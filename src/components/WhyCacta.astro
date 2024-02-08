@@ -1,10 +1,11 @@
 ---
 import Container from "./Container.astro";
+import icon from "../icons/cloud.svg";
 ---
 
-<div class="text-gray-600 dark:text-gray-300" id="why-cacta">
+<div class="text-gray-600 dark:text-gray-300 relative" id="why-cacta">
   <Container>
-    <div class="mb-20 space-y-4 px-6 md:px-0 w-1/2 mx-auto">
+    <div class="mb-20 space-y-4 px-6 md:px-0 md:w-1/2 mx-auto">
       <h2
         class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl"
       >
@@ -24,138 +25,118 @@ import Container from "./Container.astro";
 
     <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
         <p class="mt-8">
-         Conexión 100% automatizada al sistema de gestión del cliente a través de API desarrolladas.
+          Conexión 100% automatizada al sistema de gestión del cliente a través
+          de API desarrolladas.
         </p>
       </div>
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
         <p class="mt-8">
-        Algoritmo que tipifica bajo más de 70.000 emisiones registradas y 27.000 datos de actividad.
+          Algoritmo que tipifica bajo más de 70.000 emisiones registradas y
+          27.000 datos de actividad.
         </p>
       </div>
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
         <p class="mt-8">
-         Único software en Latinoamérica y Sudamérica bajo metodología “LCA”.
+          Único software en Latinoamérica y Sudamérica bajo metodología “LCA”.
         </p>
       </div>
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
-        <p class="mt-8">
-         Solución certificada, precisa y confiable.
-        </p>
+        <p class="mt-8">Solución certificada, precisa y confiable.</p>
       </div>
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
-        <p class="mt-8">
-          Paneles e informes automatizados.
-        </p>
+        <p class="mt-8">Paneles e informes automatizados.</p>
       </div>
       <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
       >
-        <div class="flex gap-4">
+        <div
+          class="flex gap-4 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
+        >
           <img
-            class="w-12 h-12 rounded-full"
-            src="./images/avatars/avatar.webp"
+            class="pl-2 w-12 h-12 rounded-full"
+            src={icon.src}
             alt="user avatar"
             width="400"
             height="400"
             loading="lazy"
           />
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">
-              Daniella Doe
-            </h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-          </div>
+          <div></div>
         </div>
         <p class="mt-8">
           Conexión 100% automatizada al sistema de gestión del cliente a través

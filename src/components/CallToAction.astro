@@ -2,6 +2,8 @@
 import Container from "./Container.astro";
 import Contributors from "./Contributors.astro";
 import Fader from "./Fader.astro";
+import photo1 from "../img/maxi.jpg";
+import photo2 from "../img/jp.jpg";
 ---
 
 <div class="relative py-16">
@@ -25,7 +27,7 @@ import Fader from "./Fader.astro";
           loading="lazy"
           width="400"
           height="400"
-          src="./images/avatars/avatar.webp"
+          src={photo1.src}
           alt="member photo"
           class="h-8 w-8 rounded-full object-cover"
         />
@@ -33,7 +35,7 @@ import Fader from "./Fader.astro";
           loading="lazy"
           width="200"
           height="200"
-          src="./images/avatars/avatar-2.webp"
+          src={photo2.src}
           alt="member photo"
           class="h-12 w-12 rounded-full object-cover"
         />
@@ -41,7 +43,7 @@ import Fader from "./Fader.astro";
           loading="lazy"
           width="200"
           height="200"
-          src="./images/avatars/avatar-3.webp"
+          src={photo1.src}
           alt="member photo"
           class="z-10 h-16 w-16 rounded-full object-cover"
         />
@@ -49,7 +51,7 @@ import Fader from "./Fader.astro";
           loading="lazy"
           width="200"
           height="200"
-          src="./images/avatars/avatar-4.webp"
+          src={photo2.src}
           alt="member photo"
           class="relative h-12 w-12 rounded-full object-cover"
         />
@@ -57,7 +59,7 @@ import Fader from "./Fader.astro";
           loading="lazy"
           width="200"
           height="200"
-          src="./images/avatars/avatar-1.webp"
+          src={photo1.src}
           alt="member photo"
           class="h-8 w-8 rounded-full object-cover"
         />
@@ -69,8 +71,8 @@ import Fader from "./Fader.astro";
           Comienza a trabajar con nosotros
         </h1>
         <p class="text-center text-xl text-gray-600 dark:text-gray-300">
-          Se parte del cambio, te ayudaremos a crecer y mejorando tu control de
-          emisiones.
+          Se parte del cambio, te ayudaremos a crecer, mejorando tu control de
+          emisiones. 
         </p>
         <aside class="w-full h-full pt-20">
           <!-- <Contributors /> -->

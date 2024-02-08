@@ -8,7 +8,7 @@ const links = [
   },
   {
     to: "/#features",
-    label: "Funcionalidad",
+    label: "Funcionalidades",
   },
 
   {
@@ -63,9 +63,9 @@ const links = [
   });
 </script>
 
-<header>
+<header class="">
   <nav
-    class="fixed z-50 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent"
+    class="fixed z-50 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent bg-gray-50 md:bg-transparent"
   >
     <Container>
       <div
@@ -124,14 +124,14 @@ const links = [
             class="w-full text-gray-600 dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0"
           >
             <ul
-              class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm"
+              class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md z-20"
             >
               {
                 links.map((link) => (
                   <li>
                     <a
                       href={link.to}
-                      class="hover:text-primary block transition font-semibold  dark:hover:text-white md:px-4"
+                      class="hover:text-black  block transition font-semibold dark:hover:text-white md:px-4"
                     >
                       <span>{link.label}</span>
                     </a>
@@ -150,11 +150,11 @@ const links = [
 
           <div class="mt-12 lg:mt-0">
             <a
-              href="/register"
-              class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              href="/#contact"
+              class="flex h-9 w-full items-center justify-center px-4 rounded-full transition duration-300 hover:scale-105 bg-gradient-to-r from-[#007d67] to-[#00ff9a] active:duration-75 active:scale-95 sm:w-max"
             >
               <span class="relative text-sm font-semibold text-white"
-                >Comienza Gratis</span
+                >Comienzar Gratis</span
               >
             </a>
           </div>
@@ -179,12 +179,12 @@ const links = [
         justify-content: space-between;
         position: fixed;
         border-radius: 1rem;
-        width: 75%;
+        width: 80%;
         top: 1rem;
         height: 4rem;
         backdrop-filter: saturate(200%) blur(20px);
         background-color: rgba(255, 255, 255, 0.5);
-        z-index: 10;
+        z-index: 80;
         color: black;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
       }

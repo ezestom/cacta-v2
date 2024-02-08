@@ -1,0 +1,91 @@
+---
+import Container from "./Container.astro";
+import Gallery from "./Gallery.astro";
+import info from "../icons/info.svg";
+import { Image } from "astro:assets";
+import us from "../img/macbook.png";
+---
+
+<div id="us">
+  <Container>
+    <section class="flex justify-between flex-wrap">
+      <div class="md:7/12 lg:w-1/2">
+        <h2
+          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
+        >
+          Nosotros
+        </h2>
+        <p
+          class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold"
+        >
+          Somos Cacta, sustentabilidad al alcance de un click.
+        </p>
+
+        <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+          <div class="mt-8 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-indigo-900/20 -z-1"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <p class="text-gray-500 dark:text-gray-400">
+                Nos dedicamos apasionadamente todos los días a impulsar a las
+                empresas a realizar una transformación hacia una gestión
+                sustentable.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <p class="text-gray-500 dark:text-gray-400">
+                ¿Cómo? Con nuestras soluciones de alta tecnología desarrolladas
+                bajo el mayor rigor académico y validación cientiífica para que
+                las empresas puedan tomar decisiones informadas, reducir su
+                impacto ambiental y al mismo tiempo maximizar su eficiencia
+                operativa.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <p class="text-gray-500 dark:text-gray-400">
+                ¿Por qué? Como equipo creemos que la sustentabilidad no solo es
+                un objetivo, sino una forma de hacer negocios que beneficia a
+                todas las partes involucradas.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <p class="text-gray-500 dark:text-gray-400">
+                Nuestro compromiso se extiende a colaborar estrechamente con
+                nuestros clientes, guiándolos hacia un futuro en donde la
+                tecnología y la responsabilidad ambiental convergen para generar
+                un impacto positivo duradero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full md:w-1/2 mt-5 z-0">
+        <Image class="rounded-[3rem]" src={us} alt="us image" />
+      </div>
+    </section>
+  </Container>
+</div>

@@ -1,72 +1,141 @@
 ---
-import Container from "./Container.astro"
-
+import Container from "./Container.astro";
+import image1 from "../img/agriculture.jpg";
+import image2 from "../img/farm.jpg";
+import image3 from "../img/tractor2.jpg";
 ---
 
 <div id="blog">
   <Container>
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Latest Articles</h2>
-        <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
-          Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt, debitis dolorum officia
-          aliquid explicabo? Excepturi, voluptate?
-        </p>
+    <div class="mb-12 space-y-2 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">
+        Últimos artículos
+      </h2>
+      <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
+        En núestros artículos encontrarás información sobre las últimas
+        tendencias en diseño, desarrollo y marketing digital.
+      </p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
+      >
+        <div class="relative overflow-hidden rounded-xl">
+          <img
+            src={image1.src}
+            alt="art cover"
+            loading="lazy"
+            width="1000"
+            height="667"
+            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="mt-6 relative">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+            Buscando la mejor experiencia de usuario.
+          </h3>
+          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+            Se empieza por el diseño, la usabilidad y la accesibilidad.
+          </p>
+        </div>
+        <a
+          href="#"
+          class="flex items-center justify-between group-hover:text-tertiary"
+        >
+          <span class="text-sm">Leer más</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
       </div>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1661749711934-492cd19a25c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-            alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
-          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              De fuga fugiat lorem ispum laboriosam expedita.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Voluptates harum aliquam totam, doloribus eum impedit atque! Temporibus...
-            </p>
-            <a class="inline-block" href="#">
-              <span class="text-info dark:text-blue-300">Read more</span>
-            </a>
-          </div>
-          
+      <div
+        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
+      >
+        <div class="relative overflow-hidden rounded-xl">
+          <img
+            src={image2.src}
+            alt="art cover"
+            loading="lazy"
+            width="1000"
+            height="667"
+            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          />
         </div>
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-            alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
-          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              De fuga fugiat lorem ispum laboriosam expedita.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Voluptates harum aliquam totam, doloribus eum impedit atque! Temporibus...
-            </p>
-            <a class="inline-block" href="#">
-              <span class="text-info dark:text-blue-300">Read more</span>
-            </a>
-          </div>
-          
+        <div class="mt-6 relative">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+            La sustentabilidad en el diseño web.
+          </h3>
+          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+            Se refleja en la forma en que se construyen los sitios web, desde el
+            diseño hasta el desarrollo.
+          </p>
         </div>
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
-          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              De fuga fugiat lorem ispum laboriosam expedita.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Voluptates harum aliquam totam, doloribus eum impedit atque! Temporibus...
-            </p>
-            <a class="inline-block" href="#">
-              <span class="text-info dark:text-blue-300">Read more</span>
-            </a>
-          </div>
-          
-        </div>
+        <a
+          href="#"
+          class="flex items-center justify-between group-hover:text-tertiary"
+        >
+          <span class="text-sm">Leer más</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
       </div>
+      <div
+        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
+      >
+        <div class="relative overflow-hidden rounded-xl">
+          <img
+            src={image3.src}
+            alt="art cover"
+            loading="lazy"
+            width="1000"
+            height="667"
+            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="mt-6 relative">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+            La importancia del control de calidad y la sustentabilidad.
+          </h3>
+          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+            En el desarrollo de software, el control de calidad es un factor
+            clave para la sustentabilidad.
+          </p>
+        </div>
+        <a
+          href="#"
+          class="flex items-center justify-between group-hover:text-tertiary"
+        >
+          <span class="text-sm">Leer más</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
   </Container>
 </div>

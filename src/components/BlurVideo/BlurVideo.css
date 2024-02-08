@@ -1,31 +1,28 @@
-
-
-
 figure:hover {
-	cursor: crosshair;
+  cursor: crosshair;
 }
 
 .youtube,
 .close-button {
-	transition: all 0.3s ease-in-out;
-	width: 5em;
+  transition: all 0.3s ease-in-out;
 }
-.close-button{
-	width: 3em;
+.close-button > img {
+  width: 3em;
+  
 }
-.youtube:hover,
+
 .close-button:hover {
-	transform: scale(1.05) translate(0, -2px);
+  transform: scale(1.05);
 }
 
 .app-video:hover {
-	cursor: crosshair;
+  cursor: crosshair;
 }
-@media(width < 768px) {
-	.article-video{
-		display: none;
-	}
-	.app-video {
-		width: 100%;
-	}
+@media (width < 768px) {
+  .article-video {
+    display: none;
+  }
+  .app-video {
+    width: 100%;
+  }
 }
