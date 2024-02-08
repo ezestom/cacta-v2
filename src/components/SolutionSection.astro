@@ -1,0 +1,79 @@
+---
+import Container from "./Container.astro";
+import Gallery from "./Gallery.astro";
+import info from "../icons/info.svg";
+---
+
+<div id="solution">
+  <Container>
+    <section class="flex justify-between flex-wrap">
+      <div class="md:7/12 lg:w-1/2">
+        <h2
+          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
+        >
+          Solución
+        </h2>
+        <p
+          class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold"
+        >
+          Gestionar la sostenibilidad nunca fue tan fácil.
+        </p>
+        <p class="my-2 text-gray-600 dark:text-gray-300">
+          Alcanza tus objetivos sin complicaciones. Recopila y analiza tus datos
+          de forma automática, y sencilla.
+        </p>
+        <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+          <div class="mt-8 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-indigo-900/20 -z-1"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <h3
+                class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
+              >
+                Monitoreo por establecimiento
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Con el monitoreo por establecimiento obten control total sobre
+                las operaciones, recursos y rendimientos por campo. Además,
+                identifica facilmente problemáticas que pueden surgir en una
+                zona geográfica en particular, facilitando una respuesta para
+                adaptar las soluciones y estrategias de manera más precisa. ​
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 flex gap-4 md:items-center">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20"
+            >
+              <img class="w-8 m-auto" src={info.src} alt="icon" />
+            </div>
+            <div class="w-5/6">
+              <h3
+                class="font-semibold text-lg text-gray-700 dark:text-teal-300"
+              >
+                Monitoreo por producto
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Con el monitoreo por producto obten total trazabilidad del uso
+                de recursos específicos en la producción de tus productos, como
+                materias primas, energía y mano de obra, facilitando la
+                identificación de oportunidades de mejora en términos de
+                eficiencia y sostenibilidad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Gallery />
+    </section>
+  </Container>
+</div>
+
+<style>
+  span {
+    color: var(--primary);
+  }
+</style>
