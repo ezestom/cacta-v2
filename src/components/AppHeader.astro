@@ -69,7 +69,7 @@ const links = [
   >
     <Container>
       <div
-        class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4"
+        class="relative flex flex-wrap items-center justify-between gap-6 py-3 "
       >
         <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
           <a
@@ -84,7 +84,7 @@ const links = [
                             <div class="h-6 w-2 bg-primary"></div>
                         </div> -->
             <img src={logo.src} alt="logo cacta" class="w-10" />
-            <span class="text-2xl font-bold text-gray-900 dark:text-white"
+            <span class="text-2xl font-bold text-white dark:text-white"
               >Cacta Eco</span
             >
           </a>
@@ -121,7 +121,7 @@ const links = [
           class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
         >
           <div
-            class="w-full text-gray-600 dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0"
+            class="w-full text-white dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0"
           >
             <ul
               class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md z-20"
@@ -131,7 +131,7 @@ const links = [
                   <li>
                     <a
                       href={link.to}
-                      class="hover:text-black  block transition font-semibold dark:hover:text-white md:px-4 tracking-tighter	"
+                      class="hover:text-primary text-gray-900 md:text-white block transition text-md font-semibold dark:hover:text-white md:px-4 tracking-tighter	"
                     >
                       <span>{link.label}</span>
                     </a>
@@ -178,15 +178,15 @@ const links = [
         right: 0;
         justify-content: space-between;
         position: fixed;
-        border-radius: 1rem;
-        width: 80%;
-        top: 1rem;
+        /* border-radius: 0 0 1rem 1rem; */
         height: 4rem;
-        backdrop-filter: saturate(200%) blur(20px);
-        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter:  blur(20px);
+        background-color: rgba(0, 0, 0, 0.3);
         z-index: 80;
-        color: black;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        width: 85%;
+        top: 1rem ;
+        border-radius: 3rem;
       }
     }
   }

@@ -19,10 +19,10 @@ export function BlurVideo() {
   };
 
   return (
-    <article className=" max-w-full md:max-w-[85%] article-video">
+    <article className="">
       <button onClick={openDialog}>
         <video
-          className="rounded-[4rem] shadow-md  app-video w-full opacity-90"
+          className="absolute max-h-screen w-full  top-0 left-0 opacity-90 -z-10"
           src={video1}
           loop
           muted

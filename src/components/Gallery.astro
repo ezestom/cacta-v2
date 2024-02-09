@@ -2,8 +2,9 @@
 import card1 from "../img/tractor5.jpg";
 import card2 from "../img/ram.jpg";
 import card3 from "../img/cow.jpg";
-import card4 from "../img/agriculture.jpg";
+import card4 from "../img/card1.jpg";
 import card5 from "../img/farm.jpg";
+import card6 from "../img/card3.jpg";
 ---
 
 <div
@@ -57,7 +58,17 @@ import card5 from "../img/farm.jpg";
         alt=`card-image-${card5}`
       />
     </div>
+
+    <!-- Item 6 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img
+        src={card6.src}
+        class="absolute block object-cover max-w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt=`card-image-${card6}`
+      />
+    </div>
   </div>
+
   <!-- Slider controls -->
   <button
     type="button"
