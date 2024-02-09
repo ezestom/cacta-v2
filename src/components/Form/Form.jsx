@@ -8,20 +8,20 @@ export function Form() {
   const openDialog = () => {
     setDialog(true);
     // hacer funcion para bloquear scroll
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   };
 
   const closeDialog = () => {
     setDialog(false);
     // hacer funcion para desbloquear scroll
-    // document.body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
   };
 
   return (
     <div className="relative form-container  z-10  ">
       <h2 className="text-xl font-bold"> ¿Preparado para comenzar?​ </h2>
-      <hr className="hr-contact" />
-      <span className="flex pt-2">
+      <hr className="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
+      <span className="flex">
         <a
           href="#open-dialog"
           onClick={openDialog} // Usar la función openDialog aquí
