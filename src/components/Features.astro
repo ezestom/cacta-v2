@@ -1,7 +1,10 @@
 ---
 import Card from "./Card.astro";
 import Container from "./Container.astro";
-import image1 from "../icons/cloud.svg";
+import leaf from "../icons/leaf.svg";
+import shield from "../icons/shield.svg";
+import math from "../icons/math.svg";
+
 ---
 
 <div id="features" class="py-20 relative">
@@ -27,13 +30,13 @@ import image1 from "../icons/cloud.svg";
       class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3"
     >
       <Card
-        image={image1.src}
+        image={math.src}
         title="Cálculo medioambiental"
         href="/environmental-calculation"
       />
-      <Card image={image1.src} title="Eco score" href="/eco-score" />
+      <Card image={shield.src} title="Eco score" href="/eco-score" />
       <Card
-        image={image1.src}
+        image={leaf.src}
         title="Declaraciones ambientales de producto"
         href="/environmental-product-declarations"
       />

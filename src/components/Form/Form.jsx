@@ -23,26 +23,29 @@ export function Form() {
       <hr className="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
       <span className="flex">
         <a
+          className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
           href="#open-dialog"
           onClick={openDialog} // Usar la función openDialog aquí
           id="open-dialog"
-          class="flex h-9 w-full items-center justify-center px-4 rounded-full transition duration-300 hover:scale-105 bg-gradient-to-r from-[#030f33] to-[#4e737a] active:duration-75 active:scale-95 sm:w-max text-white font-bold "
         >
-          Ir al formulario
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            ></path>
-          </svg>
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+            Ir al formulario
+            <svg
+              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              aria-hidden="true"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              ></path>
+            </svg>
+          </span>
         </a>
       </span>
 
