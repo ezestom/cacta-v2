@@ -5,7 +5,7 @@ import image2 from "../img/card2.jpg";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
-  <div class="absolute h-full w-full bg-white">
+  <div class="absolute h-full w-full">
     <div
       class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
     >
@@ -14,9 +14,21 @@ import image2 from "../img/card2.jpg";
   <CardZoom
     client:visible
     image={image2.src}
-    preTitle="DATA COLLECTION"
     title="ECO SCORE"
     description="Un eco score o prueba de rendimiento proporciona una manera rápida y fácil de englobar el impacto ambietal de  una empresa. Por ejemplo, un producto con un alto eco score indica que tiene un menor impacto ambiental en comparación con otros productos similares con una puntuación más baja."
     video1={video1}
   />
 </section>
+
+<style>
+  section {
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("../img/agriculture.jpg") no-repeat center center;
+    background-size: cover;
+  }
+</style>

@@ -23,12 +23,21 @@ export function CardZoom({ image, preTitle, title, description, video1 }) {
 
           <p class="mb-5  font-normal text-gray-700">{description}</p>
         </div>
-        <video className="max-w-[400px]" src={video1} autoPlay loop muted></video>
+        <video
+          className="max-w-[400px] bg-white h-full"
+          src={video1}
+          autoPlay
+          loop
+          muted
+        ></video>
         <a
           onClick={handleBack}
-          class="absolute top-2 right-2 inline-flex px-4 py-2 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full hover:scale-105 cursor-pointer text-white transition-all btn-back"
+          className=" absolute top-2 right-2 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
         >
-          Volver
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+            Volver
+          </span>
         </a>
       </div>
     </article>

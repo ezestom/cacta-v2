@@ -7,7 +7,7 @@ import video1 from "../video/video1.mp4";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
-  <div class="absolute h-full w-full bg-white">
+  <div class="absolute h-full w-full ">
     <div
       class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
     >
@@ -16,9 +16,22 @@ import video1 from "../video/video1.mp4";
   <CardZoom
     client:visible
     image={image1.src}
-    preTitle="DATA COLLECTION"
+ 
     title="CALCULO MEDIOAMBIENTAL"
     description="Vista 360º: Toda tu información centralizada en una sola pantalla (Cambio Climático, Salud Humana, Calidad del Ecosistema y agotamiento de recursos) Permitiendo identificar de forma sencilla los principales contribuyentes de tu huella ambiental."
     video1={video1}
   />
 </section>
+
+<style>
+  section {
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("../img/irrigator.jpg") no-repeat center center;
+    background-size: cover;
+  }
+</style>

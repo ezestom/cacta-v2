@@ -19,8 +19,11 @@ export function Form() {
 
   return (
     <div className="relative form-container  z-10  ">
-      <h2 className="text-xl font-bold"> ¿Preparado para comenzar?​ </h2>
-      <hr className="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
+      <h2 className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white text-center">
+        {" "}
+        ¿Preparado para comenzar?{" "}
+      </h2>
+      <hr className="hr-contact  bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
       <span className="flex">
         <a
           className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"

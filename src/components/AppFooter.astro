@@ -2,13 +2,14 @@
 import Container from "./Container.astro";
 import logo from "../../public/logo.png";
 import world from "../icons/world.svg";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<footer class="mb-3">
+<footer class="mb-3 dark:text-white">
   <section
     class="flex justify-between w-full px-2 items-start md:w-[75%] m-auto"
   >
-    <article class="opacity-75">
+    <article class="opacity-75 flex gap-3 items-center">
       <a
         target="_blank"
         href="https://ezestom.github.io/portfolio/"
@@ -22,13 +23,19 @@ import world from "../icons/world.svg";
         </div>
       </a>
     </article>
-    <article class="flex text-sm flex-col opacity-75 tracking-tighter">
-      <p class="flex items-center gap-1">
-        <span><img src={logo.src} alt="logo icon" class="w-8" /></span>© 2024
-        Cacta-Eco.
-      </p>
-      <p class="text-center">All rights reserved.</p>
-    </article>
+    <div class="flex gap-2 md:gap-10 items-start">
+      <article class="flex text-sm flex-col opacity-75 tracking-tighter">
+        <div>
+          <p class="flex items-center gap-1">
+            <span><img src={logo.src} alt="logo icon" class="w-8" /></span>©
+            2024 Cacta-Eco.
+          </p>
+
+          <p class="text-center">All rights reserved.</p>
+        </div>
+      </article>
+      <ThemeToggle />
+    </div>
     <article class="">
       <ul role="list" class="flex gap-2">
         <li>
