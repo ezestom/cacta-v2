@@ -151,10 +151,12 @@ import card6 from "../img/card3.jpg";
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
   }
-  @keyframes revealRigth {
-    from {
-      transform: translateX(25%);
-      opacity: 0;
+  @media (width >= 768px) {
+    @keyframes revealRigth {
+      from {
+        transform: translateX(25%);
+        opacity: 0;
+      }
     }
   }
 </style>

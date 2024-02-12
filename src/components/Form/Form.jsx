@@ -18,7 +18,7 @@ export function Form() {
   };
 
   return (
-    <div className="relative form-container  z-10  ">
+    <div className="relative form-container  z-10 m-auto ">
       <h2 className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white text-center">
         {" "}
         ¿Preparado para comenzar?{" "}

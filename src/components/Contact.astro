@@ -4,7 +4,7 @@ import { Form } from "../components/Form/Form.jsx";
 ---
 
 <div class="relative py-16" id="contact">
-   <div
+  <div
     aria-hidden="true"
     class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
   >
@@ -19,20 +19,20 @@ import { Form } from "../components/Form/Form.jsx";
   </div>
   <Container>
     <div class="relative">
-      <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-        <h1
-          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white text-center"
+      <div
+        class="mt-6 space-y-6 md:w-8/12 lg:w-7/12 flex flex-col justify-center w-full mx-auto"
+      >
+        <!-- <h1
+          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white text-start"
         >
           Contacto
-        </h1>
-        <p class="text-center text-xl text-gray-600 dark:text-gray-300 font-semibold">
+        </h1> -->
+        <p
+          class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-semibold text-balance tracking"
+        >
           Simplifica tu gestión, maximiza la sostenibilidad y transforma tu
-          empresa con sus beneficios. ​ Prevé el cambio, moldéalo a tu favor.
+          empresa con sus beneficios. Prevé el cambio, moldéalo a tu favor.
         </p>
-        <aside class="w-full h-full pt-20">
-          <!-- <Contributors /> -->
-          <Form client:visible />
-        </aside>
 
         <!-- two btns -->
 
@@ -57,6 +57,10 @@ import { Form } from "../components/Form/Form.jsx";
           </a>
         </div> -->
       </div>
+      <aside class="w-full h-full pt-20">
+        <!-- <Contributors /> -->
+        <Form client:visible />
+      </aside>
     </div>
   </Container>
 </div>

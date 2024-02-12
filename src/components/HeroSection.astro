@@ -47,7 +47,7 @@ import arrow from "../icons/arrows.svg";
               tu empresa.
             </p>
           </div>
-          <div class="absolute top-0 left-0 -z-10 bg-black/90 container-video">
+          <div class="absolute md:fixed top-0 left-0 -z-10 bg-black/90 container-video">
             <video
               class="object-cover h-[60vh] lg:h-full md:w-full bg-image"
               src={video}
@@ -127,11 +127,21 @@ import arrow from "../icons/arrows.svg";
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeOut linear both;
+    animation-timeline: view();
+    animation-range: 55% 85%;
   }
   .bg-image {
     mask: radial-gradient(circle at right, white 50%, transparent 100%);
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
     /* box shadow botton */
+  }
+  @media (width >= 768px) {
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+      }
+    }
   }
 </style>
