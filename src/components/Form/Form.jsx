@@ -23,7 +23,19 @@ export function Form() {
         {" "}
         ¿Preparado para comenzar?{" "}
       </h2>
-      <hr className="hr-contact  bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
+      <div className="flex w-full items-center justify-center">
+        <a
+          href="https://librecounter.org/referer/show"
+          target="_blank"
+          class="w-1"
+        >
+          <img
+            src="https://librecounter.org/counter.svg"
+            referrerPolicy="unsafe-url"
+          />
+        </a>
+        <hr className="hr-contact  bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
+      </div>
       <span className="flex">
         <a
           className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
