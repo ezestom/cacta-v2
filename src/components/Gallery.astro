@@ -145,3 +145,16 @@ import card6 from "../img/card3.jpg";
   // const modal = new Modal($modalElement, modalOptions);
   // modal.show();
 </script>
+<style>
+  #gallery {
+    animation: revealRigth linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+  @keyframes revealRigth {
+    from {
+      transform: translateX(25%);
+      opacity: 0;
+    }
+  }
+</style>

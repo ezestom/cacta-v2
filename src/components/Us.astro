@@ -9,7 +9,7 @@ import Fader from "./Fader.astro";
 
 <div id="us">
   <Container>
-    <section class="flex justify-between flex-wrap">
+    <section class="flex justify-between items-center flex-wrap">
       <div class="md:7/12 lg:w-1/2">
         <h2
           class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
@@ -84,10 +84,17 @@ import Fader from "./Fader.astro";
           </div>
         </div>
       </div>
-      <div class="relative w-full md:w-1/2 mt-5 z-0">
+      <div class="relative w-full md:max-w-[65ch] mt-5 z-0 image">
         <Image class="rounded-[3rem]" src={us} alt="us image" />
       </div>
     </section>
     <Fader />
   </Container>
 </div>
+<style>
+  .image {
+    animation: revealRigth linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+</style>

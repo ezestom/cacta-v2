@@ -4,7 +4,6 @@ import Container from "./Container.astro";
 import leaf from "../icons/leaf.svg";
 import shield from "../icons/shield.svg";
 import math from "../icons/math.svg";
-
 ---
 
 <div id="features" class="py-20 relative">
@@ -27,7 +26,7 @@ import math from "../icons/math.svg";
       </p>
     </div>
     <div
-      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3"
+      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl text-gray-600 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3"
     >
       <Card
         image={math.src}
@@ -54,5 +53,8 @@ import math from "../icons/math.svg";
       url("../img/farm2.jpg");
     background-size: cover;
     background-position: center;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
   }
 </style>
