@@ -18,8 +18,8 @@ export function Form() {
   };
 
   return (
-    <div className="relative form-container  z-10 m-auto ">
-      <h2 className="text-3xl font-bold text-gray-900 md:text-6xl dark:text-white text-center">
+    <div className="relative form-container  z-10 m-auto  ">
+      <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle ">
         {" "}
         ¿Preparado para comenzar?{" "}
       </h2>
