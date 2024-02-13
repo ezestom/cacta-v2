@@ -6,15 +6,15 @@ export function CardZoom({ image, preTitle, title, description, video1 }) {
     window.location.href = "/#features";
   };
   return (
-    <article className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-      <div class=" grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-1 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3 flex-wrap card">
+    <article className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 ">
+      <div class=" grid h-full divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-1 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3 flex-wrap card">
         <img
-          class="object-cover image w-[400px]"
+          class="object-cover max-w-[350px] md:max-w-full image aspect-square"
           src={image}
           alt={`image about ${image}`}
         />
 
-        <div class="p-5 bg-white relative h-auto max-w-[400px]">
+        <div class="p-5 bg-white relative h-auto max-w-[350px] md:max-w-full  aspect-square">
           {/* <p class="font-normal text-gray-700">{preTitle}</p> */}
 
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
@@ -24,7 +24,7 @@ export function CardZoom({ image, preTitle, title, description, video1 }) {
           <p class="mb-5  font-normal text-gray-700">{description}</p>
         </div>
         <video
-          className="max-w-[400px] bg-white h-full"
+          className="aspect-square bg-white h-full max-w-[350px] md:max-w-full "
           src={video1}
           autoPlay
           loop

@@ -12,16 +12,12 @@ const { title, description, image, href } = Astro.props;
 <div
   class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
 >
-  <div class="relative space-y-8 py-12 p-4">
-    <div
-      class="bg-gradient-to-r from-[#007d67] to-[#00ff9a] w-fit rounded-full p-2"
-    >
-      <img src={image} class="w-8" alt="burger illustration" />
-    </div>
+  <div class="relative space-y-8 py-12 p-4 text-center flex justify-center flex-col items-center">
+    <img src={image} class="w-10 " alt="burger illustration" />
 
     <div class="space-y-2">
       <h5
-        class="text-xl font-semibold text-gray-700 dark:text-white transition  h-full"
+        class="text-xl font-semibold text-gray-700 dark:text-white transition h-full"
       >
         {title}
       </h5>
@@ -38,7 +34,7 @@ const { title, description, image, href } = Astro.props;
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+        class="w-4 h-4 -translate-x-6 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100"
       >
         <path
           fill-rule="evenodd"

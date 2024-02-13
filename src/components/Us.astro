@@ -3,13 +3,13 @@ import Container from "./Container.astro";
 import Gallery from "./Gallery.astro";
 import info from "../icons/info.svg";
 import { Image } from "astro:assets";
-import us from "../img/macbook.png";
+import us from "../img/rueda.png";
 import Fader from "./Fader.astro";
 ---
 
 <div id="us">
   <Container>
-    <section class="flex justify-between items-center flex-wrap">
+    <section class="flex justify-evenly items-center flex-wrap">
       <div class="md:7/12 lg:w-1/2">
         <h2
           class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
@@ -27,7 +27,7 @@ import Fader from "./Fader.astro";
             <div
               class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-indigo-900/20 -z-1"
             >
-              <img class="w-8 m-auto" src={info.src} alt="icon" />
+              <img class="w-8 m-auto" src={info.src} alt="info image" />
             </div>
             <div class="w-5/6">
               <p class="text-gray-500 dark:text-gray-400">
@@ -84,7 +84,7 @@ import Fader from "./Fader.astro";
           </div>
         </div>
       </div>
-      <div class="relative w-full md:max-w-[65ch] mt-5 z-0 image">
+      <div class="relative w-full md:max-w-[55ch] mt-5 z-0 image ">
         <Image class="rounded-[3rem]" src={us} alt="us image" />
       </div>
     </section>
@@ -93,8 +93,19 @@ import Fader from "./Fader.astro";
 </div>
 <style>
   .image {
-    animation: revealRigth linear both;
+    animation: revealRoll linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    animation-range: entry 30% cover 45%;
+  }
+  @media (width >= 768px) {
+    @keyframes revealRoll {
+      from {
+        transform: translateX(20%) rotate(60deg);
+        opacity: 0;
+      }
+      to {
+        filter: drop-shadow(0px 0px 10px green);
+      }
+    }
   }
 </style>
