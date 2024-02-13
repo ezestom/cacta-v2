@@ -1,7 +1,5 @@
 ---
-import microsoft from "../icons/microsoft.astro";
-import android from "../icons/android.astro";
-import { Image } from "astro:assets";
+
 ---
 
 <div
@@ -230,18 +228,16 @@ import { Image } from "astro:assets";
         <div
           class="group rounded-3xl min-w-[256px] w-[256px] border flex items-center justify-center border-gray/10 px-4 cursor-pointer hover:border-muted-foreground hover:shadow-md transition-colors"
         >
-          <p
-            class="[&:not(:first-child)]:mt-6 group-hover:text-black text-gray-500 line-clamp-2 leading-tight"
-          >
+          <div class="p-2 grayscale transition duration-200 hover:grayscale-0">
             <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
+              src="./images/clients/google-cloud.svg"
+              class="h-12 w-auto mx-auto"
               loading="lazy"
               alt="client logo"
               width=""
               height=""
             />
-          </p>
+          </div>
         </div>
         <div
           class="group rounded-3xl min-w-[256px] w-[256px] border flex items-center justify-center border-gray/10 px-4 cursor-pointer hover:border-muted-foreground hover:shadow-md transition-colors"

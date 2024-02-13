@@ -1,3 +1,77 @@
+---
+import leaf from "../icons/leaf.svg";
+---
+
+<dialog
+  open
+  id="dialog"
+  class="fixed bottom-0 w-screen h-screen flex justify-center flex-col items-center m-auto"
+  style="display: hidden"
+>
+  <article
+    class="dialog absolute top-0 bottom-0 left-0 right-0 grid items-center max-w-[400px] rounded-3xl backdrop:blur-md bg-green-800/70 py-5 px-8 m-auto gap-2 h-fit"
+  >
+    <img
+      src={leaf.src}
+      class="w-16 h-16 bg-white/20 p-2 rounded-full m-auto"
+      alt="leaf icon"
+    />
+    <h2 class="text-white font-semibold text-3xl text-center">
+      Comprometidos con la reducción de emisiones
+    </h2>
+    <p class="text-md font-medium text-pretty pt-5 text-white">
+      Hemos diseñado y desarrollado nuestro sitio web en modo oscuro ya que
+      reduce en promedio el consumo de energía en un %35 y aumenta la vida útil
+      de las pantallas de sus dispositivos.
+    </p>
+    <p class="text-md font-medium text-pretty pt-5 text-white">
+      Hemos diseñado y desarrollado nuestro sitio web en modo oscuro ya que
+      reduce en promedio el consumo de energía en un %35 y aumenta la vida útil
+      de las pantallas de sus dispositivos. Sin embargo, el "modo claro" está
+      disponible para mayor accesibilidad, ya que puede resultarle más fácil y
+      cómodo de leer.
+    </p>
+
+    <button
+      class="text-white text-md py-2 rounded-3xl flex justify-center bg-white/20 hover:bg-white/40 transition mt-5"
+      id="closeDialog">Cerrar</button
+    >
+  </article>
+</dialog>
+
+<script>
+  import { isOpen } from "../store.js";
+
+  // Configura el store a true cuando se hace clic en el botón
+  function openDialog() {
+    isOpen.set(true);
+    document.body.style.overflow = "hidden";
+  }
+  function closeDialog() {
+    isOpen.set(false);
+    document.body.style.overflow = "auto";
+  }
+
+  // Agrega un escuchador de eventos al botón
+  document.getElementById("themeToggle")?.addEventListener("click", openDialog);
+  document
+    .getElementById("closeDialog")
+    ?.addEventListener("click", closeDialog);
+</script>
+
+<script>
+  import { isOpen } from "../store.js";
+
+  // Escucha los cambios en el store y muestra/oculta el diálogo en consecuencia
+  isOpen.subscribe((open) => {
+    if (open) {
+      document.getElementById("dialog").style.display = "block";
+    } else {
+      document.getElementById("dialog").style.display = "none";
+    }
+  });
+</script>
+
 <button id="themeToggle">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
