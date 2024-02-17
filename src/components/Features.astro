@@ -53,8 +53,15 @@ import math from "../icons/math.svg";
       url("../img/farm2.jpg");
     background-size: cover;
     background-position: center;
-    animation: reveal linear both;
+    animation: reveal2 linear both;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+  }
+  @keyframes reveal2 {
+    from {
+      opacity: 0.2;
+      scale: 0.8;
+      translate: 0 10%;
+    }
   }
 </style>

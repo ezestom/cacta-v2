@@ -8,6 +8,9 @@
   flex-direction: column;
   width: 100%;
 }
+.btn-form{
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
+}
 .hr-contact {
   /* margin-left: 2rem; */
   height: 2px;
