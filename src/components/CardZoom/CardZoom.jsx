@@ -3,13 +3,13 @@ import "./CardZoom.css";
 export function CardZoom({ image, preTitle, title, description, video1 }) {
   const handleBack = (e) => {
     e.preventDefault();
-    window.location.href = "/#features";
+    window.history.back();
   };
   return (
     <article className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 ">
-      <div class=" grid h-full divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-1 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3 flex-wrap card">
+      <div class=" grid h-full divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-200 text-gray-600 dark:border-gray-700 sm:grid-cols-1 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3 flex-wrap shadow-sm card">
         <img
-          class="object-cover max-w-[350px] md:max-w-full image aspect-square"
+          class="object-cover max-w-[350px] md:max-w-full image aspect-square "
           src={image}
           alt={`image about ${image}`}
         />

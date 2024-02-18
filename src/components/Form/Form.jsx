@@ -9,12 +9,14 @@ export function Form() {
     setDialog(true);
     // hacer funcion para bloquear scroll
     document.body.style.overflow = "hidden";
+    document.getElementById("navbar").style.display = "none";
   };
 
   const closeDialog = () => {
     setDialog(false);
     // hacer funcion para desbloquear scroll
     document.body.style.overflow = "auto";
+    document.getElementById("navbar").style.display = "flex";
   };
 
   return (
@@ -27,7 +29,7 @@ export function Form() {
         <a
           href="https://librecounter.org/referer/show"
           target="_blank"
-          class="w-1"
+          className="w-1"
         >
           <img
             src="https://librecounter.org/counter.svg"

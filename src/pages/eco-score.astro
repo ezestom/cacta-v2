@@ -5,13 +5,27 @@ import image2 from "../img/card2.jpg";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
+  >
+    <div
+      class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+    >
+    </div>
+    <div
+      class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
+    >
+    </div>
+  </div>
   <div class="absolute h-full w-full">
     <div
-      class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+      class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
     >
     </div>
   </div>
   <CardZoom
+    preTitle=""
     client:visible
     image={image2.src}
     title="ECO SCORE"
@@ -20,15 +34,3 @@ import image2 from "../img/card2.jpg";
   />
 </section>
 
-<style>
-  section {
-    background:
-      radial-gradient(
-        ellipse at center,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 1) 100%
-      ),
-      url("../img/agriculture.jpg") no-repeat center center;
-    background-size: cover;
-  }
-</style>
