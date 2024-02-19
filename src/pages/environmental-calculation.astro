@@ -1,9 +1,9 @@
 ---
-import { CardZoom } from "../components/CardZoom/CardZoom";
+import { CardZoom2 } from "../components/CardZoom/CardZoom2.jsx";
 
 import image1 from "../img/card1.jpg";
-
 import video1 from "../video/video1.mp4";
+import math from "../icons/math.svg";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
@@ -26,8 +26,9 @@ import video1 from "../video/video1.mp4";
     >
     </div>
   </div>
-  <CardZoom
-    preTitle=""
+  <CardZoom2
+    id="one"
+    icon={math.src}
     client:visible
     image={image1.src}
     title="CALCULO MEDIOAMBIENTAL"
@@ -46,5 +47,8 @@ import video1 from "../video/video1.mp4";
       ),
       url("../img/irrigator.jpg") no-repeat center center;
     background-size: cover; */
+  }
+  #one {
+    view-transition-name: fade;
   }
 </style>

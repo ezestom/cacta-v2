@@ -6,7 +6,7 @@ import AppHeader from "../components/AppHeader.astro";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Cacta Eco Software" />
@@ -86,6 +86,11 @@ import AppHeader from "../components/AppHeader.astro";
           scale: 0.8;
           translate: 0 10%;
         }
+      }
+      /* view transition Api */
+      ::view-transition-new(root),
+      ::view-transition-old(root) {
+        animation-duration: 0.3s;
       }
     </style>
   </body>

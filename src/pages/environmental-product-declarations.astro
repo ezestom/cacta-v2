@@ -1,8 +1,9 @@
 ---
-import { CardZoom } from "../components/CardZoom/CardZoom";
+import { CardZoom2 } from "../components/CardZoom/CardZoom2";
 import Layout from "../layouts/Layout.astro";
 import image3 from "../img/card3.jpg";
 import video1 from "../video/video1.mp4";
+import leaf from "../icons/leaf.svg";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
@@ -25,8 +26,9 @@ import video1 from "../video/video1.mp4";
     >
     </div>
   </div>
-  <CardZoom
-    preTitle=""
+  <CardZoom2
+    id="three"
+    icon={leaf.src}
     client:visible
     video1={video1}
     image={image3.src}

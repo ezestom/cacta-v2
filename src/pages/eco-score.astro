@@ -1,7 +1,8 @@
 ---
-import { CardZoom } from "../components/CardZoom/CardZoom";
+import { CardZoom2 } from "../components/CardZoom/CardZoom2";
 import video1 from "../video/video1.mp4";
 import image2 from "../img/card2.jpg";
+import shield from "../icons/shield.svg";
 ---
 
 <section class="w-screen h-full md:h-screen flex items-center justify-center">
@@ -24,8 +25,9 @@ import image2 from "../img/card2.jpg";
     >
     </div>
   </div>
-  <CardZoom
-    preTitle=""
+  <CardZoom2
+    id="two"
+    icon={shield.src}
     client:visible
     image={image2.src}
     title="ECO SCORE"
@@ -33,4 +35,3 @@ import image2 from "../img/card2.jpg";
     video1={video1}
   />
 </section>
-
