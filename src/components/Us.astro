@@ -3,13 +3,13 @@ import Container from "./Container.astro";
 import Gallery from "./Gallery.astro";
 import info from "../icons/info.svg";
 import { Image } from "astro:assets";
-import us from "../img/rueda.png";
+import us from "../img/rola.png";
 import Fader from "./Fader.astro";
 ---
 
 <div id="us">
   <Container>
-    <section class="flex justify-evenly items-center flex-wrap">
+    <section class="flex justify-between items-center flex-wrap">
       <div class="md:7/12 lg:w-1/2">
         <h2
           class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
@@ -17,7 +17,7 @@ import Fader from "./Fader.astro";
           Nosotros
         </h2>
         <p
-          class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold"
+          class="my-2 text-gray-600 dark:text-gray-300 shadow-sm text-md md:text-xl font-semibold"
         >
           Somos Cacta, sustentabilidad al alcance de un click.
         </p>
@@ -84,18 +84,66 @@ import Fader from "./Fader.astro";
           </div>
         </div>
       </div>
-      <div class="relative w-full md:max-w-[55ch] mt-5 z-0 image">
-        <Image class="rounded-[3rem]" src={us} alt="us image" />
+      <div
+        class="relative w-1/2 flex items-center justify-center mt-5 z-0 image"
+      >
+        <span
+          class="absolute top-16 -left-4 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Huella de carbono total</span
+        >
+        <span
+          class="absolute top-0 right-24 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Acidificación potencial</span
+        >
+        <span
+          class="absolute top-16 -right-4 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Eutrofización del agua</span
+        >
+        <span
+          class="absolute top-48 -right-20 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Ecotoxicidad del agua</span
+        >
+        <span
+          class="absolute bottom-48 -right-6 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Cancerígenos</span
+        >
+        <span
+          class="absolute bottom-28 -right-6 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >No cancerígenos</span
+        >
+        <span
+          class="absolute bottom-10 -right-0 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Agotamiento de ozono</span
+        >
+        <span
+          class="absolute -bottom-2 right-52 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Smog</span
+        >
+        <span
+          class="absolute bottom-4 left-24 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >No renovables</span
+        >
+        <span
+          class="absolute bottom-36 -left-10 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-1 rounded-xl border dark:bg-gray-700 dark:text-gray-300 shadow-sm"
+          >Minerales y metales</span
+        >
+
+        <Image class="md:max-w-[55ch] -z-20" src={us} alt="app image" />
       </div>
     </section>
     <Fader />
   </Container>
 </div>
 <style>
-  .image {
+  .image > img {
     animation: revealRoll linear both;
     animation-timeline: view();
-    animation-range: entry 30% cover 45%;
+    animation-range: entry 30% cover 40%;
+  }
+  .image > span {
+    animation: revealSpanRandom linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 15%;
   }
   @media (width >= 768px) {
     @keyframes revealRoll {
@@ -104,7 +152,16 @@ import Fader from "./Fader.astro";
         opacity: 0;
       }
       to {
-        filter: drop-shadow(-10em 0em 50em #ff3e57);
+        filter: drop-shadow(-10em 0em 80em #ff3e57);
+      }
+    }
+    @keyframes revealSpanRandom {
+      from {
+        transform: translateX(44%);
+        opacity: 0;
+      }
+      to {
+        filter: drop-shadow(0em 0em 1px #ff3e57);
       }
     }
   }
