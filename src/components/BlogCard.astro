@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 interface Props {
   title?: string;
   description?: string;
+  id?: string;
   image?: any;
 }
-const { title, description, image } = Astro.props;
+const { title, description, image, id } = Astro.props;
 ---
 
 <div
@@ -13,6 +14,7 @@ const { title, description, image } = Astro.props;
 >
   <div class="relative overflow-hidden rounded-xl">
     <Image
+      id={id}
       src={image}
       alt="art cover"
       loading="lazy"
@@ -33,7 +35,7 @@ const { title, description, image } = Astro.props;
     href="/blog"
     class="flex items-center justify-center group-hover:text-tertiary text-black dark:text-white font-semibold"
   >
-    <span class="text-sm">Leer más</span>
+    <span class="text-sm">Ir al blog</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"

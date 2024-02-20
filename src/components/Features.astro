@@ -4,6 +4,7 @@ import Container from "./Container.astro";
 import leaf from "../icons/leaf.svg";
 import shield from "../icons/shield.svg";
 import math from "../icons/math.svg";
+import { fade } from "astro:transitions";
 ---
 
 <div id="features" class="py-20 relative">
@@ -64,8 +65,5 @@ import math from "../icons/math.svg";
       scale: 0.8;
       translate: 0 10%;
     }
-  }
-  #environmentalCalculation {
-    view-transition-name: fade;
   }
 </style>
