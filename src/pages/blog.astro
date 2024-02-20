@@ -1,5 +1,5 @@
 ---
-import { BlogCard2 } from "../components/BlogCard2.jsx";
+import { BlogCard2 } from "../components/BlogCard2/BlogCard2.jsx";
 import Container from "../components/Container.astro";
 import blog1 from "../img/esg.png";
 import blog2 from "../img/cacta.png";
@@ -11,7 +11,7 @@ import logo from "../img/logo-negro.png";
   <Container>
     <div
       aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
+      class="absolute inset-0 h-max w-full m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -space-x-52 opacity-40 dark:opacity-20 -z-10"
     >
       <div
         class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"

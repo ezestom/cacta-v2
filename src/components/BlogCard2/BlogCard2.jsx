@@ -1,6 +1,6 @@
-import close from "../icons/x.svg";
+import close from "../../icons/x.svg";
 import { useState } from "react";
-import "./BlogCard.css";
+import "./BlogCard2.css";
 
 export function BlogCard2({ image, title, description }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +33,15 @@ export function BlogCard2({ image, title, description }) {
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
           {title}
         </h3>
-        <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300 truncate ...">
+        <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300 hidden md:block truncate ...">
           {description}
         </p>
       </div>
       <button
         onClick={openDialog}
-        class="flex items-center justify-center group-hover:text-tertiary text-black dark:text-white font-semibold"
+        class="flex items-center justify-center w-full group-hover:text-tertiary text-black dark:text-white font-semibold mt-4"
       >
-        <span class="text-sm">Leer más</span>
+        <span class="text-sm ">Leer más</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -58,14 +58,14 @@ export function BlogCard2({ image, title, description }) {
 
       {isOpen && (
         <section class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
-          <article class="relative w-full max-w-4xl p-8 bg-white rounded-xl overflow-y-scroll max-h-[95%] ">
+          <article class="relative w-full max-w-4xl p-4 md:p-12 bg-white rounded-xl overflow-y-scroll max-h-[95%] ">
+            <button
+              onClick={closeDialog}
+              class="absolute top-0 right-0 p-3 bg-black/80 rounded-md rounded-t-none rounded-e-none hover:bg-black/60 transition duration-300"
+            >
+              <img src={close.src} alt="close" />
+            </button>
             <div class="relative overflow-hidden rounded-xl">
-              <button
-                onClick={closeDialog}
-                class="absolute top-0 right-0 p-3 bg-black/50 rounded-xl hover:bg-black/75 transition duration-300"
-              >
-                <img src={close.src} alt="close" />
-              </button>
               <img
                 src={image.src}
                 alt="art cover"
@@ -76,7 +76,7 @@ export function BlogCard2({ image, title, description }) {
             <h3 class="mt-6 text-3xl font-semibold text-gray-800 dark:text-white">
               {title}
             </h3>
-            <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 text-balance">
+            <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 text-pretty">
               {description}
             </p>
           </article>

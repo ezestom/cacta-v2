@@ -11,90 +11,94 @@ import team from "../icons/team.svg";
 ---
 
 <footer class="mb-3 dark:text-white" id="footer">
-  <section
-    class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-between w-full items-center md:w-[65%] m-auto"
-  >
-    <article class="opacity-75 flex gap-3 items-center">
-      <a
-        target="_blank"
-        href="https://ezestom.github.io/portfolio/"
-        class="transition hover:text-tertiary"
-      >
-        <div class="flex text-sm flex-col items-center tracking-tighter">
-          <span class="span-footer text-center">Created &amp; Designed by</span>
-          <span class="span-footer flex items-center gap-1 text-center">
-            Eze Stom <img class="" src={world.src} alt="world-icon" /></span
-          >
-        </div>
-      </a>
-    </article>
-    <div class="flex gap-1 md:gap-10 items-center">
-      <article class="flex text-sm flex-col opacity-75 tracking-tighter">
-        <div>
-          <p class="flex items-center gap-1 text-center">
-            <span><img src={logo.src} alt="logo icon" class="w-8" /></span>©
-            2024 Cacta-Eco.
-          </p>
-
-          <p class="text-center">All rights reserved.</p>
-        </div>
+  <Container>
+    <section
+      class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-between w-full items-center m-auto"
+    >
+      <article class="opacity-75 flex gap-3 items-center">
+        <a
+          target="_blank"
+          href="https://ezestom.github.io/portfolio/"
+          class="flex items-center space-x-3 transition px-4 py-1 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
+        >
+          <div class="flex text-sm flex-col items-center tracking-tighter">
+            <span class="span-footer text-center"
+              >Created &amp; Designed by</span
+            >
+            <span class="span-footer flex items-center gap-1 text-center">
+              Eze Stom <img class="" src={world.src} alt="world-icon" /></span
+            >
+          </div>
+        </a>
       </article>
-      <ThemeToggle />
-    </div>
-    <article class="">
-      <ul role="list" class="flex gap-2">
-        <li>
-          <a
-            href="https://www.linkedin.com/company/cactaeco/"
-            target="_blank"
-            class="flex items-center space-x-3 transition"
-          >
-            <img
-              class="w-5 h-5 opacity-50"
-              src={linkedin.src}
-              alt="linkedin-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/elonmusk"
-            target="_blank"
-            class="flex items-center space-x-3 transition"
-          >
-            <img
-              class="w-5 h-5 opacity-50"
-              src={twiter.src}
-              alt="twitter-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/leomessi/"
-            target="_blank"
-            class="flex items-center space-x-3 transition"
-          >
-            <img
-              class="w-5 h-5 opacity-50"
-              src={instagram.src}
-              alt="instagram-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="/the-great-team"
-            class="flex items-center space-x-3 transition"
-          >
-            <img
-              class="w-5 h-5 opacity-50"
-              src={team.src}
-              alt="instagram-icon"
-            />
-          </a>
-        </li>
-      </ul>
-    </article>
-  </section>
+      <div class="flex gap-1 md:gap-10 items-center">
+        <article class="flex text-sm flex-col opacity-75 tracking-tighter">
+          <div>
+            <p class="flex items-center gap-1 text-center">
+              <span><img src={logo.src} alt="logo icon" class="w-8" /></span>©
+              2024 Cacta-Eco.
+            </p>
+
+            <p class="text-center">All rights reserved.</p>
+          </div>
+        </article>
+        <ThemeToggle />
+      </div>
+      <article class="">
+        <ul role="list" class="flex gap-2">
+          <li>
+            <a
+              href="https://www.linkedin.com/company/cactaeco/"
+              target="_blank"
+              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
+            >
+              <img
+                class="w-5 h-5 opacity-50"
+                src={linkedin.src}
+                alt="linkedin-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/elonmusk"
+              target="_blank"
+              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
+            >
+              <img
+                class="w-5 h-5 opacity-50"
+                src={twiter.src}
+                alt="twitter-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/leomessi/"
+              target="_blank"
+              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
+            >
+              <img
+                class="w-5 h-5 opacity-50"
+                src={instagram.src}
+                alt="instagram-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="/the-great-team"
+              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
+            >
+              <img
+                class="w-5 h-5 opacity-50"
+                src={team.src}
+                alt="instagram-icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </Container>
 </footer>

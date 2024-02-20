@@ -31,7 +31,8 @@ import leaf from "../icons/leaf.svg";
 
     <button
       class="text-white text-md py-2 rounded-3xl flex justify-center bg-white/20 hover:bg-white/40 transition mt-5"
-      id="closeDialog">Cerrar</button
+      id="closeDialog"
+      name="closeDialog">Cerrar</button
     >
   </article>
 </dialog>
@@ -85,7 +86,7 @@ import leaf from "../icons/leaf.svg";
   </svg>
 </button>
 
-<script is:inline>
+<script>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
@@ -102,7 +103,7 @@ import leaf from "../icons/leaf.svg";
     document.documentElement.classList.add("dark");
   }
 
-  window.localStorage.setItem("theme", theme);
+  window.localStorage.setItem("theme", theme || "light");
 
   const handleToggleClick = () => {
     const element = document.documentElement;
@@ -114,7 +115,7 @@ import leaf from "../icons/leaf.svg";
 
   document
     .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+    ?.addEventListener("click", handleToggleClick);
 </script>
 
 <style>
@@ -123,7 +124,7 @@ import leaf from "../icons/leaf.svg";
     background: none;
   }
   .sun {
-    fill: black;
+    fill: gray;
   }
   .moon {
     fill: transparent;
