@@ -76,7 +76,7 @@ export function Form() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://yourdomain.co/thanks.html"
+                value="www.infobae.com"
               ></input>
               <input type="hidden" name="_captcha" value="false"></input>
               <legend>

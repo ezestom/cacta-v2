@@ -1,8 +1,9 @@
 ---
 import Container from "./Container.astro";
-import image1 from "../img/agriculture.jpg";
-import image2 from "../img/farm.jpg";
-import image3 from "../img/tractor2.jpg";
+import BlogCard from "./BlogCard.astro";
+import blog1 from "../img/esg.png";
+import blog2 from "../img/cacta.png";
+import blog3 from "../img/blog3.png";
 ---
 
 <div id="blog">
@@ -21,132 +22,28 @@ import image3 from "../img/tractor2.jpg";
       </p>
     </div>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 blog-container">
-      <div
-        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
-      >
-        <div class="relative overflow-hidden rounded-xl">
-          <img
-            src={image1.src}
-            alt="art cover"
-            loading="lazy"
-            width="1000"
-            height="667"
-            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
-          />
-        </div>
-        <div class="mt-6 relative">
-          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-            Buscando la mejor experiencia de usuario.
-          </h3>
-          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            Se empieza por el diseño, la usabilidad y la accesibilidad.
-          </p>
-        </div>
-        <a
-          href="/blog"
-          class="flex items-center justify-center group-hover:text-tertiary text-black dark:text-white font-semibold"
-        >
-          <span class="text-sm">Leer más</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-4 h-4 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-      <div
-        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
-      >
-        <div class="relative overflow-hidden rounded-xl">
-          <img
-            src={image2.src}
-            alt="art cover"
-            loading="lazy"
-            width="1000"
-            height="667"
-            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
-          />
-        </div>
-        <div class="mt-6 relative">
-          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-            La sustentabilidad en el diseño web.
-          </h3>
-          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            Se refleja en la forma en que se construyen los sitios web, desde el
-            diseño hasta el desarrollo.
-          </p>
-        </div>
-        <a
-          href="/blog"
-          class="flex items-center justify-center group-hover:text-tertiary text-black dark:text-white font-semibold"
-        >
-          <span class="text-sm">Leer más</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-4 h-4 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-      <div
-        class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
-      >
-        <div class="relative overflow-hidden rounded-xl">
-          <img
-            src={image3.src}
-            alt="art cover"
-            loading="lazy"
-            width="1000"
-            height="667"
-            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
-          />
-        </div>
-        <div class="mt-6 relative">
-          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-            La importancia del control de calidad y la sustentabilidad.
-          </h3>
-          <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            En el desarrollo de software, el control de calidad es un factor
-            clave para la sustentabilidad.
-          </p>
-        </div>
-        <a
-          href="/blog"
-          class="flex items-center justify-center group-hover:text-tertiary text-black dark:text-white font-semibold"
-        >
-          <span class="text-sm">Leer más</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-4 h-4 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
+      <BlogCard
+        image={blog1}
+        title="Descifrando el Enigma ESG: El Poder y la Promesa de la Sostenibilidad Corporativa"
+        description="Las métricas ambientales, sociales y de gobernanza (habitualmente abreviadas como ESG) existen desde hace más de un siglo. Estos criterios se originaron principalmente por inversores con conciencia social que querían alinear sus inversiones con sus valores y aunque no se tenía conocimiento de cómo hacerlo, Iniciativas como los “Quaker Friends Fiduciary No-sin investments” (1890), son conocidas hoy en día como las semillas del ESG. Si bien estás propuestas tenían excelentes intenciones la falta de un plan de ejecución y una forma eficiente de medir los resultados mantuvieron al mundo por casi todo un siglo sin ningún tipo de avance en relación con la mejora de métricas ambientales y sobre todo de una forma de poder homologar a nivel global la medición sobre la forma en la que nos desenvolvemos como civilización con el planeta. Desafortunadamente tuvieron que suceder múltiples desastres como la falla de Chernóbil (1980), la detección del hoyo en la capa de ozono en (1985) o el desastre de Exxon Valdez en (1989) para que gobiernos, empresarios y activistas entre otros, despertaran realmente esta necesidad de desarrollar una metodología y unos lineamientos para incentivar y corroborar que la manera de hacer negocios pudiese ser más responsable con el planeta. Pareciese que finalmente se estaba comenzando a atender la problemática ambiental, sin embargo, rápidamente comenzaron a brincar cuestiones de otra índole y los expertos identificaron que la solución tenía que ser más integral y contemplar muchos otros aspectos, que de momento no se estaban atendiendo y estaban altamente correlacionados. Durante la década de 1990, con la llegada de la era digital, ahora era posible conocer los problemas sociales de primera mano y sin importar en donde ocurrieran. Conceptos como la responsabilidad social empresarial (RSE o CSR por sus siglas en inglés), comenzaron a considerar su impacto en la sociedad y el medio ambiente, así como sus prácticas de gobierno corporativo. Fue también durante este periodo que se desarrollaron varios estándares y directrices para los informes de sustentabilidad, como la Iniciativa de Reporte Global” GRI”. Entre el año 2000 y el 2010 sucedieron una serie de eventos financieros notables que tuvieron un impacto significativo en la economía global. La burbuja de las puntocom (2001), los fraudes contables de Enron (2001) y Worldcom (2002), La crisis financiera de las hipotecas sub-prime de alto riesgo (2007) provocó la pérdida de puestos de trabajo, la caída de los precios de las acciones y una pérdida generalizada de confianza en el sistema financiero, en las prácticas comerciales responsables. Las lecciones aprendidas de estos eventos ayudaron a dar forma al entorno regulatorio financiero actual y condujeron al desarrollo de nuevos instrumentos y regulaciones no financieras destinadas a prevenir crisis similares en el futuro, pero sobre todo darle un propósito responsable al uso del capital entre la comunidad inversora. El golpe final para poner a lo que conocemos hoy en día como los factores ESG en escena ha sido con la aparición de más y mejores datos además de una mayor comprensión de las presiones ambientales y sociales de la modernidad pero que hoy en día, pueden ser reguladas y legitimadas gracias al desarrollo de instrumentos financieros que a su vez están al alcance de la comunidad inversora.Muchos inversionistas y administradores de activos ahora consideran los factores ESG cuando toman decisiones de inversión, y muchas empresas están incorporando consideraciones ESG en sus estrategias comerciales y prácticas de informes. Los datos ambientales, sociales y de gobernanza (ESG) tienden a capturar factores extra financieros que tradicionalmente estaban ausentes en el análisis financiero: gestión empresarial del uso de energía y agua, generación de residuos, derechos de los empleados y condiciones laborales, participación de la comunidad, derechos de privacidad de datos y más. Indicadores tradicionales de responsabilidad corporativa y transparencia. Hoy en día, ESG se considera clave en la evaluación del rendimiento financiero y la sostenibilidad a largo plazo de una empresa que comercia pública e internacionalmente. Se ha convertido en una parte integral del proceso de inversión, y cada vez más empresas reconocen la necesidad de abordar los problemas de ESG para cumplir con las expectativas de sus grupos de interés y mejorar su desempeño general. En pocas palabras como comenta Rochelle March Head of ESG Product de Dun & Bradstreet ”ESG resume casi todo lo que puede reflejar cómo operan las empresas dentro de la sociedad y el medio ambiente, y si ese modo de operación es sostenible y responsable”"
+      />
+      <BlogCard
+        image={blog2}
+        title="Desentrañando el Motor Verde: La Magia detrás del Funcionamiento de Cacta"
+        description="Todos conocemos el impacto del cambio climático en el planeta. Pero… ¿Sabías que el sistema agrícola representa casi un tercio (31%) de las emisiones de carbono mundiales? Y esto es sólo la punta del iceberg. Nuestro planeta ya sobrepasa los límites definidos para otras categorías como la pérdida de biodiversidad o el agotamiento de recursos. En Cacta, entendemos la magnitud del problema y la necesidad de tomar medidas para reducir nuestro impacto y mejorar nuestra relación con el ambiente por eso hemos diseñado una herramienta pionera de gestión ambiental diseñada exclusivamente para el sector agropecuario. Es la primera en su tipo, capaz de fusionar información productiva con indicadores de impacto ambiental respaldados por la ciencia. La herramienta se compone de tres módulos: El primero (A), se centra en la extracción de datos de los clientes agropecuarios de manera semiautomática mediante la integración a sus sistemas de gestión. En el segundo módulo (B), nos concentramos en clasificar y transformar la información en un inventario de emisiones ambientales para cada cliente. Utilizamos la metodología de Análisis de Ciclo de Vida (LCA) según la normativa ISO 14040/44, siguiendo estándares europeos para calcular la fase de inventario. Durante esta etapa contemplamos desde la producción de distintos insumos y energías hasta su aplicación en el campo, teniendo en cuenta factores locales como el pH del suelo. El tercer módulo (C) se enfoca en traducir esta información en indicadores de impacto ambiental, siguiendo las recomendaciones de la Comisión Europea. Presentamos estos indicadores de manera visual en tableros interactivos y tarjetas de información de producto. Además, la herramienta incluye un benchmark 1 y un Eco Score. Alcance: La actual versión de Cacta Agro se enfoca en la determinación de los impactos ambientales asociados a la producción de cultivos agrícolas desde “la cuna” hasta “la tranquera”. Esto implica el cómputo del inventario desde la generación de materias primas y energías hasta la cosecha del producto. Al extraer la información directamente de las diversas actividades, asociamos el uso de insumos o maquinaria a cada lote y cultivo en particular. Para los casos que no sea posible se aplica el método de asignación (allocation) por masa. Para el caso particular de horas de maquinaria utilizamos la ponderación por área."
+      />
+      <BlogCard
+        image={blog3}
+        title="Transformando el mundo: Descubre los Objetivos de Desarrollo Sostenible."
+        description="El 25 de septiembre de 2015, los líderes mundiales adoptaron un conjunto de objetivos globales para erradicar la pobreza, proteger el planeta y asegurar la prosperidad para todos como parte de una nueva agenda de desarrollo sostenible. Cada objetivo tiene metas específicas que deben alcanzarse en los próximos 15 años (2030) Por tanto, los Objetivos de Desarrollo Sostenible se han acordado por todos los gobiernos. Sin embargo, el éxito de ellos dependerá de las acciones que lleven a cabo todos, tanto empresas como gobierno. Los ODS ofrecen la oportunidad para desarrollar e implementar soluciones y tecnologías desde el empresariado, lo que permite realizar los retos más grandes que se han establecido en cuanto a desarrollo sostenible. A su vez, estos forman parte de una agenda global para el desarrollo de nuestras sociedades. Con ellos se establece que las empresas líderes del mercado deben demostrar que los negocios que realizan ayudan a dirigirnos hacia un desarrollo sostenible. A pesar de que pudiera parecer complejo alinearse a dichos objetivos, la verdad de las cosas es que no lo es. Es cosa de realizar una profunda evaluación de materialidad, identificar los procesos productivos dentro de las empresas y obtener una trazabilidad clara y confiable. Las Naciones Unidas aseguran que existen beneficios clave al generar una alineación a los objetivos de desarrollo sostenible, entre ellos: Mejorar la eficiencia operativa a lo largo de la cadena de suministros, fortalecer las relaciones con clientes, consumidores y proveedores, así como reducir los riesgos ambientales y de seguridad e higiene."
+      />
     </div>
+    <style>
+      .blog-container {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 40%;
+      }
+    </style>
   </Container>
 </div>
-<style>
-  .blog-container {
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
-  }
-</style>

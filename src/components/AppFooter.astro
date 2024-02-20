@@ -7,9 +7,10 @@ import linkedin from "../icons/linkedin.svg";
 import youtube from "../icons/youtube.svg";
 import instagram from "../icons/instagram.svg";
 import twiter from "../icons/twitter.svg";
+import team from "../icons/team.svg";
 ---
 
-<footer class="mb-3 dark:text-white">
+<footer class="mb-3 dark:text-white" id="footer">
   <section
     class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-between w-full items-center md:w-[65%] m-auto"
   >
@@ -38,35 +39,59 @@ import twiter from "../icons/twitter.svg";
           <p class="text-center">All rights reserved.</p>
         </div>
       </article>
-      <ThemeToggle />
+      <!-- <ThemeToggle /> -->
     </div>
     <article class="">
       <ul role="list" class="flex gap-2">
         <li>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/cactaeco/"
             target="_blank"
-            class="flex items-center space-x-3 transition  "
+            class="flex items-center space-x-3 transition"
           >
-            <img class="w-5 h-5 opacity-50" src={linkedin.src} alt="linkedin-icon" />
+            <img
+              class="w-5 h-5 opacity-50"
+              src={linkedin.src}
+              alt="linkedin-icon"
+            />
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="https://twitter.com/elonmusk"
             target="_blank"
-            class="flex items-center space-x-3 transition  "
+            class="flex items-center space-x-3 transition"
           >
-            <img class="w-5 h-5 opacity-50" src={twiter.src} alt="twitter-icon" />
+            <img
+              class="w-5 h-5 opacity-50"
+              src={twiter.src}
+              alt="twitter-icon"
+            />
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="https://www.instagram.com/leomessi/"
             target="_blank"
-            class="flex items-center space-x-3 transition  "
+            class="flex items-center space-x-3 transition"
           >
-            <img class="w-5 h-5 opacity-50" src={instagram.src} alt="instagram-icon" />
+            <img
+              class="w-5 h-5 opacity-50"
+              src={instagram.src}
+              alt="instagram-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="/the-great-team"
+            class="flex items-center space-x-3 transition"
+          >
+            <img
+              class="w-5 h-5 opacity-50"
+              src={team.src}
+              alt="instagram-icon"
+            />
           </a>
         </li>
       </ul>

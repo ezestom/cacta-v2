@@ -61,10 +61,11 @@ import leaf from "../icons/leaf.svg";
 
   // Escucha los cambios en el store y muestra/oculta el diálogo en consecuencia
   isOpen.subscribe((open) => {
-    if (open) {
-      document.getElementById("dialog").style.display = "block";
+    const dialogElement = document.getElementById("dialog");
+    if (dialogElement) {
+      dialogElement.style.display = open ? "block" : "none";
     } else {
-      document.getElementById("dialog").style.display = "none";
+      console.error("No se encontró ningún elemento con el ID 'dialog'");
     }
   });
 </script>
