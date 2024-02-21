@@ -13,7 +13,7 @@ import team from "../icons/team.svg";
 <footer class="mb-3 dark:text-white" id="footer">
   <Container>
     <section
-      class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-between w-full items-center m-auto"
+      class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-center md:justify-between w-full items-center m-auto flex-wrap gap-2"
     >
       <article class="opacity-75 flex gap-3 items-center">
         <a
@@ -32,7 +32,9 @@ import team from "../icons/team.svg";
         </a>
       </article>
       <div class="flex gap-1 md:gap-10 items-center">
-        <article class="flex text-sm flex-col opacity-75 tracking-tighter">
+        <article
+          class="flex items-center space-x-3 transition px-4 py-1 rounded-xl dark:bg-slate-600 border border-transparent dark:border-slate-500 text-sm tracking-tighter opacity-75"
+        >
           <div>
             <p class="flex items-center gap-1 text-center">
               <span><img src={logo.src} alt="logo icon" class="w-8" /></span>©
