@@ -8,13 +8,14 @@ import CallToAction from "../components/CallToAction.astro";
 import Blog from "../components/BlogSection.astro";
 import Us from "../components/Us.astro";
 import Contact from "../components/Contact.astro";
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro";
 ---
 
 <Layout title="Bienvenido a Cacta">
-
+  <AppHeader />
   <main class="space-y-40 mb-40">
     <HeroSection />
-
     <Solutions />
     <Features />
     <WhyCacta />
@@ -23,4 +24,5 @@ import Contact from "../components/Contact.astro";
     <Contact />
     <Blog />
   </main>
+  <AppFooter />
 </Layout>

@@ -1,20 +1,22 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { AstroFont } from "astro-font";
-import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Cacta Eco Software" />
+    <meta name="author" content="Cacta Software" />
     <meta name="theme-color" content="#007d67" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/public/logo.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="Cacta Eco Software" content="Cacta Eco Software" />
+    <meta
+      name="Cacta Eco Software"
+      content="Cacta Software de sustentabilidad"
+    />
+    <link rel="canonical" href="https://www.cacta.eco/" />
     <meta
       title="Cacta Eco - Software para automatizar, calcular y reportar el impacto ambiental de tu empresa."
       content="Cacta Eco Software"
@@ -31,13 +33,13 @@ import AppHeader from "../components/AppHeader.astro";
     <meta property="og:url" content="https://ezestom.github.io/portfolio/" />
     <meta property="og:image" content="/public/logo.png" />
 
-    <title>Cacta Software</title>
+    <title>Cacta Software de sustentabilidad</title>
     <ViewTransitions />
     <AstroFont
       config={[
         {
           src: [],
-          name: "Cacta Eco Software",
+          name: "Cacta Software",
           preload: true,
           display: "swap",
           selector: "html",
@@ -49,9 +51,7 @@ import AppHeader from "../components/AppHeader.astro";
     />
   </head>
   <body class="bg-white dark:bg-gray-900">
-    <AppHeader />
     <slot />
-    <AppFooter />
 
     <!-- start free btn -->
     <!-- <div class="fixed inset-x-6 bottom-6 z-40 mx-auto w-max">
@@ -67,31 +67,32 @@ import AppHeader from "../components/AppHeader.astro";
         >
       </a>
     </div> -->
-
-    <style>
-      :root {
-        --gradient1: linear-gradient(220.55deg, #00ff9a 0%, #007d67 100%);
-        --gradient2: linear-gradient(220.55deg, #ff3e57 0%, #ffb979 100%);
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-      }
-      @keyframes reveal {
-        from {
-          opacity: 0.2;
-          scale: 0.8;
-          translate: 0 10%;
-        }
-      }
-      /* view transition Api */
-      ::view-transition-new(root),
-      ::view-transition-old(root) {
-        animation-duration: .3s;
-      }
-    </style>
   </body>
-</html>
+  </html>
+
+  
+  <style>
+    :root {
+      --gradient1: linear-gradient(220.55deg, #00ff9a 0%, #007d67 100%);
+      --gradient2: linear-gradient(220.55deg, #ff3e57 0%, #ffb979 100%);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+    }
+    @keyframes reveal {
+      from {
+        opacity: 0.2;
+        scale: 0.8;
+        translate: 0 10%;
+      }
+    }
+    /* view transition Api */
+    ::view-transition-new(root),
+    ::view-transition-old(root) {
+      animation-duration: 0.3s;
+    }
+  </style>
