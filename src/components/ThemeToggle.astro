@@ -2,7 +2,7 @@
 import leaf from "../icons/leaf.svg";
 ---
 
-<dialog
+<!-- <dialog
   open
   id="dialog"
   class="fixed bottom-0 w-screen h-screen flex justify-center flex-col items-center m-auto"
@@ -69,8 +69,7 @@ import leaf from "../icons/leaf.svg";
       console.error("No se encontró ningún elemento con el ID 'dialog'");
     }
   });
-</script>
-
+</script> -->
 <button id="themeToggle">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
@@ -123,11 +122,11 @@ import leaf from "../icons/leaf.svg";
 
 <style>
   #themeToggle {
-    border: 0;
+    padding: 0.25rem;
   }
   .dark {
     background: rgb(71 85 105);
-    border-radius: 1rem;
+    border-radius: .75rem;
     padding: 0.25rem;
     outline: 1px solid rgb(100 116 139 / 0.9);
   }
@@ -143,6 +142,7 @@ import leaf from "../icons/leaf.svg";
     fill: transparent;
   }
   :global(.dark) .moon {
-    fill: white;
+    fill: black;
+    opacity: 0.5;
   }
 </style>

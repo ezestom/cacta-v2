@@ -6,6 +6,7 @@ import quote2 from "../icons/quote2.svg";
 ---
 
 <div class="relative py-16" id="contact">
+  <!-- background -->
   <div
     aria-hidden="true"
     class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
@@ -19,16 +20,22 @@ import quote2 from "../icons/quote2.svg";
     >
     </div>
   </div>
+  <div
+    class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] "
+  >
+  </div>
+  <!-- background -->
+
   <Container>
     <div class="relative">
       <img
         src={quote1.src}
-        class="absolute opacity-30 -top-12 md:-top-3 w-12 -left-6 md:left-52"
+        class="absolute opacity-30 -top-14 md:-top-6 w-16 -left-6 md:left-48"
         alt="icon quote"
       />
       <img
         src={quote2.src}
-        class="absolute opacity-30 top-16 md:top-8 w-12 -right-6 md:right-52"
+        class="absolute opacity-30 top-24 md:top-6 w-16 -right-6 md:right-48"
         alt="icon quote"
       />
       <div

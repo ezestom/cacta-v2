@@ -9,24 +9,24 @@ export function BlogCard2({ image, title, description }) {
     setIsOpen(true);
     console.log("open");
     // stop scroll
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   };
   const closeDialog = () => {
     setIsOpen(false);
     // enable scroll
-    // document.body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
   };
 
   return (
     <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-      <div class="relative overflow-hidden rounded-xl">
+      <div class="relative overflow-hidden rounded-xl ">
         <img
           src={image.src}
           alt="art cover"
           loading="lazy"
           width="1000"
           height="667"
-          class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105 "
         />
       </div>
       <div class="mt-6 relative">
@@ -57,15 +57,15 @@ export function BlogCard2({ image, title, description }) {
       </button>
 
       {isOpen && (
-        <section class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
-          <article class="relative w-full max-w-4xl p-4 md:p-12 bg-white rounded-xl overflow-y-scroll max-h-[95%] ">
-            <button
-              onClick={closeDialog}
-              class="absolute top-0 right-0 p-3 bg-black/80 rounded-xl rounded-t-none rounded-e-none hover:bg-black/60 transition duration-300"
-            >
-              <img src={close.src} alt="close" />
-            </button>
+        <section class="fixed inset-0 z-50  items-center justify-center bg-black bg-opacity-50 flex flex-col ">
+          <article class="relative w-full max-w-4xl p-4 md:p-12 bg-white rounded-xl overflow-y-scroll max-h-[99%] ">
             <div class="relative overflow-hidden rounded-xl">
+              <button
+                onClick={closeDialog}
+                class="w-fit fixed top-0 right-0 p-2 bg-black rounded-xl rounded-e-none rounded-t-none hover:bg-black/60 transition duration-300 z-80"
+              >
+                <img src={close.src} alt="close" />
+              </button>
               <img
                 src={image.src}
                 alt="art cover"
