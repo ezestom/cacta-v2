@@ -4,199 +4,202 @@ import juan from "../img/juan.jpg";
 import maxi from "../img/maxi.jpg";
 import luciano from "../img/luciano.jpg";
 import jose from "../img/jose.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<section class="relative">
-  <!-- background -->
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20 -z-10"
-  >
+<Layout title="Cacta Team">
+  <section class="relative">
+    <!-- background -->
     <div
-      class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+      aria-hidden="true"
+      class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20 -z-10"
     >
-    </div>
-    <div
-      class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-    >
-    </div>
-  </div>
-  <div class="absolute">
-    <div
-      class="-z-10 fixed h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-    >
-    </div>
-  </div>
-  <!-- background -->
-
-  <aside class="absolute w-full h-full m-auto">
-    <h2
-      class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center py-5  flex items-end justify-center gap-2"
-    >
-      <img src={logo.src} class="w-40" alt="logo-cacta" /> team
-    </h2>
-    <p
-      class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 text-balance"
-    >
-      Somos un equipo de profesionales con experiencia en el ámbito de la
-      consultoría y la gestión de proyectos. Nuestro objetivo es brindar
-      soluciones innovadoras y eficientes a nuestros clientes.
-      <div class="box">
-        <div class="card">
-          <div class="imgBox">
-            <img src={luciano.src} alt="some image" />
-          </div>
-          <div class="details">
-            <h3>
-              Luciano Sambataro <br /><span
-                >Maestría en Cs. de Ingeniería Civil</span
-              ><br /><span>Darmstadt, Alemania</span>
-            </h3>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src={maxi.src} alt="some image" />
-          </div>
-          <div class="details">
-            <h3>
-              Maxi Hense <br /><span>Ingeniero Industrial</span><br /><span
-                >Europa - América</span
-              >
-            </h3>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src={jose.src} alt="some image" />
-          </div>
-          <div class="details">
-            <h3>
-              José Luis Cebe <br /><span>Maestría Derecho Empresarial</span><br
-              /><span>Tucumán, Argentina</span>
-            </h3>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src={juan.src} alt="some image" />
-          </div>
-          <div class="details">
-            <h3>
-              Juan Pablo Tena <br /><span>Maestría en Finanzas</span><br /><span
-                >Europa - América</span
-              >
-            </h3>
-          </div>
-        </div>
-      </div>
-    </p>
-    <span class="absolute top-5 right-5">
-      <a
-        href="/#footer"
-        class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+      <div
+        class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
       >
-        <span
-          class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-        ></span>
-        <span
-          class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
+      </div>
+      <div
+        class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
+      >
+      </div>
+    </div>
+    <div class="absolute">
+      <div
+        class="-z-10 fixed h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+      >
+      </div>
+    </div>
+    <!-- background -->
+
+    <aside class="absolute w-full h-full m-auto">
+      <h2
+        class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center py-5 flex items-end justify-center gap-2"
+      >
+        <img src={logo.src} class="w-40" alt="logo-cacta" /> team
+      </h2>
+      <p
+        class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 text-balance"
+      >
+        Somos un equipo de profesionales con experiencia en el ámbito de la
+        consultoría y la gestión de proyectos. Nuestro objetivo es brindar
+        soluciones innovadoras y eficientes a nuestros clientes.
+        <div class="box">
+          <div class="card">
+            <div class="imgBox">
+              <img src={luciano.src} alt="some image" />
+            </div>
+            <div class="details">
+              <h3>
+                Luciano Sambataro <br /><span
+                  >Maestría en Cs. de Ingeniería Civil</span
+                ><br /><span>Darmstadt, Alemania</span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBox">
+              <img src={maxi.src} alt="some image" />
+            </div>
+            <div class="details">
+              <h3>
+                Maxi Hense <br /><span>Ingeniero Industrial</span><br /><span
+                  >Europa - América</span
+                >
+              </h3>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBox">
+              <img src={jose.src} alt="some image" />
+            </div>
+            <div class="details">
+              <h3>
+                José Luis Cebe <br /><span>Maestría Derecho Empresarial</span
+                ><br /><span>Tucumán, Argentina</span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBox">
+              <img src={juan.src} alt="some image" />
+            </div>
+            <div class="details">
+              <h3>
+                Juan Pablo Tena <br /><span>Maestría en Finanzas</span><br
+                /><span>Europa - América</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </p>
+      <span class="absolute top-5 right-5">
+        <a
+          href="/#footer"
+          class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
         >
-          Volver
-        </span>
-      </a>
-    </span>
-  </aside>
+          <span
+            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+          ></span>
+          <span
+            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
+          >
+            Volver
+          </span>
+        </a>
+      </span>
+    </aside>
 
-  <style>
-    body {
-      min-height: 100vh;
-    }
+    <style>
+      body {
+        min-height: 100vh;
+      }
 
-    .box {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 2rem;
-      row-gap: 2rem;
-    }
+      .box {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem;
+        row-gap: 2rem;
+        margin-block: 2rem;
+      }
 
-    .card {
-      position: relative;
-      width: 300px;
-      height: 400px;
-      background: #ffffff;
-      border-radius: 3px;
-      margin: 0 auto;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 3rem;
-    }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #ffffff;
+        border-radius: 3px;
+        margin: 0 auto;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 3rem;
+      }
 
-    .card::before,
-    .card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 3px;
-      background: #ffffff;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-      z-index: -1;
-      transition: 0.5s;
-      border-radius: 3rem;
-    }
+      .card::before,
+      .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        background: #ffffff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        z-index: -1;
+        transition: 0.5s;
+        border-radius: 3rem;
+      }
 
-    .card:hover::after {
-      transform: rotate(10deg);
-    }
+      .card:hover::after {
+        transform: rotate(10deg);
+      }
 
-    .card:hover::before {
-      transform: rotate(20deg);
-    }
+      .card:hover::before {
+        transform: rotate(20deg);
+      }
 
-    .card .imgBox {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      z-index: 1;
-      transition: 0.5s;
-    }
+      .card .imgBox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1;
+        transition: 0.5s;
+      }
 
-    .card:hover .imgBox {
-      bottom: 75px;
-    }
+      .card:hover .imgBox {
+        bottom: 75px;
+      }
 
-    .card .imgBox img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 3rem;
-    }
+      .card .imgBox img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 3rem;
+      }
 
-    .card .details {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      height: 68px;
-      text-align: center;
-    }
+      .card .details {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 70px;
+        text-align: center;
+      }
 
-    .card .details h3 span {
-      font-weight: 400;
-      font-size: 15px;
-      color: #0dac4f;
-    }
-  </style>
-</section>
+      .card .details h3 span {
+        font-weight: 400;
+        font-size: 1rem;
+        color: #0dac4f;
+      }
+    </style>
+  </section>
+</Layout>

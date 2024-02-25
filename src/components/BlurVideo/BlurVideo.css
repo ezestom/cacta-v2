@@ -17,9 +17,6 @@ figure:hover {
   cursor: crosshair;
 }
 @media (width < 768px) {
-  .article-video {
-    display: none;
-  }
   .app-video {
     width: 100%;
   }

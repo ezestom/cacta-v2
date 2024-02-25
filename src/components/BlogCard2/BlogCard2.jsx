@@ -62,7 +62,7 @@ export function BlogCard2({ image, title, description }) {
             <div class="relative overflow-hidden rounded-xl">
               <button
                 onClick={closeDialog}
-                class="w-fit fixed top-0 right-0 p-2 bg-black rounded-xl rounded-e-none rounded-t-none hover:bg-black/60 transition duration-300 z-80"
+                class="w-fit fixed top-0 right-0 p-2 bg-black rounded-xl rounded-e-none rounded-t-none hover:scale-105  transition duration-300 z-80"
               >
                 <img src={close.src} alt="close" />
               </button>

@@ -26,16 +26,18 @@ export function Form() {
         ¿Preparado para comenzar?{" "}
       </h2>
       <div className="flex w-full items-center justify-center">
+        {/* img stas */}
         <a
           href="https://librecounter.org/referer/show"
           target="_blank"
-          className="w-1"
+          className="w-2 absolute bottom-5 mx-auto ml-7 "
         >
           <img
             src="https://librecounter.org/counter.svg"
             referrerPolicy="unsafe-url"
           />
         </a>
+        {/* img stas */}
         <hr className="hr-contact  bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
       </div>
       <span className="flex btn-form">
@@ -73,11 +75,7 @@ export function Form() {
               method="POST"
               action="https://formsubmit.co/ezequielstom@gmail.com"
             >
-              <input
-                type="hidden"
-                name="_next"
-                value="www.infobae.com"
-              ></input>
+              <input type="hidden" name="_next" value="www.infobae.com"></input>
               <input type="hidden" name="_captcha" value="false"></input>
               <legend>
                 <a
