@@ -1,12 +1,14 @@
 ---
-import { CardZoom2 } from "../components/CardZoom/CardZoom2.jsx";
-import image1 from "../img/img-calculation-1.webp";
-import video1 from "../video/video-calculation-1.mp4";
-import eco from "../icons/eco.svg";
+import { CardZoom2 } from "../components/CardZoom/CardZoom2";
+import image3 from "../img/img-declarations-3.webp";
+import video1 from "../video/video-declaration-3.mp4";
+import one from "../icons/one.svg";
+import two from "../icons/two.svg";
 import Layout from "../layouts/Layout.astro";
+import image2 from "../img/img-calculation-1.webp";
 ---
 
-<Layout title="Cáclculo ambiental 🌿">
+<Layout title="Reportes EPD 🍃">
   <section class="w-screen h-full md:h-screen flex items-center justify-center">
     <div
       aria-hidden="true"
@@ -27,15 +29,27 @@ import Layout from "../layouts/Layout.astro";
       >
       </div>
     </div>
-    <aside class="my-20 md:my-0">
-      <CardZoom2
-        icon={eco.src}
-        client:visible
-        image={image1.src}
-        title="CALCULO MEDIOAMBIENTAL"
-        description={`Vista 360º | Toda tu información centralizada en una sola pantalla, permitiendo identificar de forma sencilla los principales contribuyentes de tu huella ambiental: ☑Cambio climático ☑Biodiversidad ☑Salud humana ☑Agotamiento de recursos`}
-        video1={video1}
-      />
+    <aside class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0">
+      <div class="translate-y-0 md:-translate-y-8">
+        <CardZoom2
+          icon={one.src}
+          client:visible
+          image={image2.src}
+          title="Eco Score"
+          description="Engloba el impacto ambiental de tu empresa en un único indicador de performance. Calculado a partir de benchmarks internacionales, comunica el progreso de tu operación de manera fácil y confiable."
+          video1=""
+        />
+      </div>
+      <div class="translate-y-0 md:translate-y-8">
+        <CardZoom2
+          icon={two.src}
+          client:visible
+          image={image2.src}
+          title="Declaraciones ambientales de producto"
+          description="Cambiar imagen del pdf por algo más vistoso (Lucho hace ejemplo.  Activa tu cadena de valor y posiciona tu producto. Las declaración ambiental de producto, o EPD por su sigla en inglés, proporcionan información detallada sobre el ciclo de vida ambiental de tu actividad. Siguiendo la normativa ISO-14025, este es tu pasaporte ambiental al mundo."
+          video1=""
+        />
+      </div>
     </aside>
     <a
       href="/#features"
