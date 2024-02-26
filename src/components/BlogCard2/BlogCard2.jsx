@@ -39,7 +39,7 @@ export function BlogCard2({ image, title, description }) {
       </div>
       <button
         onClick={openDialog}
-        class="flex items-center justify-center w-full group-hover:text-tertiary text-black dark:text-white font-semibold mt-4"
+        class="flex items-center justify-center w-full group-hover:text-tertiary text-black dark:text-white font-semibold mt-4 transition hover:scale-105"
       >
         <span class="text-sm ">Leer más</span>
         <svg

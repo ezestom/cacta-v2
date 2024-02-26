@@ -12,8 +12,10 @@ const { title, description, image, href } = Astro.props;
 <div
   class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
 >
-  <div class="relative space-y-8 py-4 md:py-12 p-4 text-center flex justify-center flex-col items-center">
-    <img src={image} class="w-10 " alt="burger illustration" />
+  <div
+    class="relative space-y-8 py-4 md:py-12 p-4 text-center flex justify-center flex-col items-center"
+  >
+    <img src={image} class="w-10" alt="burger illustration" />
 
     <div class="space-y-2">
       <h5
@@ -27,9 +29,9 @@ const { title, description, image, href } = Astro.props;
     </div>
     <a
       href={href}
-      class="flex items-center justify-between group-hover:text-tertiary"
+      class="flex items-center justify-between group-hover:text-tertiary transition hover:scale-105 font-bold"
     >
-      <span class="text-sm font-semibold">Leer más</span>
+      <span class="text-sm ">Leer más</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
