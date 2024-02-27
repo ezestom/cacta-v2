@@ -4,7 +4,6 @@ import Container from "./Container.astro";
 import leaf from "../icons/leaf.svg";
 import shield from "../icons/shield.svg";
 import eco from "../icons/eco.svg";
-import { fade } from "astro:transitions";
 ---
 
 <div id="features" class="py-20 relative">
@@ -35,12 +34,12 @@ import { fade } from "astro:transitions";
         href="/environmental-calculation"
         id="environmentalCalculation"
       />
-      <Card image={shield.src} title="Análisis y gestión" href="/analysis-and-management" />
       <Card
-        image={leaf.src}
-        title="Reportes EPD"
-        href="/epd-reports"
+        image={shield.src}
+        title="Análisis y gestión"
+        href="/analysis-and-management"
       />
+      <Card image={leaf.src} title="Reportes EPD" href="/epd-reports" />
     </div>
   </Container>
 </div>
@@ -52,7 +51,7 @@ import { fade } from "astro:transitions";
         rgba(0, 0, 0, 0.3) 0%,
         rgba(0, 0, 0, 0.1) 100%
       ),
-      url("../img/farm2.jpg");
+      url("../img/farm2.webp");
     background-size: cover;
     background-position: center;
     animation: reveal2 linear both;

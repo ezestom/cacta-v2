@@ -6,12 +6,12 @@ import { Toaster, toast } from "sonner";
 export function Form() {
   const [dialog, setDialog] = useState(false);
 
-  useEffect(() => {
-    if (isMessageSucces()) {
-      toast("¡Formulario enviado con éxito!");
-      closeDialog();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (isMessageSucces()) {
+  //     toast("¡Formulario enviado con éxito!");
+  //     closeDialog();
+  //   }
+  // }, []);
 
   const openDialog = () => {
     setDialog(true);
@@ -25,9 +25,9 @@ export function Form() {
     document.getElementById("navbar").style.display = "flex";
   };
 
-  const isMessageSucces = () => {
-    return window.location.search.includes("success=true");
-  };
+  // const isMessageSucces = () => {
+  //   return window.location.search.includes("success=true");
+  // };
 
   return (
     <div className="relative form-container z-10 m-auto">
@@ -82,8 +82,13 @@ export function Form() {
               method="POST"
               action="https://formsubmit.co/ezequielstom@gmail.com"
             >
-              <input type="hidden" name="_next" value="www.infobae.com"></input>
-              <input type="hidden" name="_captcha" value="false"></input>
+              <input type="hidden" name="_subject" value="New submission!" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://cacta-v2.vercel.app/"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               <legend>
                 <a
                   className="flex justify-center my-2"

@@ -1,10 +1,7 @@
 ---
 import { CardZoom2 } from "../components/CardZoom/CardZoom2";
-import image3 from "../img/img-declarations-3.webp";
-import video1 from "../video/video-declaration-3.mp4";
-import one from "../icons/one.svg";
-import two from "../icons/two.svg";
 import Layout from "../layouts/Layout.astro";
+import eco from "../img/eco.webp";
 import image2 from "../img/img-calculation-1.webp";
 ---
 
@@ -29,11 +26,13 @@ import image2 from "../img/img-calculation-1.webp";
       >
       </div>
     </div>
-    <aside class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0">
+    <aside
+      class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0 gap-6 px-0 md:px-12"
+    >
       <CardZoom2
         icon=""
         client:visible
-        image={image2.src}
+        image={eco.src}
         title="Eco Score"
         description="Engloba el impacto ambiental de tu empresa en un único indicador de performance. Calculado a partir de benchmarks internacionales, comunica el progreso de tu operación de manera fácil y confiable."
         video1=""
