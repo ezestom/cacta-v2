@@ -25,16 +25,16 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
 
   return (
     <section className="max-w-screen w-full  h-max-full md:max-h-screen ">
-      <div className="  flex-wrap  flex  justify-center items-strech  gap-5 px-2  md:p-0 w-full">
-        <div className=" rounded-[3rem] border border-gray-100  bg-white/30 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/40 dark:shadow-none backdrop-blur-xl p-4   w-full max-w-md min-h-[550px]  ">
-          <img src={icon} alt="icon" className="w-10 absolute top-3 right-3" />
+      <div className="  flex-wrap  flex justify-center items-strech  gap-5 px-2  md:p-0 w-full">
+        <div className=" rounded-[3rem] border border-gray-100  bg-white/30 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/40 dark:shadow-none backdrop-blur-xl px-4 py-8  w-full max-w-md min-h-[625px] ">
+          {/* <img src={icon} alt="icon" className="w-10 absolute top-3 right-3" /> */}
           <div className="mx-auto h-full flex justify-around flex-col items-center text-start lg:text-left ">
             <header className="w-full ">
-              <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
+              <h2 className="text-xl font-bold text-gray-900 sm:text-2xl uppercase">
                 {title}
               </h2>
             </header>
-            <p className="mt-4  text-gray-500 text-pretty">{description}</p>
+            <p className="mt-4  text-gray-500 text-pretty ">{description}</p>
 
             <div className="flex items-center flex-col justify-center">
               <img

@@ -1,50 +1,57 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import x from "../../icons/x.svg";
 import "./Form.css";
+import { Toaster, toast } from "sonner";
 
 export function Form() {
   const [dialog, setDialog] = useState(false);
 
+  useEffect(() => {
+    if (isMessageSucces()) {
+      toast("¡Formulario enviado con éxito!");
+      closeDialog();
+    }
+  }, []);
+
   const openDialog = () => {
     setDialog(true);
-    // hacer funcion para bloquear scroll
     document.body.style.overflow = "hidden";
     document.getElementById("navbar").style.display = "none";
   };
 
   const closeDialog = () => {
     setDialog(false);
-    // hacer funcion para desbloquear scroll
     document.body.style.overflow = "auto";
     document.getElementById("navbar").style.display = "flex";
   };
 
+  const isMessageSucces = () => {
+    return window.location.search.includes("success=true");
+  };
+
   return (
-    <div className="relative form-container  z-10 m-auto  ">
-      <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle ">
-        {" "}
-        ¿Preparado para comenzar?{" "}
+    <div className="relative form-container z-10 m-auto">
+      <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle">
+        ¿Preparado para comenzar?
       </h2>
       <div className="flex w-full items-center justify-center">
-        {/* img stas */}
         <a
           href="https://librecounter.org/referer/show"
           target="_blank"
-          className="w-2 absolute bottom-5 mx-auto ml-7 "
+          className="w-2 absolute bottom-5 mx-auto ml-7"
         >
           <img
             src="https://librecounter.org/counter.svg"
             referrerPolicy="unsafe-url"
           />
         </a>
-        {/* img stas */}
-        <hr className="hr-contact  bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
+        <hr className="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
       </div>
       <span className="flex btn-form">
         <a
-          className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+          className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
           href="#open-dialog"
-          onClick={openDialog} // Usar la función openDialog aquí
+          onClick={openDialog}
           id="open-dialog"
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -68,7 +75,7 @@ export function Form() {
         </a>
       </span>
 
-      {dialog && ( // Mostrar el diálogo solo cuando dialog es true
+      {dialog && (
         <dialog open>
           <div className="form-container-dialog">
             <form
@@ -83,8 +90,6 @@ export function Form() {
                   href="/#contact"
                   onClick={closeDialog}
                 >
-                  {" "}
-                  {/* Usar la función closeDialog aquí */}
                   <img
                     className="bg-black/30 rounded-xl p-2 hover:bg-black/20 transition "
                     src={x.src}

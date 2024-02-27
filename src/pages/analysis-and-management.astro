@@ -28,39 +28,33 @@ import Layout from "../layouts/Layout.astro";
       >
       </div>
     </div>
-    <aside
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  my-20 md:my-0"
-    >
-      <div class="translate-y-0 md:-translate-y-8">
-        <CardZoom2
-          icon={one.src}
-          client:visible
-          image={image2.src}
-          title="Performance por KPI"
-          description="Identifica las acciones necesarias a través del análisis de contribución detallado. Obtén información transparente del efecto de tus insumos en el ecosistema."
-          video1=""
-        />
-      </div>
-      <div class="">
-        <CardZoom2
-          icon={two.src}
-          client:visible
-          image={image2.src}
-          title="Cadena de valor"
-          description="En Cacta entendemos que la sustentabilidad es una misión conjunta. Por eso hemos desagregado los indicadores de impacto en la contribución de cada actor en tu cadena de valor para que puedas reportar siguiendo los estándares internacionales."
-          video1=""
-        />
-      </div>
-      <div class="translate-y-0 md:translate-y-8">
-        <CardZoom2
-          icon={three.src}
-          client:visible
-          image={image2.src}
-          title="Gestión de iniciativas"
-          description="Genera iniciativas, haz el seguimiento y analiza tus resultados a través de nuestro panel de gestión. Comunica tu plan de acción con los miembros de tu empresa."
-          video1=""
-        />
-      </div>
+    <aside class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-20 md:my-0">
+      <CardZoom2
+        icon=""
+        client:visible
+        image={image2.src}
+        title="Performance por KPI"
+        description="Identifica las acciones necesarias a través del análisis de contribución detallado. Obtén información transparente del efecto de tus insumos en el ecosistema."
+        video1=""
+      />
+
+      <CardZoom2
+        icon={two.src}
+        client:visible
+        image={image2.src}
+        title="Cadena de valor"
+        description="En Cacta entendemos que la sustentabilidad es una misión conjunta. Por eso hemos desagregado los indicadores de impacto en la contribución de cada actor en tu cadena de valor para que puedas reportar siguiendo los estándares internacionales."
+        video1=""
+      />
+
+      <CardZoom2
+        icon={three.src}
+        client:visible
+        image={image2.src}
+        title="Gestión de iniciativas"
+        description="Genera iniciativas, haz el seguimiento y analiza tus resultados a través de nuestro panel de gestión. Comunica tu plan de acción con los miembros de tu empresa."
+        video1=""
+      />
     </aside>
   </section>
   <a
