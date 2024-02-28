@@ -41,7 +41,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
               <img
                 src={image}
                 alt=""
-                className=" rounded-[2rem] object-cover shadow-md  w-full "
+                className=" rounded-[2rem] object-cover max-h-[400px] "
               />
             </div>
           </div>
