@@ -29,11 +29,11 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
           {/* <img src={icon} alt="icon" className="w-10 absolute top-3 right-3" /> */}
           <div className="mx-auto h-full flex justify-center flex-col items-center text-start lg:text-left ">
             <header className="w-full ">
-              <h2 className="text-xl font-bold text-gray-900 sm:text-2xl uppercase">
+              <h2 className="text-xl text-center font-bold text-gray-900 sm:text-2xl uppercase">
                 {title}
               </h2>
             </header>
-            <p className="mt-4  text-gray-500 text-pretty flex-1 text-md ">
+            <p className="my-4  text-gray-500 text-pretty  text-md ">
               {description}
             </p>
 
@@ -41,7 +41,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
               <img
                 src={image}
                 alt=""
-                className=" rounded-[2rem] object-cover shadow-md  w-full mt-2 md:mt-4 "
+                className=" rounded-[2rem] object-cover shadow-md  w-full "
               />
             </div>
           </div>
