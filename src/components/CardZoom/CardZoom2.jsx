@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export function CardZoom2({ image, icon, title, description, video1 }) {
@@ -41,7 +40,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
               <img
                 src={image}
                 alt=""
-                className=" rounded-[2rem] object-cover max-h-[400px] "
+                className="object-cover max-h-[325px] drop-shadow"
               />
             </div>
           </div>

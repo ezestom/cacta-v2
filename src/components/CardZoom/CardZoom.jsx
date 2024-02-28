@@ -1,5 +1,3 @@
-import "./CardZoom.css";
-
 export function CardZoom({ image, preTitle, title, description, video1 }) {
   const handleBack = (e) => {
     e.preventDefault();
