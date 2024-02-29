@@ -1,107 +1,26 @@
 ---
 import Container from "./Container.astro";
-import Contributors from "./Contributors.astro";
-import Fader from "./Fader.astro";
-import photo1 from "../img/maxi.jpg";
-import photo2 from "../img/jp.jpg";
+import { BlurVideo } from "./BlurVideo/BlurVideo.jsx";
 ---
 
-<div class="relative py-16">
+<div class="relative">
   <div
-    aria-hidden="true"
-    class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+    class="-z-10 absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
   >
-    <div
-      class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-    >
-    </div>
-    <div
-      class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-    >
-    </div>
   </div>
   <Container>
-    <div class="relative">
-      <div class="flex items-center justify-center -space-x-2">
-        <img
-          loading="lazy"
-          width="400"
-          height="400"
-          src={photo1.src}
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src={photo2.src}
-          alt="member photo"
-          class="h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src={photo1.src}
-          alt="member photo"
-          class="z-10 h-16 w-16 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src={photo2.src}
-          alt="member photo"
-          class="relative h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src={photo1.src}
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
-      </div>
-      <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-        <h1
-          class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl"
-        >
-          Comienza a trabajar con nosotros
-        </h1>
-        <p class="text-center text-xl text-gray-600 dark:text-gray-300">
-          Se parte del cambio, te ayudaremos a crecer, mejorando tu control de
-          emisiones. 
-        </p>
-        <aside class="w-full h-full pt-20">
-          <!-- <Contributors /> -->
-          <Fader />
-        </aside>
-
-        <!-- two btns -->
-
-        <!-- <div class="flex flex-wrap justify-center gap-6">
-          <a
-            href="#"
-            class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-          >
-            <span
-              class="relative text-base font-semibold text-white dark:text-dark"
-              >Get Started</span
-            >
-          </a>
-          <a
-            href="#"
-            class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-          >
-            <span
-              class="relative text-base font-semibold text-primary dark:text-white"
-              >More about</span
-            >
-          </a>
-        </div> -->
-      </div>
-    </div>
+    <article class="max-w-3xl mx-auto ">
+      <h2
+        class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl"
+      >
+        Somos líderes en Latinoamérica
+      </h2>
+      <p
+        class="my-2 text-gray-600 text-center dark:text-gray-300 text-md md:text-xl font-semibold mb-10"
+      >
+        Sumergete en el mundo de la sustentabilidad con nuestra app.
+      </p>
+      <BlurVideo client:visible />
+    </article>
   </Container>
 </div>
