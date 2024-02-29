@@ -32,31 +32,31 @@ const links = [
 
   function toggleNavlinks() {
     if (isToggled) {
-      navlinks.classList.add(
+      navlinks?.classList.add(
         "!visible",
         "!scale-100",
         "!opacity-100",
         "!lg:translate-y-0",
       );
-      hamburger.classList.add("toggled");
-      layer.classList.add("origin-top", "scale-y-100");
+      hamburger?.classList.add("toggled");
+      layer?.classList.add("origin-top", "scale-y-100");
     } else {
-      navlinks.classList.remove(
+      navlinks?.classList.remove(
         "!visible",
         "!scale-100",
         "!opacity-100",
         "!lg:translate-y-0",
       );
-      hamburger.classList.remove("toggled");
-      layer.classList.remove("origin-top", "scale-y-100");
+      hamburger?.classList.remove("toggled");
+      layer?.classList.remove("origin-top", "scale-y-100");
     }
   }
-  hamburger.addEventListener("click", () => {
+  hamburger?.addEventListener("click", () => {
     isToggled = !isToggled;
     toggleNavlinks();
   });
 
-  btnStart.addEventListener("click", () => {
+  btnStart?.addEventListener("click", () => {
     isToggled = !isToggled;
     toggleNavlinks();
   });

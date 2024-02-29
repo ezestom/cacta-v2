@@ -27,7 +27,7 @@ export function BlurVideo() {
           className="absolute m-auto top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-[#007d67] to-[#00ff9a] rounded-full  z-20 p-2 hover:scale-105 transition  "
         />
         <video
-          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10 max-w-[1000px] aspect-video mx-auto revealing-image "
+          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10 max-w-[1000px] aspect-video mx-auto revealing-image  "
           src={video1}
           loop
           muted

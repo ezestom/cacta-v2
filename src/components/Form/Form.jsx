@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
+import { toast, Toaster } from "sonner";
 import x from "../../icons/x.svg";
 import "./Form.css";
-import { Toaster, toast } from "sonner";
 
 export function Form() {
   const [dialog, setDialog] = useState(false);
 
-  // useEffect(() => {
-  //   if (isMessageSucces()) {
-  //     toast("¡Formulario enviado con éxito!");
-  //     closeDialog();
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (isMessageSuccess()) {
+      toast("¡Formulario enviado con éxito! Gracias por su confianza.", {
+        type: "success",
+      });
+      closeDialog();
+    }
+  }, []);
 
   const openDialog = () => {
     setDialog(true);
@@ -25,12 +27,39 @@ export function Form() {
     document.getElementById("navbar").style.display = "flex";
   };
 
-  // const isMessageSucces = () => {
-  //   return window.location.search.includes("success=true");
-  // };
+  const isMessageSuccess = () => {
+    return window.location.search.includes("success=true");
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast("¡Formulario enviado con éxito! Gracias por su confianza.", {
+          type: "success",
+        });
+        closeDialog();
+      } else {
+        throw new Error("Error al enviar el formulario");
+      }
+    } catch (error) {
+      toast.error(
+        "Hubo un problema al enviar el formulario, por favor inténtelo de nuevo."
+      );
+    }
+  };
 
   return (
     <div className="relative form-container z-10 m-auto">
+      <Toaster />
       <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle">
         ¿Preparado para comenzar?
       </h2>
@@ -79,10 +108,17 @@ export function Form() {
         <dialog open>
           <div className="form-container-dialog">
             <form
+              onSubmit={handleSubmit}
               method="POST"
               action="https://formsubmit.co/ezequielstom@gmail.com"
             >
-              <input type="hidden" name="_subject" value="New submission!" />
+              <input type="hidden" name="_cc" value="juantesen@gmail.com" />
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="🚨 Cacta-Web | Nuevo Mensaje!"
+              />
               <input
                 type="hidden"
                 name="_next"
@@ -96,7 +132,7 @@ export function Form() {
                   onClick={closeDialog}
                 >
                   <img
-                    className="bg-black/30 rounded-xl p-2 hover:bg-black/20 transition "
+                    className="inline-flex  cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a]  p-1 hover:scale-105 transition font-medium text-gray-50 backdrop-blur-3xl"
                     src={x.src}
                     alt="x-icon"
                     id="close-dialog"
@@ -104,7 +140,7 @@ export function Form() {
                 </a>
               </legend>
 
-              <div className="flex flex-col gap-4 min-w-[350px] ">
+              <div className="flex flex-col gap-2 min-w-[350px] ">
                 <label htmlFor="name">Nombre</label>
                 <input
                   type="text"
@@ -131,7 +167,7 @@ export function Form() {
                   required
                 ></textarea>
                 <button
-                  className="w-full bg-white/20 rounded-md py-1 hover:bg-white/30"
+                  className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-2 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-105 transition mt-2"
                   type="submit"
                 >
                   Enviar
