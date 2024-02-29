@@ -19,7 +19,7 @@ export function BlurVideo() {
   };
 
   return (
-    <article className="relative">
+    <article className="relative revealing-image ">
       <button onClick={openDialog}>
         <img
           src={play.src}
@@ -27,7 +27,7 @@ export function BlurVideo() {
           className="absolute m-auto top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-[#007d67] to-[#00ff9a] rounded-full  z-20 p-2 hover:scale-105 transition  "
         />
         <video
-          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10 max-w-[850px] aspect-video mx-auto "
+          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10 max-w-[1000px] aspect-video mx-auto "
           src={video1}
           loop
           muted
@@ -38,7 +38,7 @@ export function BlurVideo() {
         <dialog open className="z-50 fixed h-screen w-screen top-0 left-0">
           <iframe
             className="m-auto bottom-0 top-0 left-0 right-0 absolute w-full p-1 md:w-[50%] aspect-video rounded-3xl shadow-2xl"
-            src="https://www.youtube.com/embed/tAzA284tHsA?si=dJEFw3gxPdQsgOm-&vq=hd1080&autoplay=1"
+            src="https://www.youtube.com/embed/tAzA284tHsA?si=dJEFw3gxPdQsgOm-&vq=hd1080&autoplay=1&mute=0"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

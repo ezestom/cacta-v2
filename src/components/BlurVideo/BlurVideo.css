@@ -16,6 +16,13 @@ figure:hover {
 .app-video:hover {
   cursor: crosshair;
 }
+.revealing-image {
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation: linear reveal both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 35%;
+}
 @media (width < 768px) {
   .app-video {
     width: 100%;

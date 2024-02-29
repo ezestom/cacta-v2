@@ -23,7 +23,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
 
   return (
     <section className="max-w-screen w-full  h-max-full md:max-h-screen ">
-      <div className="  flex-wrap  flex justify-center items-strech  gap-5 px-2  md:p-0 w-full">
+      <div className="flex justify-center flex-wrap  gap-5 px-2  md:p-0 w-full">
         <div className=" rounded-[3rem] border border-gray-100  bg-white/30 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/40 dark:shadow-none backdrop-blur-xl p-4  w-full max-w-[500px] ">
           {/* <img src={icon} alt="icon" className="w-10 absolute top-3 right-3" /> */}
           <div className="mx-auto h-full flex justify-center flex-col items-center text-start lg:text-left ">
@@ -46,7 +46,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
           </div>
         </div>
 
-        <figure className=" w-full max-w-3xl flex-col justify-center items-center gap-2 flex ">
+        <figure className="  ">
           {video1 ? (
             <button onClick={openDialog}>
               <video
@@ -54,7 +54,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
                 loop
                 muted
                 src={video1}
-                className="aspect-video rounded-[3rem] shadow-2xl transition-all "
+                className="w-full max-w-xl rounded-[3rem] shadow-2xl transition-all "
               ></video>
             </button>
           ) : undefined}
@@ -78,10 +78,10 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
               loop
               muted
               src={video1}
-              className=" m-auto bottom-0 top-0 left-0 right-0 absolute   mx-auto w-[98%] md:w-[65%] aspect-video rounded-[3rem] shadow-2xl "
+              className=" m-auto bottom-0 top-0 left-0 right-0 absolute   mx-auto w-[98%] md:w-1/2  rounded-[3rem] shadow-2xl "
             ></video>
 
-            <span className="absolute top-3 right-3">
+            <span className="absolute top-5 right-5">
               <a
                 onClick={closeDialog}
                 className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
