@@ -5,6 +5,7 @@ import "./Form.css";
 
 export function Form() {
   const [dialog, setDialog] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isMessageSuccess()) {
@@ -36,6 +37,8 @@ export function Form() {
     const form = event.target;
     const formData = new FormData(form);
 
+    setIsLoading(true);
+
     try {
       const response = await fetch(form.action, {
         method: form.method,
@@ -54,12 +57,15 @@ export function Form() {
       toast.error(
         "Hubo un problema al enviar el formulario, por favor inténtelo de nuevo."
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <div className="relative form-container z-10 m-auto">
       <Toaster />
+
       <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle">
         ¿Preparado para comenzar?
       </h2>
@@ -107,6 +113,11 @@ export function Form() {
       {dialog && (
         <dialog open>
           <div className="form-container-dialog">
+            {isLoading && (
+              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50">
+                <span class="loader"></span>
+              </div>
+            )}
             <form
               onSubmit={handleSubmit}
               method="POST"
