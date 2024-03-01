@@ -121,20 +121,16 @@ export function Form() {
             <form
               onSubmit={handleSubmit}
               method="POST"
-              action="https://formsubmit.co/ezequielstom@gmail.com"
+              action="https://formsubmit.co/jp.tena@cacta.eco"
             >
-              <input type="hidden" name="_cc" value="juantesen@gmail.com" />
+              <input type="hidden" name="_cc" value="ezequielstom@gmail.com" />
 
               <input
                 type="hidden"
                 name="_subject"
                 value="🚨 Cacta-Web | Nuevo Mensaje!"
               />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://cacta-v2.vercel.app/"
-              />
+              <input type="hidden" name="_next" value="https://cacta.eco/" />
               <input type="hidden" name="_captcha" value="false" />
               <legend>
                 <a
