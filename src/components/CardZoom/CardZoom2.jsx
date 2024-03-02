@@ -61,24 +61,14 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
 
           <dialog
             open={isOpen}
-            className="z-50 fixed h-screen w-screen backdrop-blur top-0 left-0"
+            className="z-50 fixed h-screen w-screen backdrop-blur top-0 left-0 bg-transparent  bg-opacity-90 dark:bg-opacity-90"
           >
-            <div
-              aria-hidden="true"
-              class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
-            >
-              <div class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-              <div class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"></div>
-            </div>
-            <div class="absolute h-full w-full">
-              <div class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-            </div>
             <video
               autoPlay
               loop
               muted
               src={video1}
-              className=" m-auto bottom-0 top-0 left-0 right-0 absolute   mx-auto w-[98%] md:w-1/2  rounded-[3rem] shadow-2xl "
+              className=" m-auto bottom-0 top-0 left-0 right-0 absolute   mx-auto w-[98%] md:w-1/2  rounded-[3rem] shadow-2xl  "
             ></video>
 
             <span className="absolute top-5 right-5">
