@@ -6,41 +6,21 @@ import blog2 from "../img/cacta.webp";
 import blog3 from "../img/blog3.webp";
 import logo from "../img/logo-negro.png";
 import Layout from "../layouts/Layout.astro";
-import Container from "../components/Container.astro";
+import GoBack from "../components/GoBack.astro";
+import { LogoTheme } from "../components/LogoTheme.jsx";
 ---
 
 <Layout title="Cacta blog">
-  <div id="blog-section" class="">
-    <!-- background -->
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20 -z-10"
-    >
-      <div
-        class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-      >
-      </div>
-      <div
-        class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-      >
-      </div>
-    </div>
-    <div class="fixed -z-10">
-      <div
-        class="-z-10 fixed h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-      >
-      </div>
-    </div>
-    <!-- background -->
-
+  <div id="blog-section" class="h-full sm:h-screen">
     <div class="py-10 flex items-center flex-col justify-center">
       <h2
         class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2"
       >
-        <img src={logo.src} class="w-40" alt="logo-cacta" /> blog
+        <LogoTheme client:visible />
+        blog
       </h2>
       <p
-        class="lg:mx-auto  text-gray-600 dark:text-gray-300  text-center mt-4 max-w-md"
+        class="lg:mx-auto text-gray-600 dark:text-gray-300 text-center mt-4 max-w-md"
       >
         Recorre nuestro blog y descubre las últimas noticias, tendencias y
         consejos sobre sostenibilidad y agricultura.
@@ -48,8 +28,8 @@ import Container from "../components/Container.astro";
     </div>
 
     <div
-      class="grid items-start blog-container gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-      justify-center  w-full max-w-7xl mx-auto  px-4 md:px-0 h-full my-5"
+      class="grid items-starth-fit blog-container gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+      justify-center w-full max-w-7xl mx-auto px-4 md:px-0 my-5"
     >
       <BlogCard2
         client:visible
@@ -81,27 +61,28 @@ import Container from "../components/Container.astro";
         title="Transformando el mundo: Descubre los Objetivos de Desarrollo Sostenible."
         description="El 25 de septiembre de 2015, los líderes mundiales adoptaron un conjunto de objetivos globales para erradicar la pobreza, proteger el planeta y asegurar la prosperidad para todos como parte de una nueva agenda de desarrollo sostenible. Cada objetivo tiene metas específicas que deben alcanzarse en los próximos 15 años (2030) Por tanto, los Objetivos de Desarrollo Sostenible se han acordado por todos los gobiernos. Sin embargo, el éxito de ellos dependerá de las acciones que lleven a cabo todos, tanto empresas como gobierno. Los ODS ofrecen la oportunidad para desarrollar e implementar soluciones y tecnologías desde el empresariado, lo que permite realizar los retos más grandes que se han establecido en cuanto a desarrollo sostenible. A su vez, estos forman parte de una agenda global para el desarrollo de nuestras sociedades. Con ellos se establece que las empresas líderes del mercado deben demostrar que los negocios que realizan ayudan a dirigirnos hacia un desarrollo sostenible. A pesar de que pudiera parecer complejo alinearse a dichos objetivos, la verdad de las cosas es que no lo es. Es cosa de realizar una profunda evaluación de materialidad, identificar los procesos productivos dentro de las empresas y obtener una trazabilidad clara y confiable. Las Naciones Unidas aseguran que existen beneficios clave al generar una alineación a los objetivos de desarrollo sostenible, entre ellos: Mejorar la eficiencia operativa a lo largo de la cadena de suministros, fortalecer las relaciones con clientes, consumidores y proveedores, así como reducir los riesgos ambientales y de seguridad e higiene."
       />
-      
     </div>
 
-    <span class="absolute top-5 right-5 z-10">
-      <a
-        href="/#footer"
-        class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
-      >
-        <span
-          class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-        ></span>
-        <span
-          class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
-        >
-          Volver
-        </span>
-      </a>
-    </span>
+    <GoBack />
   </div>
 </Layout>
 
 <style>
-
+  .dark {
+    background-color: #111826;
+    z-index: -10;
+  }
+  .light {
+    background-color: #fafafa;
+    z-index: -10;
+  }
 </style>
+
+<script>
+  const section = document.getElementById("blog-section");
+  if (localStorage.getItem("theme") === "dark") {
+    section?.classList.add("dark");
+  } else {
+    section?.classList.remove("dark");
+  }
+</script>

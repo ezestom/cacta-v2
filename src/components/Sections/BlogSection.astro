@@ -1,9 +1,9 @@
 ---
-import Container from "./Container.astro";
-import BlogCard from "./BlogCard.astro";
-import blog1 from "../img/esg.webp";
-import blog2 from "../img/cacta.webp";
-import blog3 from "../img/blog3.webp";
+import Container from "../Container.astro";
+import BlogCard from "../BlogCard.astro";
+import blog1 from "../../img/esg.webp";
+import blog2 from "../../img/cacta.webp";
+import blog3 from "../../img/blog3.webp";
 ---
 
 <div id="blog">
@@ -41,12 +41,13 @@ import blog3 from "../img/blog3.webp";
         description="El 25 de septiembre de 2015, los líderes mundiales adoptaron un conjunto de objetivos globales para erradicar la pobreza, proteger el planeta y asegurar la prosperidad para todos como parte de una nueva agenda de desarrollo sostenible. Cada objetivo tiene metas específicas que deben alcanzarse en los próximos 15 años (2030) Por tanto, los Objetivos de Desarrollo Sostenible se han acordado por todos los gobiernos. Sin embargo, el éxito de ellos dependerá de las acciones que lleven a cabo todos, tanto empresas como gobierno. Los ODS ofrecen la oportunidad para desarrollar e implementar soluciones y tecnologías desde el empresariado, lo que permite realizar los retos más grandes que se han establecido en cuanto a desarrollo sostenible. A su vez, estos forman parte de una agenda global para el desarrollo de nuestras sociedades. Con ellos se establece que las empresas líderes del mercado deben demostrar que los negocios que realizan ayudan a dirigirnos hacia un desarrollo sostenible. A pesar de que pudiera parecer complejo alinearse a dichos objetivos, la verdad de las cosas es que no lo es. Es cosa de realizar una profunda evaluación de materialidad, identificar los procesos productivos dentro de las empresas y obtener una trazabilidad clara y confiable. Las Naciones Unidas aseguran que existen beneficios clave al generar una alineación a los objetivos de desarrollo sostenible, entre ellos: Mejorar la eficiencia operativa a lo largo de la cadena de suministros, fortalecer las relaciones con clientes, consumidores y proveedores, así como reducir los riesgos ambientales y de seguridad e higiene."
       />
     </div>
-    <style>
-      .blog-container {
-        animation: reveal linear both;
-        animation-timeline: view();
-        animation-range: entry 20% cover 40%;
-      }
-    </style>
   </Container>
 </div>
+
+<style>
+  .blog-container {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+</style>

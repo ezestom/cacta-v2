@@ -4,10 +4,14 @@ import kpi from "../img/kpi.png";
 import cadena from "../img/cadena.png";
 import iniciativa from "../img/iniciativa.png";
 import Layout from "../layouts/Layout.astro";
+import GoBack from "../components/GoBack.astro";
 ---
 
 <Layout title="Análisis y gestión 🍀">
-  <section class="w-screen h-full md:h-screen flex items-center justify-center">
+<section
+    class="w-screen h-full md:h-screen flex items-center justify-center"
+    id="section"
+  >
     <div
       aria-hidden="true"
       class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
@@ -23,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div class="absolute h-full w-full">
       <div
-        class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+        class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
       >
       </div>
     </div>
@@ -58,17 +62,25 @@ import Layout from "../layouts/Layout.astro";
       />
     </aside>
   </section>
-  <a
-    href="/#features"
-    class="absolute top-5 right-5 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
-  >
-    <span
-      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-    ></span>
-    <span
-      class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
-    >
-      Volver
-    </span>
-  </a>
+  <GoBack />
 </Layout>
+
+<style>
+  .dark {
+    background-color: #111826;
+    z-index: -10;
+  }
+  .light {
+    background-color: #fafafa;
+    z-index: -10;
+  }
+</style>
+
+<script>
+  const section = document.getElementById("section");
+  if (localStorage.getItem("theme") === "dark") {
+    section?.classList.add("dark");
+  } else {
+    section?.classList.remove("dark");
+  }
+</script>

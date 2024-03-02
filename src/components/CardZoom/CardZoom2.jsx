@@ -28,11 +28,11 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
           {/* <img src={icon} alt="icon" className="w-10 absolute top-3 right-3" /> */}
           <div className="mx-auto h-full flex justify-center flex-col items-center text-start lg:text-left ">
             <header className="w-full ">
-              <h2 className="text-xl text-center font-bold text-gray-900 sm:text-2xl uppercase">
+              <h2 className="text-xl text-center font-bold text-gray-900 sm:text-2xl dark:text-white uppercase">
                 {title}
               </h2>
             </header>
-            <p className="my-4  text-gray-500 text-pretty  text-md ">
+            <p className="my-4  text-gray-500 dark:text-gray-300 text-pretty  text-md ">
               {description}
             </p>
 
@@ -46,7 +46,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
           </div>
         </div>
 
-        <figure className="  ">
+        <figure className=" z-20  ">
           {video1 ? (
             <button onClick={openDialog}>
               <video
@@ -54,7 +54,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
                 loop
                 muted
                 src={video1}
-                className="w-full max-w-xl rounded-[3rem] shadow-2xl transition-all "
+                className=" w-full max-w-xl rounded-[3rem] shadow-2xl transition-all "
               ></video>
             </button>
           ) : undefined}

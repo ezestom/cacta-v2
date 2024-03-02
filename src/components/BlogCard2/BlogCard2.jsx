@@ -18,8 +18,8 @@ export function BlogCard2({ image, title, description }) {
   };
 
   return (
-    <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-      <div class="relative overflow-hidden rounded-xl ">
+    <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 ">
+      <div class="relative overflow-hidden rounded-xl  ">
         <img
           src={image.src}
           alt="art cover"
@@ -58,7 +58,7 @@ export function BlogCard2({ image, title, description }) {
 
       {isOpen && (
         <section class="fixed inset-0 z-50  items-center justify-center bg-black bg-opacity-50 flex flex-col ">
-          <article class="relative w-full max-w-4xl p-4 md:p-12 bg-white rounded-xl overflow-y-scroll max-h-[99%] ">
+          <article class="relative w-full max-w-4xl p-4 md:p-12 bg-[#fafafa] dark:bg-gray-800 rounded-xl overflow-y-scroll max-h-[99%]  border border-gray-100 dark:shadow-none dark:border-gray-700">
             <div class="relative overflow-hidden rounded-xl">
               <button
                 onClick={closeDialog}
