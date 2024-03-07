@@ -43,13 +43,13 @@ dialog {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   background: hsl(0 0% 0% / 0.75);
   flex-wrap: wrap;
   z-index: 60;
   color: white;
-  min-width: 400px;
+  min-width: 375px;
 }
 
 input,
@@ -151,11 +151,6 @@ textarea {
     from {
       transform: scale(2);
       opacity: 0;
-    }
-  }
-  @media (width < 1200px) {
-    .form-container-dialog {
-      width: 95%;
     }
   }
 }

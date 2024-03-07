@@ -128,8 +128,13 @@ export function Form() {
               <input
                 type="hidden"
                 name="_subject"
-                value="🚨 Cacta-Web | Nuevo Mensaje!"
+                value="🌵 Cacta | 📩 Nuevo Mensaje!"
               />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Tu mensaje fue exitoso, te responderemos a la brevedad! 🌵 "
+              ></input>
               <input type="hidden" name="_next" value="https://cacta.eco/" />
               <input type="hidden" name="_captcha" value="false" />
               <legend>
@@ -157,6 +162,15 @@ export function Form() {
                   className="rounded-md "
                   required
                 />
+                <label htmlFor="name">Empresa</label>
+                <input
+                  type="text"
+                  name="company"
+                  id="comppany"
+                  placeholder="Cacta SaS."
+                  className="rounded-md "
+                  required
+                />
                 <label htmlFor="email">Correo</label>
                 <input
                   className="rounded-md "
@@ -170,7 +184,7 @@ export function Form() {
                 <textarea
                   name="message"
                   id="message"
-                  placeholder="Quiero unirme a la lista para recibir noticias sobre el lanzamiento de la App."
+                  placeholder="Quiero recibir información sobre la app de Cacta."
                   required
                 ></textarea>
                 <button
