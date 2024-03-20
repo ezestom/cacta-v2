@@ -153,40 +153,48 @@ export function Form() {
               </legend>
 
               <div className="flex flex-col gap-2 min-w-[350px] ">
-                <label htmlFor="name">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="John Doe"
-                  className="rounded-md "
-                  required
-                />
-                <label htmlFor="name">Empresa</label>
-                <input
-                  type="text"
-                  name="company"
-                  id="comppany"
-                  placeholder="Cacta SaS."
-                  className="rounded-md "
-                  required
-                />
-                <label htmlFor="email">Correo</label>
-                <input
-                  className="rounded-md "
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="john_doe@ejemplo.com"
-                  required
-                />
-                <label htmlFor="message">Mensaje</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Quiero recibir información sobre la app de Cacta."
-                  required
-                ></textarea>
+                <label htmlFor="name">
+                  Nombre
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="John Doe"
+                    className="rounded-md "
+                    required
+                  />
+                </label>
+                <label htmlFor="name">
+                  Empresa
+                  <input
+                    type="text"
+                    name="company"
+                    id="comppany"
+                    placeholder="Cacta SaS."
+                    className="rounded-md "
+                    required
+                  />
+                </label>
+                <label htmlFor="email">
+                  Correo
+                  <input
+                    className="rounded-md "
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="john_doe@ejemplo.com"
+                    required
+                  />
+                </label>
+                <label htmlFor="message">
+                  Mensaje
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Quiero recibir información sobre la app de Cacta."
+                    required
+                  ></textarea>
+                </label>
                 <button
                   className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-2 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-105 transition mt-2"
                   type="submit"
