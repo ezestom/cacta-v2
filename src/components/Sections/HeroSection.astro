@@ -1,54 +1,83 @@
 ---
 import bg from "../../icons/bg.svg";
 import video from "../../video/videoResize2.mp4";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+const {
+	INTRO_TITLE_1,
+	INTRO_TITLE_2,
+	INTRO_TITLE_3,
+	INTRO_TITLE_4,
+	INTRO_DESCRIPTION_1,
+	INTRO_DESCRIPTION_2,
+	INTRO_DESCRIPTION_3,
+} = i18n;
 ---
 
-<div class="" id="home">
-	<div class="max-w-7xl m-auto h-auto xl:h-screen px-6 md:px-12 xl:px-6 -z-5">
-		<div class="pt-36 lg:pt-48 ml-auto">
-			<div class="text-center m-auto top-0 bottom-0">
-				<section class="flex w-full items-start flex-wrap">
-					<div class="w-full md:w-1/2 relative">
-						<img
-							class="absolute w-auto md:max-w-[100%] let-0 top-0 bottom-0 m-auto brightness-200 -translate-x-32 svg"
-							src={bg.src}
-							alt="bg svg"
-						/>
-						<h1
-							class="text-white dark:text-white font-bold text-start text-3xl md:text-4xl xl:text-7xl">
-							Más que un <span
-								class="text-primary text-3xl md:text-4xl xl:text-8xl"
-								>Software</span
-							>
-							<p
-								class="dark:text-white text-3xl md:text-4xl xl:text-4xl">
-								La puerta al futuro de<br /> la industria agrícola.
-							</p>
-						</h1>
-
+<div
+	id="home"
+	class="max-w-7xl m-auto h-auto xl:h-screen px-6 md:px-12 xl:px-6 -z-5">
+	<div class="pt-28 lg:pt-48 ml-auto">
+		<div class="text-center m-auto top-0 bottom-0">
+			<section class="flex w-full items-start flex-wrap">
+				<div class="w-full md:w-1/2 relative">
+					<img
+						class="absolute md:w-full let-0 top-0 bottom-0 m-auto drop-shadow-2xl -translate-x-[7rem] bg-gradient-to-b from-primary/30 to-transparent rounded-full -z-10"
+						src={bg.src}
+						alt="bg svg"
+					/>
+					<h1
+						class="text-white dark:text-white font-bold text-start text-3xl md:text-4xl xl:text-5xl">
+						{INTRO_TITLE_1}
+						<br />
+						<span class="text-primary text-5xl xl:text-8xl"
+							>{INTRO_TITLE_2}</span
+						>
 						<p
-							class="mt-8 text-2xl font-semibold text-white dark:text-gray-300 text-start">
-							Automatiza, calcula y reporta <br />el impacto
-							ambiental <br />de tu empresa.
+							class="dark:text-white text-3xl md:text-4xl xl:text-4xl">
+							{INTRO_TITLE_3}<br />
+							{INTRO_TITLE_4}
 						</p>
-					</div>
-					<div
-						class="absolute md:fixed top-0 left-0 -z-10 bg-black/90 container-video">
-						<video
-							class="object-cover h-[60vh] lg:h-full md:w-full bg-image"
-							src={video}
-							autoplay
-							loop
-							muted></video>
-					</div>
-				</section>
-			</div>
+					</h1>
+					<hr class="" />
+
+					<p
+						class="text-2xl font-semibold text-white dark:text-gray-300 text-start">
+						{INTRO_DESCRIPTION_1}<br />{INTRO_DESCRIPTION_2}
+						<br />{INTRO_DESCRIPTION_3}
+					</p>
+				</div>
+				<div
+					class="absolute top-0 left-0 -z-20 bg-black/50 container-video">
+					<video
+						transition:persist
+						class="object-cover h-[60vh] lg:h-full md:w-full bg-image"
+						src={video}
+						autoplay
+						loop
+						muted>
+					</video>
+				</div>
+			</section>
 		</div>
 	</div>
 </div>
-
 <style>
-
+	/* create a amazing hr */
+	hr {
+		border: 0;
+		height: 2px;
+		background-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 1),
+			rgba(255, 255, 255, 0)
+		);
+		width: 70%;
+		margin-block: 1rem;
+	}
 	.container-video {
 		width: 100%;
 		border-bottom-left-radius: 10% 5%;
@@ -59,7 +88,7 @@ import video from "../../video/videoResize2.mp4";
 		animation-range: 55% 85%;
 	}
 	.bg-image {
-		mask: radial-gradient(circle at right, white 70%, transparent 100%);
+		/* mask: radial-gradient(circle at right, white 70%, transparent 100%); */
 		border-bottom-left-radius: 10% 5%;
 		border-bottom-right-radius: 10% 5%;
 		/* box shadow botton */

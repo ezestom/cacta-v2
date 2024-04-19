@@ -1,25 +1,25 @@
 ---
-import { CardZoom2 } from "../components/CardZoom/CardZoom2";
-import kpi from "../img/kpi.png";
-import cadena from "../img/cadena.png";
-import iniciativa from "../img/iniciativa.png";
-import Layout from "../layouts/Layout.astro";
-import GoBack from "../components/GoBack.astro";
-import { geti18n } from "../i18n/index.js";
-const { currentLocale } = Astro;
-const i18n = geti18n({ currentLocale });
+import { CardZoom2 } from "../../components/CardZoom/CardZoom2";
+import Layout from "../../layouts/Layout.astro";
+import eco from "../../img/eco-score.png";
+import image2 from "../../img/declaraciones.png";
+import GoBack from "../../components/GoBack.astro";
 
+import { getLangFromUrl, useTranslatedPath } from "../../i18n/utils";
+
+const { currentLocale } = Astro;
+import { geti18n } from "../../i18n/index.ts";
+
+const i18n = geti18n({ currentLocale });
 const {
-	title_description_2_1,
-	description_2_1,
-	title_description_2_2,
-	description_2_2,
-	title_description_2_3,
-	description_2_3,
+	title_description_3_1,
+	description_3_1,
+	title_description_3_2,
+	description_3_2,
 } = i18n.SECTION_FEATURES;
 ---
 
-<Layout title="Análisis y gestión 🍀">
+<Layout title="Reportes EPD 🍃">
 	<section
 		class="w-screen h-full md:h-screen flex items-center justify-center"
 		id="section">
@@ -39,36 +39,27 @@ const {
 			</div>
 		</div>
 		<aside
-			class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-20 md:my-0 gap-6 px-0 md:px-12">
+			class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0 gap-6 px-0 md:px-12">
 			<CardZoom2
 				icon=""
 				client:visible
-				image={kpi.src}
-				title={title_description_2_1}
-				description={description_2_1}
+				image={eco.src}
+				title={title_description_3_1}
+				description={description_3_1}
 				video1=""
 			/>
 
 			<CardZoom2
 				icon=""
 				client:visible
-				image={cadena.src}
-				title={title_description_2_2}
-				description={description_2_2}
-				video1=""
-			/>
-
-			<CardZoom2
-				icon=""
-				client:visible
-				image={iniciativa.src}
-				title={title_description_2_3}
-				description={description_2_3}
+				image={image2.src}
+				title={title_description_3_2}
+				description={description_3_2}
 				video1=""
 			/>
 		</aside>
+		<GoBack />
 	</section>
-	<GoBack />
 </Layout>
 
 <style>

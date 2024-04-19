@@ -12,13 +12,6 @@
   -webkit-box-reflect: below 0px
     linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
 }
-.hr-contact {
-  /* margin-left: 2rem; */
-  height: 2px;
-  margin: 1rem 0;
-  border: none;
-  width: 45%;
-}
 
 dialog {
   position: fixed;
@@ -43,13 +36,12 @@ dialog {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 4rem 2rem 2rem 2rem;
   border-radius: 1rem;
   background: hsl(0 0% 0% / 0.75);
   flex-wrap: wrap;
   z-index: 60;
   color: white;
-  min-width: 375px;
 }
 
 input,
@@ -66,11 +58,6 @@ textarea {
   min-height: 8rem;
 }
 
-.fixedTitle {
-  animation: fixedTitle linear both;
-  animation-timeline: view();
-  animation-range: entry 30% cover 40%;
-}
 /* loader */
 .loader {
   transform: rotateZ(45deg);
@@ -145,12 +132,3 @@ textarea {
   }
 }
 /* loader  */
-
-@media (width > 768px) {
-  @keyframes fixedTitle {
-    from {
-      transform: scale(2);
-      opacity: 0;
-    }
-  }
-}

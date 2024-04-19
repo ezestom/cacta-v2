@@ -1,83 +1,99 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { AstroFont } from "astro-font";
-import AppFooter from "../components/AppFooter.astro";
+
+import { geti18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
 ---
 
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Ezequiel Stom" />
-    <meta name="theme-color" content="#007d67" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+<html lang={currentLocale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Ezequiel Stom" />
+		<meta name="theme-color" content="#007d67" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/logo.png" />
 
-    <meta name="generator" content={Astro.generator} />
-    <meta name="Cacta Software" content="Cacta Software de sustentabilidad" />
-    <link rel="canonical" href="https://www.cacta.eco/" />
-    <meta
-      title="Cacta - Software para automatizar, calcular y reportar el impacto ambiental de tu empresa."
-      content="Cacta Software"
-    />
-    <meta
-      name="description"
-      content="Cacta es un software de gestión ambiental que te permite medir, monitorear y reducir el impacto ambiental de tu empresa. Con Cacta podrás calcular tu huella ecológica, gestionar tus residuos, medir tu consumo de agua y energía, y mucho más. ¡Descubre cómo Cacta puede ayudarte a ser una empresa más sostenible!"
-      content="Cacta Software"
-    />
-    <meta
-      name="keywords"
-      content="Cacta, Eco, Software, Medio Ambiente, Sostenibilidad, Innovación, Tecnología, App, Web, Desarrollo, Ambiental, Contaminación, Huella, Ecológica, Empresas, Industria, Medición, Monitoreo, Reducción, Impacto, Ambiental, Futuro, Sostenible, Eco-Consciente, Tecnología, Medición, Cambio, Significativo, CactaApp"
-    />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="Cacta Software"
+			content="Cacta Software de sustentabilidad"
+		/>
+		<link rel="canonical" href="https://www.cacta.eco/" />
+		<meta
+			title="Cacta - Software para automatizar, calcular y reportar el impacto ambiental de tu empresa."
+			content="Cacta Software"
+		/>
+		<meta
+			name="description"
+			content="Cacta es un software de gestión ambiental que te permite medir, monitorear y reducir el impacto ambiental de tu empresa. Con Cacta podrás calcular tu huella ecológica, gestionar tus residuos, medir tu consumo de agua y energía, y mucho más. ¡Descubre cómo Cacta puede ayudarte a ser una empresa más sostenible!"
+			content="Cacta Software"
+		/>
+		<meta
+			name="keywords"
+			content="Cacta, Eco, Software, Medio Ambiente, Sostenibilidad, Innovación, Tecnología, App, Web, Desarrollo, Ambiental, Contaminación, Huella, Ecológica, Empresas, Industria, Medición, Monitoreo, Reducción, Impacto, Ambiental, Futuro, Sostenible, Eco-Consciente, Tecnología, Medición, Cambio, Significativo, CactaApp"
+		/>
 
-    <meta property="og:url" content="https://ezestom.github.io/portfolio/" />
-    <meta property="og:image" content="/public/logo.png" />
+		<meta
+			property="og:url"
+			content="https://ezestom.github.io/portfolio/"
+		/>
+		<meta property="og:image" content="/public/logo.png" />
 
-    <title>Cacta Software - La puerta al futuro de la industria agrícola</title>
-    <ViewTransitions />
-    <AstroFont
-      config={[
-        {
-          src: [],
-          name: "Cacta Software",
-          preload: true,
-          display: "swap",
-          selector: "html",
-          fallback: "sans-serif",
-          googleFontsURL:
-            "https://fonts.googleapis.com/css2?family=Inter&family=MedievalSharp&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap",
-        },
-      ]}
-    />
-  </head>
-  <body class="bg-[#fafafa] dark:bg-gray-900">
-    
-    <slot />
+		<title>{i18n.SEO_TITLE}</title>
+		<ViewTransitions />
+		<AstroFont
+			config={[
+				{
+					src: [],
+					name: "Cacta Software",
+					preload: true,
+					display: "swap",
+					selector: "html",
+					fallback: "sans-serif",
+					googleFontsURL:
+						"https://fonts.googleapis.com/css2?family=Inter&family=MedievalSharp&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap",
+				},
+			]}
+		/>
+	</head>
+	<body class="bg-[#fafafa] dark:bg-gray-900">
+		<slot />
 
-    <style>
-      :root {
-        --gradient1: linear-gradient(220.55deg, #00ff9a 0%, #007d67 100%);
-        --gradient2: linear-gradient(220.55deg, #ff3e57 0%, #ffb979 100%);
-      }
-      html {
-        scroll-behavior: smooth;
-      }
+		<style>
+			:root {
+				--gradient1: linear-gradient(
+					220.55deg,
+					#00ff9a 0%,
+					#007d67 100%
+				);
+				--gradient2: linear-gradient(
+					220.55deg,
+					#ff3e57 0%,
+					#ffb979 100%
+				);
+			}
+			html {
+				scroll-behavior: smooth;
+			}
 
-      body {
-        margin: 0;
-      }
-      @keyframes reveal {
-        from {
-          opacity: 0.2;
-          scale: 0.8;
-          translate: 0 10%;
-        }
-      }
-      /* view transition Api */
-      ::view-transition-new(root),
-      ::view-transition-old(root) {
-        animation-duration: 0.3s;
-      }
-    </style>
-  </body>
+			body {
+				margin: 0;
+			}
+			@keyframes reveal {
+				from {
+					opacity: 0.2;
+					scale: 0.8;
+					translate: 0 10%;
+				}
+			}
+			/* view transition Api */
+			::view-transition-new(root),
+			::view-transition-old(root) {
+				animation-duration: 0.3s;
+			}
+		</style>
+	</body>
 </html>

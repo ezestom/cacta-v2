@@ -1,0 +1,28 @@
+---
+import Solutions from "../components/Sections/SolutionSection.astro";
+import Features from "../components/Sections/Features.astro";
+import HeroSection from "../components/Sections/HeroSection.astro";
+import Layout from "../layouts/Layout.astro";
+import WhyCacta from "../components/Sections/WhyCacta.astro";
+import CallToAction from "../components/Sections/CallToAction.astro";
+import Blog from "../components/Sections/BlogSection.astro";
+import Us from "../components/Sections/Us.astro";
+import Contact from "../components/Sections/Contact.astro";
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro";
+---
+
+<Layout title="Bienvenido a Cacta">
+	<AppHeader />
+	<main class="space-y-40 mb-40">
+		<HeroSection />
+		<Solutions />
+		<Features />
+		<WhyCacta />
+		<CallToAction />
+		<Us />
+		<Contact />
+		<Blog />
+	</main>
+	<AppFooter />
+</Layout>

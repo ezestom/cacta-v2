@@ -6,155 +6,140 @@ import software from "../../icons/software.svg";
 import panels from "../../icons/panels.svg";
 import map from "../../icons/map.svg";
 import prompt from "../../icons/prompt.svg";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { title, intro_1, intro_2, box_1, box_2, box_3, box_4, box_5, box_6 } =
+	i18n.SECTION_WHYCACTA;
 ---
 
 <div class="text-gray-600 dark:text-gray-300 relative" id="why-cacta">
-  <Container>
-    <div class="mb-20 space-y-4 px-6 md:px-0 md:w-1/2 mx-auto">
-      <h2
-        class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl"
-      >
-        ¿Por qué Cacta?
-      </h2>
-      <p
-        class="my-2 text-gray-600 text-center dark:text-gray-300 text-md md:text-xl font-semibold"
-      >
-        Nuestra misión: apoyar a la industria primaria en su transformación
-        hacia un futuro sustentable.
-      </p>
-      <p class="text-gray-600 text-center dark:text-gray-300">
-        Nuestro principal objetivo es que las empresas tomen decisiones
-        informadas, reduciendo su impacto ambiental optimizando su eficiencia
-        operativa.
-      </p>
-    </div>
+	<Container>
+		<div class="mb-20 space-y-4 px-6 md:px-0 md:w-1/2 mx-auto">
+			<h2
+				class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+				{title}
+			</h2>
+			<p
+				class="my-2 text-gray-600 text-center dark:text-gray-300 text-md md:text-xl font-semibold">
+				{intro_1}
+			</p>
+			<p class="text-gray-600 text-center dark:text-gray-300">
+				{intro_2}
+			</p>
+		</div>
 
-    <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={signal.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Nos conectamos a tu sistema de gestión, obteniendo información
-          confiable y con trazabilidad.
-        </p>
-      </div>
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={prompt.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Software desarrollado por y para agricultores bajo la métodología de
-          Análsis de Ciclo de Vida "LCA".
-        </p>
-      </div>
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={panels.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Paneles e informes automatizados que harán de tu gestión sustentable
-          una labor simple y eficaz.
-        </p>
-      </div>
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={map.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Algoritmo optimizado que registra más de 70.000 emisiones al suelo,
-          aire y agua y 27.000 registros ambientales.
-        </p>
-      </div>
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={software.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Solución certificada, alineada a los estándares Europeos y la normativa ISO 14040/44. La herramienta más completa del mercado.
-        </p>
-      </div>
-      <div
-        class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none"
-      >
-        <div
-          class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full"
-        >
-          <img
-            class="w-12 h-12 rounded-full p-2"
-            src={icon.src}
-            alt="user avatar"
-            width="400"
-            height="400"
-            loading="lazy"
-          />
-          <div></div>
-        </div>
-        <p class="mt-8">
-          Herramienta customizada a tus necesidades, para pequeños, medianos y
-          grandes productores.
-        </p>
-      </div>
-    </div>
-  </Container>
+		<div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={signal.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_1}
+				</p>
+			</div>
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={prompt.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_2}
+				</p>
+			</div>
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={panels.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_3}
+				</p>
+			</div>
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={map.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_4}
+				</p>
+			</div>
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={software.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_5}
+				</p>
+			</div>
+			<div
+				class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:shadow-xl hover:shadow-gray-600/10 transition cursor-crosshair dark:shadow-none">
+				<div
+					class="flex justify-center w-fit m-auto bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full">
+					<img
+						class="w-12 h-12 rounded-full p-2"
+						src={icon.src}
+						alt="user avatar"
+						width="400"
+						height="400"
+						loading="lazy"
+					/>
+					<div></div>
+				</div>
+				<p class="mt-8">
+					{box_6}
+				</p>
+			</div>
+		</div>
+	</Container>
 </div>

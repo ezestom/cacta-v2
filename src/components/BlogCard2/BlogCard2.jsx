@@ -2,7 +2,7 @@ import close from "../../icons/x.svg";
 import { useState } from "react";
 import "./BlogCard2.css";
 
-export function BlogCard2({ image, title, description }) {
+export function BlogCard2({ image, title, description, read_more}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openDialog = () => {
@@ -39,9 +39,9 @@ export function BlogCard2({ image, title, description }) {
       </div>
       <button
         onClick={openDialog}
-        class="flex items-center justify-center w-full group-hover:text-tertiary text-black dark:text-white font-semibold mt-4 transition hover:scale-105"
+        class="flex items-center justify-center w-full group-hover:text-tertiary text-black dark:text-white font-semibold mt-4 transition"
       >
-        <span class="text-sm ">Leer más</span>
+        <span class="text-sm ">{read_more}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

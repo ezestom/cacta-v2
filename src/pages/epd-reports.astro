@@ -4,73 +4,71 @@ import Layout from "../layouts/Layout.astro";
 import eco from "../img/eco-score.png";
 import image2 from "../img/declaraciones.png";
 import GoBack from "../components/GoBack.astro";
+
+import { geti18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
 ---
 
 <Layout title="Reportes EPD 🍃">
-  <section
-    class="w-screen h-full md:h-screen flex items-center justify-center"
-    id="section"
-  >
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
-    >
-      <div
-        class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-      >
-      </div>
-      <div
-        class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-      >
-      </div>
-    </div>
-    <div class="absolute h-full w-full">
-      <div
-        class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-      >
-      </div>
-    </div>
-    <aside
-      class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0 gap-6 px-0 md:px-12"
-    >
-      <CardZoom2
-        icon=""
-        client:visible
-        image={eco.src}
-        title="Eco Score"
-        description="Engloba el impacto ambiental de tu empresa en un único indicador de performance. Calculado a partir de benchmarks internacionales, comunica el progreso de tu operación de manera fácil y confiable."
-        video1=""
-      />
+	<section
+		class="w-screen h-full md:h-screen flex items-center justify-center"
+		id="section">
+		<div
+			aria-hidden="true"
+			class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10">
+			<div
+				class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
+			</div>
+			<div
+				class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
+			</div>
+		</div>
+		<div class="absolute h-full w-full">
+			<div
+				class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+			</div>
+		</div>
+		<aside
+			class="grid grid-cols-1 md:grid-cols-2 my-20 md:my-0 gap-6 px-0 md:px-12">
+			<CardZoom2
+				icon=""
+				client:visible
+				image={eco.src}
+				title="Eco Score"
+				description="Engloba el impacto ambiental de tu empresa en un único indicador de performance. Calculado a partir de benchmarks internacionales, comunica el progreso de tu operación de manera fácil y confiable."
+				video1=""
+			/>
 
-      <CardZoom2
-        icon=""
-        client:visible
-        image={image2.src}
-        title="Declaraciones ambientales de producto"
-        description="Activa tu cadena de valor y posiciona tu producto. Las declaración ambiental de producto, o EPD por su sigla en inglés, proporcionan información detallada sobre el ciclo de vida ambiental de tu actividad. Siguiendo la normativa ISO-14025, este es tu pasaporte ambiental al mundo."
-        video1=""
-      />
-    </aside>
-    <GoBack />
-  </section>
+			<CardZoom2
+				icon=""
+				client:visible
+				image={image2.src}
+				title="Declaraciones ambientales de producto"
+				description="Activa tu cadena de valor y posiciona tu producto. Las declaración ambiental de producto, o EPD por su sigla en inglés, proporcionan información detallada sobre el ciclo de vida ambiental de tu actividad. Siguiendo la normativa ISO-14025, este es tu pasaporte ambiental al mundo."
+				video1=""
+			/>
+		</aside>
+		<GoBack />
+	</section>
 </Layout>
 
 <style>
-  .dark {
-    background-color: #111826;
-    z-index: -10;
-  }
-  .light {
-    background-color: #fafafa;
-    z-index: -10;
-  }
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
 </style>
 
 <script>
-  const section = document.getElementById("section");
-  if (localStorage.getItem("theme") === "dark") {
-    section?.classList.add("dark");
-  } else {
-    section?.classList.remove("dark");
-  }
+	const section = document.getElementById("section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
 </script>

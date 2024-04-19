@@ -54,7 +54,7 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
                 loop
                 muted
                 src={video1}
-                className=" w-full max-w-xl rounded-[3rem] shadow-2xl transition-all "
+                className=" aspect-auto w-full max-w-xl rounded-[3rem] shadow-2xl transition-all "
               ></video>
             </button>
           ) : undefined}

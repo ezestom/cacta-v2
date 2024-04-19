@@ -2,14 +2,25 @@ import { useState, useEffect } from "react";
 import { toast, Toaster } from "sonner";
 import x from "../../icons/x.svg";
 import "./Form.css";
+import logo from "../../img/logo-blanco.png";
 
-export function Form() {
+export function Form({
+  button,
+  toast_message,
+  name,
+  company,
+  email,
+  email_placeholder,
+  message,
+  message_placeholder,
+  send,
+}) {
   const [dialog, setDialog] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isMessageSuccess()) {
-      toast("¡Formulario enviado con éxito! Gracias por su confianza.", {
+      toast("Information successfully submitted! Thank you for your trust.", {
         type: "success",
       });
       closeDialog();
@@ -46,7 +57,7 @@ export function Form() {
       });
 
       if (response.ok) {
-        toast("¡Formulario enviado con éxito! Gracias por su confianza.", {
+        toast("Information successfully submitted! Thank you for your trust.", {
           type: "success",
         });
         closeDialog();
@@ -54,9 +65,7 @@ export function Form() {
         throw new Error("Error al enviar el formulario");
       }
     } catch (error) {
-      toast.error(
-        "Hubo un problema al enviar el formulario, por favor inténtelo de nuevo."
-      );
+      toast.error("There was a problem submitting the form, please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -66,9 +75,6 @@ export function Form() {
     <div className="relative form-container z-10 m-auto">
       <Toaster />
 
-      <h2 className="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle">
-        ¿Preparado para comenzar?
-      </h2>
       <div className="flex w-full items-center justify-center">
         <a
           href="https://librecounter.org/referer/show"
@@ -80,7 +86,6 @@ export function Form() {
             referrerPolicy="unsafe-url"
           />
         </a>
-        <hr className="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979 border-none" />
       </div>
       <span className="flex btn-form">
         <a
@@ -91,7 +96,7 @@ export function Form() {
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
-            Ir al formulario
+            {button}
             <svg
               className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
               aria-hidden="true"
@@ -114,15 +119,22 @@ export function Form() {
         <dialog open>
           <div className="form-container-dialog">
             {isLoading && (
-              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50">
+              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50 ">
                 <span class="loader"></span>
               </div>
             )}
             <form
               onSubmit={handleSubmit}
               method="POST"
-              action="https://formsubmit.co/jp.tena@cacta.eco"
+              // action="https://formsubmit.co/jp.tena@cacta.eco"
+              action="https://formsubmit.co/ezequielstom@gmail.com"
+              className="relative"
             >
+              <img
+                src={logo.src}
+                className="absolute  -top-14 mx-auto left-0 right-0 max-w-[125px]"
+                alt="logo cacta"
+              />
               <input type="hidden" name="_cc" value="ezequielstom@gmail.com" />
 
               <input
@@ -133,28 +145,27 @@ export function Form() {
               <input
                 type="hidden"
                 name="_autoresponse"
-                value="Tu mensaje fue exitoso, te responderemos a la brevedad! 🌵 "
+                value={toast_message}
               ></input>
               <input type="hidden" name="_next" value="https://cacta.eco/" />
               <input type="hidden" name="_captcha" value="false" />
               <legend>
-                <a
+                <button
                   className="flex justify-center my-2"
-                  href="/#contact"
                   onClick={closeDialog}
                 >
                   <img
-                    className="inline-flex  cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a]  p-1 hover:scale-105 transition font-medium text-gray-50 backdrop-blur-3xl"
+                    className="inline-flex  cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a]  p-1 hover:scale-105 transition font-medium text-gray-50 backdrop-blur-3xl right-0 absolute -top-6 "
                     src={x.src}
                     alt="x-icon"
                     id="close-dialog"
                   />
-                </a>
+                </button>
               </legend>
 
               <div className="flex flex-col gap-2 min-w-[350px] ">
                 <label htmlFor="name">
-                  Nombre
+                  {name}
                   <input
                     type="text"
                     name="name"
@@ -165,7 +176,7 @@ export function Form() {
                   />
                 </label>
                 <label htmlFor="name">
-                  Empresa
+                  {company}
                   <input
                     type="text"
                     name="company"
@@ -176,22 +187,22 @@ export function Form() {
                   />
                 </label>
                 <label htmlFor="email">
-                  Correo
+                  {email}
                   <input
                     className="rounded-md "
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="john_doe@ejemplo.com"
+                    placeholder={email_placeholder}
                     required
                   />
                 </label>
                 <label htmlFor="message">
-                  Mensaje
+                  {message}
                   <textarea
                     name="message"
                     id="message"
-                    placeholder="Quiero recibir información sobre la app de Cacta."
+                    placeholder={message_placeholder}
                     required
                   ></textarea>
                 </label>
@@ -199,7 +210,7 @@ export function Form() {
                   className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-2 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-105 transition mt-2"
                   type="submit"
                 >
-                  Enviar
+                  {send}
                 </button>
               </div>
             </form>

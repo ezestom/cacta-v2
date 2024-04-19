@@ -2,76 +2,78 @@
 import Container from "../Container.astro";
 import Gallery from "../Gallery.astro";
 import info from "../../icons/info.svg";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const {
+	title,
+	intro_1,
+	intro_2,
+	title_solution_1,
+	description_solution_1,
+	title_solution_2,
+	description_solution_2,
+} = i18n.SECTION_SOLUTION;
 ---
 
-<div id="solution" class="pt-10 lg:pt-40">
-  <Container>
-    <section class="flex flex-wrap justify-between">
-      <div class="w-full md:w-1/2">
-        <h2
-          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white"
-        >
-          Solución
-        </h2>
-        <p
-          class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold"
-        >
-          Gestionar la sustentabilidad nunca fue tan fácil.
-        </p>
-        <p class="my-2 text-gray-600 dark:text-gray-300">
-          Alcanza tus objetivos sin complicaciones. Recopila y analiza tus datos
-          de forma automática, y sencilla.
-        </p>
-        <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
-          <div class="mt-8 flex gap-4 md:items-center">
-            <div
-              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-indigo-900/20 -z-1"
-            >
-              <img class="w-8 m-auto" src={info.src} alt="icon" />
-            </div>
-            <div class="w-5/6">
-              <h3
-                class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
-              >
-                Monitoreo por establecimiento:
-              </h3>
-              <p class="text-gray-500 dark:text-gray-400">
-                Obtén control sobre las operaciones, recursos y rendimientos por
-                campo. Además, identifica fácilmente impactos georeferenciados,
-                facilitando una respuesta para adaptar las soluciones y
-                estrategias de manera más precisa. Inluye tus estudios de suelo
-                y consigue indicadores locales y confiables.
-              </p>
-            </div>
-          </div>
-          <div class="pt-4 flex gap-4 md:items-center">
-            <div
-              class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20"
-            >
-              <img class="w-8 m-auto" src={info.src} alt="icon" />
-            </div>
-            <div class="w-5/6">
-              <h3
-                class="font-semibold text-lg text-gray-700 dark:text-teal-300"
-              >
-                Monitoreo por producto:
-              </h3>
-              <p class="text-gray-500 dark:text-gray-400">
-                Adquiere trazabilidad del uso de recursos y generación de
-                emisiones asociadas a tus actividades. Identifica oportunidades
-                de mejora de eficiencia y sustentabilidad.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Gallery />
-    </section>
-  </Container>
+<div id="solution" class="pt-10 lg:pt-32">
+	<Container>
+		<section class="flex flex-wrap justify-between">
+			<div class="w-full md:w-1/2">
+				<h2
+					class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+					{title}
+				</h2>
+				<p
+					class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold">
+					{intro_1}
+				</p>
+				<p class="my-2 text-gray-600 dark:text-gray-300">
+					{intro_2}
+				</p>
+				<div
+					class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+					<div class="mt-8 flex gap-4 md:items-center">
+						<div
+							class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-indigo-900/20 -z-1">
+							<img class="w-8 m-auto" src={info.src} alt="icon" />
+						</div>
+						<div class="w-5/6">
+							<h3
+								class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+								{title_solution_1}
+							</h3>
+							<p class="text-gray-500 dark:text-gray-400">
+								{description_solution_1}
+							</p>
+						</div>
+					</div>
+					<div class="pt-4 flex gap-4 md:items-center">
+						<div
+							class="w-12 h-12 flex gap-4 rounded-full bg-gradient-to-r from-[#ff3e57] to-[#ffb979] dark:bg-teal-900/20">
+							<img class="w-8 m-auto" src={info.src} alt="icon" />
+						</div>
+						<div class="w-5/6">
+							<h3
+								class="font-semibold text-lg text-gray-700 dark:text-teal-300">
+								{title_solution_2}
+							</h3>
+							<p class="text-gray-500 dark:text-gray-400">
+								{description_solution_2}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Gallery />
+		</section>
+	</Container>
 </div>
 
 <style>
-  span {
-    color: var(--primary);
-  }
+	span {
+		color: var(--primary);
+	}
 </style>

@@ -3,78 +3,108 @@ import Container from "../Container.astro";
 import { Form } from "../Form/Form.jsx";
 import quote1 from "../../icons/quote1.svg";
 import quote2 from "../../icons/quote2.svg";
+import { toast } from "sonner";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { paragraph, ready } = i18n.SECTION_CONTACT;
+const {
+	button,
+  toast_message,
+	name,
+	company,
+	email,
+	email_placeholder,
+	message,
+	message_placeholder,
+	send,
+} = i18n.SECTION_CONTACT.FORM;
 ---
 
 <div class="relative py-0 md:py-16" id="contact">
-  <!-- background -->
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
-  >
-    <div
-      class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-    >
-    </div>
-    <div
-      class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-    >
-    </div>
-  </div>
-  <div
-    class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-  >
-  </div>
-  <!-- background -->
+	<!-- background -->
+	<div
+		aria-hidden="true"
+		class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+		<div
+			class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
+		</div>
+		<div
+			class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
+		</div>
+	</div>
+	<div
+		class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+	</div>
+	<!-- background -->
 
-  <Container>
-    <div class="relative">
-      <img
-        src={quote1.src}
-        class="absolute opacity-30 -top-14 md:-top-6 w-16 -left-6 md:left-48"
-        alt="icon quote"
-      />
-      <img
-        src={quote2.src}
-        class="absolute opacity-30 top-20 md:top-6 w-16 -right-6 md:right-48"
-        alt="icon quote"
-      />
-      <div
-        class="mt-6 space-y-6 md:w-8/12 lg:w-7/12 flex flex-col justify-center w-full mx-auto"
-      >
-        <p
-          class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-semibold"
-        >
-          Simplifica tu gestión sustentable, optimiza tus procesos y maximiza
-          tus beneficios operativos. Prevé el cambio, moldéalo a tu favor.
-        </p>
+	<Container>
+		<div class="relative">
+			<img
+				src={quote1.src}
+				class="absolute opacity-20 -top-14 md:-top-6 w-16 -left-6 md:left-48"
+				alt="icon quote"
+			/>
+			<img
+				src={quote2.src}
+				class="absolute opacity-20 top-20 md:top-6 w-16 -right-6 md:right-48"
+				alt="icon quote"
+			/>
+			<div
+				class="mt-6 space-y-6 md:w-8/12 lg:w-7/12 flex flex-col justify-center w-full mx-auto">
+				<p
+					class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-semibold">
+					{paragraph}
+				</p>
+			</div>
+			<aside class="w-full h-full pt-20 mx-auto">
+				<h2
+					class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white text-center fixedTitle">
+					{ready}
+				</h2>
+				<hr
+					class="hr-contact bg-gradient-to-r from-[#ff3e57] to-[#ffb979] border-none"
+				/>
 
-        <!-- two btns -->
-
-        <!-- <div class="flex flex-wrap justify-center gap-6">
-          <a
-            href="#"
-            class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-          >
-            <span
-              class="relative text-base font-semibold text-white dark:text-dark"
-              >Get Started</span
-            >
-          </a>
-          <a
-            href="#"
-            class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-          >
-            <span
-              class="relative text-base font-semibold text-primary dark:text-white"
-              >More about</span
-            >
-          </a>
-        </div> -->
-      </div>
-      <aside class="w-full h-full pt-20">
-        <!-- <Contributors /> -->
-        <Form client:visible />
-      </aside>
-    </div>
-  </Container>
+				<!-- <Contributors /> -->
+				<Form
+					button={button}
+          toast_message={toast_message}
+					name={name}
+					company={company}
+					email={email}
+					email_placeholder={email_placeholder}
+					message={message}
+					message_placeholder={message_placeholder}
+					send={send}
+					client:visible
+				/>
+			</aside>
+		</div>
+	</Container>
 </div>
+
+<style>
+	.hr-contact {
+		height: 2px;
+		margin: 1rem 0;
+		border: none;
+		width: 30%;
+		margin: 1rem auto;
+	}
+	.fixedTitle {
+		animation: fixedTitle linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+	}
+	@media (width > 768px) {
+		@keyframes fixedTitle {
+			from {
+				transform: scale(1.5);
+				opacity: 0;
+			}
+		}
+	}
+</style>

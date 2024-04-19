@@ -4,62 +4,64 @@ import rola from "../img/rola.png";
 import video1 from "../video/app-video.mp4";
 import Layout from "../layouts/Layout.astro";
 import GoBack from "../components/GoBack.astro";
+
+import { geti18n } from "../i18n/index.js";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { title_description_1, description_1_1 } = i18n.SECTION_FEATURES;
+
 ---
 
 <Layout title="Cáclculo ambiental 🌿">
-  <section
-    class="w-screen h-full md:h-screen flex items-center justify-center"
-    id="section"
-  >
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
-    >
-      <div
-        class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-      >
-      </div>
-      <div
-        class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600"
-      >
-      </div>
-    </div>
-    <div class="absolute h-full w-full">
-      <div
-        class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-      >
-      </div>
-    </div>
-    <aside class="my-20 md:my-0">
-      <CardZoom2
-        icon=""
-        client:visible
-        image={rola.src}
-        title="CALCULO MEDIOAMBIENTAL"
-        description={`Vista 360º | Toda tu información centralizada en una sola pantalla, permitiendo identificar de forma sencilla los principales contribuyentes de tu huella ambiental: ☑Cambio climático ☑Biodiversidad ☑Salud humana ☑Agotamiento de recursos`}
-        video1={video1}
-      />
-    </aside>
-    <GoBack />
-  </section>
+	<section
+		class="w-screen h-full md:h-screen flex items-center justify-center"
+		id="section">
+		<div
+			aria-hidden="true"
+			class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10">
+			<div
+				class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
+			</div>
+			<div
+				class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
+			</div>
+		</div>
+		<div class="absolute h-full w-full">
+			<div
+				class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+			</div>
+		</div>
+		<aside class="my-20 md:my-0">
+			<CardZoom2
+				icon=""
+				client:visible
+				image={rola.src}
+				title={title_description_1}
+				description={description_1_1}
+				video1={video1}
+			/>
+		</aside>
+		<GoBack />
+	</section>
 </Layout>
 
 <style>
-  .dark {
-    background-color: #111826;
-    z-index: -10;
-  }
-  .light {
-    background-color: #fafafa;
-    z-index: -10;
-  }
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
 </style>
 
 <script>
-  const section = document.getElementById("section");
-  if (localStorage.getItem("theme") === "dark") {
-    section?.classList.add("dark");
-  } else {
-    section?.classList.remove("dark");
-  }
+	const section = document.getElementById("section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
 </script>

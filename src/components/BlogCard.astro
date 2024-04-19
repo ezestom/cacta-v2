@@ -1,51 +1,69 @@
 ---
+import LanguageSelector from "../components/LanguageSelector.astro";
+import HeaderLink from "../components/HeaderLink.astro";
+
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../i18n/utils";
+
+import { geti18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
 import { Image } from "astro:assets";
 interface Props {
-  title?: string;
-  description?: string;
-  id?: string;
-  image?: any;
+	title?: string;
+	description?: string;
+	id?: string;
+	image?: any;
 }
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
 const { title, description, image, id } = Astro.props;
+
+const { button } = i18n.SECTION_BLOG;
 ---
 
 <div
-  class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
->
-  <div class="relative overflow-hidden rounded-xl">
-    <Image
-      id={id}
-      src={image}
-      alt="art cover"
-      loading="lazy"
-      width="1000"
-      height="667"
-      class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
-    />
-  </div>
-  <div class="mt-6 relative">
-    <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-      {title}
-    </h3>
-    <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300 hidden md:block truncate ...">
-      {description}
-    </p>
-  </div>
-  <a
-    href="/blog"
-    class="flex items-center justify-center group-hover:text-tertiary mt-4 text-black dark:text-white font-semibold transition hover:scale-105"
-  >
-    <span class="text-sm">Ir al blog</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      class="w-4 h-4 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-        clip-rule="evenodd"></path>
-    </svg>
-  </a>
+	class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+	<div class="relative overflow-hidden rounded-xl">
+		<Image
+			id={id}
+			src={image}
+			alt="art cover"
+			loading="lazy"
+			width="1000"
+			height="667"
+			class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+		/>
+	</div>
+	<div class="mt-6 relative">
+		<h3 class="text-xl font-semibold text-gray-800 dark:text-white">
+			{title}
+		</h3>
+		<p
+			class="mt-6 mb-8 text-gray-600 dark:text-gray-300 hidden md:block truncate ...">
+			{description}
+		</p>
+	</div>
+	<a
+		href={translatePath("/blog")}
+		class="flex items-center justify-center group-hover:text-tertiary mt-4 text-black dark:text-white font-semibold transition">
+		<span class="text-sm">{button}</span>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class="w-4 h-4 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-2 group-hover:opacity-100">
+			<path
+				fill-rule="evenodd"
+				d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+				clip-rule="evenodd"></path>
+		</svg>
+	</a>
 </div>

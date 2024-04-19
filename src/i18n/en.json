@@ -1,0 +1,117 @@
+{
+  "BUTTON_HEADER": "Contact Us",
+  "SEO_TITLE": "Welcome to Cacta | The gateway to the future of the agricultural industry.",
+  "SEO_DESCRIPTION": "Cacta is a software platform that automates, calculates, and reports on your company's environmental impact.",
+  "INTRO_TITLE_1": "More than a ",
+  "INTRO_TITLE_2": "Software",
+  "INTRO_TITLE_3": "The gateway to the future",
+  "INTRO_TITLE_4": "of the agricultural industry.",
+  "INTRO_DESCRIPTION_1": "Automate, calculate, and report",
+  "INTRO_DESCRIPTION_2": "the environmental impact",
+  "INTRO_DESCRIPTION_3": "of your company.",
+  "SECTION_SOLUTION": {
+    "title": "Solution",
+    "intro_1": "Managing sustainability has never been easier.",
+    "intro_2": "Achieve your goals without complications. Collect and analyze your data automatically and simply.",
+    "title_solution_1": "Monitoring by establishment:",
+    "description_solution_1": "Gain comprehensive control over operations, resources, and yields per field. Additionally, easily identify georeferenced impacts, facilitating a tailored response to adapt solutions and strategies more precisely. Incorporate soil studies to obtain reliable local indicators.",
+    "title_solution_2": "Monitoring by product:",
+    "description_solution_2": "Acquire traceability of resource use and generation of emissions associated with your activities. Identify opportunities to improve efficiency and sustainability."
+  },
+  "SECTION_FEATURES": {
+    "button_read_more": "Read more",
+    "button_back": "Back",
+    "title": "Features",
+    "intro_1": "Secure your exports. Always up to date with international regulations.",
+    "intro_2": "Automate the generation of your reports to communicate your relationship with the environment clearly and precisely.",
+    "title_description_1": "Environmental Calculation",
+    "description_1_1": "360º View | All your information centralized on one screen, allowing easy identification of the main contributors to your environmental footprint: ☑Climate Change ☑Biodiversity ☑Human Health ☑Resource Depletion.",
+    "title_description_2": "Analysis and Management",
+    "title_description_2_1": "PERFORMANCE BY KPI",
+    "description_2_1": "Identify necessary actions through detailed contribution analysis. Obtain transparent information about the effect of your inputs on the ecosystem.",
+    "title_description_2_2": "VALUE CHAIN",
+    "description_2_2": "At Cacta, we understand that sustainability is a joint mission. That's why we have disaggregated impact indicators into the contribution of each actor in your value chain so you can report following international standards.",
+    "title_description_2_3": "INITIATIVE MANAGEMENT",
+    "description_2_3": "Generate initiatives, track and analyze your results through our management dashboard. Communicate your action plan with members of your company.",
+    "title_description_3": "EPD Reports",
+    "title_description_3_1": "ECO SCORE",
+    "description_3_1": "Wrap up your company's environmental impact in a single performance indicator. Calculated from international benchmarks, communicate your operation's progress easily and reliably.",
+    "title_description_3_2": "ENVIRONMENTAL PRODUCT DECLARATIONS",
+    "description_3_2": "Activate your value chain and position your product. Environmental Product Declarations, or EPDs, provide detailed information about the environmental lifecycle of your activity. Following ISO-14025 regulations, this is your environmental passport to the world."
+  },
+  "SECTION_WHYCACTA": {
+    "title": "Why Choose Cacta?",
+    "intro_1": "Our mission: to support the primary industry in its transformation towards a sustainable future.",
+    "intro_2": "Our main goal is to enable companies to make informed decisions, reducing their environmental impact while optimizing operational efficiency.",
+    "box_1": "We connect to your management system, obtaining reliable and traceable information.",
+    "box_2": "Software developed by and for farmers under the Life Cycle Assessment (LCA) methodology.",
+    "box_3": "Automated panels and reports that make sustainable management simple and effective.",
+    "box_4": "Optimized algorithm that records over 70,000 emissions to soil, air, and water and 27,000 environmental records.",
+    "box_5": "Certified solution, aligned with European standards and ISO 14040/44 regulations. The most comprehensive tool on the market.",
+    "box_6": "Customized tool to fit your needs, for small, medium, and large-scale producers."
+  },
+  "CALL_TO_ACTION": {
+    "title": "We are more than just software.",
+    "intro_1": "We are the gateway to the future for primary industry businesses.",
+    "intro_2": "Automate, calculate, and report your company's environmental impact."
+  },
+  "SECTION_US": {
+    "title": "About Us",
+    "intro_1": "We are Cacta, sustainability at the click of a button.",
+    "description_1": "We passionately dedicate ourselves every day to driving businesses towards a transformation to sustainable management.",
+    "description_2": "How? With our high-tech solutions developed under the strictest academic rigor and scientific validation so that companies can make informed decisions, reduce their environmental impact, and maximize operational efficiency simultaneously.",
+    "description_3": "Why? As a team, we believe that sustainability is not just a goal but a way of doing business that benefits all parties involved.",
+    "description_4": "Our commitment extends to closely collaborating with our clients, guiding them towards a future where technology and environmental responsibility converge to generate lasting positive impact.",
+    "span_1": "Total carbon footprint",
+    "span_2": "Potential acidification",
+    "span_3": "Water eutrophication",
+    "span_4": "Water ecotoxicity",
+    "span_5": "Carcinogens",
+    "span_6": "Non-carcinogens",
+    "span_7": "Ozone depletion",
+    "span_8": "Smog",
+    "span_9": "Non-renewables",
+    "span_10": "Minerals and metals"
+  },
+  "FADER": {
+    "title": "Our Partners",
+    "intro_1": "We are supported by these companies around the world."
+  },
+  "SECTION_CONTACT": {
+    "paragraph": "Simplify your sustainable management, optimize your processes, and maximize your operational benefits. Anticipate change, shape it to your advantage.",
+    "ready": "Ready to start?",
+    "FORM": {
+      "button": "I want to receive more information",
+      "toast_message": "Your message was successful, we will get back to you shortly! 🌵",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "email_placeholder": "john_doe@example.com",
+      "message": "Message",
+      "message_placeholder": "I want to receive information about the Cacta app.",
+      "send": "Send"
+    }
+  },
+  "SECTION_BLOG": {
+    "title": "Latest Articles",
+    "intro": "Dive into our carefully crafted content, where we address a variety of sustainability-related topics, from the latest trends, technological applications, regulations, frameworks to practical tips to improve your business.",
+    "button": "Go to the blog",
+    "read_more": "Read more",
+    "post_1": {
+      "title": "Deciphering the ESG Enigma: The Power and Promise of Corporate Sustainability",
+      "description": "Environmental, Social, and Governance (ESG) metrics have existed for over a century. These criteria originated mainly from socially conscious investors who wanted to align their investments with their values, though initially lacking a clear execution plan and an efficient way to measure results. Initiatives like the 'Quaker Friends Fiduciary No-sin investments' (1890) are known today as the seeds of ESG.\n\nWhile these proposals had excellent intentions, the lack of an execution plan and an efficient way to measure results kept the world for almost a century without any advancement in improving environmental metrics and especially without a way to globally standardize the measurement of how we interact with the planet.\n\nUnfortunately, it took multiple disasters such as the Chernobyl disaster (1980), the detection of the ozone layer hole in (1985), or the Exxon Valdez disaster in (1989) for governments, entrepreneurs, activists, among others, to truly awaken to the need to develop a methodology and guidelines to encourage and corroborate that business practices could be more responsible towards the planet.\n\nIt seemed that finally, the environmental issue was starting to be addressed. However, other issues quickly arose, and experts identified that the solution had to be more comprehensive and consider many other aspects that were not being addressed at the moment but were highly correlated.\n\nDuring the 1990s, with the advent of the digital era, it became possible to firsthand learn about social problems no matter where they occurred. Concepts like Corporate Social Responsibility (CSR) began to consider their impact on society and the environment, as well as their corporate governance practices. It was also during this period that various standards and guidelines for sustainability reporting were developed, such as the Global Reporting Initiative (GRI).\n\nBetween 2000 and 2010, several notable financial events occurred that had a significant impact on the global economy. The dot-com bubble (2001), the accounting frauds of Enron (2001) and Worldcom (2002), and the subprime mortgage crisis (2007) led to job losses, stock price declines, and widespread loss of confidence in the financial system and responsible business practices.\n\nThe lessons learned from these events helped shape the current financial regulatory environment and led to the development of new non-financial instruments and regulations aimed at preventing similar crises in the future, but above all giving a responsible purpose to the use of capital among the investment community.\n\nThe final blow to bring what we now know as ESG factors into play has been the emergence of more and better data, as well as a better understanding of the environmental and social pressures of modernity, which can now be regulated and legitimized thanks to the development of financial instruments that are accessible to the investment community.\n\nMany investors and asset managers now consider ESG factors when making investment decisions, and many companies are incorporating ESG considerations into their business strategies and reporting practices.\n\nEnvironmental, social, and governance (ESG) data tends to capture non-financial factors that were traditionally absent in financial analysis: business management of energy and water use, waste generation, employee rights and working conditions, community involvement, data privacy rights, and more. Traditional indicators of corporate responsibility and transparency.\n\nToday, ESG is considered key in assessing the financial performance and long-term sustainability of a company trading publicly and internationally. It has become an integral part of the investment process, and more and more companies recognize the need to address ESG issues to meet the expectations of their stakeholders and improve their overall performance.\n\nIn short, as Rochelle March, Head of ESG Product at Dun & Bradstreet, comments, “ESG encapsulates almost everything that can reflect how companies operate within society and the environment, and whether that mode of operation is sustainable and responsible”."
+    },
+    "post_2": {
+      "title": "Unraveling the Green Engine: The Magic behind Cacta's Operation",
+      "description": "We all know the impact of climate change on the planet. But... Did you know that the agricultural system accounts for nearly one-third (31%) of global carbon emissions? And this is just the tip of the iceberg. Our planet already exceeds defined limits for other categories such as biodiversity loss or resource depletion. At Cacta, we understand the magnitude of the problem and the need to take action to reduce our impact and improve our relationship with the environment. That's why we've designed a pioneering environmental management tool exclusively for the agricultural sector. It is the first of its kind, capable of merging productive information with environmental impact indicators backed by science. The tool consists of three modules: The first one (A) focuses on semi-automatically extracting data from agricultural clients by integrating it into their management systems. In the second module (B), we focus on classifying and transforming the information into an inventory of environmental emissions for each client. We use the Life Cycle Analysis (LCA) methodology according to ISO 14040/44 regulations, following European standards to calculate the inventory phase. During this stage, we consider everything from the production of various inputs and energies to their application in the field, taking into account local factors such as soil pH. The third module (C) focuses on translating this information into environmental impact indicators, following the recommendations of the European Commission. We present these indicators visually in interactive dashboards and product information cards. Additionally, the tool includes a benchmark and an Eco Score. Scope: The current version of Cacta Agro focuses on determining the environmental impacts associated with the production of agricultural crops from 'cradle' to 'gate.' This involves computing the inventory from the generation of raw materials and energies to the harvesting of the product. By extracting information directly from various activities, we associate the use of inputs or machinery with each particular batch and crop. For cases where it is not possible, the mass allocation method is applied. For the particular case of machinery hours, we use area weighting."
+    },
+    "post_3": {
+      "title": "Transforming the World: Discover the Sustainable Development Goals.",
+      "description": "On September 25, 2015, world leaders adopted a set of global goals to eradicate poverty, protect the planet, and ensure prosperity for all as part of a new sustainable development agenda. Each goal has specific targets to be achieved over the next 15 years (2030). Therefore, the Sustainable Development Goals have been agreed upon by all governments. However, their success will depend on the actions taken by everyone, both companies and governments. The SDGs offer the opportunity to develop and implement solutions and technologies from the business sector, allowing the largest challenges established in terms of sustainable development to be addressed. At the same time, these are part of a global agenda for the development of our societies. They establish that market-leading companies must demonstrate that the businesses they conduct help lead us towards sustainable development. Despite seeming complex to align with these objectives, the truth is that it is not. It's a matter of conducting a thorough materiality assessment, identifying productive processes within companies, and obtaining clear and reliable traceability. The United Nations assures that there are key benefits to generating alignment with sustainable development goals, including: Improving operational efficiency throughout the supply chain, strengthening relationships with customers, consumers, and suppliers, as well as reducing environmental and health and safety risks."
+    }
+  },
+  "PAGE_BLOG": {
+    "title": "Explore our blog and discover the latest news, trends, and tips on sustainability, agriculture, and innovation.",
+    "button_back": "Back"
+  }
+}

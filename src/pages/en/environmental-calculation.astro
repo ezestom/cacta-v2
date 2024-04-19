@@ -1,25 +1,19 @@
 ---
-import { CardZoom2 } from "../components/CardZoom/CardZoom2";
-import kpi from "../img/kpi.png";
-import cadena from "../img/cadena.png";
-import iniciativa from "../img/iniciativa.png";
-import Layout from "../layouts/Layout.astro";
-import GoBack from "../components/GoBack.astro";
-import { geti18n } from "../i18n/index.js";
+import { CardZoom2 } from "../../components/CardZoom/CardZoom2.jsx";
+import rola from "../../img/rola.png";
+import video1 from "../../video/app-video.mp4";
+import Layout from "../../layouts/Layout.astro";
+import GoBack from "../../components/GoBack.astro";
+
+import { geti18n } from "../../i18n/index.js";
 const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
-const {
-	title_description_2_1,
-	description_2_1,
-	title_description_2_2,
-	description_2_2,
-	title_description_2_3,
-	description_2_3,
-} = i18n.SECTION_FEATURES;
+const { title_description_1, description_1_1 } = i18n.SECTION_FEATURES;
+
 ---
 
-<Layout title="Análisis y gestión 🍀">
+<Layout title="Cáclculo ambiental 🌿">
 	<section
 		class="w-screen h-full md:h-screen flex items-center justify-center"
 		id="section">
@@ -38,37 +32,18 @@ const {
 				class="absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
 			</div>
 		</div>
-		<aside
-			class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-20 md:my-0 gap-6 px-0 md:px-12">
+		<aside class="my-20 md:my-0">
 			<CardZoom2
 				icon=""
 				client:visible
-				image={kpi.src}
-				title={title_description_2_1}
-				description={description_2_1}
-				video1=""
-			/>
-
-			<CardZoom2
-				icon=""
-				client:visible
-				image={cadena.src}
-				title={title_description_2_2}
-				description={description_2_2}
-				video1=""
-			/>
-
-			<CardZoom2
-				icon=""
-				client:visible
-				image={iniciativa.src}
-				title={title_description_2_3}
-				description={description_2_3}
-				video1=""
+				image={rola.src}
+				title={title_description_1}
+				description={description_1_1}
+				video1={video1}
 			/>
 		</aside>
+		<GoBack />
 	</section>
-	<GoBack />
 </Layout>
 
 <style>
