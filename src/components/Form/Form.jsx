@@ -126,8 +126,8 @@ export function Form({
             <form
               onSubmit={handleSubmit}
               method="POST"
-              // action="https://formsubmit.co/jp.tena@cacta.eco"
-              action="https://formsubmit.co/ezequielstom@gmail.com"
+              action="https://formsubmit.co/jp.tena@cacta.eco"
+              // action="https://formsubmit.co/ezequielstom@gmail.com"
               className="relative"
             >
               <img

@@ -18,7 +18,7 @@ const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
 ---
 
 <Layout title="Cacta blog">
-	<div id="blog-section" class="h-full sm:h-screen">
+	<div id="blog-section" class="min-h-screen h-full">
 		<div class="py-10 flex items-center flex-col justify-center">
 			<h2
 				class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2">
@@ -33,7 +33,7 @@ const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
 
 		<div
 			class="grid items-starth-fit blog-container gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-      justify-center w-full max-w-7xl mx-auto px-4 md:px-0 my-5">
+      justify-center w-full max-w-7xl mx-auto px-4 md:px-0 py-5">
 			<BlogCard2
 				client:visible
 				image={blog1}
@@ -57,7 +57,6 @@ const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
 				read_more={read_more}
 			/>
 		</div>
-
 		<GoBack button={button_back} />
 	</div>
 </Layout>

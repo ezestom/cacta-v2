@@ -98,7 +98,7 @@ import Container from "./Container.astro";
 			<div
 				class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo">
 				<HeaderLink
-					href={translatePath("/home/")}
+					href={translatePath("/#home")}
 					aria-label="logo"
 					class="flex items-center space-x-2">
 					<img src={logo.src} alt="logo cacta" class="w-14" />
@@ -125,7 +125,7 @@ import Container from "./Container.astro";
 			<div
 				id="navLayer"
 				aria-hidden="true"
-				class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white backdrop-blur-2xl transition duration-500 dark:bg-gray-900 lg:hidden">
+				class="fixed inset-0 z-10 h-screen w-full origin-bottom scale-y-0 bg-white backdrop-blur-2xl transition duration-500 dark:bg-gray-900 lg:hidden">
 			</div>
 			<div
 				id="navlinks"
@@ -146,28 +146,28 @@ import Container from "./Container.astro";
 											</li> -->
 						<li>
 							<HeaderLink
-								href={translatePath("/solution/")}
+								href={translatePath("/#solution")}
 								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
 								{t("nav.solution")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
-								href={translatePath("/features/")}
+								href={translatePath("/#features")}
 								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
 								{t("nav.features")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
-								href={translatePath("/whyCacta/")}
+								href={translatePath("/#why-cacta")}
 								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
 								{t("nav.whyCacta")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
-								href={translatePath("/us/")}
+								href={translatePath("/#us")}
 								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
 								{t("nav.us")}
 							</HeaderLink>
@@ -177,7 +177,7 @@ import Container from "./Container.astro";
 
 				<div class="mt-12 lg:mt-0 flex items-center">
 					<HeaderLink
-						href={translatePath("/contact/")}
+						href={translatePath("/#contact")}
 						class="z-100 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 mr-2">
 						<span
 							class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"

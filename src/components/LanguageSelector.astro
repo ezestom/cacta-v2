@@ -17,9 +17,9 @@ const otherLocales = Object.values(LANGUAGES).filter(
 );
 ---
 
-<div class="relative inline-block text-left">
+<div class="relative inline-block text-left" id="language-btn">
 	<div
-		class="group text-white  rounded-full text-xs font-semibold bg-black/20 hover:bg-black/40 transition-all">
+		class="group text-white rounded-full text-xs font-semibold bg-black/20 hover:bg-black/40 transition-all">
 		<button
 			type="button"
 			class="inline-flex justify-start items-center w-full gap-x-2 px-2 py-[.92rem]"
@@ -30,22 +30,36 @@ const otherLocales = Object.values(LANGUAGES).filter(
 			<Chevron />
 		</button>
 		<ul
-			class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden  absolute w-full">
+			class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden absolute w-full">
 			{
 				otherLocales.map((locale) => (
-					<li class="]">
-						<a
-							class="rounded-full  bg-black/30 hover:bg-black/50 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 mt-2 py-4"
-							href={translatePath(
-								`/${route ? route : ""}`,
-								locale.code
-							)}>
-							<locale.flag />
-							{locale.name}
-						</a>
-					</li>
+					<a
+						id="language-btn"
+						class="rounded-full  bg-black/30 hover:bg-black/50 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 mt-2 py-4"
+						href={translatePath(
+							`/${route ? route : ""}`,
+							locale.code
+						)}>
+						<locale.flag />
+						{locale.name}
+					</a>
 				))
 			}
 		</ul>
 	</div>
 </div>
+
+<script>
+	const changeLanguage = (e: any) => {
+		e.preventDefault();
+		const url = e.target.href;
+		window.location = url;
+	};
+
+	// agregar el evento click a los elementos de la lista
+	const languageBtn = document.getElementById("language-btn");
+	const languageBtnItems = languageBtn?.querySelectorAll("a");
+	languageBtnItems?.forEach((item) => {
+		item.addEventListener("click", changeLanguage);
+	});
+</script>

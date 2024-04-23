@@ -1,14 +1,14 @@
 ---
-import juan from "../img/juan.webp";
-import maxi from "../img/maxi.webp";
-import luciano from "../img/luciano.webp";
-import jose from "../img/jose.webp";
-import sofia from "../img/sofia.webp";
-import Layout from "../layouts/Layout.astro";
-import GoBack from "../components/GoBack.astro";
-import { LogoTheme } from "../components/LogoTheme.jsx";
+import juan from "../../img/juan.webp";
+import maxi from "../../img/maxi.webp";
+import luciano from "../../img/luciano.webp";
+import jose from "../../img/jose.webp";
+import sofia from "../../img/sofia.webp";
+import Layout from "../../layouts/Layout.astro";
+import GoBack from "../../components/GoBack.astro";
+import { LogoTheme } from "../../components/LogoTheme.jsx";
 
-import { geti18n } from "../i18n/";
+import { geti18n } from "../../i18n/";
 const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
@@ -43,6 +43,7 @@ const { description } = i18n.FOOTER;
 		<p
 			class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 text-balance">
 			{description}
+
 			<div class="box">
 				<div class="card">
 					<div class="imgBox">

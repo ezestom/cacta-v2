@@ -112,6 +112,11 @@
   },
   "PAGE_BLOG": {
     "title": "Recorre nuestro blog y descubre las últimas noticias, tendencias y consejos sobre sostenibilidad, agricultura e innovación.",
-    "button_back": "Volver"
+    "button_back": "Volver",
+    "button_read_more": "Leer más"
+  },
+  "FOOTER": {
+    "description":"Somos el equipo detrás de Cacta, comprometidos con la transformación de la industria primaria hacia un futuro sustentable. Con experiencia en desarrollo de software, agricultura y sustentabilidad, trabajamos juntos para ofrecer soluciones innovadoras y eficaces a nuestros clientes."
   }
+
 }
