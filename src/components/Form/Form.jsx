@@ -74,7 +74,6 @@ export function Form({
   return (
     <div className="relative form-container z-10 m-auto">
       <Toaster />
-
       <div className="flex w-full items-center justify-center">
         <a
           href="https://librecounter.org/referer/show"
@@ -88,9 +87,8 @@ export function Form({
         </a>
       </div>
       <span className="flex btn-form">
-        <a
+        <button
           className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
-          href="#open-dialog"
           onClick={openDialog}
           id="open-dialog"
         >
@@ -112,7 +110,7 @@ export function Form({
               ></path>
             </svg>
           </span>
-        </a>
+        </button>
       </span>
 
       {dialog && (

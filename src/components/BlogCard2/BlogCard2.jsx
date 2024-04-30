@@ -1,5 +1,5 @@
 import close from "../../icons/x.svg";
-import { useState } from "react";
+import {  useState } from "react";
 import "./BlogCard2.css";
 
 export function BlogCard2({ image, title, description, read_more }) {
@@ -30,7 +30,7 @@ export function BlogCard2({ image, title, description, read_more }) {
         />
       </div>
       <div className="mt-6 relative">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+        <h3 className="text-base font-semibold text-gray-800 dark:text-white">
           {title}
         </h3>
         <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300 hidden md:block truncate ...">
@@ -70,13 +70,13 @@ export function BlogCard2({ image, title, description, read_more }) {
                 src={image.src}
                 alt="art cover"
                 loading="lazy"
-                className="  max-h-[300px] mx-auto rounded-xl shadow-2xl shadow-gray-600/10"
+                className="  max-h-[250px] w-1/2 object-cover mx-auto rounded-xl shadow-2xl shadow-gray-600/10"
               />
             </div>
-            <h3 className="mt-6 text-3xl font-semibold text-gray-800 dark:text-white">
+            <h3 className="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
               {title}
             </h3>
-            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 text-pretty">
+            <p className="mt-6 text-base text-gray-600 dark:text-gray-300 text-pretty">
               {description}
             </p>
           </article>

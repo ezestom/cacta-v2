@@ -1,7 +1,4 @@
 ---
-import LanguageSelector from "../components/LanguageSelector.astro";
-import HeaderLink from "../components/HeaderLink.astro";
-
 import {
 	getLangFromUrl,
 	useTranslations,
@@ -31,6 +28,7 @@ const { button } = i18n.SECTION_BLOG;
 
 <div
 	class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+	<slot />
 	<div class="relative overflow-hidden rounded-xl">
 		<Image
 			id={id}
@@ -43,7 +41,7 @@ const { button } = i18n.SECTION_BLOG;
 		/>
 	</div>
 	<div class="mt-6 relative">
-		<h3 class="text-xl font-semibold text-gray-800 dark:text-white">
+		<h3 class="text-base font-semibold text-gray-800 dark:text-white">
 			{title}
 		</h3>
 		<p
