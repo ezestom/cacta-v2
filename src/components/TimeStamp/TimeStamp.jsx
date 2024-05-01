@@ -25,10 +25,10 @@ export function TimeStamp({ time }) {
     <div className="flex flex-end w-fit ml-auto shadow-md rounded-xl mb-2 px-2 py-1 items-center text-gray-500 dark:text-gray-400 text-sm">
       <img src={write.src} className="w-5 pr-1" alt="icon date" />
       {diffDays < 30
-        ? `${diffDays} day/s`
+        ? `${diffDays} days`
         : diffMonths < 12
-        ? `${diffMonths} month/s`
-        : `${diffYears} year/s`}
+        ? `${diffMonths} months`
+        : `${diffYears} years`}
     </div>
   );
   // Ejemplo de uso
