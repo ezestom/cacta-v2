@@ -22,7 +22,7 @@ export function TimeStamp({ time }) {
   const diffYears = Math.floor(diffDays / 365);
 
   return (
-    <div className="flex flex-end w-fit ml-auto shadow-md rounded-xl mb-2 px-2 py-1 items-center text-gray-500 dark:text-gray-400 text-sm">
+    <div className="flex flex-end w-fit ml-auto shadow-md rounded-xl mb-2 px-2 py-1 items-center text-gray-800 dark:text-gray-400 text-sm">
       <img src={write.src} className="w-5 pr-1" alt="icon date" />
       {diffDays < 30
         ? `${diffDays} days`

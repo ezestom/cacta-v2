@@ -79,10 +79,12 @@ export function Form({
           href="https://librecounter.org/referer/show"
           target="_blank"
           className="w-2 absolute bottom-5 mx-auto ml-7"
+          name="referer"
         >
           <img
             src="https://librecounter.org/counter.svg"
             referrerPolicy="unsafe-url"
+            alt="counter component"
           />
         </a>
       </div>
