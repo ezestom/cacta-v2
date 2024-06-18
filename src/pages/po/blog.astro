@@ -1,0 +1,92 @@
+---
+import { BlogCard2 } from "../../components/BlogCard2/BlogCard2.jsx";
+import { TimeStamp } from "../../components/TimeStamp/TimeStamp.jsx";
+
+import blog1 from "../../img/esg.webp";
+import blog2 from "../../img/cacta.webp";
+import blog3 from "../../img/blog3.webp";
+import Layout from "../../layouts/Layout.astro";
+import GoBack from "../../components/GoBack.astro";
+import { LogoTheme } from "../../components/LogoTheme.jsx";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { title } = i18n.PAGE_BLOG;
+const { button_back } = i18n.SECTION_FEATURES;
+const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
+---
+
+<Layout title="Cacta blog">
+	<div id="blog-section" class="min-h-screen h-full">
+		<div class="py-10 flex items-center flex-col justify-center">
+			<h2
+				class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2">
+				<LogoTheme client:visible />
+				blog
+			</h2>
+			<p
+				class="lg:mx-auto text-gray-600 dark:text-gray-300 text-center m-4 max-w-md">
+				{title}
+			</p>
+		</div>
+
+		<div
+			class="grid items-starth-fit blog-container gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center w-full max-w-7xl mx-auto px-4 md:px-0 py-5">
+			<article class="">
+				<TimeStamp time="2024-04-28T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog1}
+					title={post_1.title}
+					description={post_1.description}
+					read_more={read_more}
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2024-04-15T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog2}
+					title={post_2.title}
+					description={post_2.description}
+					read_more={read_more}
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2024-03-25T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog3}
+					title={post_3.title}
+					description={post_3.description}
+					read_more={read_more}
+				/>
+			</article>
+			<GoBack button={button_back} />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
+</style>
+
+<script>
+	const section = document.getElementById("blog-section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
+</script>

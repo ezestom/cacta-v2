@@ -56,18 +56,34 @@ export function Form({
         body: formData,
       });
 
-      if (response.ok) {
-        toast("Information successfully submitted! Thank you for your trust.", {
-          type: "success",
-        });
-        closeDialog();
-      } else {
-        throw new Error("Error al enviar el formulario");
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(
+          `Server responded with ${response.status}: ${errorText}`
+        );
       }
+
+      toast("Information successfully submitted! Thank you for your trust.", {
+        type: "success",
+      });
+
+      // Set a timeout to redirect after 3 seconds
+      setTimeout(() => {
+        // Determine where to redirect based on current URL path
+        const currentPath = window.location.pathname;
+        let redirectTo = "/message-sent";
+
+        if (currentPath.startsWith("/en")) {
+          redirectTo = "/en/message-sent";
+        }
+
+        closeDialog();
+        window.location.href = redirectTo;
+        setIsLoading(false);
+      }, 3000);
     } catch (error) {
+      console.error("Error submitting form:", error);
       toast.error("There was a problem submitting the form, please try again.");
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -119,15 +135,15 @@ export function Form({
         <dialog open>
           <div className="form-container-dialog">
             {isLoading && (
-              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50 ">
-                <span class="loader"></span>
+              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50 rounded-3xl">
+                <span className="loader"></span>
               </div>
             )}
             <form
               onSubmit={handleSubmit}
               method="POST"
-              action="https://formsubmit.co/jp.tena@cacta.eco"
-              // action="https://formsubmit.co/ezequielstom@gmail.com"
+              // action="https://formsubmit.co/jp.tena@cacta.eco"
+              action="https://formsubmit.co/ezequielstom@gmail.com"
               className="relative"
             >
               <img
@@ -147,7 +163,7 @@ export function Form({
                 name="_autoresponse"
                 value={toast_message}
               ></input>
-              <input type="hidden" name="_next" value="https://cacta.eco/" />
+
               <input type="hidden" name="_captcha" value="false" />
               <legend>
                 <button
@@ -171,19 +187,19 @@ export function Form({
                     name="name"
                     id="name"
                     placeholder="John Doe"
-                    className="rounded-md "
                     required
+                    className="rounded-md "
                   />
                 </label>
-                <label htmlFor="name">
+                <label htmlFor="company">
                   {company}
                   <input
                     type="text"
                     name="company"
                     id="comppany"
                     placeholder="Cacta SaS."
-                    className="rounded-md "
                     required
+                    className="rounded-md "
                   />
                 </label>
                 <label htmlFor="email">
@@ -193,8 +209,8 @@ export function Form({
                     type="email"
                     name="email"
                     id="email"
-                    placeholder={email_placeholder}
                     required
+                    placeholder={email_placeholder}
                   />
                 </label>
                 <label htmlFor="message">
@@ -202,8 +218,8 @@ export function Form({
                   <textarea
                     name="message"
                     id="message"
-                    placeholder={message_placeholder}
                     required
+                    placeholder={message_placeholder}
                   ></textarea>
                 </label>
                 <button

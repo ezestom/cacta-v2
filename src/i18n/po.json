@@ -1,0 +1,126 @@
+{
+  "BUTTON_HEADER": "Contate-nos",
+  "SEO_TITLE": "Bem-vindo à Cacta | A porta para o futuro da indústria agrícola.",
+  "SEO_DESCRIPTION": "Cacta é uma plataforma de software que automatiza, calcula e reporta o impacto ambiental da sua empresa.",
+  "INTRO_TITLE_1": "Mais do que um ",
+  "INTRO_TITLE_2": "Software",
+  "INTRO_TITLE_3": "A porta para o futuro",
+  "INTRO_TITLE_4": "da indústria agrícola.",
+  "INTRO_DESCRIPTION_1": "Automatize, calcule e reporte",
+  "INTRO_DESCRIPTION_2": "o impacto ambiental",
+  "INTRO_DESCRIPTION_3": "da sua empresa.",
+  "SECTION_SOLUTION": {
+    "title": "Solução",
+    "intro_1": "Gerenciar a sustentabilidade nunca foi tão fácil.",
+    "intro_2": "Alcance seus objetivos sem complicações. Colete e analise seus dados de forma automática e simples.",
+    "title_solution_1": "Monitoramento por estabelecimento",
+    "description_solution_1": "Garanta controle total das operações, recursos e rendimentos em cada campo. Além disso, localize facilmente os impactos georreferenciados, agilizando a resposta para ajustar as soluções e estratégias com maior precisão. Incorpore a análise de solos para obter indicadores locais confiáveis.",
+    "title_solution_2": "Monitoramento por produto",
+    "description_solution_2": "Obtenha rastreabilidade do uso de recursos e geração de emissões associadas às suas atividades. Identifique oportunidades de melhoria de eficiência e sustentabilidade."
+  },
+  "SECTION_FEATURES": {
+    "button_read_more": "Leia mais",
+    "button_back": "Voltar",
+    "title": "Funcionalidades",
+    "intro_1": "Garanta suas exportações. Sempre em dia com as normas internacionais.",
+    "intro_2": "Automatize a geração de seus relatórios para comunicar de maneira clara e precisa sua relação com o meio ambiente.",
+    "title_description_1": "Cálculo ambiental",
+    "description_1_1": "Vista 360º | Todas as suas informações centralizadas em uma única tela, permitindo identificar facilmente os principais contribuintes da sua pegada ambiental: ☑Mudança climática ☑Biodiversidade ☑Saúde humana ☑Esgotamento de recursos.",
+    "title_description_2": "Análise e gestão",
+    "title_description_2_1": "Desempenho por KPI",
+    "description_2_1": "Identifique as ações necessárias através da análise de contribuição detalhada. Obtenha informações transparentes sobre o efeito de seus insumos no ecossistema.",
+    "title_description_2_2": "Cadeia de valor",
+    "description_2_2": "Na Cacta, entendemos que a sustentabilidade é uma missão conjunta. Por isso, desagregamos os indicadores de impacto na contribuição de cada ator na sua cadeia de valor para que você possa reportar seguindo os padrões internacionais.",
+    "title_description_2_3": "Gestão de iniciativas",
+    "description_2_3": "Gere iniciativas, faça o acompanhamento e analise seus resultados através do nosso painel de gestão. Comunique seu plano de ação com os membros da sua empresa.",
+    "title_description_3": "Relatórios EPD",
+    "title_description_3_1": "Eco Score",
+    "description_3_1": "Engloba o impacto ambiental da sua empresa em um único indicador de desempenho. Calculado a partir de benchmarks internacionais, comunica o progresso da sua operação de maneira fácil e confiável.",
+    "title_description_3_2": "Declarações ambientais de produto",
+    "description_3_2": "Ative sua cadeia de valor e posicione seu produto. A declaração ambiental de produto, ou EPD em inglês, fornece informações detalhadas sobre o ciclo de vida ambiental da sua atividade. Seguindo a norma ISO-14025, este é seu passaporte ambiental para o mundo."
+  },
+  "SECTION_WHYCACTA": {
+    "title": "Por que a Cacta?",
+    "intro_1": "Nossa missão: apoiar a indústria primária na sua transformação para um futuro sustentável.",
+    "intro_2": "Nosso principal objetivo é que as empresas tomem decisões informadas, reduzindo seu impacto ambiental e otimizando sua eficiência operacional.",
+    "box_1": "Conectamos ao seu sistema de gestão, obtendo informações confiáveis e com rastreabilidade.",
+    "box_2": "Software desenvolvido por e para agricultores sob a metodologia de Análise de Ciclo de Vida (ACV).",
+    "box_3": "Painéis e relatórios automatizados que tornarão sua gestão sustentável uma tarefa simples e eficaz.",
+    "box_4": "Algoritmo otimizado que registra mais de 70.000 emissões no solo, ar e água e 27.000 registros ambientais.",
+    "box_5": "Solução certificada, alinhada aos padrões europeus e à norma ISO 14040/44. A ferramenta mais completa do mercado.",
+    "box_6": "Ferramenta personalizada para suas necessidades, para pequenos, médios e grandes produtores."
+  },
+  "CALL_TO_ACTION": {
+    "title": "Somos mais do que um software.",
+    "intro_1": "Somos a porta para o futuro para negócios da indústria primária.",
+    "intro_2": "Automatize, calcule e reporte o impacto ambiental da sua empresa."
+  },
+  "SECTION_US": {
+    "title": "Nós",
+    "intro_1": "Somos a Cacta, sustentabilidade ao alcance de um clique.",
+    "description_1": "Nos dedicamos apaixonadamente todos os dias a impulsionar as empresas a realizar uma transformação para uma gestão sustentável.",
+    "description_2": "Como? Com nossas soluções de alta tecnologia desenvolvidas sob o maior rigor acadêmico e validação científica para que as empresas possam tomar decisões informadas, reduzir seu impacto ambiental e ao mesmo tempo maximizar sua eficiência operacional.",
+    "description_3": "Por quê? Como equipe, acreditamos que a sustentabilidade não é apenas um objetivo, mas uma forma de fazer negócios que beneficia todas as partes envolvidas.",
+    "description_4": "Nosso compromisso se estende a colaborar estreitamente com nossos clientes, guiando-os para um futuro onde a tecnologia e a responsabilidade ambiental convergem para gerar um impacto positivo duradouro.",
+    "span_1": "Pegada de carbono total",
+    "span_2": "Potencial de acidificação",
+    "span_3": "Eutrofização da água",
+    "span_4": "Ecotoxicidade da água",
+    "span_5": "Cancerígenos",
+    "span_6": "Não cancerígenos",
+    "span_7": "Esgotamento de ozônio",
+    "span_8": "Smog",
+    "span_9": "Não renováveis",
+    "span_10": "Minerais e metais"
+  },
+  "FADER": {
+    "title": "Nossos Parceiros",
+    "intro_1": "Estamos acompanhados por estas empresas ao redor do mundo."
+  },
+  "SECTION_CONTACT": {
+    "paragraph": "Simplifique sua gestão sustentável, otimize seus processos e maximize seus benefícios operacionais. Preveja a mudança, molde-a a seu favor.",
+    "ready": "Preparado para começar?",
+    "FORM": {
+      "button": "Quero receber mais informações",
+      "toast_message": "Obrigado pela sua mensagem. Entraremos em contato com você em breve! 🌵",
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "Email",
+      "email_placeholder": "john_doe@exemplo.com",
+      "message": "Mensagem",
+      "message_placeholder": "Quero receber informações sobre o app da Cacta.",
+      "send": "Enviar"
+    }
+  },
+  "SECTION_BLOG": {
+    "title": "Últimos Artigos",
+    "intro": "Mergulhe em nosso conteúdo cuidadosamente elaborado, onde abordamos uma variedade de temas relevantes à sustentabilidade, desde as últimas tendências, aplicação tecnológica, regulamentações, marcos até dicas práticas para melhorar seu negócio.",
+    "button": "Ir para o blog",
+    "read_more": "Leia mais",
+    "post_1": {
+      "title": "Decifrando o Enigma ESG: O Poder e a Promessa da Sustentabilidade Corporativa",
+      "description": "As métricas ambientais, sociais e de governança (geralmente abreviadas como ESG) existem há mais de um século. Esses critérios se originaram principalmente de investidores com consciência social que queriam alinhar seus investimentos com seus valores e, embora não soubessem como fazer isso, iniciativas como os 'Quaker Friends Fiduciary No-sin investments' (1890) são conhecidas hoje como as sementes do ESG.\n\nEmbora essas propostas tivessem excelentes intenções, a falta de um plano de execução e uma forma eficiente de medir os resultados mantiveram o mundo por quase todo um século sem nenhum tipo de avanço em relação à melhoria das métricas ambientais e, sobretudo, de uma forma de poder homologar a nível global a medição sobre a maneira como nos desenvolvemos como civilização com o planeta.\n\nInfelizmente, tiveram que ocorrer múltiplos desastres como a falha de Chernobyl (1980), a detecção do buraco na camada de ozônio (1985) ou o desastre do Exxon Valdez (1989) para que governos, empresários e ativistas, entre outros, despertassem realmente essa necessidade de desenvolver uma metodologia e diretrizes para incentivar e corroborar que a maneira de fazer negócios pudesse ser mais responsável com o planeta.\n\nParecia que finalmente estava começando a se atender a problemática ambiental, porém, rapidamente começaram a surgir questões de outra índole e os especialistas identificaram que a solução tinha que ser mais integral e contemplar muitos outros aspectos, que de momento não estavam sendo atendidos e estavam altamente correlacionados.\n\nDurante a década de 1990, com a chegada da era digital, agora era possível conhecer os problemas sociais em primeira mão e não importando onde ocorressem. Conceitos como responsabilidade social corporativa (RSE ou CSR em inglês) começaram a considerar seu impacto na sociedade e no meio ambiente, bem como suas práticas de governança corporativa. Foi também durante este período que se desenvolveram vários padrões e diretrizes para os relatórios de sustentabilidade, como a Iniciativa de Relatório Global 'GRI'.\n\nEntre o ano 2000 e 2010, ocorreram uma série de eventos financeiros notáveis que tiveram um impacto significativo na economia global. A bolha das pontocom (2001), os fraudes contábeis da Enron (2001) e Worldcom (2002), a crise financeira das hipotecas subprime (2007) provocou a perda de empregos, a queda dos preços das ações e uma perda generalizada de confiança no sistema financeiro, nas práticas comerciais responsáveis.\n\nAs lições aprendidas desses eventos ajudaram a moldar o ambiente regulatório financeiro atual e conduziram ao desenvolvimento de novos instrumentos e regulamentos não financeiros destinados a prevenir crises similares no futuro, mas sobretudo dar um propósito responsável ao uso do capital entre a comunidade investidora.\n\nO golpe final para colocar o que conhecemos hoje como os fatores ESG em cena foi o surgimento de mais e melhores dados, além de uma maior compreensão das pressões ambientais e sociais da modernidade, mas que hoje em dia podem ser reguladas e legitimadas graças ao desenvolvimento de instrumentos financeiros que, por sua vez, estão ao alcance da comunidade investidora.\n\nMuitos investidores e administradores de ativos agora consideram os fatores ESG quando tomam decisões de investimento, e muitas empresas estão incorporando considerações ESG em suas estratégias comerciais e práticas de relatórios.\n\nOs dados ambientais, sociais e de governança (ESG) tendem a capturar fatores extrafinanceiros que tradicionalmente estavam ausentes na análise financeira: gestão empresarial do uso de energia e água, geração de resíduos, direitos dos empregados e condições de trabalho, participação da comunidade, direitos de privacidade de dados e mais. Indicadores tradicionais de responsabilidade corporativa e transparência.\n\nHoje em dia, ESG é considerado chave na avaliação do desempenho financeiro e da sustentabilidade a longo prazo de uma empresa que comercializa pública e internacionalmente. Tornou-se uma parte integral do processo de investimento, e cada vez mais empresas reconhecem a necessidade de abordar os problemas de ESG para cumprir as expectativas de seus grupos de interesse e melhorar seu desempenho geral.\n\nEm poucas palavras, como comenta Rochelle March, Head of ESG Product da Dun & Bradstreet, 'ESG resume quase tudo o que pode refletir como as empresas operam dentro da sociedade e do meio ambiente, e se esse modo de operação é sustentável e responsável.'"
+    },
+    "post_2": {
+      "title": "Desvendando o Motor Verde: A Magia por Trás do Funcionamento da Cacta",
+      "description": "Todos conhecemos o impacto das mudanças climáticas no planeta. Mas... Sabia que o sistema agrícola representa quase um terço (31%) das emissões de carbono mundiais? E isso é apenas a ponta do iceberg. Nosso planeta já ultrapassa os limites definidos para outras categorias, como a perda de biodiversidade ou o esgotamento de recursos. Na Cacta, entendemos a magnitude do problema e a necessidade de tomar medidas para reduzir nosso impacto e melhorar nossa relação com o ambiente. Por isso, projetamos uma ferramenta pioneira de gestão ambiental projetada exclusivamente para o setor agropecuário. É a primeira do seu tipo, capaz de fundir informações produtivas com indicadores de impacto ambiental respaldados pela ciência. A ferramenta é composta por três módulos: O primeiro (A), foca na extração de dados dos clientes agropecuários de maneira semiautomática, integrando aos seus sistemas de gestão. No segundo módulo (B), concentramos em classificar e transformar as informações em um inventário de emissões ambientais para cada cliente. Utilizamos a metodologia de Análise de Ciclo de Vida (LCA) segundo a norma ISO 14040/44, seguindo padrões europeus para calcular a fase de inventário. Durante esta etapa, contemplamos desde a produção de diversos insumos e energias até sua aplicação no campo, considerando fatores locais como o pH do solo. O terceiro módulo (C) se foca em traduzir essas informações em indicadores de impacto ambiental, seguindo as recomendações da Comissão Europeia. Apresentamos esses indicadores de maneira visual em painéis interativos e cartões de informação de produto. Além disso, a ferramenta inclui um benchmark e um Eco Score. Alcance: A versão atual da Cacta Agro se foca na determinação dos impactos ambientais associados à produção de cultivos agrícolas desde 'o berço' até 'a porteira'. Isso implica o cômputo do inventário desde a geração de matérias-primas e energias até a colheita do produto. Ao extrair as informações diretamente das diversas atividades, associamos o uso de insumos ou maquinaria a cada lote e cultivo em particular. Para os casos em que não seja possível, aplica-se o método de alocação (allocation) por massa. Para o caso particular de horas de maquinaria, utilizamos a ponderação por área."
+    },
+    "post_3": {
+      "title": "Transformando o Mundo: Descubra os Objetivos de Desenvolvimento Sustentável",
+      "description": "Em 25 de setembro de 2015, os líderes mundiais adotaram um conjunto de objetivos globais para erradicar a pobreza, proteger o planeta e garantir a prosperidade para todos como parte de uma nova agenda de desenvolvimento sustentável. Cada objetivo tem metas específicas que devem ser alcançadas nos próximos 15 anos (2030). Portanto, os Objetivos de Desenvolvimento Sustentável foram acordados por todos os governos. No entanto, o sucesso deles dependerá das ações que todos tomarem, tanto empresas quanto governo. Os ODS oferecem a oportunidade para desenvolver e implementar soluções e tecnologias desde o empresariado, o que permite realizar os maiores desafios que foram estabelecidos em termos de desenvolvimento sustentável. Por sua vez, estes fazem parte de uma agenda global para o desenvolvimento de nossas sociedades. Com eles, estabelece-se que as empresas líderes de mercado devem demonstrar que os negócios que realizam ajudam a nos direcionar para um desenvolvimento sustentável. Apesar de parecer complexo alinhar-se a esses objetivos, a verdade é que não é. É questão de realizar uma profunda avaliação de materialidade, identificar os processos produtivos dentro das empresas e obter uma rastreabilidade clara e confiável. As Nações Unidas garantem que existem benefícios-chave ao gerar um alinhamento com os objetivos de desenvolvimento sustentável, entre eles: melhorar a eficiência operacional ao longo da cadeia de suprimentos, fortalecer as relações com clientes, consumidores e fornecedores, assim como reduzir os riscos ambientais e de segurança e higiene."
+    }
+  },
+  "PAGE_BLOG": {
+    "title": "Explore nosso blog e descubra as últimas notícias,tendências e dicas sobre sustentabilidade, agricultura e inovação.",
+    "button_back": "Voltar",
+    "button_read_more": "Leia mais"
+  },
+  "FOOTER": {
+    "description": "Somos a equipe por trás da Cacta, comprometidos com a transformação da indústria primária rumo a um futuro sustentável. Com experiência em desenvolvimento de software, agricultura e sustentabilidade, trabalhamos juntos para oferecer soluções inovadoras e eficazes aos nossos clientes."
+  },
+  "MESSAGE_SENT": {
+    "status": "Sua mensagem foi enviada com sucesso",
+    "paragraph": "A equipe de vendas da Cacta entrará em contato com você em breve.",
+    "button": "Voltar ao início"
+  }
+}

@@ -22,10 +22,10 @@ const otherLocales = Object.values(LANGUAGES).filter(
 		class="group text-white rounded-full text-xs font-semibold bg-black/20 hover:bg-black/40 transition-all">
 		<button
 			type="button"
-			class="inline-flex justify-start items-center w-full gap-x-2 px-2 py-[.92rem]"
+			class="inline-flex justify-start items-center w-full  px-4 py-[.92rem]"
 			aria-expanded="true"
 			aria-haspopup="true">
-			<currentLocaleData.flag />
+			<!-- <currentLocaleData.flag /> -->
 			{currentLocaleData.name}
 			<Chevron />
 		</button>
@@ -35,12 +35,12 @@ const otherLocales = Object.values(LANGUAGES).filter(
 				otherLocales.map((locale) => (
 					<a
 						id="language-btn"
-						class="rounded-full  bg-black/30 hover:bg-black/50 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 mt-2 py-4"
+						class="rounded-full  bg-black/30 hover:bg-black/50 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 px-3 mt-1 py-4"
 						href={translatePath(
 							`/${route ? route : ""}`,
 							locale.code
 						)}>
-						<locale.flag />
+						{/* <locale.flag /> */}
 						{locale.name}
 					</a>
 				))
@@ -61,5 +61,6 @@ const otherLocales = Object.values(LANGUAGES).filter(
 	const languageBtnItems = languageBtn?.querySelectorAll("a");
 	languageBtnItems?.forEach((item) => {
 		item.addEventListener("click", changeLanguage);
+		console.log("click");
 	});
 </script>
