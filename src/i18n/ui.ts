@@ -44,14 +44,14 @@ export const ui = {
     "nav.us": "About us",
     "nav.contact": "Contact us",
   },
-  po: {
-    "nav.home": "Início",
-    "nav.solution": "Solução",
-    "nav.features": "Recursos",
-    "nav.whyCacta": "Por que escolher a Cacta?",
-    "nav.us": "Sobre nós",
-    "nav.contact": "Contate-nos",
-  },
+  // po: {
+  //   "nav.home": "Início",
+  //   "nav.solution": "Solução",
+  //   "nav.features": "Recursos",
+  //   "nav.whyCacta": "Por que escolher a Cacta?",
+  //   "nav.us": "Sobre nós",
+  //   "nav.contact": "Contate-nos",
+  // },
 } as const;
 
 export const routes = {
@@ -71,12 +71,12 @@ export const routes = {
     us: "#us",
     contact: "#contact",
   },
-  po: {
-    home: "#home",
-    solution: "#solution",
-    features: "#features",
-    whyCacta: "#why-cacta",
-    us: "#us",
-    contact: "#contact",
-  },
+  // po: {
+  //   home: "#home",
+  //   solution: "#solution",
+  //   features: "#features",
+  //   whyCacta: "#why-cacta",
+  //   us: "#us",
+  //   contact: "#contact",
+  // },
 };
