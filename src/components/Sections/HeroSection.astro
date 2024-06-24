@@ -1,6 +1,7 @@
 ---
 import bg from "../../icons/bg.svg";
 import video from "../../video/portada_cacta_optimizado.mp4";
+import poster from "../../img/slider6.webp";
 
 import { geti18n } from "../../i18n/";
 const { currentLocale } = Astro;
@@ -52,6 +53,7 @@ const {
 				<div
 					class="absolute top-0 left-0 -z-20 bg-black/50 container-video">
 					<video
+						poster={poster.src}
 						transition:persist
 						class="object-cover h-[60vh] lg:h-screen md:w-full bg-image"
 						src={video}
