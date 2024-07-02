@@ -5,6 +5,8 @@ import { TimeStamp } from "../components/TimeStamp/TimeStamp.jsx";
 import blog1 from "../img/esg.webp";
 import blog2 from "../img/cacta.webp";
 import blog3 from "../img/blog3.webp";
+import blog4 from "../img/blog4.webp";
+import blog5 from "../img/blog5.jpg";
 import Layout from "../layouts/Layout.astro";
 import GoBack from "../components/GoBack.astro";
 import { LogoTheme } from "../components/LogoTheme.jsx";
@@ -15,7 +17,7 @@ const i18n = geti18n({ currentLocale });
 
 const { title } = i18n.PAGE_BLOG;
 const { button_back } = i18n.SECTION_FEATURES;
-const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
+const { post_1, post_2, post_3, post_4,post_5, read_more } = i18n.SECTION_BLOG;
 ---
 
 <Layout title="Cacta blog">
@@ -35,12 +37,34 @@ const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
 		<div
 			class="grid items-starth-fit blog-container gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center w-full max-w-7xl mx-auto px-4 md:px-0 py-5">
 			<article class="">
+				<TimeStamp time="2024-07-02T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog5}
+					title={post_5.title}
+					description={post_5.description}
+					read_more={read_more}
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2024-07-02T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog4}
+					title={post_4.title}
+					description={post_4.description}
+					read_more={read_more}
+				/>
+			</article>
+
+			<article class="">
 				<TimeStamp time="2024-04-28T10:00:00Z" />
 				<BlogCard2
 					client:visible
-					image={blog1}
-					title={post_1.title}
-					description={post_1.description}
+					image={blog3}
+					title={post_3.title}
+					description={post_3.description}
 					read_more={read_more}
 				/>
 			</article>
@@ -55,17 +79,17 @@ const { post_1, post_2, post_3, read_more } = i18n.SECTION_BLOG;
 					read_more={read_more}
 				/>
 			</article>
-
 			<article class="">
 				<TimeStamp time="2024-03-25T10:00:00Z" />
 				<BlogCard2
 					client:visible
-					image={blog3}
-					title={post_3.title}
-					description={post_3.description}
+					image={blog1}
+					title={post_1.title}
+					description={post_1.description}
 					read_more={read_more}
 				/>
 			</article>
+
 			<GoBack button={button_back} />
 		</div>
 	</div>
