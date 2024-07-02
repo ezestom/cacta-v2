@@ -44,8 +44,8 @@ export function BlogCard2({ image, title, description, read_more }) {
   }, []);
 
   return (
-    <div class="group rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-xl shadow-gray-600/10 rounded-t-xl">
-      <div class="relative overflow-hidden rounded-t-xl">
+    <div className="group rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-xl shadow-gray-600/10 rounded-t-xl">
+      <div className="relative overflow-hidden rounded-t-xl">
         <img
           src={image.src}
           alt="art cover"
@@ -55,7 +55,7 @@ export function BlogCard2({ image, title, description, read_more }) {
           className="h-64 w-full object-cover object-center transition duration-500 group-hover:scale-105 "
         />
       </div>
-      <div class="relative p-8">
+      <div className="relative p-8">
         <h3 className="text-base font-semibold text-gray-800 dark:text-white">
           {title}
         </h3>

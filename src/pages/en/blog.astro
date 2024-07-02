@@ -1,6 +1,7 @@
 ---
 import { BlogCard2 } from "../../components/BlogCard2/BlogCard2.jsx";
 import { TimeStamp } from "../../components/TimeStamp/TimeStamp.jsx";
+import Container from "../../components/Container.astro";
 
 import blog1 from "../../img/esg.webp";
 import blog2 from "../../img/cacta.webp";
@@ -35,7 +36,7 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 		</div>
 
 		<div
-			class="grid items-starth-fit blog-container gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center w-full max-w-7xl mx-auto px-4 md:px-0 py-5">
+			class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 pb-6">
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
@@ -91,24 +92,24 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 			<GoBack button={button_back} />
 		</div>
 	</div>
+
+	<style>
+		.dark {
+			background-color: #111826;
+			z-index: -10;
+		}
+		.light {
+			background-color: #fafafa;
+			z-index: -10;
+		}
+	</style>
+
+	<script>
+		const section = document.getElementById("blog-section");
+		if (localStorage.getItem("theme") === "dark") {
+			section?.classList.add("dark");
+		} else {
+			section?.classList.remove("dark");
+		}
+	</script>
 </Layout>
-
-<style>
-	.dark {
-		background-color: #111826;
-		z-index: -10;
-	}
-	.light {
-		background-color: #fafafa;
-		z-index: -10;
-	}
-</style>
-
-<script>
-	const section = document.getElementById("blog-section");
-	if (localStorage.getItem("theme") === "dark") {
-		section?.classList.add("dark");
-	} else {
-		section?.classList.remove("dark");
-	}
-</script>
