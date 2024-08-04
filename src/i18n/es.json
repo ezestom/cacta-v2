@@ -53,7 +53,9 @@
   "CALL_TO_ACTION": {
     "title": "Somos más que un software.",
     "intro_1": "Somos la puerta al futuro para negocios de la industria primaria.",
-    "intro_2": "Automatiza, calcula y reporta el impacto ambiental de tu empresa."
+    "intro_2": "Automatiza, calcula y reporta el impacto ambiental de tu empresa.",
+    "youtube_url_1": "https://www.youtube.com/embed/DZZiAAm1rWs?si=G8SFAN_AP1Ic3qmr-&vq=hd1080&autoplay=1&mute=0",
+    "youtube_url_2": "https://www.youtube.com/embed/DZZiAAm1rWs?si=G8SFAN_AP1Ic3qmr-&vq=hd1080&autoplay=1&mute=1"
   },
   "SECTION_US": {
     "title": "Nosotros",

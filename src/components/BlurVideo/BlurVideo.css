@@ -1,3 +1,12 @@
+#blurvideo {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(20px) contrast(250%);
+  z-index: -20;
+}
+
 figure:hover {
   cursor: crosshair;
 }

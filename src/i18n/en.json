@@ -53,7 +53,9 @@
   "CALL_TO_ACTION": {
     "title": "We are more than just software.",
     "intro_1": "We are the gateway to the future for primary industry businesses.",
-    "intro_2": "Automate, calculate, and report your company's environmental impact."
+    "intro_2": "Automate, calculate, and report your company's environmental impact.",
+    "youtube_url_1": "https://www.youtube.com/embed/7vMIFvedCRY?si=hwZMMZxTvxXhQyIFqmr-&vq=hd1080&autoplay=1&mute=0",
+    "youtube_url_2": "https://www.youtube.com/embed/7vMIFvedCRY?si=hwZMMZxTvxXhQyIFqmr-&vq=hd1080&autoplay=1&mute=1"
   },
   "SECTION_US": {
     "title": "About Us",

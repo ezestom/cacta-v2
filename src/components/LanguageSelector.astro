@@ -22,7 +22,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
 		class="group text-white rounded-full text-xs font-semibold bg-black/20 hover:bg-black/40 transition-all">
 		<button
 			type="button"
-			class="inline-flex justify-start items-center w-full  px-4 py-[.92rem]"
+			class="inline-flex justify-start items-center w-full px-4 py-[.92rem]"
 			aria-expanded="true"
 			aria-haspopup="true">
 			<!-- <currentLocaleData.flag /> -->
@@ -61,6 +61,5 @@ const otherLocales = Object.values(LANGUAGES).filter(
 	const languageBtnItems = languageBtn?.querySelectorAll("a");
 	languageBtnItems?.forEach((item) => {
 		item.addEventListener("click", changeLanguage);
-		console.log("click");
 	});
 </script>
