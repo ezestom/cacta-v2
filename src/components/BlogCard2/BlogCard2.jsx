@@ -44,7 +44,7 @@ export function BlogCard2({ image, title, description, link, read_more }) {
   }, []);
 
   return (
-    <div className="group rounded-3xl bg-[#fafafa] border border-gray-100 dark:shadow-none  dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-xl shadow-gray-600/10 rounded-t-xl">
+    <div className="group rounded-3xl bg-[#fafafa] border border-gray-100 dark:shadow-none  dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-xl shadow-gray-600/10 rounded-t-xl ">
       <div className="relative overflow-hidden rounded-t-xl border-b border-gray-100 dark:border-gray-700">
         <img
           src={image.src}
