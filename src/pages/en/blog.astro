@@ -1,13 +1,13 @@
 ---
 import { BlogCard2 } from "../../components/BlogCard2/BlogCard2.jsx";
 import { TimeStamp } from "../../components/TimeStamp/TimeStamp.jsx";
-import Container from "../../components/Container.astro";
 
 import blog1 from "../../img/esg.webp";
 import blog2 from "../../img/cacta.webp";
 import blog3 from "../../img/blog3.webp";
 import blog4 from "../../img/blog4.webp";
-import blog5 from "../../img/blog5.jpg";
+import blog5 from "../../img/blog5.webp";
+import blog6 from "../../img/infocampo.png";
 import Layout from "../../layouts/Layout.astro";
 import GoBack from "../../components/GoBack.astro";
 import { LogoTheme } from "../../components/LogoTheme.jsx";
@@ -18,7 +18,8 @@ const i18n = geti18n({ currentLocale });
 
 const { title } = i18n.PAGE_BLOG;
 const { button_back } = i18n.SECTION_FEATURES;
-const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
+const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
+	i18n.SECTION_BLOG;
 ---
 
 <Layout title="Cacta blog">
@@ -38,6 +39,18 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 		<div
 			class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 pb-6">
 			<article class="">
+				<TimeStamp time="2024-09-27T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog6}
+					title={post_6.title}
+					description={post_6.description}
+					read_more={read_more}
+					link="https://www.infocampo.com.ar/creo-un-software-de-medicion-de-impacto-ambiental-y-asegura-la-sustentabilidad-llego-para-quedarse/"
+				/>
+			</article>
+
+			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
 					client:visible
@@ -45,8 +58,10 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 					title={post_5.title}
 					description={post_5.description}
 					read_more={read_more}
+					link=""
 				/>
 			</article>
+
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
@@ -55,6 +70,7 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 					title={post_4.title}
 					description={post_4.description}
 					read_more={read_more}
+					link=""
 				/>
 			</article>
 
@@ -66,6 +82,7 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 					title={post_3.title}
 					description={post_3.description}
 					read_more={read_more}
+					link=""
 				/>
 			</article>
 
@@ -77,6 +94,7 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 					title={post_2.title}
 					description={post_2.description}
 					read_more={read_more}
+					link=""
 				/>
 			</article>
 			<article class="">
@@ -87,6 +105,7 @@ const { post_1, post_2, post_3, post_4, post_5, read_more } = i18n.SECTION_BLOG;
 					title={post_1.title}
 					description={post_1.description}
 					read_more={read_more}
+					link=""
 				/>
 			</article>
 			<GoBack button={button_back} />

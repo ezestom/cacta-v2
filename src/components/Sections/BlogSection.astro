@@ -1,11 +1,9 @@
 ---
 import Container from "../Container.astro";
 import BlogCard from "../BlogCard.astro";
-import blog1 from "../../img/esg.webp";
-import blog2 from "../../img/cacta.webp";
-import blog3 from "../../img/blog3.webp";
 import blog4 from "../../img/blog4.webp";
-import blog5 from "../../img/blog5.jpg";
+import blog5 from "../../img/blog5.webp";
+import blog6 from "../../img/infocampo.png";
 import { TimeStamp } from "../TimeStamp/TimeStamp.jsx";
 
 import { geti18n } from "../../i18n/";
@@ -13,7 +11,7 @@ const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
 const { title, intro } = i18n.SECTION_BLOG;
-const { post_3, post_4, post_5 } = i18n.SECTION_BLOG;
+const {  post_4, post_5, post_6 } = i18n.SECTION_BLOG;
 ---
 
 <section id="blog">
@@ -31,6 +29,16 @@ const { post_3, post_4, post_5 } = i18n.SECTION_BLOG;
 		<div
 			class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full"
 			id="blog-info">
+
+			<article class="">
+				<TimeStamp time="2024-08-27T10:00:00Z" />
+				<BlogCard
+					image={blog6}
+					title={post_6.title}
+					description={post_6.description}
+				/>
+			</article>
+
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 
@@ -47,15 +55,6 @@ const { post_3, post_4, post_5 } = i18n.SECTION_BLOG;
 					image={blog4}
 					title={post_4.title}
 					description={post_4.description}
-				/>
-			</article>
-
-			<article class="">
-				<TimeStamp time="2024-04-28T10:00:00Z" />
-				<BlogCard
-					image={blog3}
-					title={post_3.title}
-					description={post_3.description}
 				/>
 			</article>
 		</div>
