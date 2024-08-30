@@ -25,7 +25,7 @@ export function Form({
       });
       closeDialog();
     }
-  }, []);
+  }, []); // Agrega las dependencias aquí
 
   const openDialog = () => {
     setDialog(true);
@@ -40,7 +40,9 @@ export function Form({
   };
 
   const isMessageSuccess = () => {
-    return window.location.search.includes("success=true");
+    return (
+      new URLSearchParams(window.location.search).get("success") === "true"
+    );
   };
 
   const handleSubmit = async (event) => {
@@ -67,15 +69,9 @@ export function Form({
         type: "success",
       });
 
-      // Set a timeout to redirect after 3 seconds
       setTimeout(() => {
-        // Determine where to redirect based on current URL path
-        const currentPath = window.location.pathname;
-        let redirectTo = "/message-sent";
-
-        if (currentPath.startsWith("/en")) {
-          redirectTo = "/en/message-sent";
-        }
+        const isEnglish = window.location.pathname.startsWith("/en");
+        const redirectTo = isEnglish ? "/en/message-sent" : "/message-sent";
 
         closeDialog();
         window.location.href = redirectTo;
@@ -83,7 +79,10 @@ export function Form({
       }, 3000);
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("There was a problem submitting the form, please try again.");
+      toast.error(
+        `There was a problem submitting the form, please try again. (Error: ${error.message})`
+      );
+      setIsLoading(false); // Asegúrate de desactivar el loading en caso de error
     }
   };
 
@@ -201,7 +200,7 @@ export function Form({
                   <input
                     type="text"
                     name="company"
-                    id="comppany"
+                    id="company"
                     placeholder="Cacta SaS."
                     required
                     className="rounded-md "
