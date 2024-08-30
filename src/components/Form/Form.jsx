@@ -151,7 +151,12 @@ export function Form({
                 className="absolute  -top-14 mx-auto left-0 right-0 max-w-[125px]"
                 alt="logo cacta"
               />
-              <input type="hidden" name="_cc" value="ezequielstom@gmail.com" />
+
+              <input
+                type="hidden"
+                name="_cc"
+                value="vicky.engelberger@cacta.eco,ezequielstom@gmail.com"
+              />
 
               <input
                 type="hidden"
