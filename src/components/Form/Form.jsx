@@ -3,8 +3,11 @@ import { toast, Toaster } from "sonner";
 import x from "../../icons/x.svg";
 import "./Form.css";
 import logo from "../../img/logo-blanco.png";
+import agriculture from "../../img/agriculture.webp";
 
 export function Form({
+  h1,
+  subtitle,
   button,
   toast_message,
   name,
@@ -14,6 +17,7 @@ export function Form({
   message,
   message_placeholder,
   send,
+  message_2,
 }) {
   const [dialog, setDialog] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -131,110 +135,146 @@ export function Form({
       </span>
 
       {dialog && (
-        <dialog open>
-          <div className="form-container-dialog">
-            {isLoading && (
-              <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50 rounded-3xl">
-                <span className="loader"></span>
-              </div>
-            )}
-            <form
-              onSubmit={handleSubmit}
-              method="POST"
-              action="https://formsubmit.co/jp.tena@cacta.eco"
-              // action="https://formsubmit.co/ezequielstom@gmail.com"
-              className="relative"
-            >
-              <img
-                src={logo.src}
-                className="absolute  -top-14 mx-auto left-0 right-0 max-w-[125px]"
-                alt="logo cacta"
-              />
-
-              <input
-                type="hidden"
-                name="_cc"
-                value="vicky.engelberger@cacta.eco,ezequielstom@gmail.com"
-              />
-
-              <input
-                type="hidden"
-                name="_subject"
-                value="🌵 Cacta | 📩 Nuevo Mensaje!"
-              />
-              <input
-                type="hidden"
-                name="_autoresponse"
-                value={toast_message}
-              ></input>
-
-              <input type="hidden" name="_captcha" value="false" />
-              <legend>
-                <button
-                  className="flex justify-center my-2"
-                  onClick={closeDialog}
-                >
+        <dialog
+          open
+          className="backdrop-blur  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full "
+        >
+          <section className="md:bg-black/50 flex items-center justify-center overflow-hidden  ">
+            <div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0 ">
+              <aside className="relative hidden md:block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+                <picture>
                   <img
-                    className="inline-flex  cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a]  p-1 hover:scale-105 transition font-medium text-gray-50 backdrop-blur-3xl right-0 absolute -top-6 "
-                    src={x.src}
-                    alt="x-icon"
-                    id="close-dialog"
+                    src={agriculture.src}
+                    alt="agriculture woman image"
+                    className="absolute inset-0 h-full w-full object-cover hidden lg:block"
                   />
-                </button>
-              </legend>
+                  <img
+                    src={logo.src}
+                    className="absolute  bottom-20 mx-auto left-10 max-w-[150px] drop-shadow-md"
+                    alt="logo cacta"
+                  />
+                </picture>
+              </aside>
 
-              <div className="flex flex-col gap-2 min-w-[350px] ">
-                <label htmlFor="name">
-                  {name}
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="John Doe"
-                    required
-                    className="rounded-md "
-                  />
-                </label>
-                <label htmlFor="company">
-                  {company}
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    placeholder="Cacta SaS."
-                    required
-                    className="rounded-md "
-                  />
-                </label>
-                <label htmlFor="email">
-                  {email}
-                  <input
-                    className="rounded-md "
-                    type="email"
-                    name="email"
-                    id="email"
-                    required
-                    placeholder={email_placeholder}
-                  />
-                </label>
-                <label htmlFor="message">
-                  {message}
-                  <textarea
-                    name="message"
-                    id="message"
-                    required
-                    placeholder={message_placeholder}
-                  ></textarea>
-                </label>
-                <button
-                  className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-2 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-105 transition mt-2"
-                  type="submit"
-                >
-                  {send}
-                </button>
-              </div>
-            </form>
-          </div>
+              <main className="flex items-center justify-center py-8 md:px-12 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 ">
+                <div className="form-container-dialog max-w-xl lg:max-w-3xl p-8 bg-[#f0f0f0] rounded-3xl relative">
+                  <button
+                    className="absolute z-100 top-2 right-2 "
+                    onClick={closeDialog}
+                  >
+                    <img
+                      className="inline-flex  cursor-pointer items-center justify-center rounded-3xl bg-gradient-to-r from-[#030f33] to-[#4e737a]  p-2 hover:scale-105 transition font-medium text-gray-50 backdrop-blur-3xl"
+                      src={x.src}
+                      alt="x-icon"
+                      id="close-dialog"
+                    />
+                  </button>
+                  <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+                    {h1}
+                  </h1>
+
+                  <p className="mt-4 leading-relaxed text-gray-700">
+                    {subtitle}
+                  </p>
+                  {isLoading && (
+                    <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur bg-white/10 opacity-50 flex justify-center items-center z-50 rounded-3xl">
+                      <span className="loader"></span>
+                    </div>
+                  )}
+                  <form
+                    onSubmit={handleSubmit}
+                    method="POST"
+                    action="https://formsubmit.co/jp.tena@cacta.eco"
+                    // action="https://formsubmit.co/ezequielstom@gmail.com"
+                    className="mt-8 gap-6"
+                  >
+                    <input
+                      type="hidden"
+                      name="_cc"
+                      value="vicky.engelberger@cacta.eco,ezequielstom@gmail.com"
+                    />
+
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="🌵 Cacta | 📩 Nuevo Mensaje!"
+                    />
+                    <input
+                      type="hidden"
+                      name="_autoresponse"
+                      value={toast_message}
+                    ></input>
+
+                    <input type="hidden" name="_captcha" value="false" />
+
+                    <div className="col-span-6 sm:col-span-3">
+                      <label className="block text-sm font-medium text-gray-700">
+                        {name}
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="John Doe"
+                          required
+                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                        />
+                      </label>
+                    </div>
+                    <div className="col-span-6 sm:col-span-3">
+                      <label className="block text-sm font-medium text-gray-700">
+                        {company}
+                        <input
+                          type="text"
+                          name="company"
+                          id="company"
+                          placeholder="Cacta SaS."
+                          required
+                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                        />
+                      </label>
+                    </div>
+                    <div className="col-span-6 sm:col-span-3">
+                      <label className="block text-sm font-medium text-gray-700">
+                        {email}
+                        <input
+                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                          type="email"
+                          name="email"
+                          id="email"
+                          required
+                          placeholder={email_placeholder}
+                        />
+                      </label>
+                    </div>
+                    <fieldset>
+                      <legend className="block text-sm font-medium text-gray-700">
+                        {message}
+                        <textarea
+                          name="message"
+                          id="message"
+                          required
+                          className="w-full border-gray-200 rounded-md bg-white text-sm text-gray-700 shadow-sm p-2 max-h-[100px]"
+                          placeholder={message_placeholder}
+                        ></textarea>
+                      </legend>
+                    </fieldset>
+
+                    <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
+                      <button
+                        className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-3 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-[1.02] transition mt-2"
+                        type="submit"
+                      >
+                        {send}
+                      </button>
+                      <p className="mt-4 text-sm text-gray-700 font-semibold sm:mt-0 ">
+                        ✉️ {message_2}
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </main>
+            </div>
+          </section>
         </dialog>
       )}
     </div>

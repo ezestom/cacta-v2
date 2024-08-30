@@ -83,6 +83,8 @@
     "paragraph": "Simplify your sustainable management, optimize your processes, and maximize your operational benefits. Anticipate change, shape it to your advantage.",
     "ready": "Ready to start?",
     "FORM": {
+      "h1": "Thank you for your interest in Cacta 🌵",
+      "subtitle": "To provide you with the best service, please fill out the following form.",
       "button": "I want to receive more information",
       "toast_message": "Your message was successful, we will get back to you shortly! 🌵",
       "name": "Name",
@@ -91,7 +93,8 @@
       "email_placeholder": "john_doe@example.com",
       "message": "Message",
       "message_placeholder": "I want to receive information about the Cacta app.",
-      "send": "Send"
+      "send": "Send",
+      "message_2": "We will get in touch with you shortly."
     }
   },
   "SECTION_BLOG": {

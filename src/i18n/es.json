@@ -83,6 +83,8 @@
     "paragraph": "Simplifica tu gestión sustentable, optimiza tus procesos y maximiza tus beneficios operativos. Prevé el cambio, moldéalo a tu favor.",
     "ready": " ¿Preparado para comenzar?",
     "FORM": {
+      "h1": "Gacias por tu interés en Cacta 🌵",
+      "subtitle": "Para brindarte la mejor atención, por favor completa el siguiente formulario.",
       "button": "Quiero recibir más información",
       "toast_message": "Gracias por tu mensaje. Nos pondremos en contacto contigo a la brevedad! 🌵",
       "name": "Nombre",
@@ -91,7 +93,8 @@
       "email_placeholder": "john_doe@ejemplo.com",
       "message": "Mensaje",
       "message_placeholder": "Quiero recibir información sobre la app de Cacta.",
-      "send": "Enviar"
+      "send": "Enviar",
+      "message_2": "A la brevedad nos pondremos en contacto."
     }
   },
   "SECTION_BLOG": {
