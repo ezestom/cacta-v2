@@ -13,8 +13,9 @@ const { button_back } = i18n.SECTION_FEATURES;
 ---
 
 <button
+	onclick="window.history.go(-1); setTimeout(() => window.location.reload(), 100);"
 	id="goBack"
-	class="fixed top-5 right-5 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-30">
+	class="fixed top-5 right-5 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50">
 	<span
 		class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
 	></span>
@@ -24,7 +25,7 @@ const { button_back } = i18n.SECTION_FEATURES;
 	</span>
 </button>
 
-<script is:inline>
+<!-- <script is:inline>
 	const goBack = document.getElementById("goBack");
 	goBack?.addEventListener("click", () => {
 		// Add a slight delay before navigating back to ensure previous page is fully loaded
@@ -35,4 +36,4 @@ const { button_back } = i18n.SECTION_FEATURES;
 			}, 100); // Adjust delay as needed
 		}, 100); // Adjust delay as needed
 	});
-</script>
+</script> -->
