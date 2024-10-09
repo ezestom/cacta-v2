@@ -135,15 +135,15 @@ export function SwiperHome({
                   data-swiper-parallax="-300"
                   src={image.img.src}
                   alt={`${image.img} image`}
-                  className="absolute top-0 left-0 h-full object-cover object-center -z-10 w-full blur-sm border-transparent"
+                  className="absolute top-0 left-0 h-full object-cover object-center -z-10 w-full blur-sm overflow-hidden"
                 />
-                <div className="book-container ">
+                <div className="book-container">
                   <img
                     data-swiper-parallax="-200"
                     id="img2"
                     src={image.img2.src}
                     alt={`${image.img2} image`}
-                    className="absolute lg:block hidden  m-auto -right-[30rem]  object-cover sm:rounded-[3rem] -z-10 opacity-85  p-4 shadow-md book "
+                    className="absolute lg:block hidden m-auto -right-[25rem] object-cover sm:rounded-[3rem] -z-10 opacity-85 p-4 shadow-md book "
                   />
                 </div>
               </article>

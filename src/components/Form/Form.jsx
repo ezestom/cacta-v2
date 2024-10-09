@@ -157,7 +157,7 @@ export function Form({
               </aside>
 
               <main className="flex items-center justify-center py-8 md:px-12 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 ">
-                <div className="form-container-dialog max-w-xl lg:max-w-3xl p-8 bg-[#f0f0f0] rounded-3xl relative">
+                <div className="form-container-dialog max-w-[550px]  p-4 bg-[#f0f0f0] rounded-3xl relative">
                   <button
                     className="absolute z-100 top-2 right-2 "
                     onClick={closeDialog}
@@ -169,9 +169,7 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                    {h1}
-                  </h1>
+                  <h1 className="font-bold text-gray-900 text-2xl">{h1}</h1>
 
                   <p className="mt-4 leading-relaxed text-gray-700">
                     {subtitle}
