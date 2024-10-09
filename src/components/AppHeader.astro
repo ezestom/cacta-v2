@@ -119,7 +119,7 @@ import logo from "../../public/logo.png";
 												<a
 													href={link.to}
 													class="hover:text-primary
-									  text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-semibold   tracking-tighter	">
+									  text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transitbasen text-xl fracking-tighter	">
 													<span>{link.label}</span>
 												</a>
 											</li> -->
@@ -127,28 +127,28 @@ import logo from "../../public/logo.png";
 						<li>
 							<HeaderLink
 								href={translatePath("/#solution")}
-								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
 								{t("nav.solution")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#features")}
-								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
 								{t("nav.features")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#why-cacta")}
-								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
 								{t("nav.whyCacta")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#us")}
-								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
 								{t("nav.us")}
 							</HeaderLink>
 						</li>
@@ -233,12 +233,12 @@ import logo from "../../public/logo.png";
 		@keyframes enhance-header {
 			to {
 				z-index: 50;
-				backdrop-filter: blur(10px);
+				backdrop-filter: blur(20px) saturate(200%);
 				margin-inline: auto;
 				left: 0;
 				right: 0;
 				box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1);
-				background: rgba(0, 0, 0, 0.3);
+				background: rgba(0, 0, 0, 0.35);
 				padding-inline: 6rem;
 			}
 		}
