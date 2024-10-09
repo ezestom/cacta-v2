@@ -1,5 +1,6 @@
 ---
 import Container from "../Container.astro";
+import CardParallax from "../CardParallax/CardPallax.jsx";
 import Gallery from "../Gallery.astro";
 import lemon from "../../icons/lemon.svg";
 import farm from "../../icons/farm.svg";
@@ -16,12 +17,15 @@ const {
 	description_solution_1,
 	title_solution_2,
 	description_solution_2,
+	parallax_title,
+	parallax_description,
+	parallax_strong,
 } = i18n.SECTION_SOLUTION;
 ---
 
 <div id="solution" class="pt-10 lg:pt-32">
 	<Container>
-		<section class="flex flex-wrap justify-between">
+		<section class="flex flex-wrap justify-between items-center">
 			<div class="w-full md:w-1/2">
 				<h2
 					class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
@@ -76,7 +80,14 @@ const {
 					</div>
 				</div>
 			</div>
-			<Gallery />
+			<CardParallax
+				client:visible
+				title={parallax_title}
+				description={parallax_description}
+				strong={parallax_strong}
+			/>
+
+			<!-- <Gallery /> -->
 		</section>
 	</Container>
 </div>

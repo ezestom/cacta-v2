@@ -1,0 +1,41 @@
+---
+import AppHeader from "../AppHeader.astro";
+import { SwiperHome } from "../SwiperHome/SwiperHome.jsx";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { swiper_1, swiper_2, swiper_3, swiper_4, swiper_5, swiper_6 } =
+	i18n.HERO;
+---
+
+<header id="home">
+	<AppHeader />
+	<SwiperHome
+		client:visible
+		title1={swiper_1.title}
+		subtitle1={swiper_1.subtitle}
+		paragraph1={swiper_1.paragraph}
+		title2={swiper_2.title}
+		subtitle2={swiper_2.subtitle}
+		paragraph2={swiper_2.paragraph}
+		title3={swiper_3.title}
+		subtitle3={swiper_3.subtitle}
+		paragraph3={swiper_3.paragraph}
+		title4={swiper_4.title}
+		subtitle4={swiper_4.subtitle}
+		paragraph4={swiper_4.paragraph}
+		title5={swiper_5.title}
+		subtitle5={swiper_5.subtitle}
+		paragraph5={swiper_5.paragraph}
+		title6={swiper_6.title}
+		subtitle6={swiper_6.subtitle}
+		paragraph6={swiper_6.paragraph}
+	/>
+	<!-- <iframe
+		class="absolute top-0 right-0 m-auto left-0 w-full h-full z-10 pt-20"
+		src="https://next-bot-cacta.vercel.app/"
+		frameborder="0">
+	</iframe> -->
+</header>

@@ -266,7 +266,7 @@ export function Form({
                       >
                         {send}
                       </button>
-                      <p className="mt-4 text-sm text-gray-700 font-semibold sm:mt-0 ">
+                      <p className="mt-4 text-sm text-gray-700 font-semibold sm:mt-0 text-center ">
                         ✉️ {message_2}
                       </p>
                     </div>

@@ -89,21 +89,89 @@ import logo from "../../public/logo.png";
 </script>
 
 <header class="">
-	<nav
-		class="fixed z-50 w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 right-0 left-0">
+	<nav class="fixed z-50 w-full mx-auto px-4 md:px-20 right-0 left-0">
 		<div
 			id="navbar"
-			class="relative flex flex-wrap items-center justify-between gap-6 py-3">
+			class="relative flex flex-wrap items-center justify-between gap-6 py-2">
 			<div
-				class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo">
+				class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo text-md text-current font-medium flex-grow basis-0">
 				<HeaderLink
 					href={translatePath("/#home")}
 					aria-label="logo"
 					class="flex items-center space-x-2">
-					<img src={logo.src} alt="logo cacta" class="w-14" />
+					<img src={logo.src} alt="logo cacta" class="w-16" />
 				</HeaderLink>
-
-				<div class="relative flex max-h-10 items-center lg:hidden">
+			</div>
+			<div
+				id="navLayer"
+				aria-hidden="true"
+				class="fixed inset-0 z-10 h-screen w-full origin-bottom scale-y-0 bg-white backdrop-blur-2xl transition duration-500 dark:bg-gray-900 lg:hidden">
+			</div>
+			<div
+				id="navlinks"
+				class="invisible my-auto absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col justify-end gap-6 rounded-3xl border border-gray-100 bg-transparent p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:shadow-none flex-wrap lg:visible lg:relative lg:flex lg:w-fit lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:p-0 lg:opacity-100 lg:shadow-none">
+				<div class="w-full dark:text-gray-200 lg:pr-8 lg:pt-0">
+					<ul
+						class="flex flex-col gap-6 lg:flex-row lg:text-md z-20 relative">
+						<!-- {
+								links.map((link) => (
+											<li>
+												<a
+													href={link.to}
+													class="hover:text-primary
+									  text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-xl font-semibold   tracking-tighter	">
+													<span>{link.label}</span>
+												</a>
+											</li> -->
+						<!-- <hr class="absolute hidden md:block" /> -->
+						<li>
+							<HeaderLink
+								href={translatePath("/#solution")}
+								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-md lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								{t("nav.solution")}
+							</HeaderLink>
+						</li>
+						<li>
+							<HeaderLink
+								href={translatePath("/#features")}
+								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-md lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								{t("nav.features")}
+							</HeaderLink>
+						</li>
+						<li>
+							<HeaderLink
+								href={translatePath("/#why-cacta")}
+								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-md lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								{t("nav.whyCacta")}
+							</HeaderLink>
+						</li>
+						<li>
+							<HeaderLink
+								href={translatePath("/#us")}
+								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-md lg:text-white dark:text-white block transition text-xl font-bold tracking-tighter">
+								{t("nav.us")}
+							</HeaderLink>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				id="navlinks"
+				class="lg:mt-0 flex items-center md:justify-end flex-grow basis-0 w-full">
+				<HeaderLink
+					href={translatePath("/#contact")}
+					class="z-100 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 mr-2">
+					<span
+						class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+					></span>
+					<span
+						class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#007d67] to-[#00ff9a] px-8 py-1 font-semibold text-base text-gray-50 backdrop-blur-3xl whitespace-nowrap">
+						<span class="relative text-white"></span>
+						{t("nav.contact")}
+					</span>
+				</HeaderLink>
+				<LanguageSelector />
+				<div class="relative flex max-h-10 items-center lg:hidden z-50">
 					<button
 						aria-label="humburger"
 						id="hamburger"
@@ -121,81 +189,25 @@ import logo from "../../public/logo.png";
 					</button>
 				</div>
 			</div>
-			<div
-				id="navLayer"
-				aria-hidden="true"
-				class="fixed inset-0 z-10 h-screen w-full origin-bottom scale-y-0 bg-white backdrop-blur-2xl transition duration-500 dark:bg-gray-900 lg:hidden">
-			</div>
-			<div
-				id="navlinks"
-				class="invisible my-auto absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col justify-end gap-6 rounded-3xl border border-gray-100 bg-transparent p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:shadow-none flex-wrap lg:visible lg:relative lg:flex lg:w-fit lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:p-0 lg:opacity-100 lg:shadow-none">
-				<div
-					class="w-full dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0">
-					<ul
-						class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md z-20">
-						<!-- {
-								links.map((link) => (
-											<li>
-												<a
-													href={link.to}
-													class="hover:text-primary
-									 dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold  md:px-4 tracking-tighter	">
-													<span>{link.label}</span>
-												</a>
-											</li> -->
-						<li>
-							<HeaderLink
-								href={translatePath("/#solution")}
-								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
-								{t("nav.solution")}
-							</HeaderLink>
-						</li>
-						<li>
-							<HeaderLink
-								href={translatePath("/#features")}
-								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
-								{t("nav.features")}
-							</HeaderLink>
-						</li>
-						<li>
-							<HeaderLink
-								href={translatePath("/#why-cacta")}
-								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
-								{t("nav.whyCacta")}
-							</HeaderLink>
-						</li>
-						<li>
-							<HeaderLink
-								href={translatePath("/#us")}
-								class="hover:text-primary dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter">
-								{t("nav.us")}
-							</HeaderLink>
-						</li>
-					</ul>
-				</div>
-
-				<div class="mt-12 lg:mt-0 flex items-center">
-					<HeaderLink
-						href={translatePath("/#contact")}
-						class="z-100 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 mr-2">
-						<span
-							class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-						></span>
-						<span
-							class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#007d67] to-[#00ff9a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
-							<span class="relative font-semibold text-white"
-							></span>
-							{t("nav.contact")}</span
-						>
-					</HeaderLink>
-				</div>
-				<LanguageSelector />
-			</div>
 		</div>
 	</nav>
 </header>
 
 <style>
+	hr {
+		border: 0;
+		height: 16px;
+		background-image: linear-gradient(
+			to right,
+			rgba(0, 125, 103, 0),
+			rgba(0, 125, 103, 1),
+			rgba(0, 125, 103, 0)
+		);
+		width: 140%;
+		margin-block: 0.5rem;
+		z-index: -10;
+		transform: translate(-12%, 0);
+	}
 	.logo {
 		border-radius: 1.5rem;
 	}
@@ -207,18 +219,27 @@ import logo from "../../public/logo.png";
 		animation-timeline: scroll(root);
 		animation-range: 0 300px;
 	}
+	hr {
+		animation: disappear linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 100px;
+	}
+	@keyframes disappear {
+		to {
+			opacity: 0;
+		}
+	}
 	@media (width > 700px) {
 		@keyframes enhance-header {
 			to {
 				z-index: 50;
 				backdrop-filter: blur(10px);
-				margin-top: 2rem;
 				margin-inline: auto;
-				border-radius: 1.75rem;
 				left: 0;
 				right: 0;
 				box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1);
 				background: rgba(0, 0, 0, 0.3);
+				padding-inline: 6rem;
 			}
 		}
 	}

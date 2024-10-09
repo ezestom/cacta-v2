@@ -1,14 +1,40 @@
 {
+  "SEO_TITLE": "Cacta | Software de gestión sustentable para la industria primaria",
   "BUTTON_HEADER": "Contáctanos",
-  "SEO_TITLE": "Bienvenido a Cacta | La puerta al futuro de la industria agrícola.",
-  "SEO_DESCRIPTION": "Cacta es una plataforma de software que automatiza, calcula y reporta el impacto ambiental de tu empresa.",
-  "INTRO_TITLE_1": "Más que un ",
-  "INTRO_TITLE_2": "Software",
-  "INTRO_TITLE_3": "La puerta al futuro",
-  "INTRO_TITLE_4": "de la industria agrícola.",
-  "INTRO_DESCRIPTION_1": "Automatiza, calcula y reporta",
-  "INTRO_DESCRIPTION_2": "el impacto ambiental",
-  "INTRO_DESCRIPTION_3": "de tu empresa.",
+  "HERO": {
+    "button_header": "Contáctanos",
+    "swiper_1": {
+      "title": "Más que un Software",
+      "subtitle": "La puerta al futuro de la industria agrícola",
+      "paragraph": "Automatiza, calcula y reporta el impacto ambiental de tu empresa."
+    },
+    "swiper_2": {
+      "title": "Vista 360",
+      "subtitle": "Toda tu información en una sola pantalla",
+      "paragraph": "Simplifica tu análisis ambiental con datos claros y centralizados. Identifica fácilmente los mayores contribuyentes de tu huella ambiental."
+    },
+    "swiper_3": {
+      "title": "Más eficiencia",
+      "subtitle": "Cero trabajo extra",
+      "paragraph": "Automatiza la captura de datos y elimina procesos manuales para que tu equipo se enfoque en lo importante."
+    },
+    "swiper_4": {
+      "title": "Informes automáticos",
+      "subtitle": "Siempre al día con los informes",
+      "paragraph": "Genera reportes internos y externos con un clic y mantente al tanto de las regulaciones internacionales sin esfuerzo."
+    },
+    "swiper_5": {
+      "title": "Mide tu impacto ambiental",
+      "subtitle": "12 indicadores claves",
+      "paragraph": "Herramienta sencilla para entender y comunicar tu impacto ambiental, desde el cambio climático hasta la agotamiento de recursos."
+    },
+    "swiper_6": {
+      "title": "Monitorea",
+      "subtitle": "Alertas en tiempo real",
+      "paragraph": "Configuralas, recibe notificaciones y crea planes de acción basados en datos cuantificables para una gestión sustentable."
+    }
+  },
+
   "SECTION_SOLUTION": {
     "title": "Solución",
     "intro_1": "Gestionar la sustentabilidad nunca fue tan fácil.",
@@ -16,7 +42,10 @@
     "title_solution_1": "Monitoreo por establecimiento",
     "description_solution_1": "Asegura un control completo de las operaciones, recursos y rendimientos en cada campo. Asimismo, localiza de manera sencilla los impactos georeferenciados, lo que agiliza la respuesta para ajustar las soluciones y estrategias con mayor precisión. Incorpora el análisis de suelos para obtener indicadores locales confiables.",
     "title_solution_2": "Monitoreo por producto",
-    "description_solution_2": "Adquiere trazabilidad del uso de recursos y generación de emisiones asociadas a tus actividades. Identifica oportunidades de mejora de eficiencia y sustentabilidad."
+    "description_solution_2": "Adquiere trazabilidad del uso de recursos y generación de emisiones asociadas a tus actividades. Identifica oportunidades de mejora de eficiencia y sustentabilidad.",
+    "parallax_title": "Nuestro software incluye Declaraciones Ambientales de Producto",
+    "parallax_description": "Muestra el impacto ambiental de un material en todo su ciclo de vida, desde la extracción hasta la manufactura. Esto te permite tomar decisiones más informadas, optimizar procesos y comunicar de manera transparente el desempeño ambiental de tus productos.",
+    "parallax_strong": "Con la declaración ambiental, no solo cumples con regulaciones, sino que también avanzas hacia una producción más sostenible y eficiente."
   },
   "SECTION_FEATURES": {
     "button_read_more": "Leer más",

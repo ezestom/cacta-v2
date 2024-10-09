@@ -1,14 +1,40 @@
 {
+  "SEO_TITLE": "Cacta | Sustainability at the click of a button",
   "BUTTON_HEADER": "Contact Us",
-  "SEO_TITLE": "Welcome to Cacta | The gateway to the future of the agricultural industry.",
-  "SEO_DESCRIPTION": "Cacta is a software platform that automates, calculates, and reports on your company's environmental impact.",
-  "INTRO_TITLE_1": "More than a ",
-  "INTRO_TITLE_2": "Software",
-  "INTRO_TITLE_3": "The gateway to the future",
-  "INTRO_TITLE_4": "of the agricultural industry.",
-  "INTRO_DESCRIPTION_1": "Automate, calculate, and report",
-  "INTRO_DESCRIPTION_2": "the environmental impact",
-  "INTRO_DESCRIPTION_3": "of your company.",
+  "HERO": {
+    "button_header": "Contact Us",
+    "swiper_1": {
+      "title": "More than Software",
+      "subtitle": "The Gateway to the Future of Agriculture",
+      "paragraph": "Automate, calculate, and report the environmental impact of your business."
+    },
+    "swiper_2": {
+      "title": "360 View",
+      "subtitle": "All your information on a single screen",
+      "paragraph": "Simplify your environmental analysis with clear, centralized data. Easily identify the biggest contributors to your environmental footprint."
+    },
+    "swiper_3": {
+      "title": "Increased Efficiency",
+      "subtitle": "No extra work required",
+      "paragraph": "Automate data capture and eliminate manual processes, allowing your team to focus on what matters."
+    },
+    "swiper_4": {
+      "title": "Automated Reports",
+      "subtitle": "Stay up to date with reporting",
+      "paragraph": "Generate internal and external reports with a single click and effortlessly keep track of international regulations."
+    },
+    "swiper_5": {
+      "title": "Measure Your Environmental Impact",
+      "subtitle": "12 Key Indicators",
+      "paragraph": "A simple tool to understand and communicate your environmental impact, from climate change to resource depletion."
+    },
+    "swiper_6": {
+      "title": "Monitor",
+      "subtitle": "Real-Time Alerts",
+      "paragraph": "Set them up, receive notifications, and create action plans based on quantifiable data for sustainable management."
+    }
+  },
+
   "SECTION_SOLUTION": {
     "title": "Solution",
     "intro_1": "Managing sustainability has never been easier.",
@@ -16,7 +42,10 @@
     "title_solution_1": "Monitoring by establishment:",
     "description_solution_1": "Gain comprehensive control over operations, resources, and yields per field. Additionally, easily identify georeferenced impacts, facilitating a tailored response to adapt solutions and strategies more precisely. Incorporate soil studies to obtain reliable local indicators.",
     "title_solution_2": "Monitoring by product:",
-    "description_solution_2": "Acquire traceability of resource use and generation of emissions associated with your activities. Identify opportunities to improve efficiency and sustainability."
+    "description_solution_2": "Acquire traceability of resource use and generation of emissions associated with your activities. Identify opportunities to improve efficiency and sustainability.",
+    "parallax_title": "Our software includes Environmental Product Declarations",
+    "parallax_description": "It illustrates the environmental impact of a material throughout its entire lifecycle, from extraction to manufacturing. This enables you to make more informed decisions, optimize processes, and transparently communicate the environmental performance of your products.",
+    "parallax_strong": "With the environmental declaration, you not only comply with regulations but also move towards more sustainable and efficient production."
   },
   "SECTION_FEATURES": {
     "button_read_more": "Read more",
