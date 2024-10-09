@@ -68,11 +68,11 @@ const CardParallax = ({ title, description, strong }) => {
             <img src={declaraciones.src} alt="Wizard-info" />
           </div>
           <div className="title">
-            <h2 className=" pb-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold">
+            <h2 className=" pb-2 text-gray-600 dark:text-gray-300  md:text-xl font-semibold">
               {title}
             </h2>
           </div>
-          <div className="my-2 text-gray-600 dark:text-gray-300">
+          <div className="my-2 text-gray-600 dark:text-gray-300 text-base">
             <p>
               {description}
               <span>

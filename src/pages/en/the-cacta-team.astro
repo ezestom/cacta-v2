@@ -43,68 +43,67 @@ const { description } = i18n.FOOTER;
 		<p
 			class="lg:mx-auto lg:w-4/12 text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 text-balance">
 			{description}
+		</p>
 
-			<div class="box">
-				<div class="card">
-					<div class="imgBox">
-						<img src={luciano.src} alt="some image" />
-					</div>
-					<div class="details">
-						<h3>
-							Luciano Sambataro <br /><span>CEO | Co-founder</span
-							>
-						</h3>
-					</div>
+		<div class="box">
+			<div class="card">
+				<div class="imgBox">
+					<img src={luciano.src} alt="some image" />
 				</div>
-
-				<div class="card">
-					<div class="imgBox">
-						<img src={maxi.src} alt="some image" />
-					</div>
-					<div class="details">
-						<h3>
-							Maxi Hense <br /><span>CFO | Co-Founder</span><br />
-						</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="imgBox">
-						<img src={jose.src} alt="some image" />
-					</div>
-					<div class="details">
-						<h3>
-							José Luis Cebe <br /><span
-								>Accounts Director | Co-founder</span
-							>
-						</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="imgBox">
-						<img src={juan.src} alt="some image" />
-					</div>
-					<div class="details">
-						<h3>
-							Juan Pablo Tena <br /><span>Strategy Director</span>
-						</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="imgBox">
-						<img src={sofia.src} alt="some image" />
-					</div>
-					<div class="details">
-						<h3>
-							Sofia Rodriguez <br /><span>Software Developer</span
-							>
-						</h3>
-					</div>
+				<div class="details">
+					<h3>
+						Luciano Sambataro <br /><span>CEO | Co-founder</span>
+					</h3>
 				</div>
 			</div>
-		</p>
+
+			<div class="card">
+				<div class="imgBox">
+					<img src={maxi.src} alt="some image" />
+				</div>
+				<div class="details">
+					<h3>
+						Maxi Hense <br /><span>CFO | Co-Founder</span><br />
+					</h3>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="imgBox">
+					<img src={jose.src} alt="some image" />
+				</div>
+				<div class="details">
+					<h3>
+						José Luis Cebe <br /><span
+							>Accounts Director | Co-founder</span
+						>
+					</h3>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="imgBox">
+					<img src={juan.src} alt="some image" />
+				</div>
+				<div class="details">
+					<h3>
+						Juan Pablo Tena <br /><span>Strategy Director</span>
+					</h3>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="imgBox">
+					<img src={sofia.src} alt="some image" />
+				</div>
+				<div class="details">
+					<h3>
+						Sofia Rodriguez <br /><span>Software Developer</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+
 		<GoBack />
 	</section>
 </Layout>
@@ -153,11 +152,11 @@ const { description } = i18n.FOOTER;
 	}
 
 	.card:hover::after {
-		transform: rotate(10deg);
+		transform: rotate(5deg);
 	}
 
 	.card:hover::before {
-		transform: rotate(20deg);
+		transform: rotate(10deg);
 	}
 
 	.card .imgBox {
@@ -172,7 +171,7 @@ const { description } = i18n.FOOTER;
 	}
 
 	.card:hover .imgBox {
-		transform: scale(0.8) rotate(0deg) translate(0px, -35px);
+		transform: scale(0.8) rotate(0deg) translate(0px, -25px);
 		filter: drop-shadow(0 0 0.15rem #0dac4f);
 	}
 

@@ -59,7 +59,7 @@ export function BlurVideo({ youtube_url_1, youtube_url_2 }) {
           ></iframe>
           <div className="w-full flex items-center justify-center">
             <button
-              className="fixed top-20 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full  z-80 p-1 close-button "
+              className="fixed top-[5%] bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full  z-80 p-2 close-button "
               onClick={closeDialog}
             >
               <img src={close.src} alt="close button" />

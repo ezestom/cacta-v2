@@ -16,17 +16,13 @@
   padding: 2.5rem;
   text-wrap: pretty;
   box-shadow: 0px 0px 2px #d3d3d3;
-  animation-delay: 2s;
+  animation-delay: 0.2s;
   transition: all 0.2s ease;
   will-change: transform;
 }
 
 .main-box:hover {
   cursor: crosshair;
-}
-
-p {
-  font-size: 1rem;
 }
 
 .img {
@@ -41,7 +37,7 @@ p {
 .img img {
   width: 750px;
 }
-
+/* 
 @keyframes scale {
   to {
     transform: scale(1) translateY(0);
@@ -55,4 +51,4 @@ p {
   animation: scale both linear;
   animation-timeline: --scroll;
   animation-delay: 0.5s;
-}
+} */

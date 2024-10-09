@@ -84,11 +84,11 @@ export function BlogCard2({ image, title, description, link, read_more }) {
 
       {isOpen && (
         <section className="fixed inset-0 z-50  items-center justify-center bg-black bg-opacity-50 flex flex-col ">
-          <article className="relative h-full w-full max-w-xl  bg-[#fafafa] dark:bg-gray-800 rounded-xl overflow-y-scroll max-h-[99%]  border border-gray-100 dark:shadow-none dark:border-gray-700">
+          <article className="relative h-full w-full max-w-xl  bg-white dark:bg-gray-800 rounded-xl overflow-y-scroll max-h-[99%]  border border-gray-100 dark:shadow-none dark:border-gray-700">
             <div className="relative overflow-hidden rounded-t-xl ">
               <button
                 onClick={closeDialog}
-                className="w-fit absolute top-0 right-0 p-2 bg-black rounded-xl rounded-e-none rounded-t-none hover:scale-105  transition duration-300 z-80"
+                className="w-fit fixed top-1 right-0 p-2 bg-black rounded-xl rounded-e-none rounded-t-none hover:scale-105  transition duration-300 z-[100]"
               >
                 <img src={close.src} alt="close" className="w-10 " />
               </button>
