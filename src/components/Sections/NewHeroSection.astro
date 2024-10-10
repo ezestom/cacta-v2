@@ -10,7 +10,7 @@ const { swiper_1, swiper_2, swiper_3, swiper_4, swiper_5, swiper_6 } =
 	i18n.HERO;
 ---
 
-<header id="home">
+<header id="home" class="relative">
 	<AppHeader />
 	<SwiperHome
 		client:visible
@@ -38,4 +38,45 @@ const { swiper_1, swiper_2, swiper_3, swiper_4, swiper_5, swiper_6 } =
 		src="https://next-bot-cacta.vercel.app/"
 		frameborder="0">
 	</iframe> -->
+	<button
+		id="scroll"
+		class="fixed bottom-2 right-2 sm:right-20 m-auto w-10 h-10 bg-white rounded-xl shadow-lg z-20 hover:scale-105 active:scale-95 transition opacity-0">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="m-auto"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			stroke-width="2"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<polyline points="6 15 12 9 18 15"></polyline>
+		</svg>
+
+		<script>
+			const scroll = document.getElementById("scroll");
+			scroll?.addEventListener("click", () => {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			});
+		</script>
+	</button>
 </header>
+
+<style>
+	#scroll {
+		animation: reveal linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 50px;
+	}
+	@keyframes reveal {
+		to {
+			opacity: 1;
+		}
+	}
+</style>

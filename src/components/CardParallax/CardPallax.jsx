@@ -57,8 +57,8 @@ const CardParallax = ({ title, description, strong }) => {
   }, []);
 
   return (
-    <div className="main md:pt-0 pt-28 b">
-      <div className="main-inner " id="panel" ref={panelRef}>
+    <div className="main md:pt-0 pt-28">
+      <div className="main-inner" id="panel" ref={panelRef}>
         <div
           className="main-box group bg-gray-100 dark:bg-gray-800 dark:border-gray-700 "
           id="panel-container"
@@ -72,8 +72,8 @@ const CardParallax = ({ title, description, strong }) => {
               {title}
             </h2>
           </div>
-          <div className="my-2 text-gray-600 dark:text-gray-300 text-base">
-            <p>
+          <div className="my-2 text-gray-600 dark:text-gray-300">
+            <p className="">
               {description}
               <span>
                 <br /> {strong}

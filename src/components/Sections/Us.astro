@@ -143,18 +143,14 @@ const {
 	}
 	@media (width >= 768px) {
 		@keyframes revealRoll {
-			from {
-				transform: translateX(10%) rotate(60deg);
+			0% {
+				transform: rotate(0deg);
 				opacity: 0;
 			}
-			to {
-				filter: drop-shadow(0em 0em 80em #ff3e57);
-			}
-		}
-		@keyframes revealSpanRandom {
-			from {
-				transform: translateX(20%);
-				opacity: 0;
+			100% {
+				transform: rotate(360deg);
+				opacity: 1;
+				filter: drop-shadow(0em 0em 0.1em #00ff9a);
 			}
 		}
 	}
