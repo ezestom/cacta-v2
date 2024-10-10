@@ -1,465 +1,105 @@
 ---
-import frutucuman from "../img/frutucuman.png";
-import donato from "../img/donato.png";
-import delotte from "../img/delotte.png";
-import inducitrica from "../img/inducitrica.png";
-import galicia from "../img/galicia.webp";
-import kikel from "../img/kikel.png";
+import frutucuman from "../img/logo/frutucuman.png";
+import donato from "../img/logo/donato.png";
+import delotte from "../img/logo/delotte.png";
+import inducitrica from "../img/logo/inducitrica.png";
+import galicia from "../img/logo/galicia.webp";
+import kikel from "../img/logo/kikel.png";
+import lapacho from "../img/logo/lapacho.png";
+import alianza from "../img/logo/alianza.png";
 
 import { geti18n } from "../i18n/";
 const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
 const { title, intro_1 } = i18n.FADER;
+
+const companies = [
+	{ src: donato.src, href: "#" },
+	{ src: delotte.src, href: "https://grupodelotte.com/" },
+	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
+	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
+	{ src: kikel.src, href: "#" },
+	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
+	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
+	// repeating
+	{ src: donato.src, href: "#" },
+	{ src: delotte.src, href: "https://grupodelotte.com/" },
+	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
+	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
+	{ src: kikel.src, href: "#" },
+	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
+	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
+];
 ---
 
-<div class="flex flex-col gap-2 w-full my-40" id="example-output-section">
+<section class="flex flex-col gap-2 w-full my-40" id="example-output-section">
 	<h1 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
 		{title}
 	</h1>
 	<p class="my-2 text-gray-500 text-md md:text-xl font-semibold">
 		{intro_1}
 	</p>
-	<div class="flex flex-row examples-container overflow-hidden mt-2">
+
+	<article class="flex flex-col examples-container overflow-hidden mt-2">
 		<div class="flex flex-row examples-row gap-2 p-2">
 			<div class="flex flex-row gap-4">
-				<a
-					href="#"
-					target="_blank"
-					class="group rounded-3xl flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={donato.src}
-							class="h-12 w-auto mx-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://grupodelotte.com/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={delotte.src}
-							class="h-12 w-auto mx-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://www.frutucumansa.com.ar/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={frutucuman.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://grupodelotte.com/inducitrica/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={inducitrica.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://www.galicia.ar/empresas/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={galicia.src}
-							class="h-16 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="#"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={kikel.src}
-							class="h-16 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="#"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={donato.src}
-							class="h-12 w-auto mx-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
+				{
+					companies.map((company) => (
+						<a
+							href={company.href}
+							target="_blank"
+							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+								<img
+									src={company.src}
+									class="h-12 w-auto m-auto"
+									loading="lazy"
+									alt="client logo"
+									width=""
+									height=""
+								/>
+							</div>
+						</a>
+					))
+				}
 			</div>
-			<div class="flex flex-row gap-4">
-				<a
-					href="https://grupodelotte.com/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={delotte.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://www.frutucumansa.com.ar/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={frutucuman.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://grupodelotte.com/inducitrica/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={inducitrica.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="https://www.galicia.ar/empresas/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={galicia.src}
-							class="h-16 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="#"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={kikel.src}
-							class="h-16 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-				<a
-					href="#"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={donato.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-			</div>
-			<div class="flex flex-row gap-4">
-				<a
-					href="https://grupodelotte.com/"
-					target="_blank"
-					class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-					<div
-						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-						<img
-							src={delotte.src}
-							class="h-12 w-auto m-auto"
-							loading="lazy"
-							alt="client logo"
-							width=""
-							height=""
-						/>
-					</div>
-				</a>
-			</div>
-
-			<a
-				href="https://www.frutucumansa.com.ar/"
-				target="_blank"
-				class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={frutucuman.src}
-						class="h-12 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
-			<a
-				href="https://grupodelotte.com/inducitrica/"
-				target="_blank"
-				class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={inducitrica.src}
-						class="h-12 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
-			<a
-				href="https://www.galicia.ar/empresas/"
-				target="_blank"
-				class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={galicia.src}
-						class="h-16 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
-			<a
-				href="#"
-				target="_blank"
-				class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={kikel.src}
-						class="h-16 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
 		</div>
-	</div>
-</div>
 
-<!-- <div class="flex flex-row examples-container overflow-hidden">
-    <div class="flex flex-row examples-row2 gap-2">
-      <div class="flex flex-row gap-4">
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div class="p-2 grayscale transition duration-200 hover:grayscale-0">
-            <img
-              src="./images/clients/google-cloud.svg"
-              class="h-12 w-auto mx-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row gap-4">
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div class="p-2 grayscale transition duration-200 hover:grayscale-0">
-            <img
-              src="./images/clients/google-cloud.svg"
-              class="h-12 w-auto mx-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl min-w-[256px] w-[256px]  flex items-center justify-center  px-4 cursor-pointer  transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+		<div class="flex flex-row examples-row2 gap-2 p-2">
+			<div class="flex flex-row gap-4">
+				{
+					companies.map((company) => (
+						<a
+							href={company.href}
+							target="_blank"
+							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+								<img
+									src={company.src}
+									class="h-12 w-auto m-auto"
+									loading="lazy"
+									alt="client logo"
+									width=""
+									height=""
+								/>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</article>
+</section>
 
 <style>
 	.examples-row {
-		animation: marquee 180s linear infinite;
+		animation: marquee 120s linear infinite;
 	}
 	.examples-row2 {
-		animation: marquee 70s linear infinite;
+		animation: marquee 40s linear infinite;
 	}
 
 	.flex {
@@ -488,7 +128,7 @@ const { title, intro_1 } = i18n.FADER;
 			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(-50%);
+			transform: translateX(-75%);
 		}
 	}
 </style>
