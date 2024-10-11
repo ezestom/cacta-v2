@@ -32,6 +32,15 @@ const companies = [
 	{ src: kikel.src, href: "#" },
 	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
 	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
+	// repeating 2
+	{ src: donato.src, href: "#" },
+	{ src: delotte.src, href: "https://grupodelotte.com/" },
+	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
+	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
+	{ src: kikel.src, href: "#" },
+	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
+	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
 ];
 ---
 
@@ -68,7 +77,31 @@ const companies = [
 			</div>
 		</div>
 
-		<div class="flex flex-row examples-row2 gap-2 p-2">
+		<div class="flex flex-row-reverse examples-row2 gap-2 p-2 opacity-75">
+			<div class="flex flex-row gap-4">
+				{
+					companies.map((company) => (
+						<a
+							href={company.href}
+							target="_blank"
+							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+								<img
+									src={company.src}
+									class="h-12 w-auto m-auto"
+									loading="lazy"
+									alt="client logo"
+									width=""
+									height=""
+								/>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+
+		<div class="flex flex-row examples-row3 gap-2 p-2 opacity-50">
 			<div class="flex flex-row gap-4">
 				{
 					companies.map((company) => (
@@ -96,10 +129,13 @@ const companies = [
 
 <style>
 	.examples-row {
-		animation: marquee 120s linear infinite;
+		animation: marquee 80s linear infinite;
 	}
 	.examples-row2 {
-		animation: marquee 40s linear infinite;
+		animation: marquee2 30s linear infinite;
+	}
+	.examples-row3 {
+		animation: marquee 20s linear infinite;
 	}
 
 	.flex {
@@ -129,6 +165,14 @@ const companies = [
 		}
 		100% {
 			transform: translateX(-75%);
+		}
+	}
+	@keyframes marquee2 {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(75%);
 		}
 	}
 </style>
