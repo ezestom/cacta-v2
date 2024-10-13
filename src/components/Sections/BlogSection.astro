@@ -14,7 +14,7 @@ const { title, intro } = i18n.SECTION_BLOG;
 const { post_7, post_5, post_6 } = i18n.SECTION_BLOG;
 ---
 
-<section id="blog">
+<section id="blog" class="">
 	<Container>
 		<div class="mb-12 space-y-2 text-center">
 			<h2
@@ -27,9 +27,8 @@ const { post_7, post_5, post_6 } = i18n.SECTION_BLOG;
 			</p>
 		</div>
 		<div
-			class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full"
+			class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full z-10"
 			id="blog-info">
-
 			<article class="">
 				<TimeStamp time="2024-09-24T10:00:00Z" />
 				<BlogCard

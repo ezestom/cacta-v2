@@ -6,12 +6,13 @@ import { geti18n } from "../../i18n/";
 const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
-const { title, intro_1, intro_2, youtube_url_1, youtube_url_2 } = i18n.CALL_TO_ACTION;
+const { title, intro_1, intro_2, youtube_url_1, youtube_url_2 } =
+	i18n.CALL_TO_ACTION;
 ---
 
 <div class="relative">
 	<div
-		class="-z-10 absolute h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+		class="-z-10 mt-20 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
 	</div>
 	<Container>
 		<article class="max-w-3xl mx-auto">
@@ -26,7 +27,11 @@ const { title, intro_1, intro_2, youtube_url_1, youtube_url_2 } = i18n.CALL_TO_A
 			<p class="text-gray-600 text-center dark:text-gray-300 pb-10">
 				{intro_2}
 			</p>
-			<BlurVideo client:visible youtube_url_1={youtube_url_1} youtube_url_2={youtube_url_2}/>
+			<BlurVideo
+				client:visible
+				youtube_url_1={youtube_url_1}
+				youtube_url_2={youtube_url_2}
+			/>
 		</article>
 	</Container>
 </div>

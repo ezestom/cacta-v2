@@ -1,6 +1,7 @@
 ---
 import Container from "../Container.astro";
 import CardParallax from "../CardParallax/CardPallax.jsx";
+import topWave from "../../img/waves-bg-top.svg";
 import Gallery from "../Gallery.astro";
 import lemon from "../../icons/lemon.svg";
 import farm from "../../icons/farm.svg";
@@ -23,7 +24,8 @@ const {
 } = i18n.SECTION_SOLUTION;
 ---
 
-<div id="solution" class="pt-10 lg:pt-32">
+<div id="solution" class="pt-10 lg:pt-32 relative">
+	<img src={topWave.src} alt="top wave svg" class="w-full absolute right-0 top-0 dark:opacity-25 opacity-5 -z-10"/>
 	<Container>
 		<section class="flex flex-wrap justify-between items-center">
 			<div class="w-full md:w-1/2">

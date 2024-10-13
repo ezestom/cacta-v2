@@ -5,6 +5,7 @@ import world from "../icons/world.svg";
 import ThemeToggle from "./ThemeToggle.astro";
 import linkedin from "../icons/linkedin.svg";
 import team from "../icons/team.svg";
+import bottomWave from "../img/waves-bg-bottom.svg";
 import {
 	getLangFromUrl,
 	useTranslations,
@@ -20,10 +21,15 @@ const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 ---
 
-<footer class="mb-3 dark:text-white" id="footer">
+<footer class="mb-3 dark:text-white relative" id="footer">
+	<img
+		src={bottomWave.src}
+		alt="top wave svg"
+		class="w-full absolute -z-10 right-0 bottom-0 dark:opacity-25 opacity-5"
+	/>
 	<Container>
 		<section
-			class="border p-4 border-gray-100 rounded-3xl bg-white/10 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-center md:justify-between w-full items-center m-auto flex-wrap gap-2">
+			class="border p-4 border-gray-100 rounded-3xl bg-[#fafafa]/75 dark:bg-gray-800/75 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-center md:justify-between w-full items-center m-auto flex-wrap gap-2">
 			<article class="opacity-75 flex gap-3 items-center">
 				<a
 					title="go to ezestom website"
