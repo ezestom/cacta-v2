@@ -24,8 +24,7 @@ const {
 } = i18n.SECTION_SOLUTION;
 ---
 
-<div id="solution" class="pt-10 lg:pt-32 relative">
-	<img src={topWave.src} alt="top wave svg" class="w-full absolute right-0 top-0 dark:opacity-25 opacity-5 -z-10"/>
+<div id="solution" class="pt-10 lg:pt-32">
 	<Container>
 		<section class="flex flex-wrap justify-between items-center">
 			<div class="w-full md:w-1/2">
@@ -95,6 +94,13 @@ const {
 </div>
 
 <style>
+	#solution {
+		background-image: url("../../img/waves-bg-top.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 100%;
+	}
+
 	span {
 		color: var(--primary);
 	}
