@@ -5,10 +5,9 @@ import { TimeStamp } from "../components/TimeStamp/TimeStamp.jsx";
 import blog1 from "../img/esg.webp";
 import blog2 from "../img/cacta.webp";
 import blog3 from "../img/blog3.webp";
-import blog4 from "../img/blog4.webp";
-import blog5 from "../img/blog5.webp";
-import blog6 from "../img/infocampo.webp";
-import blog7 from "../img/infocampo2.webp";
+import blog4 from "../img/blog5.webp";
+import blog5 from "../img/infocampo.webp";
+import blog6 from "../img/infocampo2.webp";
 import Layout from "../layouts/Layout.astro";
 import GoBack from "../components/GoBack.astro";
 import { LogoTheme } from "../components/LogoTheme.jsx";
@@ -19,7 +18,7 @@ const i18n = geti18n({ currentLocale });
 
 const { title } = i18n.PAGE_BLOG;
 const { button_back } = i18n.SECTION_FEATURES;
-const { post_1, post_2, post_3, post_4, post_5, post_6, post_7, read_more } =
+const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 	i18n.SECTION_BLOG;
 ---
 
@@ -40,18 +39,6 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, post_7, read_more } =
 		<div
 			class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 pb-6">
 			<article class="">
-				<TimeStamp time="2024-09-24T10:00:00Z" />
-				<BlogCard2
-					client:visible
-					image={blog7}
-					title={post_7.title}
-					description={post_7.description}
-					read_more={read_more}
-					link="https://www.infocampo.com.ar/un-punto-a-favor-en-la-huella-ambiental-del-agro-argentino-el-nivel-de-digitalizacion-es-muy-bueno/"
-				/>
-			</article>
-
-			<article class="">
 				<TimeStamp time="2024-08-27T10:00:00Z" />
 				<BlogCard2
 					client:visible
@@ -59,7 +46,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, post_7, read_more } =
 					title={post_6.title}
 					description={post_6.description}
 					read_more={read_more}
-					link="https://www.infocampo.com.ar/creo-un-software-de-medicion-de-impacto-ambiental-y-asegura-la-sustentabilidad-llego-para-quedarse/"
+					link="https://www.infocampo.com.ar/un-punto-a-favor-en-la-huella-ambiental-del-agro-argentino-el-nivel-de-digitalizacion-es-muy-bueno/"
 				/>
 			</article>
 
@@ -71,7 +58,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, post_7, read_more } =
 					title={post_5.title}
 					description={post_5.description}
 					read_more={read_more}
-					link=""
+					link="https://www.infocampo.com.ar/creo-un-software-de-medicion-de-impacto-ambiental-y-asegura-la-sustentabilidad-llego-para-quedarse/"
 				/>
 			</article>
 
