@@ -169,9 +169,9 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h1 className="font-bold text-gray-900 text-2xl">{h1}</h1>
+                  <h1 className="font-bold mx-2 text-gray-900 text-2xl">{h1}</h1>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed mx-2 text-gray-700">
                     {subtitle}
                   </p>
                   {isLoading && (
@@ -184,7 +184,7 @@ export function Form({
                     method="POST"
                     action="https://formsubmit.co/jp.tena@cacta.eco"
                     // action="https://formsubmit.co/ezequielstom@gmail.com"
-                    className="mt-8 gap-6"
+                    className="mt-8 gap-6 mx-2"
                   >
                     <input
                       type="hidden"
@@ -206,7 +206,7 @@ export function Form({
                     <input type="hidden" name="_captcha" value="false" />
 
                     <div className="col-span-6 sm:col-span-3">
-                      <label className="block text-sm font-medium text-gray-700">
+                      <label className="block text-sm  font-medium text-gray-700">
                         {name}
                         <input
                           type="text"
@@ -214,12 +214,12 @@ export function Form({
                           id="name"
                           placeholder="John Doe"
                           required
-                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                          className="p-2 my-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                         />
                       </label>
                     </div>
                     <div className="col-span-6 sm:col-span-3">
-                      <label className="block text-sm font-medium text-gray-700">
+                      <label className="block text-sm  font-medium text-gray-700">
                         {company}
                         <input
                           type="text"
@@ -227,15 +227,15 @@ export function Form({
                           id="company"
                           placeholder="Cacta SaS."
                           required
-                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                          className="p-2 my-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                         />
                       </label>
                     </div>
                     <div className="col-span-6 sm:col-span-3">
-                      <label className="block text-sm font-medium text-gray-700">
+                      <label className="block text-sm  font-medium text-gray-700">
                         {email}
                         <input
-                          className="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                          className="p-2 my-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                           type="email"
                           name="email"
                           id="email"
@@ -245,7 +245,7 @@ export function Form({
                       </label>
                     </div>
                     <fieldset>
-                      <legend className="block text-sm font-medium text-gray-700">
+                      <legend className="block text-sm  font-medium text-gray-700">
                         {message}
                         <textarea
                           name="message"
