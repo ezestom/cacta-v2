@@ -29,7 +29,7 @@ const i18n = geti18n({ currentLocale });
 		<meta property="og:url" content="https://www.cacta.eco/" />
 		<meta
 			name="description"
-			property="og:descripton"
+			property="og:description"
 			content="Cacta es un software de gestión ambiental que ayuda a empresas a medir y reducir su impacto, optimizando la huella ecológica y el uso de recursos."
 		/>
 		<meta
@@ -46,7 +46,21 @@ const i18n = geti18n({ currentLocale });
 			property="og:title"
 			content="Cacta - Software para automatizar, calcular y reportar el impacto ambiental de tu empresa."
 		/>
+		<meta property="og:site_name" content="Cacta" />
 		<meta property="og:image" content="/public/logo.png" />
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@cacta_sas" />
+		<meta
+			name="twitter:title"
+			content="Cacta - Software de Gestión Ambiental"
+		/>
+		<meta
+			name="twitter:description"
+			content="Cacta te permite calcular tu huella ecológica, gestionar tus residuos y medir tu consumo de recursos."
+		/>
+		<meta name="twitter:image" content="/public/logo.png" />
+		<meta name="twitter:image:alt" content="/public/logo.png" />
 
 		<title>{i18n.SEO_TITLE}</title>
 		<ViewTransitions />
@@ -107,3 +121,28 @@ const i18n = geti18n({ currentLocale });
 		animation-duration: 0.3s;
 	}
 </style>
+
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Cacta",
+		"description": "Cacta es un software de gestión ambiental que permite a las empresas medir y reducir su impacto ambiental.",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "WEB",
+		"url": "https://cacta.eco",
+		"image": "https://cacta.eco/public/logo.png",
+		"author": {
+			"@type": "Organization",
+			"name": "Cacta Software"
+		},
+		"offers": {
+			"@type": "Offer",
+			"url": "https://cacta.eco",
+			"price": "0.00",
+			"priceCurrency": "USD",
+			"itemCondition": "https://schema.org/NewCondition",
+			"availability": "https://schema.org/InStock"
+		}
+	}
+</script>
