@@ -47,7 +47,7 @@ hr {
 .book {
 	position: relative;
 	transform-style: preserve-3d;
-	transform: rotateY(-4deg) rotateX(2deg); /* Ajuste en X y Y para más realismo */
+	transform: rotateY(-6deg) rotateX(4deg); /* Ajuste en X y Y para más realismo */
 	transition: transform 1s ease;
 	animation: initAnimation 15s ease-in-out infinite alternate;
 }

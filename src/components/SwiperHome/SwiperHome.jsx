@@ -3,7 +3,7 @@ import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { Parallax, Autoplay, FreeMode, Pagination } from "swiper/modules";
 import "./SwiperHome.css";
 
 import home1 from "../../img/hero/farmApp.jpg";
@@ -88,8 +88,9 @@ export function SwiperHome({
 
   return (
     <Swiper
-      ref={swiperRef} // Asignar la referencia
+      ref={swiperRef}
       speed={1250}
+      parallax={true}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
@@ -101,7 +102,7 @@ export function SwiperHome({
         clickable: true,
         el: ".swiper-pagination",
       }}
-      modules={[Autoplay, FreeMode, Pagination]}
+      modules={[Parallax, Autoplay, FreeMode, Pagination]}
       className="mySwiper z-0"
     >
       {images.map((image, index) => (
@@ -113,33 +114,34 @@ export function SwiperHome({
             <span className="swiper-pagination absolute m-auto" />
             <div className="home-swiper relative z-20">
               <article className="home-article relative w-full h-screen flex items-center justify-center lg:justify-start md:pl-[6rem] overflow-hidden">
-                <div
-                  className="home-data absolute flex flex-col items-center lg:items-start text-start lg-text-center z-10 gap-5 text-balance px-4 md:px-0 max-w-[35ch] lg:max-w-[60ch] lg:top-1/2 md:transform lg:-translate-y-1/2"
-                  data-swiper-parallax="500"
-                >
+                <div className="home-data absolute flex flex-col items-center lg:items-start text-start lg-text-center z-10 gap-5 text-balance px-4 md:px-0 max-w-[35ch] lg:max-w-[60ch] lg:top-1/2 md:transform lg:-translate-y-1/2">
                   <h7
                     className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] text-transparent bg-clip-text text-[3.75rem] xl:text-[3.75vw] max-w-[15ch] leading-none tracking-tight font-black text-center lg:text-left -my-4 drop-shadow-md py-4 "
-                    data-swiper-parallax="400"
+                    data-swiper-parallax="-400"
                   >
                     {image.title}
                   </h7>
-                  <h3 className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] py-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl max-w-[35ch] sm:leading-10 text-center lg:text-left tracking-tight drop-shadow-md ">
+                  <h3
+                    className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] py-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl max-w-[35ch] sm:leading-10 text-center lg:text-left tracking-tight drop-shadow-md"
+                    data-swiper-parallax="-300"
+                  >
                     {image.subtitle}
                   </h3>
                   <hr />
-                  <p className="home-subtitle text-center lg:text-left text-white font-bold text-xl md:text-2xl max-w-[35ch] tracking-tight text-balance drop-shadow-md">
+                  <p
+                    className="home-subtitle text-center lg:text-left text-white font-bold text-xl md:text-2xl max-w-[35ch] tracking-tight text-balance drop-shadow-md"
+                    data-swiper-parallax="-200"
+                  >
                     {image.paragraph}
                   </p>
                 </div>
                 <img
-                  data-swiper-parallax="-300"
                   src={image.img.src}
                   alt={`${image.img} image`}
                   className="absolute top-0 left-0 h-full object-cover object-center -z-10 w-full blur-sm overflow-hidden"
                 />
                 <div className="book-container">
                   <img
-                    data-swiper-parallax="-200"
                     id="img2"
                     src={image.img2.src}
                     alt={`${image.img2} image`}
