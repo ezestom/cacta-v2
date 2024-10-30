@@ -1,0 +1,25 @@
+<div id="progress"></div>
+
+<style>
+	#progress {
+      margin-top: 4.35rem;
+		z-index: 50;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0%;
+		background: var(--gradient1);
+		height: 0.2em;
+		animation: progress-grow auto linear;
+		animation-timeline: scroll(root block);
+	}
+
+	@keyframes progress-grow {
+		from {
+			width: 0%;
+		}
+		to {
+			width: 100%;
+		}
+	}
+</style>
