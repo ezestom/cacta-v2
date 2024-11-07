@@ -35,12 +35,14 @@ export function Form({
     setDialog(true);
     document.body.style.overflow = "hidden";
     document.getElementById("navbar").style.display = "none";
+    document.getElementById("progress").style.display = "none";
   };
 
   const closeDialog = () => {
     setDialog(false);
     document.body.style.overflow = "auto";
     document.getElementById("navbar").style.display = "flex";
+    document.getElementById("progress").style.display = "flex";
   };
 
   const isMessageSuccess = () => {
@@ -137,7 +139,7 @@ export function Form({
       {dialog && (
         <dialog
           open
-          className="backdrop-blur  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full "
+          className="backdrop-blur  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full"
         >
           <section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden  ">
             <div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0 ">
@@ -169,7 +171,9 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h1 className="font-bold mx-2 text-gray-900 text-2xl">{h1}</h1>
+                  <h1 className="font-bold mx-2 text-gray-900 text-2xl">
+                    {h1}
+                  </h1>
 
                   <p className="mt-4 leading-relaxed mx-2 text-gray-700">
                     {subtitle}
