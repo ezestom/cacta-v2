@@ -171,9 +171,9 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h1 className="font-bold mx-2 text-gray-900 text-2xl">
+                  <h5 className="font-bold mx-2 text-gray-900 text-2xl">
                     {h1}
-                  </h1>
+                  </h5>
 
                   <p className="mt-4 leading-relaxed mx-2 text-gray-700">
                     {subtitle}

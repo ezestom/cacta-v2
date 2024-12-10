@@ -60,7 +60,7 @@ const CardParallax = ({ title, description, strong }) => {
     <div className="main md:pt-0 pt-28">
       <div className="main-inner" id="panel" ref={panelRef}>
         <div
-          className="main-box group bg-gray-100 dark:bg-gray-800 dark:border-gray-700 "
+          className="main-box group bg-gray-50 dark:bg-gray-800 dark:border-gray-700 "
           id="panel-container"
           ref={containerRef}
         >

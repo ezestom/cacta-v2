@@ -116,13 +116,13 @@ export function SwiperHome({
               <article className="home-article relative w-full h-screen flex items-center justify-center lg:justify-start md:pl-[6rem] overflow-hidden">
                 <div className="home-data absolute flex flex-col items-center lg:items-start text-start lg-text-center z-10 gap-5 text-balance px-4 md:px-0 max-w-[35ch] lg:max-w-[60ch] lg:top-1/2 md:transform lg:-translate-y-1/2">
                   <h7
-                    className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] text-transparent bg-clip-text text-[3.75rem] xl:text-[3.75vw] max-w-[15ch] leading-none tracking-tight font-black text-center lg:text-left -my-4 drop-shadow-md py-4 "
+                    className="home-title bg-gradient-to-r from-[#007d67] to-[#00ff9a]  text-transparent bg-clip-text text-[4.5rem] xl:text-[4vw] max-w-[15ch] leading-none tracking-tight font-black text-center lg:text-left -my-4  py-4 drop-shadow-xl "
                     data-swiper-parallax="-400"
                   >
                     {image.title}
                   </h7>
                   <h3
-                    className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] py-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl max-w-[35ch] sm:leading-10 text-center lg:text-left tracking-tight drop-shadow-md"
+                    className="home-subtitle bg-gradient-to-r from-[#007d67] to-[#00ff9a]  py-1 text-transparent bg-clip-text font-black text-4xl md:text-4xl max-w-[35ch] sm:leading-10 text-center lg:text-left tracking-tight drop-shadow-md"
                     data-swiper-parallax="-300"
                   >
                     {image.subtitle}

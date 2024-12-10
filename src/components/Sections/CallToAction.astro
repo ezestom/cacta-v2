@@ -15,23 +15,24 @@ const { title, intro_1, intro_2, youtube_url_1, youtube_url_2 } =
 		class="-z-10 mt-20 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
 	</div>
 	<Container>
-		<article class="max-w-3xl mx-auto">
+		<article
+			class="space-y-4 px-6 md:px-0 md:w-1/2 mx-auto text-center text-pretty">
 			<h2
-				class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+				class="text-5xl font-black text-gray-900 xl:text-[2.5vw] dark:text-white">
 				{title}
 			</h2>
 			<p
-				class="my-2 text-gray-600 text-center dark:text-gray-300 text-md md:text-xl font-semibold">
+				class="my-2 text-gray-600 dark:text-gray-300 text-xl md:text-2xl font-bold py-2">
 				{intro_1}
 			</p>
-			<p class="text-gray-600 text-center dark:text-gray-300 pb-10">
+			<p class="my-2 text-gray-600 dark:text-gray-300 pb-10">
 				{intro_2}
 			</p>
-			<BlurVideo
-				client:visible
-				youtube_url_1={youtube_url_1}
-				youtube_url_2={youtube_url_2}
-			/>
 		</article>
+		<BlurVideo
+			client:visible
+			youtube_url_1={youtube_url_1}
+			youtube_url_2={youtube_url_2}
+		/>
 	</Container>
 </div>

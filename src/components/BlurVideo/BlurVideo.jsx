@@ -19,7 +19,7 @@ export function BlurVideo({ youtube_url_1, youtube_url_2 }) {
   };
 
   return (
-    <article className="relative  ">
+    <article className="relative flex justify-center ">
       <button onClick={openDialog}>
         <img
           src={play.src}
