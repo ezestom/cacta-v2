@@ -1,5 +1,6 @@
 ---
 import Container from "../Container.astro";
+import declaraciones from "../../img/declaraciones.webp";
 import CardParallax from "../CardParallax/CardPallax.jsx";
 import { geti18n } from "../../i18n/";
 const { currentLocale } = Astro;
@@ -17,18 +18,33 @@ const {
 	parallax_description,
 	parallax_strong,
 } = i18n.SECTION_SOLUTION;
+
+const cardSolution = [
+	{
+		title1: parallax_title,
+		title2: parallax_description,
+		title3: parallax_strong,
+		img: declaraciones.src,
+		gradient:
+			"bg-gradient-to-r from-[#e6f6ee] to-[#8bcfad] text-ij-green md:h-row-span-1 md:h-full",
+		colorTitle: "text-[#0E8247]",
+		imageClass:
+			"p-4 sm:p-8 md:p-4 lg:p-8 !pb-0  opacity-50 translate-y-10 group-hover:opacity-100 scale-125",
+	},
+];
 ---
 
 <div id="solution" class="pt-10 lg:pt-32">
 	<Container>
-		<section class="flex flex-wrap justify-between items-center">
+		<section
+			class="flex flex-col md:flex-row justify-between items-start gap-8 relative">
 			<div class="w-full md:w-1/2 text-pretty">
 				<h2
-					class="text-5xl font-black text-gray-900 xl:text-[2.5vw] dark:text-white">
+					class="text-4xl font-black text-gray-900 xl:text-[2.5vw] dark:text-white">
 					{title}
 				</h2>
 				<p
-					class="my-2 text-gray-600 dark:text-gray-300 text-xl md:text-2xl font-bold py-2">
+					class="my-2 text-gray-600 dark:text-gray-300 text-xl font-bold py-2">
 					{intro_1}
 				</p>
 				<p class="my-2 text-gray-600 dark:text-gray-300">
@@ -62,17 +78,95 @@ const {
 					</div>
 				</div>
 			</div>
-			<CardParallax
+			<aside class="w-full md:max-w-[50%]">
+				{
+					cardSolution.map((card) => (
+						<button
+							class={`group flex flex-col rounded-3xl pt-4 px-4 md:px-12 lg:px-15 lg:pt-6 xl:pt-10   w-full transition-all  overflow-hidden ${card.gradient} open-dialog`}>
+							<p class="my-2 text-gray-900 text-xl font-bold py-2 text-start">
+								{card.title1}
+							</p>
+							<div class="flex justify-center mt-auto w-full h-auto md:mb-0">
+								<img
+									class="w-full h-full scale-100 duration-300 transition group-hover:-translate-y-0  group-hover:scale-105 group-hover:z-10 object-contain object-bottom"
+									class:list={card.imageClass}
+									src={card.img}
+									alt="cactus image"
+								/>
+							</div>
+						</button>
+					))
+				}
+				<dialog
+					class="dialog w-full h-full m-auto overflow-hidden bg-transparent">
+					{
+						cardSolution.map((card) => (
+							<aside
+								class={`group flex flex-col items-start justify-start text-start rounded-3xl p-4 md:p-8  h-full w-full transition-all  ${card.gradient} gap-4 relative max-w-[75ch] max-h-[95%] shadow-2xl shadow-gray-600/10 m-auto`}>
+								<button class="h-8 w-8 absolute top-4 right-4 text-gray-900 hover:scale-105 transition close-dialog z-20">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M6 18L18 6M6 6l12 12"
+										/>
+									</svg>
+								</button>
+								<div class="z-10 backdrop-blur bg-white/10 rounded-3xl p-6 md:p-8 ">
+									<h2 class="text-base md:text-xl font-semibold">
+										{card.title1}
+									</h2>
+									<p
+										class={`text-sm md:text-base py-4  text-pretty ${card.colorTitle}`}>
+										{card.title2}
+									</p>
+									<p class="text-sm md:text-base  text-pretty ">
+										{card.title3}
+									</p>
+								</div>
+								<img
+									src={card.img}
+									alt=""
+									class="absolute bottom-10 object-contain object-bottom w-screen h-1/2"
+								/>
+							</aside>
+						))
+					}
+				</dialog>
+			</aside>
+			<!-- <CardParallax
 				client:visible
 				title={parallax_title}
 				description={parallax_description}
 				strong={parallax_strong}
-			/>
+			/> -->
 
 			<!-- <Gallery /> -->
 		</section>
 	</Container>
 </div>
+
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+		const dialog = document.querySelector("dialog");
+		const openButtons = document.querySelector(".open-dialog"); // Botones que abren el diálogo
+		const closeButton = dialog.querySelector(".close-dialog"); // Botón dentro del diálogo para cerrarlo
+
+		openButtons.addEventListener("click", () => {
+			dialog.showModal();
+			document.body.style.overflow = "hidden";
+		});
+		closeButton.addEventListener("click", () => {
+			dialog.close();
+			document.body.style.overflow = "auto";
+		});
+	});
+</script>
 
 <style>
 	#solution {

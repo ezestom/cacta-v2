@@ -1,11 +1,4 @@
-#blurvideo {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: blur(20px) contrast(250%);
-  z-index: -20;
-}
+
 
 figure:hover {
   cursor: crosshair;
@@ -26,11 +19,9 @@ figure:hover {
   cursor: crosshair;
 }
 .revealing-image {
-  view-timeline-name: --revealing-image;
-  view-timeline-axis: block;
-  animation: linear reveal both;
-  animation-timeline: --revealing-image;
-  animation-range: entry 25% cover 35%;
+  animation: reveal2 linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
 }
 @media (width < 768px) {
   .app-video {

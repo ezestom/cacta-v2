@@ -4,22 +4,18 @@ import video1 from "../../video/previewInstitutional.mp4";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
 
-export function BlurVideo({ youtube_url_1, youtube_url_2 }) {
+export function BlurVideo({ youtube_url_1 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openDialog = () => {
     setIsOpen(true);
-    // stop scroll
-    document.body.style.overflow = "hidden";
   };
   const closeDialog = () => {
     setIsOpen(false);
-    // enable scroll
-    document.body.style.overflow = "auto";
   };
 
   return (
-    <article className="relative flex justify-center ">
+    <article className="relative flex justify-center revealing-image">
       <button onClick={openDialog}>
         <img
           src={play.src}
@@ -28,7 +24,7 @@ export function BlurVideo({ youtube_url_1, youtube_url_2 }) {
         />
         <video
           id="loopvideo"
-          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10 max-w-[1000px] aspect-video mx-auto revealing-image"
+          className="relative max-h-screen  w-full rounded-3xl shadow-md z-10  aspect-video mx-auto "
           src={video1}
           loop
           muted
@@ -38,33 +34,22 @@ export function BlurVideo({ youtube_url_1, youtube_url_2 }) {
       {isOpen && (
         <dialog
           open
-          className="z-50 fixed h-screen w-screen top-0 left-0 bg-[#fafafa] dark:bg-gray-900 "
+          className="z-50 !w-full fixed h-full top-0 bottom-0 left-0 bg-transparent "
         >
-          <div class="-z-10 absolute rounded-3xl h-full w-full bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
           <iframe
-            className="m-auto bottom-0 top-0 left-0 right-0 absolute w-full  md:w-[50%] aspect-video rounded-3xl  border-0 bg-black"
+            className="m-auto bottom-0 top-0 left-0 right-0 absolute w-full  aspect-video rounded-3xl  border-0 bg-black"
             src={youtube_url_1}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <iframe
-            className="m-auto bottom-0 top-0 left-0 right-0 relative w-full  md:w-[50.5%] aspect-video rounded-3xl  -z-10"
-            id="blurvideo"
-            src={youtube_url_2}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            muted
-          ></iframe>
-          <div className="w-full flex items-center justify-center">
-            <button
-              className="fixed top-[5%] bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full  z-80 p-2 close-button "
-              onClick={closeDialog}
-            >
-              <img src={close.src} alt="close button" />
-            </button>
-          </div>
+
+          <button
+            className="fixed -top-6 -right-6 bg-gradient-to-r from-[#030f33] to-[#4e737a] rounded-full  z-80 p-2 close-button "
+            onClick={closeDialog}
+          >
+            <img src={close.src} alt="close button" />
+          </button>
         </dialog>
       )}
     </article>

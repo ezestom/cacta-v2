@@ -139,7 +139,7 @@ export function Form({
       {dialog && (
         <dialog
           open
-          className="backdrop-blur  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full"
+          className="backdrop-blur-xl  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full"
         >
           <section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden  ">
             <div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0 ">

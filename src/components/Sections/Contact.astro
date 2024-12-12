@@ -24,7 +24,7 @@ const {
 } = i18n.SECTION_CONTACT.FORM;
 ---
 
-<div class="relative py-0 md:py-16" id="contact">
+<div class="relative" id="contact">
 	<!-- background -->
 	<!-- <div
 		aria-hidden="true"
@@ -37,7 +37,7 @@ const {
 		</div>
 	</div> -->
 	<div
-		class="-z-10 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+		class="z-0 absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
 	</div>
 	<!-- background -->
 
@@ -51,13 +51,13 @@ const {
 			<div
 				class="mt-6 space-y-6 md:w-8/12 lg:w-7/12 flex flex-col justify-center w-full mx-auto">
 				<p
-					class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-semibold text-balance">
+					class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-bold text-balance">
 					{paragraph}
 				</p>
 			</div>
 			<aside class="w-fit h-full pt-20 mx-auto">
 				<h2
-					class="text-5xl font-black text-gray-900 xl:text-[2.5vw] dark:text-white fixedTitle">
+					class="text-4xl font-black text-center text-gray-900 xl:text-[2.5vw] dark:text-white fixedTitle">
 					{ready}
 				</h2>
 				<hr

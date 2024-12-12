@@ -56,16 +56,16 @@
     "title_description_1": "Environmental Calculation",
     "description_1_1": "360º View | All your information centralized on one screen, allowing easy identification of the main contributors to your environmental footprint: ☑Climate Change ☑Biodiversity ☑Human Health ☑Resource Depletion.",
     "title_description_2": "Analysis and Management",
-    "title_description_2_1": "PERFORMANCE BY KPI",
+    "title_description_2_1": "Performance by KPI",
     "description_2_1": "Identify necessary actions through detailed contribution analysis. Obtain transparent information about the effect of your inputs on the ecosystem.",
-    "title_description_2_2": "VALUE CHAIN",
+    "title_description_2_2": "Value Chain",
     "description_2_2": "At Cacta, we understand that sustainability is a joint mission. That's why we have disaggregated impact indicators into the contribution of each actor in your value chain so you can report following international standards.",
-    "title_description_2_3": "INITIATIVE MANAGEMENT",
+    "title_description_2_3": "Initiative Management",
     "description_2_3": "Generate initiatives, track and analyze your results through our management dashboard. Communicate your action plan with members of your company.",
     "title_description_3": "EPD Reports",
-    "title_description_3_1": "ECO SCORE",
+    "title_description_3_1": "Eco Score",
     "description_3_1": "Wrap up your company's environmental impact in a single performance indicator. Calculated from international benchmarks, communicate your operation's progress easily and reliably.",
-    "title_description_3_2": "ENVIRONMENTAL PRODUCT DECLARATIONS",
+    "title_description_3_2": "Environmental Product Declarations",
     "description_3_2": "Activate your value chain and position your product. Environmental Product Declarations, or EPDs, provide detailed information about the environmental lifecycle of your activity. Following ISO-14025 regulations, this is your environmental passport to the world."
   },
   "SECTION_WHYCACTA": {
@@ -125,6 +125,25 @@
       "send": "Send",
       "message_2": "We will get in touch with you shortly."
     }
+  },
+  "SECTION_FAQ": {
+    "title": "Frequently Asked Questions",
+    "intro_1": "Have questions? Here are some answers.",
+    "question_1": "What is the price of the tool?",
+    "go_back": "Back",
+    "answer_1": "The pricing of the tool varies across three differentiated packages: Basic, Standard, and Corporate, each designed to benefit and enhance the productivity of different types of farmers. For more information, we invite you to request a quote using the 'Contact Us' button, and one of our specialists will get in touch with you immediately.",
+    "question_2": "What indicators does the tool measure?",
+    "answer_2": "Our solution measures not only the carbon footprint but also evaluates over 11 environmental impact indicators. With more than 70,000 emission flows and 27,000 unique activity data points, we provide the necessary insights to make informed decisions, reduce environmental impact, and improve operational efficiency.",
+    "question_3": "What is LCA?",
+    "answer_3": "Life Cycle Assessment (LCA) is a methodology used to evaluate the environmental impact of a product, service, or process throughout its entire lifecycle, from raw material extraction to final disposal. This analysis considers all environmental aspects that may be affected, such as air and water pollution, resource usage, waste generation, and more.",
+    "question_4": "Is the tool certified?",
+    "answer_4": "The Cacta engine operates under the Life Cycle Assessment (LCA) methodology, complying with the following standards: ISO 14040/44: Principles and framework of LCA, and requirements and guidelines for implementation (ISO 14040:2006 and ISO 14044:2006). ISO 14025:2006: Type III Environmental Declarations, principles, and procedures. These standards ensure a rigorous and transparent approach to environmental management.",
+    "question_5": "How can I enhance my environmental commitment with Cacta?",
+    "answer_5": "With our tool, you can create initiatives, monitor progress, and analyze results through our management dashboard. Additionally, you can efficiently communicate your action plan with your team members, facilitating collaboration and success in achieving your sustainability goals.",
+    "question_6": "How does Cacta work?",
+    "answer_6": "We have developed a unique and comprehensive platform based on the Life Cycle Assessment (LCA) methodology, where we measure 12 environmental impact indicators. These range from climate change (Carbon Footprint) and the toxicity of substances (Water Footprint) to ecosystem quality (Biodiversity and Human Health).",
+    "question_7": "How does Cacta collect data from my business?",
+    "answer_7": "We offer APIs designed for automatic and accurate integration with various management systems. If your administration is not yet digitized, don't worry—we provide a manual option with specially designed templates, allowing you to easily and quickly input the necessary data."
   },
   "SECTION_BLOG": {
     "title": "Latest Articles",

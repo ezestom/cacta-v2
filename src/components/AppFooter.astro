@@ -21,16 +21,18 @@ const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 ---
 
-<footer class="mb-3 dark:text-white relative" id="footer">
+<footer
+	class=" dark:text-white  pt-40 relative"
+	id="footer">
 	<img
 		src={bottomWave.src}
 		alt="top wave svg"
-		class="w-full absolute -z-10 right-0 bottom-0 dark:opacity-20 opacity-5"
+		class="w-full absolute z-0 right-0 bottom-0 dark:opacity-20 opacity-5"
 	/>
 	<Container>
 		<section
-			class="border p-4 border-gray-100 rounded-3xl bg-[#fafafa]/75 dark:bg-gray-800/75 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-center md:justify-between w-full items-center m-auto flex-wrap gap-2">
-			<article class="opacity-75 flex gap-3 items-center">
+			class="border p-4 border-gray-100 rounded-3xl bg-[#fafafa]/75 dark:bg-gray-800/75 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none flex justify-center md:justify-between w-full items-center m-auto flex-wrap gap-2 ">
+			<article class="opacity-75 flex gap-3 items-center z-10">
 				<a
 					title="go to ezestom website"
 					target="_blank"
@@ -71,8 +73,8 @@ const i18n = geti18n({ currentLocale });
 				</article>
 			</div>
 			<article class="">
-				<ul role="list" class="flex gap-2">
-					<li>
+				<ul role="list" class="flex gap-2 0">
+					<li class="z-20">
 						<ThemeToggle />
 					</li>
 					<li>
@@ -82,49 +84,22 @@ const i18n = geti18n({ currentLocale });
 							target="_blank"
 							class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200">
 							<img
-								class="w-5 h-5 opacity-50"
+								class="w-6 h-6 opacity-50"
 								src={linkedin.src}
 								alt="linkedin-icon"
 							/>
 						</a>
 					</li>
-					<!-- <li>
-            <a
-            title="linkedin"
-              href="https://twitter.com/elonmusk"
-              target="_blank"
-              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
-            >
-              <img
-                class="w-5 h-5 opacity-50"
-                src={twiter.src}
-                alt="twitter-icon"
-              />
-            </a>
-          </li> -->
-					<!-- <li>
-            <a
-            title="linkedin"
-              href="https://www.instagram.com/leomessi/"
-              target="_blank"
-              class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200"
-            >
-              <img
-                class="w-5 h-5 opacity-50"
-                src={instagram.src}
-                alt="instagram-icon"
-              />
-            </a>
-          </li> -->
+
 					<li>
 						<a
 							title="team"
 							href={translatePath("/the-cacta-team")}
 							class="flex items-center space-x-3 transition p-2 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200">
 							<img
-								class="w-5 h-5 opacity-50"
+								class="w-6 h-6 opacity-50"
 								src={team.src}
-								alt="instagram-icon"
+								alt="team-icon"
 							/>
 						</a>
 					</li>

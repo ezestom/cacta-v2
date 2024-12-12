@@ -25,10 +25,10 @@ export function CardZoom2({ image, icon, title, description, video1 }) {
   return (
     <section className="max-w-screen w-full  h-max-full md:max-h-screen">
       <div className="flex justify-center flex-wrap  gap-5 px-2  md:p-0 w-full">
-        <div className=" rounded-[3rem] border border-gray-100  bg-white/30 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/40 dark:shadow-none backdrop-blur-xl p-4  w-full max-w-[500px] ">
+        <div className=" rounded-[3rem] border border-gray-100  bg-white/30 dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/40 dark:shadow-none backdrop-blur-xl p-4 md:p-8  w-full max-w-[500px] ">
           <div className="mx-auto h-full flex justify-center flex-col items-center text-start lg:text-left ">
             <header className="w-full ">
-              <h2 className="text-xl text-center font-bold text-gray-900 sm:text-2xl dark:text-white uppercase">
+              <h2 className="my-2 text-gray-600 dark:text-gray-300 text-xl md:text-2xl font-bold py-2">
                 {title}
               </h2>
             </header>

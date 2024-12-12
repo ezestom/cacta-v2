@@ -34,6 +34,7 @@ export const ui = {
     "nav.features": "Funcionalidades",
     "nav.whyCacta": "¿Por qué elegir Cacta?",
     "nav.us": "Nosotros",
+    "nav.faq": "Preguntas frecuentes",
     "nav.contact": "Contáctanos",
   },
   en: {
@@ -42,6 +43,7 @@ export const ui = {
     "nav.features": "Features",
     "nav.whyCacta": "Why choose Cacta?",
     "nav.us": "About us",
+    "nav.faq": "Frequently asked questions",
     "nav.contact": "Contact us",
   },
   // po: {

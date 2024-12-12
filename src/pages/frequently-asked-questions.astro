@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GoBack from "../components/GoBack.astro";
+import { LogoTheme } from "../components/LogoTheme.jsx";
+
+import { geti18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { go_back, intro_1 } = i18n.SECTION_FAQ;
+const faqArray = [
+	{
+		question: i18n.SECTION_FAQ.question_1,
+		answer: i18n.SECTION_FAQ.answer_1,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_2,
+		answer: i18n.SECTION_FAQ.answer_2,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_3,
+		answer: i18n.SECTION_FAQ.answer_3,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_4,
+		answer: i18n.SECTION_FAQ.answer_4,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_5,
+		answer: i18n.SECTION_FAQ.answer_5,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_6,
+		answer: i18n.SECTION_FAQ.answer_6,
+	},
+	{
+		question: i18n.SECTION_FAQ.question_7,
+		answer: i18n.SECTION_FAQ.answer_7,
+	},
+];
+---
+
+<Layout title="Cacta faq">
+	<div id="blog-section" class="min-h-screen h-full">
+		<div class="py-10 flex items-center flex-col justify-center">
+			<h2
+				class="text-2xl font-black text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2">
+				<LogoTheme client:visible />
+				faq
+			</h2>
+			<p
+				class="lg:mx-auto text-gray-600 dark:text-gray-300 text-center m-4 max-w-md">
+				{intro_1}
+			</p>
+		</div>
+
+		<div
+			class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 pb-6">
+			{
+				faqArray.map((faq) => (
+					<article class="group bg-[#f0f0f0] z-10 border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 p-8 shadow-xl shadow-gray-600/10 rounded-3xl">
+						<h7 class="w-full dark:text-gray-300 text-base font-semibold md:text-xl">
+							{faq.question}
+						</h7>
+						<div class="mt-4 w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base text-pretty">
+							<p>{faq.answer}</p>
+						</div>
+					</article>
+				))
+			}
+			<GoBack text={go_back} />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
+</style>
+
+<script>
+	const section = document.getElementById("blog-section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
+</script>

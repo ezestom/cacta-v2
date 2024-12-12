@@ -3,12 +3,14 @@ import juan from "../../img/juan.webp";
 import maxi from "../../img/maxi.webp";
 import luciano from "../../img/luciano.webp";
 import jose from "../../img/jose.webp";
+import vicky from "../../img/vicky.jpg";
 import sofia from "../../img/sofia.webp";
 import Layout from "../../layouts/Layout.astro";
 import GoBack from "../../components/GoBack.astro";
 import { LogoTheme } from "../../components/LogoTheme.jsx";
 
 import { geti18n } from "../../i18n/";
+import Container from "../../components/Container.astro";
 const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
@@ -17,94 +19,111 @@ const { description } = i18n.FOOTER;
 
 <Layout title="Cacta Team">
 	<section class="h-full m-auto w-full" id="blogSection">
-		<!-- background -->
-		<div
-			aria-hidden="true"
-			class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20">
+		<Container>
+			<!-- background -->
 			<div
-				class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
+				aria-hidden="true"
+				class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20">
+				<div
+					class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
+				</div>
+				<div
+					class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
+				</div>
 			</div>
-			<div
-				class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
+			<div class="absolute">
+				<div
+					class="fixed h-1/2 bottom-0 w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+				</div>
 			</div>
-		</div>
-		<div class="absolute">
-			<div
-				class="fixed h-1/2 bottom-0 w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
-			</div>
-		</div>
-		<!-- background -->
+			<!-- background -->
 
-		<h2
-			class="text-2xl font-semibold text-gray-900 md:text-5xl dark:text-white text-center py-5 flex items-end justify-center gap-2">
-			<LogoTheme client:visible />
-			team
-		</h2>
-		<p
-			class="lg:mx-auto lg:w-4/12 text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 text-balance">
-			{description}
-		</p>
+			<h2
+				class="text-2xl font-black text-gray-900 md:text-5xl dark:text-white text-center py-5 flex items-end justify-center gap-2">
+				<LogoTheme client:visible />
+				team
+			</h2>
+			<p
+				class="max-w-[75ch] text-gray-600 dark:text-gray-300 text-pretty-paragraph text-center my-5 mx-auto">
+				{description}
+			</p>
 
-		<div class="box">
-			<div class="card">
-				<div class="imgBox">
-					<img src={luciano.src} alt="some image" />
+			<div class="box">
+				<div class="card">
+					<div class="imgBox">
+						<img src={luciano.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Luciano Sambataro <br /><span>CEO | Co-founder</span
+							>
+						</h3>
+					</div>
 				</div>
-				<div class="details">
-					<h3>
-						Luciano Sambataro <br /><span>CEO | Co-founder</span>
-					</h3>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={maxi.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Maxi Hense <br /><span>CFO | Co-Founder</span><br />
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={jose.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							José Luis Cebe <br /><span
+								>Accounts Director | Co-founder</span
+							>
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={juan.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Juan Pablo Tena <br /><span>Strategy Director</span>
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={vicky.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Victoria Engelberger <br /><span
+								>Manager in Agribusiness</span
+							>
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={sofia.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Sofia Rodriguez <br /><span>Software Developer</span
+							>
+						</h3>
+					</div>
 				</div>
 			</div>
 
-			<div class="card">
-				<div class="imgBox">
-					<img src={maxi.src} alt="some image" />
-				</div>
-				<div class="details">
-					<h3>
-						Maxi Hense <br /><span>CFO | Co-Founder</span><br />
-					</h3>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="imgBox">
-					<img src={jose.src} alt="some image" />
-				</div>
-				<div class="details">
-					<h3>
-						José Luis Cebe <br /><span
-							>Accounts Director | Co-founder</span
-						>
-					</h3>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="imgBox">
-					<img src={juan.src} alt="some image" />
-				</div>
-				<div class="details">
-					<h3>
-						Juan Pablo Tena <br /><span>Strategy Director</span>
-					</h3>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="imgBox">
-					<img src={sofia.src} alt="some image" />
-				</div>
-				<div class="details">
-					<h3>
-						Sofia Rodriguez <br /><span>Software Developer</span>
-					</h3>
-				</div>
-			</div>
-		</div>
-
-		<GoBack />
+			<GoBack />
+		</Container>
 	</section>
 </Layout>
 
@@ -171,7 +190,7 @@ const { description } = i18n.FOOTER;
 	}
 
 	.card:hover .imgBox {
-		transform: scale(0.8) rotate(0deg) translate(0px, -25px);
+		transform: scale(0.75) rotate(0deg) translate(0px, -25px);
 		filter: drop-shadow(0 0 0.15rem #0dac4f);
 	}
 
@@ -194,10 +213,15 @@ const { description } = i18n.FOOTER;
 		text-align: center;
 		z-index: 3;
 	}
-
+	.card .details h3 {
+		line-height: 1.5rem;
+		font-weight: 800;
+		font-size: 1.25rem;
+		color: #111826;
+	}
 	.card .details h3 span {
 		font-weight: 400;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		color: #0dac4f;
 	}
 	.dark {

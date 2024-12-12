@@ -79,7 +79,7 @@ const i18n = geti18n({ currentLocale });
 			]}
 		/>
 	</head>
-	<body class="bg-[#fafafa] dark:bg-gray-900">
+	<body>
 		<slot />
 	</body>
 </html>
@@ -103,10 +103,14 @@ const i18n = geti18n({ currentLocale });
 			"Open Sans",
 			"Helvetica Neue",
 			sans-serif;
+			height: 100%;
 	}
 
 	body {
+		background-color: var(--bg-color);
+		color: var(--text-color);
 		margin: 0;
+		padding: 0;
 	}
 	@keyframes reveal {
 		from {

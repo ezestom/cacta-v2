@@ -11,19 +11,21 @@ import Contact from "../components/Sections/Contact.astro";
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro";
 import NewHeroSection from "../components/Sections/NewHeroSection.astro";
+import Faq from "../components/Sections/Faq.astro";
 ---
 
 <Layout title="Bienvenido a Cacta">
-  <NewHeroSection />
-  <main class="space-y-40 mb-40">
-    <!-- <HeroSection /> -->
-    <Solutions />
-    <Features />
-    <WhyCacta />
-    <CallToAction />
-    <Us />
-    <Contact />
-    <Blog />
-  </main>
-  <AppFooter />
+	<NewHeroSection />
+	<main class="bg-[#fafafa] dark:bg-[#111826]">
+		<!-- <HeroSection /> -->
+		<Solutions />
+		<Features />
+		<WhyCacta />
+		<CallToAction />
+		<Us />
+		<Contact />
+		<Faq />
+		<Blog />
+    <AppFooter />
+	</main>
 </Layout>

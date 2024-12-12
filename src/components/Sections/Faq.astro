@@ -1,0 +1,280 @@
+---
+import Container from "../Container.astro";
+import cactus from "../../img/cactus.png";
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+import { getLangFromUrl, useTranslatedPath } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const { title, intro_1 } = i18n.SECTION_FAQ;
+const {
+	question_1,
+	answer_1,
+	question_2,
+	answer_2,
+	question_3,
+	answer_3,
+	question_4,
+	answer_4,
+	question_5,
+	answer_5,
+} = i18n.SECTION_FAQ;
+
+const cardFaq = [
+	{
+		title1: title,
+		title2: intro_1,
+		img: cactus.src,
+		gradient:
+			"bg-gradient-to-r from-[#e6f6ee] to-[#8bcfad] text-ij-green md:h-row-span-1 md:h-full",
+		colorTitle: "text-[#0E8247]",
+		imageClass:
+			"p-4 sm:p-8 md:p-4 lg:p-8 !pb-0 max-w-[450px] opacity-50 translate-y-10 group-hover:opacity-100",
+		href: "/frequently-asked-questions",
+	},
+];
+---
+
+<Container>
+	<article id="faq" class="my-32">
+		<div class="mb-12 space-y-2 text-start">
+			<div class="md:flex flex-row-reverse gap-8">
+				<div id="demo" class="flex flex-col items-center w-full">
+					<div class="accordion-wrapper" class="!w-full">
+						<details
+							name="accordion"
+							class="w-full bg-[#fafafa] z-10 border border-gray-100 dark:shadow-none mb-4 dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
+							open>
+							<summary
+								class="w-full dark:text-gray-300 text-base md:text-xl"
+								>{question_1}</summary
+							>
+							<div
+								class="w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base">
+								<p>
+									{answer_1}
+								</p>
+							</div>
+						</details>
+						<details
+							name="accordion"
+							class="w-full bg-[#fafafa] z-10 border border-gray-100 dark:shadow-none mb-4 dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+							<summary
+								class="w-full dark:text-gray-300 text-base md:text-xl"
+								>{question_2}</summary
+							>
+							<div
+								class="w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base">
+								<p>
+									{answer_2}
+								</p>
+							</div>
+						</details>
+						<details
+							name="accordion"
+							class="w-full bg-[#fafafa] z-10 border border-gray-100 dark:shadow-none mb-4 dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+							<summary
+								class="w-full dark:text-gray-300 text-base md:text-xl"
+								>{question_3}</summary
+							>
+							<div
+								class="w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base">
+								<p>
+									{answer_3}
+								</p>
+							</div>
+						</details>
+
+						<details
+							name="accordion"
+							class="w-full bg-[#fafafa] z-10 border border-gray-100 dark:shadow-none mb-4 dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+							<summary
+								class="w-full dark:text-gray-300 text-base md:text-xl"
+								>{question_4}</summary
+							>
+							<div
+								class="w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base">
+								<p>
+									{answer_4}
+								</p>
+							</div>
+						</details>
+
+						<details
+							name="accordion"
+							class="w-full bg-[#fafafa] z-10 border border-gray-100 dark:shadow-none mb-4 dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+							<summary
+								class="w-full dark:text-gray-300 text-base md:text-xl"
+								>{question_5}</summary
+							>
+							<div
+								class="w-full details-content-wrapper dark:text-gray-400 text-sm md:text-base">
+								<p>
+									{answer_5}
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+
+				{
+					cardFaq.map((card) => (
+						<a
+							class={`group flex flex-col rounded-3xl pt-4 px-4 md:px-12 lg:px-15 lg:pt-6 xl:pt-10  w-full transition-all  overflow-hidden ${card.gradient}`}
+							href={translatePath(card.href)}
+							target="_self">
+							<p class="my-2 text-gray-900 text-xl font-bold py-2">
+								{card.title1}
+							</p>
+							<p
+								class={`mt-2 text-3xl sm:text-4xl md:text-3xl lg:text-5xl text-pretty font-semibold ${card.colorTitle}`}>
+								{card.title2}
+							</p>
+
+							<div class="flex justify-center mt-auto w-full h-auto md:mb-0">
+								<img
+									class="w-full h-full scale-100 duration-300 transition group-hover:-translate-y-0  group-hover:scale-105 group-hover:z-10 object-contain object-bottom"
+									class:list={card.imageClass}
+									src={card.img}
+									alt="cactus image"
+								/>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</article>
+</Container>
+
+<script>
+	document.documentElement.dataset.embed = window.location.search.includes(
+		"type=embed"
+	)
+		? "yep"
+		: "nope";
+</script>
+
+<style>
+	.accordion-wrapper {
+		width: 100%;
+	}
+	@supports selector(::details-content) {
+		.warning {
+			display: none;
+		}
+	}
+
+	/* Animate all properties on details. This because we change the margin, border, etc when open. */
+	details {
+		transition: all 0.5s ease;
+		background: white;
+	}
+
+	/* Add border to all details, but prevent a 2px-looking one when two successive details are collapsed */
+	details {
+		border-radius: 1.5rem;
+	}
+
+	/* Animate all on summmary */
+	summary {
+		transition: all 0.5s ease;
+		padding: 0.5em 1em;
+		width: 100%;
+	}
+	[open] summary {
+		padding: 1em 1em;
+	}
+
+	summary {
+		cursor: pointer;
+
+		/* Roll our own marker */
+		display: flex;
+		justify-content: space-between;
+
+		&::marker {
+			content: "";
+		}
+		&::after {
+			content: "";
+			background: url("../../icons/arrows.svg") no-repeat center center;
+			background-size: cover;
+			background-color: #f0f0f0;
+			height: 1.25rem;
+			border-radius: 100%;
+			/* width: 1.25rem; */
+			aspect-ratio: 1;
+			padding: 0.75rem;
+			display: block;
+			transform: rotate(90deg);
+			transition: transform 0.5s ease;
+			transform-origin: 50% 50%;
+			opacity: 0.5;
+		}
+		[open] &::after {
+			transform: rotate(270deg);
+		}
+	}
+
+	.details-content-wrapper {
+		padding: 1rem 2rem;
+
+		/* We need margin-trim … */
+		:first-child {
+			margin-top: 0;
+		}
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	::details-content {
+		transition:
+			all 0.5s ease,
+			content-visibility 0.5s allow-discrete;
+		height: 0;
+		overflow: clip;
+	}
+	@supports (interpolate-size: allow-keywords) {
+		:root {
+			interpolate-size: allow-keywords;
+		}
+
+		[open]::details-content {
+			height: auto;
+			padding-bottom: 0.5em;
+		}
+	}
+	@supports not (interpolate-size: allow-keywords) {
+		[open]::details-content {
+			height: 150px; /* In the future to be replaced by `height: auto` */
+			overflow-y: scroll; /* In case the contents should be taller than 150px */
+		}
+	}
+
+	/* Hide a bunch of stuff when embedded */
+	:root[data-embed="yep"] {
+		main {
+			padding: 2em 1em;
+
+			:not(
+					p.warning,
+					p.warning *,
+					#demo,
+					#demo *,
+					#demo ~ p,
+					#demo ~ p *
+				) {
+				display: none;
+			}
+		}
+		#demo ~ p {
+			margin-top: 1em;
+			text-align: center;
+		}
+	}
+</style>

@@ -126,6 +126,26 @@
       "message_2": "A la brevedad nos pondremos en contacto."
     }
   },
+  "SECTION_FAQ": {
+    "title": "Preguntas Frecuentes",
+    "intro_1": "¿Tienes dudas? Aquí te dejamos algunas respuestas.",
+    "question_1": "¿Cuál es el precio de la herramienta?",
+    "go_back": "Volver",
+    "answer_1": "El pricing de la herramienta varía dentro de 3 paquetes diferenciales: Básico, Estándar y Corporativo, cada uno pensado para potenciar y beneficiar a los distintos tipos de agricultores. Para mayor información, te invitamos a solicitar una cotización en el botón de Contáctanos, y uno de nuestros especialistas se pondrá en contacto inmediatamente contigo.",
+    "question_2": "¿Qué indicadores mide la herramienta?",
+    "answer_2": "Nuestra solución no solo mide la huella de carbono, sino que también evalúa más de 11 indicadores de impacto ambiental. Con más de 70,000 flujos de emisiones y 27,000 datos únicos de actividad, te ofrecemos la información necesaria para tomar decisiones informadas, reducir el impacto ambiental y mejorar la eficiencia operativa.",
+    "question_3": "¿Qué es el LCA?",
+    "answer_3": "El análisis de ciclo de vida (LCA, por sus siglas en inglés) es una metodología utilizada para evaluar el impacto ambiental de un producto, servicio o proceso a lo largo de todo su ciclo de vida, desde la extracción de materias primas hasta su disposición final. Este análisis tiene en cuenta todos los aspectos ambientales que pueden verse afectados, como la contaminación del aire y agua, el uso de recursos, la generación de residuos, entre otros.",
+    "question_4": "¿La herramienta está certificada?",
+    "answer_4": "El engine de Cacta funciona bajo la metodología de Análisis de Ciclo de Vida (ACV), cumpliendo con las siguientes normativas: ISO 14040/44: Principios y marco del ACV, y requisitos y directrices para su implementación (ISO 14040:2006 e ISO 14044:2006). ISO 14025:2006: Declaraciones ambientales tipo III, principios y procedimientos. Estas normativas garantizan un enfoque riguroso y transparente para la gestión ambiental.",
+    "question_5": "¿Cómo puedo mejorar mi compromiso ambiental con Cacta?",
+    "answer_5": "Con nuestra herramienta puedes generar iniciativas, realizar el seguimiento y analizar los resultados a través de nuestro panel de gestión. Además, podrás comunicar tu plan de acción de manera eficiente con los miembros de tu empresa, facilitando la colaboración y el éxito en tus objetivos sustentables.",
+    "question_6": "¿Cómo funciona Cacta?",
+    "answer_6": "Desarrollamos una plataforma única e integral, basada en la metodología del Análisis de Ciclo de Vida (ACV), en la cual medimos 12 indicadores de impacto ambiental, que van desde el cambio climático (huella de carbono) y la toxicidad de las sustancias (huella hídrica), hasta la calidad de los ecosistemas (biodiversidad y salud humana).",
+    "question_7": "¿Cómo recolecta Cacta los datos de mi negocio?",
+    "answer_7": "Contamos con APIs diseñadas para una integración automática y precisa con diversos sistemas de gestión. Si tu administración aún no está digitalizada, no te preocupes. Ofrecemos una opción manual en la que, con nuestras plantillas diseñadas especialmente, podrás completar los datos necesarios de forma sencilla y rápida."
+  },
+
   "SECTION_BLOG": {
     "title": "Últimos Artículos",
     "intro": " Sumérgete en nuestro contenido cuidadosamente elaborado, donde abordamos una variedad de temas relevantes a la sustentabilidad, desde últimas tendencias, aplicación tecnológica, normativas, marcos hasta consejos prácticos para mejorar tu negocio.",
