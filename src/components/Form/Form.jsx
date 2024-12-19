@@ -201,8 +201,8 @@ export function Form({
                   <form
                     onSubmit={handleSubmit}
                     method="POST"
-                    // action="https://formsubmit.co/jp.tena@cacta.eco"
-                    action="https://formsubmit.co/ezequielstom@gmail.com"
+                    action="https://formsubmit.co/jp.tena@cacta.eco"
+                    // action="https://formsubmit.co/ezequielstom@gmail.com"
                     className="mt-2 gap-6 mx-2"
                   >
                     <div className="recaptcha object-contain pb-1">
@@ -213,11 +213,11 @@ export function Form({
                       />
                     </div>
 
-                    {/* <input
+                    <input
                       type="hidden"
                       name="_cc"
                       value="vicky.engelberger@cacta.eco,ezequielstom@gmail.com"
-                    /> */}
+                    />
 
                     <input
                       type="hidden"
