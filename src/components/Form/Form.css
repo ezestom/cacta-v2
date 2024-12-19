@@ -24,8 +24,8 @@ textarea {
 }
 
 textarea {
-  max-height: 10rem;
-  min-height: 8rem;
+  max-height: 8rem;
+  min-height: 6rem;
 }
 
 /* loader */
@@ -51,7 +51,7 @@ textarea {
   animation: 1s spin linear infinite;
 }
 .loader:after {
-  color: #ff3d00;
+  color: #007d67;
   transform: rotateY(70deg);
   animation-delay: 0.4s;
 }

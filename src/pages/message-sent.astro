@@ -12,7 +12,7 @@ const { status, paragraph, button } = i18n.MESSAGE_SENT;
 <Layout title="Mensaje enviado">
 	<section class="h-screen flex items-center justify-center px-4 relative">
 		<article class="rounded-3xl shadow-2xl text-white">
-			<div class="p-8 text-center">
+			<div class="p-12 text-center">
 				<p
 					class="text-base font-normal flex gap-2 items-center justify-center">
 					{status}
@@ -38,19 +38,21 @@ const { status, paragraph, button } = i18n.MESSAGE_SENT;
 		position: relative; /* Necesario para que el pseudo-elemento se posicione relativamente al section */
 		overflow: hidden; /* Para asegurarse de que el pseudo-elemento no sobresalga del section */
 	}
-
+	
 	section::before {
+		background-color: #fafafa;
+		margin-block: 4rem;
 		content: ""; /* Necesario para mostrar el pseudo-elemento */
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-image: url("../img/agriculture.jpg");
-		background-size: cover;
+		background-image: url("../img/logo-negro.png");
+		background-size: contain;
 		background-position: bottom;
 		background-repeat: no-repeat;
-		opacity: 0.85; /* Ajusta la opacidad aquí */
+		opacity: 0.03; /* Ajusta la opacidad aquí */
 		z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del section */
 	}
 	article {

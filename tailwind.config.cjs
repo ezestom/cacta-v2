@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const animations = require("@midudev/tailwind-animations");
+
+
 module.exports = {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
@@ -981,5 +984,5 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), animations],
 };

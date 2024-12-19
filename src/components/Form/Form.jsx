@@ -4,6 +4,8 @@ import x from "../../icons/x.svg";
 import "./Form.css";
 import logo from "../../img/logo-blanco.png";
 import agriculture from "../../img/agriculture.webp";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useRef } from "react";
 
 export function Form({
   h1,
@@ -21,6 +23,9 @@ export function Form({
 }) {
   const [dialog, setDialog] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  const captcha = useRef(null);
 
   useEffect(() => {
     if (isMessageSuccess()) {
@@ -92,6 +97,16 @@ export function Form({
     }
   };
 
+  // recaptcha v2 function
+
+  const onChange = () => {
+    if (captcha.current.getValue()) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  };
+
   return (
     <div className="relative form-container z-10 m-auto">
       <Toaster />
@@ -159,7 +174,7 @@ export function Form({
               </aside>
 
               <main className="flex items-center justify-center py-8 md:px-12 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 ">
-                <div className="form-container-dialog max-w-[550px]  p-4 bg-[#f0f0f0] rounded-3xl relative">
+                <div className="form-container-dialog max-w-[550px] p-4 md:p-6 bg-[#f0f0f0] rounded-3xl relative ">
                   <button
                     className="absolute z-100 top-2 right-2 "
                     onClick={closeDialog}
@@ -186,15 +201,23 @@ export function Form({
                   <form
                     onSubmit={handleSubmit}
                     method="POST"
-                    action="https://formsubmit.co/jp.tena@cacta.eco"
-                    // action="https://formsubmit.co/ezequielstom@gmail.com"
-                    className="mt-8 gap-6 mx-2"
+                    // action="https://formsubmit.co/jp.tena@cacta.eco"
+                    action="https://formsubmit.co/ezequielstom@gmail.com"
+                    className="mt-2 gap-6 mx-2"
                   >
-                    <input
+                    <div className="recaptcha object-contain pb-1">
+                      <ReCAPTCHA
+                        ref={captcha}
+                        sitekey="6LcHvp8qAAAAAKVKL-k-JABtkoTkkN_etXxBcMrf"
+                        onChange={onChange}
+                      />
+                    </div>
+
+                    {/* <input
                       type="hidden"
                       name="_cc"
                       value="vicky.engelberger@cacta.eco,ezequielstom@gmail.com"
-                    />
+                    /> */}
 
                     <input
                       type="hidden"
@@ -255,19 +278,29 @@ export function Form({
                           name="message"
                           id="message"
                           required
-                          className="w-full border-gray-200 rounded-md bg-white text-sm text-gray-700 shadow-sm p-2 max-h-[100px]"
+                          className="w-full border-gray-200 rounded-md bg-white text-sm text-gray-700 shadow-sm p-2 maw-w-[100%]"
                           placeholder={message_placeholder}
                         ></textarea>
                       </legend>
                     </fieldset>
 
                     <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                      <button
-                        className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-3 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-[1.02] transition mt-2"
-                        type="submit"
-                      >
-                        {send}
-                      </button>
+                      {isDisabled ? (
+                        <button
+                          className="inline-flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-3 font-medium text-md text-gray-50 backdrop-blur-3xl cursor-not-allowed transition mt-2"
+                          type="submit"
+                          disabled
+                        >
+                          {send}
+                        </button>
+                      ) : (
+                        <button
+                          className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[#007d67] to-[#00ff9a] py-3 font-medium text-md text-gray-50 backdrop-blur-3xl hover:scale-[1.02] transition mt-2"
+                          type="submit"
+                        >
+                          {send}
+                        </button>
+                      )}
                       <p className="mt-4 text-sm text-gray-700 font-semibold sm:mt-0 text-center ">
                         ✉️ {message_2}
                       </p>

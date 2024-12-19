@@ -82,7 +82,7 @@ const cardSolution = [
 				{
 					cardSolution.map((card) => (
 						<button
-							class={`group flex flex-col rounded-3xl pt-4 px-4 md:px-12 lg:px-15 lg:pt-6 xl:pt-10   w-full transition-all  overflow-hidden ${card.gradient} open-dialog`}>
+							class={`group flex flex-col rounded-3xl pt-4 px-4 md:px-12 lg:px-15 lg:pt-6 xl:pt-10 w-full transition-all overflow-hidden ${card.gradient} open-dialog`}>
 							<p class="my-2 text-gray-900 text-xl font-bold py-2 text-start">
 								{card.title1}
 							</p>
@@ -92,13 +92,15 @@ const cardSolution = [
 									class:list={card.imageClass}
 									src={card.img}
 									alt="cactus image"
+									id="declaration"
+									transition:name="declaration"
 								/>
 							</div>
 						</button>
 					))
 				}
 				<dialog
-					class="dialog w-full h-full m-auto overflow-hidden bg-transparent">
+					class="dialog w-full h-full m-auto overflow-hidden bg-transparent animate-fade-in delay-200 duration-200">
 					{
 						cardSolution.map((card) => (
 							<aside
@@ -133,6 +135,7 @@ const cardSolution = [
 									src={card.img}
 									alt=""
 									class="absolute bottom-10 object-contain object-bottom w-screen h-1/2"
+									transition:name="declaration"
 								/>
 							</aside>
 						))
@@ -156,14 +159,17 @@ const cardSolution = [
 		const dialog = document.querySelector("dialog");
 		const openButtons = document.querySelector(".open-dialog"); // Botones que abren el diálogo
 		const closeButton = dialog.querySelector(".close-dialog"); // Botón dentro del diálogo para cerrarlo
+		const declaration = document.getElementById("declaration");
 
 		openButtons.addEventListener("click", () => {
 			dialog.showModal();
 			document.body.style.overflow = "hidden";
+			declaration.style.display = "none";
 		});
 		closeButton.addEventListener("click", () => {
 			dialog.close();
 			document.body.style.overflow = "auto";
+			declaration.style.display = "block";
 		});
 	});
 </script>
