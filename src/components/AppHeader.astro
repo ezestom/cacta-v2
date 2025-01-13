@@ -99,7 +99,7 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 				<HeaderLink
 					href={translatePath("/#home")}
 					aria-label="logo"
-					class="flex items-center space-x-2">
+					class="flex items-center space-x-2 active:scale-95 transition-all duration-300 ease-in-out">
 					<img
 						src={logo.src}
 						alt="Cacta"
@@ -134,31 +134,32 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 												</a>
 											</li> -->
 						<!-- <hr class="absolute hidden md:block" /> -->
+
 						<li>
 							<HeaderLink
 								href={translatePath("/#solution")}
-								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
+								class="hover:text-primary dark:hover:text-primary drop-shadow-sm lg:text-white dark:text-white flex transition md:text-sm font-semibold relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[2px] md:after:w-full md:after:translate-y-2 md:after:bg-primary md:after:opacity-0 md:after:transition md:after:duration-150 md:pb-[2px] md:after:ease-in-out md:hover:after:translate-y-0 md:hover:after:opacity-100 md:hover:after:duration-150 md:hover:after:ease-in-out active:scale-95">
 								{t("nav.solution")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#features")}
-								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
+								class="hover:text-primary dark:hover:text-primary drop-shadow-sm lg:text-white dark:text-white flex transition md:text-sm font-semibold relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[2px] md:after:w-full md:after:translate-y-2 md:after:bg-primary md:after:opacity-0 md:after:transition md:after:duration-150 md:pb-[2px] md:after:ease-in-out md:hover:after:translate-y-0 md:hover:after:opacity-100 md:hover:after:duration-150 md:hover:after:ease-in-out active:scale-95">
 								{t("nav.features")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#why-cacta")}
-								class="hover:text-primary dark:hover:text-primary text-gray-700 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
+								class="hover:text-primary dark:hover:text-primary drop-shadow-sm lg:text-white dark:text-white flex transition md:text-sm font-semibold relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[2px] md:after:w-full md:after:translate-y-2 md:after:bg-primary md:after:opacity-0 md:after:transition md:after:duration-150 md:pb-[2px] md:after:ease-in-out md:hover:after:translate-y-0 md:hover:after:opacity-100 md:hover:after:duration-150 md:hover:after:ease-in-out active:scale-95">
 								{t("nav.whyCacta")}
 							</HeaderLink>
 						</li>
 						<li>
 							<HeaderLink
 								href={translatePath("/#us")}
-								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
+								class="hover:text-primary dark:hover:text-primary drop-shadow-sm lg:text-white dark:text-white flex transition md:text-sm font-semibold relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[2px] md:after:w-full md:after:translate-y-2 md:after:bg-primary md:after:opacity-0 md:after:transition md:after:duration-150 md:pb-[2px] md:after:ease-in-out md:hover:after:translate-y-0 md:hover:after:opacity-100 md:hover:after:duration-150 md:hover:after:ease-in-out active:scale-95">
 								{t("nav.us")}
 							</HeaderLink>
 						</li>
@@ -166,7 +167,7 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 						<li>
 							<HeaderLink
 								href={translatePath("/#faq")}
-								class="hover:text-primary dark:hover:text-primary text-gray7900 drop-shadow-sm lg:text-white dark:text-white block transition text-base font-bold">
+								class="hover:text-primary dark:hover:text-primary drop-shadow-sm lg:text-white dark:text-white flex transition md:text-sm font-semibold relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[2px] md:after:w-full md:after:translate-y-2 md:after:bg-primary md:after:opacity-0 md:after:transition md:after:duration-150 md:pb-[2px] md:after:ease-in-out md:hover:after:translate-y-0 md:hover:after:opacity-100 md:hover:after:duration-150 md:hover:after:ease-in-out active:scale-95">
 								{t("nav.faq")}
 							</HeaderLink>
 						</li>
@@ -183,7 +184,7 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 						class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
 					></span>
 					<span
-						class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#007d67] to-[#00ff9a] px-8 py-1 font-semibold text-base text-gray-50 backdrop-blur-3xl whitespace-nowrap">
+						class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#007d67] to-[#00ff9a] px-8 py-1 font-semibold text-sm text-gray-50 backdrop-blur-3xl whitespace-nowrap">
 						<span class="relative text-white"></span>
 						{t("nav.contact")}
 					</span>
