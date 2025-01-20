@@ -3,7 +3,7 @@ import { toast, Toaster } from "sonner";
 import x from "../../icons/x.svg";
 import "./Form.css";
 import logo from "../../img/logo-blanco.png";
-import agriculture from "../../img/agriculture.webp";
+// import agriculture from "../../img/agriculture.webp";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
 
@@ -20,6 +20,7 @@ export function Form({
   message_placeholder,
   send,
   message_2,
+  img,
 }) {
   const [dialog, setDialog] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -36,8 +37,16 @@ export function Form({
     }
   }, []); // Agrega las dependencias aquí
 
+  function toggleButtonsForm() {
+    const formButtons = document.querySelectorAll(".btn-form");
+    formButtons.forEach((button) => {
+      button.classList.toggle("btn-form-hidden");
+    });
+  }
+
   const openDialog = () => {
     setDialog(true);
+    toggleButtonsForm();
     document.body.style.overflow = "hidden";
     document.getElementById("navbar").style.display = "none";
     document.getElementById("progress").style.display = "none";
@@ -45,6 +54,7 @@ export function Form({
 
   const closeDialog = () => {
     setDialog(false);
+    toggleButtonsForm();
     document.body.style.overflow = "auto";
     document.getElementById("navbar").style.display = "flex";
     document.getElementById("progress").style.display = "flex";
@@ -110,28 +120,14 @@ export function Form({
   return (
     <div className="relative form-container z-10 m-auto">
       <Toaster />
-      <div className="flex w-full items-center justify-center">
-        <a
-          href="https://librecounter.org/referer/show"
-          target="_blank"
-          className="w-2 absolute bottom-5 mx-auto ml-7"
-          name="referer"
-        >
-          <img
-            src="https://librecounter.org/counter.svg"
-            referrerPolicy="unsafe-url"
-            alt="counter component"
-          />
-        </a>
-      </div>
-      <span className="flex btn-form">
+      <div className="flex w-full items-center justify-center pt-4">
         <button
-          className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+          className="btn-form z-0 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
           onClick={openDialog}
-          id="open-dialog"
+          // id="open-dialog"
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#030f33] to-[#4e737a] px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl">
             {button}
             <svg
               className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
@@ -149,25 +145,25 @@ export function Form({
             </svg>
           </span>
         </button>
-      </span>
+      </div>
 
       {dialog && (
         <dialog
           open
-          className="backdrop-blur-xl  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full"
+          className="backdrop-blur-xl  flex items-center justify-center fixed top-0 bg-black/20 w-full h-full !z-[100]"
         >
-          <section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden  ">
-            <div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0 ">
+          <section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden">
+            <div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0  ">
               <aside className="relative hidden md:block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
                 <picture>
                   <img
-                    src={agriculture.src}
+                    src={img.src}
                     alt="agriculture woman image"
                     className="absolute inset-0 h-full w-full object-cover hidden lg:block"
                   />
                   <img
                     src={logo.src}
-                    className="absolute  bottom-20 mx-auto left-10 max-w-[150px] drop-shadow-md"
+                    className="absolute  top-2 mx-auto left-2 max-w-[110px] drop-shadow-md"
                     alt="logo cacta"
                   />
                 </picture>
@@ -186,9 +182,7 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h5 className="font-bold mx-2 text-gray-900 text-2xl">
-                    {h1}
-                  </h5>
+                  <h5 className=" mx-2 text-gray-900 text-xl">{h1}</h5>
 
                   <p className="mt-4 leading-relaxed mx-2 text-gray-700">
                     {subtitle}
@@ -301,7 +295,7 @@ export function Form({
                           {send}
                         </button>
                       )}
-                      <p className="mt-4 text-sm text-gray-700 font-semibold sm:mt-0 text-center ">
+                      <p className="mt-4 text-sm text-gray-700 sm:mt-0 text-center ">
                         ✉️ {message_2}
                       </p>
                     </div>

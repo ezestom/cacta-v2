@@ -44,7 +44,7 @@ const cardSolution = [
 					{title}
 				</h2>
 				<p
-					class="my-2 text-gray-600 dark:text-gray-300 text-xl font-bold py-2">
+					class="my-2 text-gray-600 dark:text-gray-300 text-xl font-semibold py-2">
 					{intro_1}
 				</p>
 				<p class="my-2 text-gray-600 dark:text-gray-300">
@@ -83,9 +83,12 @@ const cardSolution = [
 					cardSolution.map((card) => (
 						<button
 							class={`group flex flex-col rounded-3xl pt-4 px-4 md:px-12 lg:px-15 lg:pt-6 xl:pt-10 w-full transition-all overflow-hidden ${card.gradient} open-dialog`}>
-							<p class="my-2 text-gray-900 text-xl font-bold py-2 text-start">
-								{card.title1}
-							</p>
+							<div class="flex items-start gap-4 text-green-600">
+								✓
+								<p class=" text-gray-900 text-lg font-semibold  text-start">
+									{card.title1}
+								</p>
+							</div>
 							<div class="flex justify-center mt-auto w-full h-auto md:mb-0">
 								<img
 									class="w-full h-full scale-100 duration-300 transition group-hover:-translate-y-0  group-hover:scale-105 group-hover:z-10 object-contain object-bottom"
@@ -104,7 +107,7 @@ const cardSolution = [
 					{
 						cardSolution.map((card) => (
 							<aside
-								class={`group flex flex-col items-start justify-start text-start rounded-3xl p-4 md:p-8  h-full w-full transition-all  ${card.gradient} gap-4 relative max-w-[75ch] max-h-[95%] shadow-2xl shadow-gray-600/10 m-auto`}>
+								class={`group flex flex-col items-start justify-start text-start rounded-3xl  h-full w-full transition-all  ${card.gradient} gap-4 relative max-w-[75ch] max-h-[95%] shadow-2xl shadow-gray-600/10 m-auto`}>
 								<button class="h-8 w-8 absolute top-4 right-4 text-gray-900 hover:scale-105 transition close-dialog z-20">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -119,8 +122,8 @@ const cardSolution = [
 										/>
 									</svg>
 								</button>
-								<div class="z-10 backdrop-blur bg-white/10 rounded-3xl p-6 md:p-8 ">
-									<h2 class="text-base md:text-xl font-semibold">
+								<div class="z-10 backdrop-blur bg-white/10 rounded-t-3xl p-8">
+									<h2 class="text-base md:text-lg font-semibold">
 										{card.title1}
 									</h2>
 									<p
@@ -134,7 +137,7 @@ const cardSolution = [
 								<img
 									src={card.img}
 									alt=""
-									class="absolute bottom-10 object-contain object-bottom w-screen h-1/2"
+									class="absolute bottom-10 object-contain object-bottom w-full h-1/2 "
 									transition:name="declaration"
 								/>
 							</aside>

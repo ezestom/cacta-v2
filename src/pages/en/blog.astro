@@ -27,7 +27,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 	<div id="blog-section" class="min-h-screen h-full">
 		<div class="py-10 flex items-center flex-col justify-center">
 			<h2
-				class="text-2xl font-black text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2">
+				class="text-5xl flex-col font-bold text-gray-900 dark:text-white text-center flex items-center justify-center gap-2">
 				<LogoTheme client:visible />
 				blog
 			</h2>
@@ -42,6 +42,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<article class="">
 				<TimeStamp time="2024-08-27T10:00:00Z" />
 				<BlogCard2
+					transition:name="blog_1"
 					client:visible
 					image={blog6}
 					title={post_6.title}
@@ -54,6 +55,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
+					transition:name="blog_2"
 					client:visible
 					image={blog5}
 					title={post_5.title}
@@ -66,6 +68,7 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
+					transition:name="blog_3"
 					client:visible
 					image={blog4}
 					title={post_4.title}
@@ -112,24 +115,29 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<GoBack button={button_back} />
 		</div>
 	</div>
-
-	<style>
-		.dark {
-			background-color: #111826;
-			z-index: -10;
-		}
-		.light {
-			background-color: #fafafa;
-			z-index: -10;
-		}
-	</style>
-
-	<script>
-		const section = document.getElementById("blog-section");
-		if (localStorage.getItem("theme") === "dark") {
-			section?.classList.add("dark");
-		} else {
-			section?.classList.remove("dark");
-		}
-	</script>
 </Layout>
+<style>
+	#blog-section {
+		background-image: url("../../img/waves-bg-top.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 100%;
+	}
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
+</style>
+
+<script>
+	const section = document.getElementById("blog-section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
+</script>

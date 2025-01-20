@@ -21,17 +21,13 @@ const { title, intro_1, intro_2, youtube_url_1, youtube_url_2 } =
 				{title}
 			</h2>
 			<p
-				class="my-2 text-gray-600 dark:text-gray-300 text-xl font-bold py-2">
+				class="my-2 text-gray-600 dark:text-gray-300 text-xl font-semibold py-2">
 				{intro_1}
 			</p>
 			<p class="my-2 text-gray-600 dark:text-gray-300 pb-10">
 				{intro_2}
 			</p>
 		</article>
-		<BlurVideo
-			client:visible
-			youtube_url_1={youtube_url_1}
-			youtube_url_2={youtube_url_2}
-		/>
+		<BlurVideo client:visible youtube_url_1={youtube_url_1} />
 	</Container>
 </div>

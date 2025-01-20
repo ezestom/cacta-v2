@@ -36,6 +36,7 @@ export const ui = {
     "nav.us": "Nosotros",
     "nav.faq": "Preguntas frecuentes",
     "nav.contact": "Contáctanos",
+    "nav.services": "Servicios",
   },
   en: {
     "nav.home": "Home",
@@ -45,6 +46,7 @@ export const ui = {
     "nav.us": "About us",
     "nav.faq": "Frequently asked questions",
     "nav.contact": "Contact us",
+    "nav.services": "Services",
   },
   // po: {
   //   "nav.home": "Início",
@@ -64,6 +66,7 @@ export const routes = {
     whyCacta: "#why-cacta",
     us: "#us",
     contact: "#contact",
+    services: "services",
   },
   en: {
     home: "#home",
@@ -72,6 +75,7 @@ export const routes = {
     whyCacta: "#why-cacta",
     us: "#us",
     contact: "#contact",
+    services: "services",
   },
   // po: {
   //   home: "#home",

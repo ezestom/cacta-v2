@@ -1,0 +1,107 @@
+---
+import { Form } from "../components/Form/Form";
+import sustaintability from "../img/sustaintability.webp";
+import leaf from "../icons/leaf.svg";
+
+import { geti18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const {
+	h1,
+	subtitle,
+	button,
+	toast_message,
+	name,
+	company,
+	email,
+	email_placeholder,
+	message,
+	message_placeholder,
+	send,
+	message_2,
+} = i18n.SECTION_CONTACT.FORM;
+
+interface ServicesCard {
+	service?: string;
+	description?: string;
+	process1?: string;
+	process2?: string;
+	process3?: string;
+	process4?: string;
+	questions?: string;
+}
+const {
+	service,
+	description,
+	process1,
+	process2,
+	process3,
+	process4,
+	questions,
+} = Astro.props as ServicesCard;
+---
+
+<div
+	class="dark:bg-[#1f2937] dark:border-white/[0.2] bg-[#fafafa] rounded-3xl px-6 py-8 ring-1 ring-gray-900/10 sm:mx-8 lg:mx-0 border border-transparent h-full flex flex-col justify-start">
+	<div class="flex flex-col h-full">
+		<p class="mt-2 gap-x-2">
+			<img src={leaf.src} class="opacity-25 w-16" alt="" />
+			<span class="text-gray-400 text-sm block h-2 dark:text-white"
+			></span>
+			<span
+				class="text-gray-900 text-5xl font-bold tracking-tight flex justify-center dark:text-[#007d67]">
+				{service}
+			</span>
+		</p>
+		<p
+			class="text-gray-600 my-8 text-center text-pretty font-semibold text-sm leading-7 dark:text-neutral-200">
+			{description}
+		</p>
+		<ul
+			role="list"
+			class="text-gray-600 mb-8 space-y-3 text-sm leading-6 flex-1 dark:text-neutral-100">
+			<li class="flex gap-x-3">
+				<div class="flex justify-center text-green-600">✓</div>
+				{process1}
+			</li>
+			<li class="flex gap-x-3">
+				<div class="flex justify-center text-green-600">✓</div>
+				{process2}
+			</li>
+			<li class="flex gap-x-3">
+				<div class="flex justify-center text-green-600">✓</div>
+				{process3}
+			</li>
+			<li class="flex gap-x-3">
+				<div class="flex justify-center text-green-600">✓</div>
+				{process4}
+			</li>
+		</ul>
+
+		<div class="">
+			<Form
+				h1={h1}
+				subtitle={subtitle}
+				button={button}
+				toast_message={toast_message}
+				name={name}
+				company={company}
+				email={email}
+				email_placeholder={email_placeholder}
+				message={message}
+				message_placeholder={message_placeholder}
+				send={send}
+				message_2={message_2}
+				img={sustaintability}
+				client:visible
+			/>
+			<a
+				target="_blank"
+				href="mailto:jp.tena@cacta.eco"
+				class="text-xs text-[#007d67] opacity-75 dark:opacity-100 mt-4 flex items-center justify-center pt-8 gap-1 hover:underline dark:text-[#007d67] max-w-[30ch] mx-auto text-center">
+				{questions}
+			</a>
+		</div>
+	</div>
+</div>

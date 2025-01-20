@@ -105,7 +105,7 @@
     "span_10": "Minerales y metales"
   },
   "FADER": {
-    "title": "Nuestros Socios",
+    "title": "Nuestros socios",
     "intro_1": "Estamos acompañados por estas empresas alrededor del mundo."
   },
   "SECTION_CONTACT": {
@@ -121,7 +121,7 @@
       "email": "Correo Electrónico",
       "email_placeholder": "john_doe@ejemplo.com",
       "message": "Mensaje",
-      "message_placeholder": "Quiero recibir información sobre la app de Cacta.",
+      "message_placeholder": "Quiero recibir información.",
       "send": "Enviar",
       "message_2": "A la brevedad nos pondremos en contacto."
     }
@@ -147,7 +147,7 @@
   },
 
   "SECTION_BLOG": {
-    "title": "Últimos Artículos",
+    "title": "Últimos artículos",
     "intro": " Sumérgete en nuestro contenido cuidadosamente elaborado, donde abordamos una variedad de temas relevantes a la sustentabilidad, desde últimas tendencias, aplicación tecnológica, normativas, marcos hasta consejos prácticos para mejorar tu negocio.",
     "button": "Ir al blog",
     "read_more": "Leer más",
@@ -192,5 +192,38 @@
     "status": "Tu mensaje fue enviado exitosamente",
     "paragraph": "El equipo de ventas de Cacta se pondrá en contacto contigo a la brevedad.",
     "button": "Volver al inicio"
+  },
+
+  "SERVICES": {
+    "title": "servicios",
+    "subtitle": "¿Cuál se adapta mejor a tu empresa?",
+    "button_back": "Volver",
+    "questions": "¿Tienes consultas sobre este plan? Escríbenos vía email.",
+    "plan_1": {
+      "service": "Básico",
+      "description": "Ideal para comenzar tu viaje hacia la sostenibilidad de forma ágil y eficiente.",
+      "process1": "Empresas ágiles, con visión de crecimiento.",
+      "process2": "Centralización de datos y optimización de procesos para mayor eficiencia.",
+      "process3": "Inversión accesible con alto retorno de valor.",
+      "process4": "Hasta 2,000 hectáreas para una gestión eficiente.",
+      "questions": ""
+    },
+    "plan_2": {
+      "service": "Estándar",
+      "description": "Perfecto para empresas que buscan optimizar procesos y escalar con facilidad.",
+      "process1": "Empresas consolidadas, innovadoras y en expansión.",
+      "process2": "Gestión digital avanzada, automatización y capacidad para escalar rápidamente.",
+      "process3": "Capacidad para invertir en crecimiento y diferenciación.",
+      "process4": "Hasta 20,000 hectáreas, con soluciones escalables.",
+      "questions": ""
+    },
+    "plan_3": {
+      "service": "Corporativo",
+      "description": "Soluciones avanzadas para empresas globales que buscan innovación y cumplimiento a gran escala.",
+      "process1": "Líderes del sector con un impacto global.",
+      "process2": "Integración perfecta de datos, análisis profundo y cumplimiento con estándares internacionales.",
+      "process3": "Alta inversión en innovación para mantener liderazgo.",
+      "process4": "Sin límite, adaptado a grandes operaciones."
+    }
   }
 }

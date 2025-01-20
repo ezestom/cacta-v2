@@ -69,7 +69,7 @@
     "description_3_2": "Activate your value chain and position your product. Environmental Product Declarations, or EPDs, provide detailed information about the environmental lifecycle of your activity. Following ISO-14025 regulations, this is your environmental passport to the world."
   },
   "SECTION_WHYCACTA": {
-    "title": "Why Choose Cacta?",
+    "title": "Why choose Cacta?",
     "intro_1": "Our mission: to support the primary industry in its transformation towards a sustainable future.",
     "intro_2": "Our main goal is to enable companies to make informed decisions, reducing their environmental impact while optimizing operational efficiency.",
     "box_1": "We connect to your management system, obtaining reliable and traceable information.",
@@ -87,7 +87,7 @@
     "youtube_url_2": "https://www.youtube.com/embed/xBtoAhYzlSA?si=DYdqlBYi6skce2h6&vq=hd1080&autoplay=1&mute=1"
   },
   "SECTION_US": {
-    "title": "About Us",
+    "title": "About us",
     "intro_1": "We are Cacta, sustainability at the click of a button.",
     "description_1": "We passionately dedicate ourselves every day to driving businesses towards a transformation to sustainable management.",
     "description_2": "How? With our high-tech solutions developed under the strictest academic rigor and scientific validation so that companies can make informed decisions, reduce their environmental impact, and maximize operational efficiency simultaneously.",
@@ -105,7 +105,7 @@
     "span_10": "Minerals and metals"
   },
   "FADER": {
-    "title": "Our Partners",
+    "title": "Our partners",
     "intro_1": "We are supported by these companies around the world."
   },
   "SECTION_CONTACT": {
@@ -121,7 +121,7 @@
       "email": "Email",
       "email_placeholder": "john_doe@example.com",
       "message": "Message",
-      "message_placeholder": "I want to receive information about the Cacta app.",
+      "message_placeholder": "I want to receive information.",
       "send": "Send",
       "message_2": "We will get in touch with you shortly."
     }
@@ -146,7 +146,7 @@
     "answer_7": "We offer APIs designed for automatic and accurate integration with various management systems. If your administration is not yet digitized, don't worry—we provide a manual option with specially designed templates, allowing you to easily and quickly input the necessary data."
   },
   "SECTION_BLOG": {
-    "title": "Latest Articles",
+    "title": "Latest articles",
     "intro": "Dive into our carefully crafted content, where we address a variety of sustainability-related topics, from the latest trends, technological applications, regulations, frameworks to practical tips to improve your business.",
     "button": "Go to the blog",
     "read_more": "Read more",
@@ -191,5 +191,38 @@
     "status": "Your message was sent successfully.",
     "paragraph": "The Cacta sales team will contact you shortly.",
     "button": "Back to home"
+  },
+
+  "SERVICES": {
+    "title": "services",
+    "subtitle": "Which one best fits your company?",
+    "button_back": "Back",
+    "questions": "Do you have any questions about this plan? Reach out to us via email.",
+    "plan_1": {
+      "service": "Basic",
+      "description": "Ideal for starting your journey towards sustainability in an agile and efficient way.",
+      "process1": "Agile companies with a growth mindset.",
+      "process2": "Data centralization and process optimization for greater efficiency.",
+      "process3": "Accessible investment with high return on value.",
+      "process4": "Up to 2,000 hectares for efficient management.",
+      "questions": ""
+    },
+    "plan_2": {
+      "service": "Standard",
+      "description": "Perfect for companies looking to optimize processes and scale effortlessly.",
+      "process1": "Established, innovative, and expanding companies.",
+      "process2": "Advanced digital management, automation, and the ability to scale quickly.",
+      "process3": "Ability to invest in growth and differentiation.",
+      "process4": "Up to 20,000 hectares, with scalable solutions.",
+      "questions": ""
+    },
+    "plan_3": {
+      "service": "Corporate",
+      "description": "Advanced solutions for global companies seeking innovation and large-scale compliance.",
+      "process1": "Industry leaders with a global impact.",
+      "process2": "Seamless data integration, deep analysis, and compliance with international standards.",
+      "process3": "High investment in innovation to maintain leadership.",
+      "process4": "Unlimited, tailored to large operations."
+    }
   }
 }

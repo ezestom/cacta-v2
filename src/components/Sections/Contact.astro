@@ -2,6 +2,7 @@
 import Container from "../Container.astro";
 import { Form } from "../Form/Form.jsx";
 import quote1 from "../../icons/quote1.svg";
+import agriculture from "../../img/agriculture.webp";
 
 import { geti18n } from "../../i18n/";
 const { currentLocale } = Astro;
@@ -51,7 +52,7 @@ const {
 			<div
 				class="mt-6 space-y-6 md:w-8/12 lg:w-7/12 flex flex-col justify-center w-full mx-auto">
 				<p
-					class="text-center text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-bold text-balance">
+					class="text-center text-xl max-w-[50ch] mx-auto text-gray-600 dark:text-gray-300 font-semibold text-pretty">
 					{paragraph}
 				</p>
 			</div>
@@ -78,6 +79,7 @@ const {
 					message_placeholder={message_placeholder}
 					send={send}
 					message_2={message_2}
+					img={agriculture}
 					client:visible
 				/>
 			</aside>

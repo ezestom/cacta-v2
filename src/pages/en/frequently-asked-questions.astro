@@ -41,10 +41,10 @@ const faqArray = [
 ---
 
 <Layout title="Cacta faq">
-	<div id="blog-section" class="min-h-screen h-full">
+	<div id="faq-section" class="min-h-screen h-full">
 		<div class="py-10 flex items-center flex-col justify-center">
 			<h2
-				class="text-2xl font-black text-gray-900 md:text-5xl dark:text-white text-center flex items-end justify-center gap-2">
+				class="text-5xl flex-col font-bold text-gray-900 dark:text-white text-center flex items-center justify-center gap-2">
 				<LogoTheme client:visible />
 				faq
 			</h2>
@@ -74,6 +74,12 @@ const faqArray = [
 </Layout>
 
 <style>
+	#faq-section {
+		background-image: url("../../img/waves-bg-top.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 100%;
+	}
 	.dark {
 		background-color: #111826;
 		z-index: -10;
@@ -85,7 +91,7 @@ const faqArray = [
 </style>
 
 <script>
-	const section = document.getElementById("blog-section");
+	const section = document.getElementById("faq-section");
 	if (localStorage.getItem("theme") === "dark") {
 		section?.classList.add("dark");
 	} else {

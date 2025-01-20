@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GoBack from "../../components/GoBack.astro";
+import { LogoTheme } from "../../components/LogoTheme.jsx";
+import Container from "../../components/Container.astro";
+import ServicesCard from "../../components/ServicesCard.astro";
+
+import { geti18n } from "../../i18n/";
+const { currentLocale } = Astro;
+const i18n = geti18n({ currentLocale });
+
+const { title, subtitle, questions } = i18n.SERVICES;
+const {
+	service: servicePlan1,
+	description: descriptionPlan1,
+	process1: process1Plan1,
+	process2: process2Plan1,
+	process3: process3Plan1,
+	process4: process4Plan1,
+} = i18n.SERVICES.plan_1;
+
+const {
+	service: servicePlan2,
+	description: descriptionPlan2,
+	process1: process1Plan2,
+	process2: process2Plan2,
+	process3: process3Plan2,
+	process4: process4Plan2,
+} = i18n.SERVICES.plan_2;
+
+const {
+	service: servicePlan3,
+	description: descriptionPlan3,
+	process1: process1Plan3,
+	process2: process2Plan3,
+	process3: process3Plan3,
+	process4: process4Plan3,
+} = i18n.SERVICES.plan_3;
+---
+
+<Layout title="Cacta services">
+	<section id="services-section" class="min-h-screen h-full">
+		<Container>
+			<GoBack text="volver" />
+
+			<div class="pb-10 flex items-center flex-col justify-center px-4">
+				<h2
+					class="text-5xl flex-col font-bold text-gray-900 dark:text-white text-center flex items-center justify-center gap-2">
+					<LogoTheme client:visible />
+					{title}
+				</h2>
+				<p
+					class="lg:mx-auto text-gray-600 dark:text-gray-300 text-center m-4 max-w-md text-xl">
+					{subtitle}
+				</p>
+			</div>
+			<div
+				class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:mx-auto place-content-center">
+				<ServicesCard
+					service={servicePlan1}
+					description={descriptionPlan1}
+					process1={process1Plan1}
+					process2={process2Plan1}
+					process3={process3Plan1}
+					process4={process4Plan1}
+					questions={questions}
+				/>
+				<ServicesCard
+					service={servicePlan2}
+					description={descriptionPlan2}
+					process1={process1Plan2}
+					process2={process2Plan2}
+					process3={process3Plan2}
+					process4={process4Plan2}
+					questions={questions}
+				/>
+				<ServicesCard
+					service={servicePlan3}
+					description={descriptionPlan3}
+					process1={process1Plan3}
+					process2={process2Plan3}
+					process3={process3Plan3}
+					process4={process4Plan3}
+					questions={questions}
+				/>
+			</div>
+		</Container>
+	</section>
+</Layout>
+
+<style>
+	#services-section {
+		background-image: url("../../img/waves-bg-top.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 100%;
+	}
+	.dark {
+		background-color: #111826;
+		z-index: -10;
+	}
+	.light {
+		background-color: #fafafa;
+		z-index: -10;
+	}
+</style>
+
+<script>
+	const section = document.getElementById("services-section");
+	if (localStorage.getItem("theme") === "dark") {
+		section?.classList.add("dark");
+	} else {
+		section?.classList.remove("dark");
+	}
+</script>

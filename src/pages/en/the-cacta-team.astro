@@ -18,28 +18,10 @@ const { description } = i18n.FOOTER;
 ---
 
 <Layout title="Cacta Team">
-	<section class="h-full m-auto w-full" id="blogSection">
+	<section class="h-full m-auto w-full" id="team-section">
 		<Container>
-			<!-- background -->
-			<div
-				aria-hidden="true"
-				class="absolute inset-0 h-max w-full m-auto opacity-40 dark:opacity-20">
-				<div
-					class="blur-[106px] h-[20rem] bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700">
-				</div>
-				<div
-					class="blur-[106px] h-32 bg-gradient-to-r from-secondary to-tertiary dark:to-indigo-600">
-				</div>
-			</div>
-			<div class="absolute">
-				<div
-					class="fixed h-1/2 bottom-0 w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(rebeccapurple_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
-				</div>
-			</div>
-			<!-- background -->
-
 			<h2
-				class="text-2xl font-black text-gray-900 md:text-5xl dark:text-white text-center py-5 flex items-end justify-center gap-2">
+				class="text-5xl flex-col font-bold text-gray-900 dark:text-white text-center flex items-center justify-center gap-2">
 				<LogoTheme client:visible />
 				team
 			</h2>
@@ -128,6 +110,12 @@ const { description } = i18n.FOOTER;
 </Layout>
 
 <style>
+	#team-section {
+		background-image: url("../../img/waves-bg-top.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 100%;
+	}
 	section {
 		height: 100%;
 		min-height: 100vh;
@@ -233,7 +221,7 @@ const { description } = i18n.FOOTER;
 </style>
 
 <script is:inline>
-	const section = document.getElementById("blogSection");
+	const section = document.getElementById("team-section");
 	if (localStorage.getItem("theme") === "dark") {
 		section?.classList.add("dark");
 	} else {

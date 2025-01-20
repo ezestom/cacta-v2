@@ -16,6 +16,18 @@ export function BlurVideo({ youtube_url_1 }) {
 
   return (
     <article className="relative flex justify-center revealing-image">
+      <a
+        href="https://librecounter.org/referer/show"
+        target="_blank"
+        className="w-2 absolute bottom-0 top-0 m-auto flex z-20"
+        name="referer"
+      >
+        <img
+          src="https://librecounter.org/counter.svg"
+          referrerPolicy="unsafe-url"
+          alt="counter component"
+        />
+      </a>
       <button onClick={openDialog}>
         <img
           src={play.src}
