@@ -182,9 +182,9 @@ export function Form({
                       id="close-dialog"
                     />
                   </button>
-                  <h5 className=" mx-2 text-gray-900 text-xl">{h1}</h5>
+                  <h5 className=" mx-2 text-gray-900 text-base">{h1}</h5>
 
-                  <p className="mt-4 leading-relaxed mx-2 text-gray-700">
+                  <p className="mt-4 leading-relaxed text-sm mx-2 text-gray-700">
                     {subtitle}
                   </p>
                   {isLoading && (
