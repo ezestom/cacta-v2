@@ -1,6 +1,7 @@
 ---
 import LanguageSelector from "../components/LanguageSelector.astro";
 import HeaderLink from "../components/HeaderLink.astro";
+import LogoAnimation from "./LogoAnimation.astro";
 
 import { geti18n } from "../i18n/index.ts";
 import {
@@ -93,18 +94,18 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 	<nav class="fixed z-50 w-full mx-auto px-4 md:px-24 right-0 left-0">
 		<div
 			id="navbar"
-			class="relative flex flex-wrap items-center justify-between gap-6 py-2">
+			class="relative flex flex-wrap items-center justify-between gap-6 py-3">
 			<h1
 				class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo text-md text-current font-medium flex-grow basis-0">
-				<HeaderLink
-					href={translatePath("/#home")}
-					aria-label="logo"
-					class="flex items-center space-x-2 active:scale-95 w-fit transition-all duration-300 ease-in-out">
-					<img
+				<HeaderLink href={translatePath("/#home")} aria-label="logo">
+					<!-- <img
 						src={logo.src}
 						alt="Cacta"
 						class="w-16 drop-shadow-md"
-					/>
+					/> -->
+
+					<LogoAnimation />
+
 					<span class="hidden"
 						>Cacta - Más que un Software La puerta al futuro de la
 						industria agrícola Automatiza, calcula y reporta el

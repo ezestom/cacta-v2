@@ -1,8 +1,8 @@
-.mySwiper{
+.mySwiper {
   height: 100dvh;
 }
 
-#img2 {
+video{
   position: relative;
   object-fit: cover;
   /* Fondo con gradiente radial desde transparente hacia blanco */
@@ -29,15 +29,13 @@ hr {
   );
 }
 
-.book-container {
+/* .book-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* real perpective */
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  padding: 5rem;
-}
+} */
 
 @keyframes initAnimation {
   0% {
@@ -48,10 +46,10 @@ hr {
   }
 }
 
-.book {
+/* .book {
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateY(-6deg) rotateX(4deg); /* Ajuste en X y Y para más realismo */
+  transform: rotateY(-6deg) rotateX(4deg);
   transition: transform 1s ease;
   animation: initAnimation 15s ease-in-out infinite alternate;
-}
+} */
