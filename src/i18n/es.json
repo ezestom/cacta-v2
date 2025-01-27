@@ -205,7 +205,6 @@
       "process1": "Empresas ágiles, con visión de crecimiento.",
       "process2": "Centralización de datos y optimización de procesos para mayor eficiencia.",
       "process3": "Inversión accesible con alto retorno de valor.",
-      "process4": "Hasta 2,000 hectáreas para una gestión eficiente.",
       "questions": ""
     },
     "plan_2": {
@@ -214,7 +213,6 @@
       "process1": "Empresas consolidadas, innovadoras y en expansión.",
       "process2": "Gestión digital avanzada, automatización y capacidad para escalar rápidamente.",
       "process3": "Capacidad para invertir en crecimiento y diferenciación.",
-      "process4": "Hasta 20,000 hectáreas, con soluciones escalables.",
       "questions": ""
     },
     "plan_3": {
@@ -223,7 +221,7 @@
       "process1": "Líderes del sector con un impacto global.",
       "process2": "Integración perfecta de datos, análisis profundo y cumplimiento con estándares internacionales.",
       "process3": "Alta inversión en innovación para mantener liderazgo.",
-      "process4": "Sin límite, adaptado a grandes operaciones."
+      "questions": ""
     }
   }
 }

@@ -204,7 +204,6 @@
       "process1": "Agile companies with a growth mindset.",
       "process2": "Data centralization and process optimization for greater efficiency.",
       "process3": "Accessible investment with high return on value.",
-      "process4": "Up to 2,000 hectares for efficient management.",
       "questions": ""
     },
     "plan_2": {
@@ -213,7 +212,6 @@
       "process1": "Established, innovative, and expanding companies.",
       "process2": "Advanced digital management, automation, and the ability to scale quickly.",
       "process3": "Ability to invest in growth and differentiation.",
-      "process4": "Up to 20,000 hectares, with scalable solutions.",
       "questions": ""
     },
     "plan_3": {
@@ -222,7 +220,7 @@
       "process1": "Industry leaders with a global impact.",
       "process2": "Seamless data integration, deep analysis, and compliance with international standards.",
       "process3": "High investment in innovation to maintain leadership.",
-      "process4": "Unlimited, tailored to large operations."
+      "questions": ""
     }
   }
 }
