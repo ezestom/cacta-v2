@@ -103,10 +103,10 @@ export function SwiperHome({
       </figure>
       <Swiper
         ref={swiperRef}
-        speed={1250}
+        speed={1500}
         parallax={true}
         autoplay={{
-          delay: 5000,
+          delay: 7500,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -120,7 +120,7 @@ export function SwiperHome({
         className="mySwiper z-0"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} className="">
+          <SwiperSlide key={index} className="h-screen">
             <div className="home relative">
               <span className="swiper-fraction absolute text-6xl top-0 right-0 px-12 md:px-5 font-black text-white z-20">
                 {(index + 1).toString().padStart(2, "0")}
@@ -152,7 +152,7 @@ export function SwiperHome({
                   <img
                     src={image.img.src}
                     alt={`${image.img} image`}
-                    className="absolute top-0 left-0 h-full object-cover object-center -z-10 w-full blur-sm overflow-hidden opacity-95"
+                    className="absolute top-0 left-0 h-screen object-cover object-center -z-10 w-full blur-sm overflow-hidden opacity-95"
                   />
                   {/* imagen de la app que hace swipe */}
 
