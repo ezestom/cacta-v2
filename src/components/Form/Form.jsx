@@ -202,7 +202,7 @@ export function Form({
                     <div className="recaptcha object-contain pb-1">
                       <ReCAPTCHA
                         ref={captcha}
-                        sitekey="6LcHvp8qAAAAAKVKL-k-JABtkoTkkN_etXxBcMrf"
+                        sitekey="6LfpnOoqAAAAAHjzVQuYj5a-m6fqMN_Mwh4nhZYa"
                         onChange={onChange}
                       />
                     </div>
