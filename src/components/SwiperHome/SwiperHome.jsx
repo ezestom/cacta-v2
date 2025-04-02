@@ -89,8 +89,8 @@ export function SwiperHome({
   ];
 
   return (
-    <section className="relative h-screen w-screen bg-white/75">
-      <figure className=" rounded-3xl shadow absolute top-0 bottom-0 m-auto -right-6 aspect-video max-w-[66%] max-h-[80%] z-10 p-4 bg-[#fafafa]/10 hidden xl:block">
+    <section className="relative h-screen w-screen">
+      <figure className=" rounded-3xl shadow absolute top-0 bottom-0 m-auto -right-6 aspect-video max-w-[66%] max-h-[80%] z-10 p-2 bg-[#fafafa]/10 hidden xl:block">
         <video
           src={video}
           poster={poster.src}
@@ -98,7 +98,7 @@ export function SwiperHome({
           loop
           muted
           playsInline
-          className="object-cover object-center w-full h-full rounded-2xl shadow-md"
+          className="object-cover object-center w-full h-full rounded-2xl shadow-md "
         ></video>
       </figure>
       <Swiper
@@ -116,18 +116,21 @@ export function SwiperHome({
           clickable: true,
           el: ".swiper-pagination",
         }}
-        modules={[Parallax, Autoplay, FreeMode, Pagination]}
+        modules={[Parallax, Autoplay, FreeMode]}
         className="mySwiper z-0"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} className="h-screen">
+          <SwiperSlide
+            key={index}
+            className="bg-gradient-to-r from-[#007d67]/25 to-[#00ff9a]/25 border-b-2"
+          >
             <div className="home relative">
-              <span className="swiper-fraction absolute text-6xl top-0 right-0 px-12 md:px-5 font-black text-white z-20">
+              {/* <span className="swiper-fraction absolute text-6xl top-0 right-0 px-12 md:px-5 font-black text-white z-20">
                 {(index + 1).toString().padStart(2, "0")}
-              </span>
+              </span> */}
               <span className="swiper-pagination absolute m-auto" />
-              <div className="home-swiper relative z-20">
-                <article className="home-article relative w-full h-screen flex items-center justify-center xl:justify-start xl:pl-[6rem] overflow-hidden">
+              <div className="home-swiper relative z-20 flex flex-col items-center justify-center h-screen w-screen">
+                <article className="home-article relative w-[96vw] mx-auto md:w-full h-[80vh] md:h-screen flex items-center justify-center xl:justify-start xl:pl-[6rem] overflow-hidden rounded-3xl md:rounded-none ">
                   <div className="home-data absolute flex flex-col items-center xl:items-start xl:text-start lg-text-center z-10 gap-5 text-balance px-4 md:px-0 max-w-[35ch] xl:max-w-[60ch] xl:top-1/2 md:transform xl:-translate-y-1/2">
                     <h7
                       className="home-title bg-gradient-to-r from-[#007d67] to-[#00ff9a]  text-transparent bg-clip-text text-[3.5rem] xl:text-[3.25vw] max-w-[12ch] leading-tight tracking-tight font-black text-center xl:text-left -my-4 py-4 drop-shadow-xl text-balance "
@@ -152,7 +155,7 @@ export function SwiperHome({
                   <img
                     src={image.img.src}
                     alt={`${image.img} image`}
-                    className="absolute top-0 left-0 h-screen object-cover object-center -z-10 w-full blur-sm overflow-hidden opacity-95"
+                    className="absolute top-0 left-0 h-[80vh] md:h-screen object-cover object-center -z-10 w-full blur-sm opacity-95 brightness-75 "
                   />
                   {/* imagen de la app que hace swipe */}
 
