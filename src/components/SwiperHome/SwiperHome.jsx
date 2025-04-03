@@ -90,7 +90,7 @@ export function SwiperHome({
 
   return (
     <section className="relative h-screen w-screen">
-      <figure className=" rounded-3xl shadow absolute top-0 bottom-0 m-auto -right-6 aspect-video max-w-[66%] max-h-[80%] z-10 p-2 bg-[#fafafa]/10 hidden xl:block">
+      <figure className=" rounded-3xl shadow absolute top-0 bottom-0 m-auto -right-6 aspect-video max-w-[66%] max-h-[80%] z-10 p-1 bg-[#fafafa]/10 hidden xl:block">
         <video
           src={video}
           poster={poster.src}
@@ -98,7 +98,7 @@ export function SwiperHome({
           loop
           muted
           playsInline
-          className="object-cover object-center w-full h-full rounded-2xl shadow-md "
+          className="object-cover object-center w-full h-full rounded-[1.25rem] shadow-md "
         ></video>
       </figure>
       <Swiper
@@ -155,7 +155,7 @@ export function SwiperHome({
                   <img
                     src={image.img.src}
                     alt={`${image.img} image`}
-                    className="absolute top-0 left-0 h-[80vh] md:h-screen object-cover object-center -z-10 w-full blur-sm opacity-95 brightness-75 "
+                    className="absolute top-0 left-0 h-[80vh] md:h-screen object-cover object-center -z-10 w-full blur-sm brightness-80 "
                   />
                   {/* imagen de la app que hace swipe */}
 
