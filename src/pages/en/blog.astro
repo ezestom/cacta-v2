@@ -2,13 +2,19 @@
 import { BlogCard2 } from "../../components/BlogCard2/BlogCard2.jsx";
 import { TimeStamp } from "../../components/TimeStamp/TimeStamp.jsx";
 
-import blog1 from "../../img/esg.webp";
-import blog2 from "../../img/cacta.webp";
-import blog3 from "../../img/blog3.webp";
+import blog1 from "../../img/blog/esg.webp";
+import blog2 from "../../img/blog/cacta.webp";
+import blog3 from "../../img/blog/blog3.webp";
+import blog4 from "../../img/blog/blog5.webp";
+import blog5 from "../../img/blog/infocampo.webp";
+import blog6 from "../../img/blog/infocampo2.webp";
+import blog7 from "../../img/blog/bipolos1.jpg";
+import blog8 from "../../img/blog/bipolos2.jpg";
+import blog9 from "../../img/blog/bipolos3.jpg";
+import blog10 from "../../img/blog/expo1.jpg";
+import blog11 from "../../img/blog/galicia1.jpg";
+import blog12 from "../../img/blog/bichos1.jpg";
 
-import blog4 from "../../img/blog5.webp";
-import blog5 from "../../img/infocampo.webp";
-import blog6 from "../../img/infocampo2.webp";
 import Layout from "../../layouts/Layout.astro";
 import GoBack from "../../components/GoBack.astro";
 import { LogoTheme } from "../../components/LogoTheme.jsx";
@@ -19,8 +25,21 @@ const i18n = geti18n({ currentLocale });
 
 const { title } = i18n.PAGE_BLOG;
 const { button_back } = i18n.SECTION_FEATURES;
-const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
-	i18n.SECTION_BLOG;
+const {
+	post_1,
+	post_2,
+	post_3,
+	post_4,
+	post_5,
+	post_6,
+	post_7,
+	post_8,
+	post_9,
+	post_10,
+	post_11,
+	post_12,
+	read_more,
+} = i18n.SECTION_BLOG;
 ---
 
 <Layout title="Cacta blog">
@@ -40,9 +59,84 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 		<div
 			class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 blog-container w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 pb-6">
 			<article class="">
+				<TimeStamp time="2025-04-17T15:00:00Z" />
+
+				<BlogCard2
+					client:visible
+					image={blog12}
+					title={post_12.title}
+					description={post_12.description}
+					read_more={read_more}
+					link="https://bichosdecampo.com/el-caso-cacta-luciano-sambataro-explica-como-funciona-esta-aplicacion-que-propone-medir-el-impacto-ambiental-y-no-solo-la-huella-de-carbono-para-llegar-a-nuevos-mercados/"
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2025-04-15T15:00:00Z" />
+
+				<BlogCard2
+					client:visible
+					image={blog11}
+					title={post_11.title}
+					description={post_11.description}
+					read_more={read_more}
+					link="https://sustenomics.com/galicia-seguros-es-la-primera-compania-del-sector-en-adoptar-herramienta-de-medicion-de-impacto-ambiental/"
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2025-04-15T15:00:00Z" />
+
+				<BlogCard2
+					client:visible
+					image={blog10}
+					title={post_10.title}
+					description={post_10.description}
+					read_more={read_more}
+					link="https://www.infocampo.com.ar/un-punto-a-favor-en-la-huella-ambiental-del-agro-argentino-el-nivel-de-digitalizacion-es-muy-bueno/"
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2025-04-15T10:00:00Z" />
+
+				<BlogCard2
+					client:visible
+					image={blog9}
+					title={post_9.title}
+					description={post_9.description}
+					read_more={read_more}
+					link="https://www.noticiasdecampo.com/2025/03/15/bipolos-presento-su-ia-destinada-a-simplificar-las-cotiziaciones-de-insumos-por-whatsapp/"
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2025-04-10T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog8}
+					title={post_8.title}
+					description={post_8.description}
+					read_more={read_more}
+					link="https://fortuna.perfil.com/noticias/negocios/bipolos-presento-pia-su-inteligencia-artificial.phtml"
+				/>
+			</article>
+
+			<article class="">
+				<TimeStamp time="2025-04-01T10:00:00Z" />
+				<BlogCard2
+					client:visible
+					image={blog7}
+					title={post_7.title}
+					description={post_7.description}
+					read_more={read_more}
+					link="https://www.cronista.com/infotechnology/innovacion-it/una-startup-argentina-apuesta-por-la-ia-y-whatsapp-para-agilizar-el-agro/"
+				/>
+			</article>
+
+			<article class="">
 				<TimeStamp time="2024-08-27T10:00:00Z" />
 				<BlogCard2
-					transition:name="blog_1"
 					client:visible
 					image={blog6}
 					title={post_6.title}
@@ -55,7 +149,6 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
-					transition:name="blog_2"
 					client:visible
 					image={blog5}
 					title={post_5.title}
@@ -68,7 +161,6 @@ const { post_1, post_2, post_3, post_4, post_5, post_6, read_more } =
 			<article class="">
 				<TimeStamp time="2024-07-02T10:00:00Z" />
 				<BlogCard2
-					transition:name="blog_3"
 					client:visible
 					image={blog4}
 					title={post_4.title}

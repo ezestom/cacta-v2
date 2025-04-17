@@ -7,6 +7,14 @@ import galicia from "../img/logo/galicia.webp";
 import kikel from "../img/logo/kikel.png";
 import lapacho from "../img/logo/lapacho.png";
 import alianza from "../img/logo/alianza.png";
+import agrimarba from "../img/logo/agrimarba.png";
+import albor from "../img/logo/albor.png";
+import bipolos from "../img/logo/bipolos.png";
+import citricos from "../img/logo/citricos.png";
+import finnegans from "../img/logo/finnegans.png";
+import galicia_seguros from "../img/logo/galicia_seguros.png";
+import twente from "../img/logo/twente.png";
+import zincagro from "../img/logo/zincagro.png";
 
 import { geti18n } from "../i18n/";
 const { currentLocale } = Astro;
@@ -18,29 +26,53 @@ const companies = [
 	{ src: donato.src, href: "#" },
 	{ src: delotte.src, href: "https://grupodelotte.com/" },
 	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
-	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: inducitrica.src, href: "https://inducitrica.com/" },
 	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
 	{ src: kikel.src, href: "#" },
 	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
 	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
-	// repeating
+	{ src: agrimarba.src, href: "https://www.citricoglobal.com/" },
+	{ src: albor.src, href: "https://alboragro.com/" },
+	{ src: bipolos.src, href: "https://www.bipolos.com/" },
+	{ src: citricos.src, href: "https://www.citricoglobal.com/" },
+	{ src: finnegans.src, href: "https://www.finneg.com/latam/" },
+	{ src: galicia_seguros.src, href: "https://www.galiciaseguros.com.ar/" },
+	{ src: twente.src, href: "https://twentepartners.com/" },
+	{ src: zincagro.src, href: "http://zincagro.com.ar/w/" },
+	// // repeating
 	{ src: donato.src, href: "#" },
 	{ src: delotte.src, href: "https://grupodelotte.com/" },
 	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
-	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: inducitrica.src, href: "https://inducitrica.com/" },
 	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
 	{ src: kikel.src, href: "#" },
 	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
 	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
-	// repeating 2
+	{ src: agrimarba.src, href: "https://www.citricoglobal.com/" },
+	{ src: albor.src, href: "https://alboragro.com/" },
+	{ src: bipolos.src, href: "https://www.bipolos.com/" },
+	{ src: citricos.src, href: "https://www.citricoglobal.com/" },
+	{ src: finnegans.src, href: "https://www.finneg.com/latam/" },
+	{ src: galicia_seguros.src, href: "https://www.galiciaseguros.com.ar/" },
+	{ src: twente.src, href: "https://twentepartners.com/" },
+	{ src: zincagro.src, href: "http://zincagro.com.ar/w/" },
+	// // repeating 2
 	{ src: donato.src, href: "#" },
 	{ src: delotte.src, href: "https://grupodelotte.com/" },
 	{ src: frutucuman.src, href: "https://www.frutucumansa.com.ar/" },
-	{ src: inducitrica.src, href: "https://grupodelotte.com/inducitrica/" },
+	{ src: inducitrica.src, href: "https://inducitrica.com/" },
 	{ src: galicia.src, href: "https://www.galicia.ar/empresas/" },
 	{ src: kikel.src, href: "#" },
 	{ src: lapacho.src, href: "https://www.agroalianza.ar/" },
 	{ src: alianza.src, href: "https://www.agroalianza.ar/" },
+	{ src: agrimarba.src, href: "https://www.citricoglobal.com/" },
+	{ src: albor.src, href: "https://alboragro.com/" },
+	{ src: bipolos.src, href: "https://www.bipolos.com/" },
+	{ src: citricos.src, href: "https://www.citricoglobal.com/" },
+	{ src: finnegans.src, href: "https://www.finneg.com/latam/" },
+	{ src: galicia_seguros.src, href: "https://www.galiciaseguros.com.ar/" },
+	{ src: twente.src, href: "https://twentepartners.com/" },
+	{ src: zincagro.src, href: "http://zincagro.com.ar/w/" },
 ];
 ---
 
@@ -54,19 +86,19 @@ const companies = [
 		{intro_1}
 	</p>
 
-	<article class="flex flex-col examples-container overflow-hidden mt-2">
-		<div class="flex flex-row examples-row gap-2 p-2">
+	<article class="flex flex-col examples-container overflow-hidden mt-2 gap-2">
+		<div class="flex flex-row examples-row gap-2 p-1 opacity-75">
 			<div class="flex flex-row gap-4">
 				{
 					companies.map((company) => (
 						<a
 							href={company.href}
 							target="_blank"
-							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+							class="group rounded-3xl min-w-[200px] w-[200px] flex items-center justify-center px-2 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-1 flex grayscale transition duration-200 hover:grayscale-0 hover:brightness-125">
 								<img
 									src={company.src}
-									class="h-12 w-auto m-auto"
+									class="h-12 w-auto m-auto object-contain"
 									loading="lazy"
 									alt="client logo"
 									width=""
@@ -79,18 +111,18 @@ const companies = [
 			</div>
 		</div>
 
-		<div class="flex flex-row-reverse examples-row2 gap-2 p-2 opacity-50">
+		<div class="flex flex-row-reverse examples-row2 gap-2 p-1 opacity-75">
 			<div class="flex flex-row gap-4">
 				{
 					companies.map((company) => (
 						<a
 							href={company.href}
 							target="_blank"
-							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+							class="group rounded-3xl min-w-[200px] w-[200px] flex items-center justify-center px-2 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-1 flex grayscale transition duration-200 hover:grayscale-0 hover:brightness-125">
 								<img
 									src={company.src}
-									class="h-12 w-auto m-auto"
+									class="h-12 w-auto m-auto object-contain"
 									loading="lazy"
 									alt="client logo"
 									width=""
@@ -103,18 +135,18 @@ const companies = [
 			</div>
 		</div>
 
-		<div class="flex flex-row examples-row3 gap-2 p-2 opacity-25">
+		<div class="flex flex-row examples-row3 gap-2 p-1 opacity-75">
 			<div class="flex flex-row gap-4">
 				{
 					companies.map((company) => (
 						<a
 							href={company.href}
 							target="_blank"
-							class="group rounded-3xl min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
-							<div class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+							class="group rounded-3xl min-w-[200px] w-[200px] flex items-center justify-center px-2 cursor-pointer transition-all hover:scale-105 shadow-sm bg-white/50 dark:bg-gray-800 dark:border dark:border-gray-700">
+							<div class="p-1 flex grayscale transition duration-200 hover:grayscale-0 hover:brightness-125">
 								<img
 									src={company.src}
-									class="h-12 w-auto m-auto"
+									class="h-12 w-auto m-auto object-contain"
 									loading="lazy"
 									alt="client logo"
 									width=""
@@ -125,21 +157,23 @@ const companies = [
 					))
 				}
 			</div>
+		</div>
+
+	
 		</div>
 	</article>
 </section>
 
 <style>
 	.examples-row {
-		animation: marquee 80s linear infinite;
+		animation: marquee 75s linear infinite;
 	}
 	.examples-row2 {
-		animation: marquee2 90s linear infinite;
+		animation: marquee2 50s linear infinite;
 	}
 	.examples-row3 {
-		animation: marquee 100s linear infinite;
+		animation: marquee 25s linear infinite;
 	}
-
 	.flex {
 		display: flex;
 	}

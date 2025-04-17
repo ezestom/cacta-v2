@@ -1,10 +1,12 @@
 ---
-import juan from "../../img/juan.webp";
-import maxi from "../../img/maxi.webp";
-import luciano from "../../img/luciano.webp";
-import jose from "../../img/jose.webp";
-import vicky from "../../img/vicky.jpg";
-import sofia from "../../img/sofia.webp";
+import juan from "../../img/team/JuanPablo_Tena.jpg";
+import maxi from "../../img/team/Maximiliano_Hense.jpg";
+import luciano from "../../img/team/Luciano_Sambataro.jpg";
+import jose from "../../img/team/Jose_Cebe.jpg";
+import vicky from "../../img/team/Victoria_Engelberger.jpg";
+import sofia from "../../img/team/Sofia_Rodriguez.jpg";
+import ezequiel from "../../img/team/Ezequiel_Stom.jpg";
+import laurens from "../../img/team/Laurens_Peeters.jpg";
 import Layout from "../../layouts/Layout.astro";
 import GoBack from "../../components/GoBack.astro";
 import { LogoTheme } from "../../components/LogoTheme.jsx";
@@ -33,23 +35,24 @@ const { description } = i18n.FOOTER;
 			<div class="box">
 				<div class="card">
 					<div class="imgBox">
-						<img src={luciano.src} alt="some image" />
+						<img src={maxi.src} alt="some image" />
 					</div>
 					<div class="details">
 						<h3>
-							Luciano Sambataro <br /><span>CEO | Co-founder</span
-							>
+							Max Hense <br /><span>Co-founder & CEO</span><br />
 						</h3>
 					</div>
 				</div>
 
 				<div class="card">
 					<div class="imgBox">
-						<img src={maxi.src} alt="some image" />
+						<img src={luciano.src} alt="some image" />
 					</div>
 					<div class="details">
 						<h3>
-							Maxi Hense <br /><span>CFO | Co-Founder</span><br />
+							Luciano Sambataro <br /><span
+								>Co-founder & Product Director</span
+							>
 						</h3>
 					</div>
 				</div>
@@ -61,7 +64,7 @@ const { description } = i18n.FOOTER;
 					<div class="details">
 						<h3>
 							José Luis Cebe <br /><span
-								>Accounts Director | Co-founder</span
+								>Business Development Associate</span
 							>
 						</h3>
 					</div>
@@ -73,7 +76,9 @@ const { description } = i18n.FOOTER;
 					</div>
 					<div class="details">
 						<h3>
-							Juan Pablo Tena <br /><span>Strategy Director</span>
+							Juan Pablo Tena <br /><span
+								>Europe Sales Director</span
+							>
 						</h3>
 					</div>
 				</div>
@@ -85,7 +90,7 @@ const { description } = i18n.FOOTER;
 					<div class="details">
 						<h3>
 							Victoria Engelberger <br /><span
-								>Comercial Director</span
+								>Latam Sales Directo</span
 							>
 						</h3>
 					</div>
@@ -99,6 +104,28 @@ const { description } = i18n.FOOTER;
 						<h3>
 							Sofia Rodriguez <br /><span>Software Developer</span
 							>
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={laurens.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Laurens Peeters <br /><span>Business Analyst</span>
+						</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox">
+						<img src={ezequiel.src} alt="some image" />
+					</div>
+					<div class="details">
+						<h3>
+							Ezequiel Stom <br /><span>Web Developer</span>
 						</h3>
 					</div>
 				</div>
@@ -132,7 +159,7 @@ const { description } = i18n.FOOTER;
 
 	.card {
 		position: relative;
-		width: 300px;
+		width: 350px;
 		height: 400px;
 		background: #ffffff;
 		border-radius: 3px;
@@ -179,7 +206,7 @@ const { description } = i18n.FOOTER;
 
 	.card:hover .imgBox {
 		transform: scale(0.75) rotate(0deg) translate(0px, -25px);
-		filter: drop-shadow(0 0 0.15rem #0dac4f);
+		filter: drop-shadow(0 0 0.15rem #0dac4f) brightness(1);
 	}
 
 	.card .imgBox img {
@@ -190,6 +217,7 @@ const { description } = i18n.FOOTER;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 3rem;
+		filter: brightness(1.1);
 	}
 
 	.card .details {
@@ -200,9 +228,10 @@ const { description } = i18n.FOOTER;
 		height: 65px;
 		text-align: center;
 		z-index: 3;
+		padding: 0.5rem;
 	}
 	.card .details h3 {
-		line-height: 1.5rem;
+		line-height: 1.25rem;
 		font-weight: 800;
 		font-size: 1.25rem;
 		color: #111826;

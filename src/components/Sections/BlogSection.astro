@@ -1,9 +1,9 @@
 ---
 import Container from "../Container.astro";
 import BlogCard from "../BlogCard.astro";
-import blog4 from "../../img/blog5.webp";
-import blog5 from "../../img/infocampo.webp";
-import blog6 from "../../img/infocampo2.webp";
+import blog10 from "../../img/blog/expo1.jpg";
+import blog11 from "../../img/blog/galicia1.jpg";
+import blog12 from "../../img/blog/bichos1.jpg";
 import { TimeStamp } from "../TimeStamp/TimeStamp.jsx";
 
 import { geti18n } from "../../i18n/";
@@ -11,7 +11,7 @@ const { currentLocale } = Astro;
 const i18n = geti18n({ currentLocale });
 
 const { title, intro } = i18n.SECTION_BLOG;
-const { post_6, post_4, post_5 } = i18n.SECTION_BLOG;
+const { post_12, post_11, post_10 } = i18n.SECTION_BLOG;
 ---
 
 <section id="blog" class="">
@@ -32,9 +32,9 @@ const { post_6, post_4, post_5 } = i18n.SECTION_BLOG;
 				<TimeStamp time="2024-09-24T10:00:00Z" />
 				<BlogCard
 					transition:name="blog_1"
-					image={blog6}
-					title={post_6.title}
-					description={post_6.description}
+					image={blog12}
+					title={post_12.title}
+					description={post_12.description}
 				/>
 			</article>
 
@@ -42,9 +42,9 @@ const { post_6, post_4, post_5 } = i18n.SECTION_BLOG;
 				<TimeStamp time="2024-08-27T10:00:00Z" />
 				<BlogCard
 					transition:name="blog_2"
-					image={blog5}
-					title={post_5.title}
-					description={post_5.description}
+					image={blog11}
+					title={post_10.title}
+					description={post_10.description}
 				/>
 			</article>
 
@@ -53,9 +53,9 @@ const { post_6, post_4, post_5 } = i18n.SECTION_BLOG;
 
 				<BlogCard
 					transition:name="blog_3"
-					image={blog4}
-					title={post_4.title}
-					description={post_4.description}
+					image={blog10}
+					title={post_11.title}
+					description={post_11.description}
 				/>
 			</article>
 		</div>

@@ -84,7 +84,7 @@ export function BlogCard2({ image, title, description, link, read_more }) {
 
       {isOpen && (
         <section className="fixed inset-0 z-50  items-center justify-center bg-black bg-opacity-50 flex flex-col ">
-          <article className="relative h-full w-full max-w-xl  bg-white dark:bg-gray-800 rounded-xl overflow-y-scroll max-h-[99%]  border border-gray-100 dark:shadow-none dark:border-gray-700">
+          <article className="relative h-full w-full max-w-3xl  bg-white dark:bg-gray-800 rounded-xl overflow-y-scroll max-h-[99%]  border border-gray-100 dark:shadow-none dark:border-gray-700">
             <div className="relative overflow-hidden rounded-t-xl ">
               <button
                 onClick={closeDialog}
@@ -96,7 +96,7 @@ export function BlogCard2({ image, title, description, link, read_more }) {
                 src={image.src}
                 alt="art cover"
                 loading="lazy"
-                className=" w-full max-h-[300px] object-cover mx-auto shadow-2xl shadow-gray-600/10"
+                className=" w-full h-[300px] md:h-[500px] object-cover mx-auto shadow-2xl shadow-gray-600/10"
               />
             </div>
             <div className="p-4 md:p-6 group">
