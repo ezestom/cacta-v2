@@ -19,8 +19,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-import logo from "../../public/logo.png";
 import TimeLineScroll from "./TimeLineScroll.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 // const links = [
 // 	{
 // 		to: "/#solution",
@@ -199,6 +199,8 @@ import TimeLineScroll from "./TimeLineScroll.astro";
 					</span>
 				</HeaderLink>
 				<LanguageSelector />
+				<ThemeToggle />
+
 				<div class="relative flex max-h-10 items-center xl:hidden z-50">
 					<button
 						aria-label="humburger"

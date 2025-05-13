@@ -89,7 +89,7 @@ export function SwiperHome({
   ];
 
   return (
-    <section className="relative h-screen w-screen">
+    <section className="relative h-screen md:h-[96vh] w-screen overflow-hidden">
       <figure className=" rounded-3xl shadow absolute top-0 bottom-0 m-auto -right-6 aspect-video max-w-[66%] max-h-[80%] z-10 p-1 bg-[#fafafa]/10 hidden xl:block">
         <video
           src={video}

@@ -5,8 +5,9 @@
 <button
 	title="Cambiar tema"
 	id="themeToggle"
-	class="dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200 rounded-xl">
-	<svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	class="bg-black/50 hover:bg-black/40 transition-all border border-transparent  rounded-full mx-2"
+	aria-label="Cambiar tema">
+	<svg width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<path
 			class="sun"
 			fill-rule="evenodd"
@@ -66,27 +67,28 @@
 
 <style>
 	#themeToggle {
-		padding: 0.25rem;
+		padding: 0.65rem;
 	}
 
 	.dark {
-		background: rgb(71 85 105);
+		background-color: rgb(0 0 0 / 0.4);
 		border-radius: 0.75rem;
 		padding: 0.25rem;
 	}
 
 	.sun {
-		fill: gray;
+		fill: white;
 	}
 	.moon {
 		fill: transparent;
+		opacity: 0.5;
 	}
 
 	:global(.dark) .sun {
 		fill: transparent;
 	}
 	:global(.dark) .moon {
-		fill: black;
+		fill: white;
 		opacity: 0.5;
 	}
 </style>

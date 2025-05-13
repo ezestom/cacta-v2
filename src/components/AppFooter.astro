@@ -1,8 +1,6 @@
 ---
 import Container from "./Container.astro";
 import logo from "../../public/logo.png";
-import world from "../icons/world.svg";
-import ThemeToggle from "./ThemeToggle.astro";
 import linkedin from "../icons/linkedin.svg";
 import instagram from "../icons/instagram.svg";
 import team from "../icons/team.svg";
@@ -39,9 +37,7 @@ const i18n = geti18n({ currentLocale });
 					class="flex items-center space-x-3 transition px-4 py-1 rounded-xl dark:bg-slate-600 hover:bg-slate-100 dark:hover:bg-slate-500 border border-transparent dark:border-slate-500 hover:border-slate-200">
 					<div
 						class="flex text-sm flex-col items-center tracking-tighter">
-						<span class="span-footer text-center"
-							>Designed by</span
-						>
+						<span class="span-footer text-center">Designed by</span>
 						<span
 							class="span-footer flex items-center gap-1 text-center">
 							Eze Stom</span
@@ -52,26 +48,20 @@ const i18n = geti18n({ currentLocale });
 			<div class="flex gap-1 md:gap-10 items-center">
 				<article
 					class="flex items-center space-x-3 transition px-4 py-1 rounded-xl dark:bg-slate-600 border border-transparent dark:border-slate-500 text-sm tracking-tighter opacity-75">
-					<div>
-						<p class="flex items-center gap-1 text-center">
-							<span
-								><img
-									src={logo.src}
-									alt="logo icon"
-									class="w-8"
-								/></span
-							>© 2025 Cacta SAS.
-						</p>
+					<div class="flex items-center">
+						<img src={logo.src} alt="logo icon" class="w-10" />
+						<div>
+							<p class="flex items-center gap-2 text-center">
+								© 2025 Cacta Sustainability Solutions LLC.
+							</p>
 
-						<p class="text-center">All rights reserved.</p>
+							<p class="text-center">All rights reserved.</p>
+						</div>
 					</div>
 				</article>
 			</div>
 			<article class="">
 				<ul role="list" class="flex gap-2 0">
-					<li class="z-20">
-						<ThemeToggle />
-					</li>
 					<li>
 						<a
 							title="team"
